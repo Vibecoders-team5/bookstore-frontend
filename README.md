@@ -39,10 +39,11 @@ git checkout main
 git pull origin main
 ```
 
-2. Перейти на свою гілку або створити нову:
+2. Перейти на свою гілку або створити нову та підтягуємо свіжу версію коду з `main`:
 
 ```bash
 git checkout -b DEV-123
+git merge main
 ```
 
 3. Працюємо над кодом у своїй гілці.
@@ -70,7 +71,7 @@ git commit -m "DEV-123: короткий опис змін"
 git checkout main
 git pull origin main
 git checkout DEV-123
-git merge main??
+git merge main
 ```
 
 7. Виправ конфлікти, якщо вони є, і тільки потім:
