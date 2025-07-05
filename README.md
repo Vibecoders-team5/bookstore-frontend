@@ -2,6 +2,8 @@
 
 Group Project for Vibecoders. Creating functional bookstore.
 
+![Logo](./readme-assets/vibecoders.jpg)
+
 ---
 
 ## ✨ Поділ роботи
