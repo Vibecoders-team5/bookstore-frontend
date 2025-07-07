@@ -9,8 +9,6 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90',
         destructive:
           'bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
         outline:
@@ -24,6 +22,9 @@ const buttonVariants = cva(
           'w-[160px] h-[40px] rounded-[8px] bg-[#313237] text-white hover:shadow-[0_0_13px_0_#17203166]',
         addToCartAdded:
           'w-[160px] h-[40px] rounded-[8px] bg-white text-[#27AE60]',
+        default:
+          'w-8 h-8 rounded-lg border-gray-200 border hover:border-[#313237]',
+        paginationArrow: 'w-8 h-8 rounded-lg',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
