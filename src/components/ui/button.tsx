@@ -20,6 +20,10 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
+        addToCartNormal:
+          'w-[160px] h-[40px] rounded-[8px] bg-[#313237] text-white hover:shadow-[0_0_13px_0_#17203166]',
+        addToCartAdded:
+          'w-[160px] h-[40px] rounded-[8px] bg-white text-[#27AE60]',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
