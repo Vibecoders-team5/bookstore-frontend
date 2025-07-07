@@ -110,6 +110,76 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.html {
+  font-family: 'Manrope', sans-serif;
+}
+
+.h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+}
+
+.h2,
+.h1-mobile {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 41px;
+  letter-spacing: -0.01em;
+}
+
+.h3,
+.h2-mobile {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 31px;
+}
+
+.h4,
+.h3-mobile {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.h4-mobile {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.uppercase {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: -0.01em;
+}
+
+.btn-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.body-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.small-text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
