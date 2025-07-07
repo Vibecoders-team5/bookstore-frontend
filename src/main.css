@@ -113,7 +113,8 @@
   --sidebar-ring: 113 113 122;
 }
 
-.html {
+html,
+body {
   font-family: 'Manrope', sans-serif;
 }
 
