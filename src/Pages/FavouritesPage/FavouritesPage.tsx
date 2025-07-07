@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { PaginationButton } from './PaginationButton';
+import { PaginationButton } from '../../components/ui/Buttons/PaginationButton';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { HeartButton } from './HeartButton';
+import { HeartButton } from '../../components/ui/Buttons/HeartButton';
 
 export const FavouritesPage = () => {
   return (

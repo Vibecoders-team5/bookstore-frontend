@@ -23,7 +23,9 @@ const buttonVariants = cva(
         addToCartAdded:
           'w-[160px] h-[40px] rounded-[8px] bg-white text-[#27AE60]',
         default:
-          'w-8 h-8 rounded-lg border-gray-200 border hover:border-[#313237]',
+          'w-8 h-8 rounded-lg border-gray-200 border hover:border-[#313237] box-border',
+        defaultHeart:
+          'w-10 h-10 rounded-lg border-gray-200 border hover:border-[#313237]',
         paginationArrow: 'w-8 h-8 rounded-lg',
       },
       size: {

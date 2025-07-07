@@ -1,5 +1,5 @@
-import { AddButton } from './AddButton';
-import { BackButton } from './BackButton';
+import { AddButton } from '../../components/ui/Buttons/AddButton';
+import { BackButton } from '../../components/ui/Buttons/BackButton';
 
 export function PaperPage() {
   return (
