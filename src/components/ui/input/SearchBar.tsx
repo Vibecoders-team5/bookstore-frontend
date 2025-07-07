@@ -1,4 +1,4 @@
-import { Input } from '@/components/ui/input/Input';
+import { Input } from '@/components/ui/input/input';
 import { Search } from 'lucide-react';
 import { useState } from 'react';
 

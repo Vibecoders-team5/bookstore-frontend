@@ -116,9 +116,11 @@
 html,
 body {
   font-family: 'Manrope', sans-serif;
+  /* background-color: #FAFBFC */
 }
 
 .h1 {
+  font-family: inherit;
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
@@ -127,6 +129,7 @@ body {
 
 .h2,
 .h1-mobile {
+  font-family: inherit;
   font-weight: 700;
   font-size: 32px;
   line-height: 41px;
@@ -135,6 +138,7 @@ body {
 
 .h3,
 .h2-mobile {
+  font-family: inherit;
   font-weight: 700;
   font-size: 22px;
   line-height: 31px;
@@ -142,24 +146,28 @@ body {
 
 .h4,
 .h3-mobile {
+  font-family: inherit;
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
 }
 
 .h5 {
+  font-family: inherit;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
 }
 
 .h4-mobile {
+  font-family: inherit;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
 }
 
 .uppercase {
+  font-family: inherit;
   font-weight: 700;
   font-size: 12px;
   line-height: 11px;
@@ -167,19 +175,22 @@ body {
 }
 
 .btn-text {
-  font-weight: 600;
+  font-family: inherit;
+  font-weight: 700;
   font-size: 14px;
   line-height: 21px;
 }
 
 .body-text {
+  font-family: inherit;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
 }
 
 .small-text {
-  font-weight: 600;
+  font-family: inherit;
+  font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 }
