@@ -5,7 +5,6 @@ export const App = () => {
   return (
     <div>
       <Header />
-
       <div className="section">
         <div className="container">
           <Outlet />
