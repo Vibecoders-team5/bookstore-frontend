@@ -1,7 +1,7 @@
 export const HomePage = () => (
   <>
     <h1>HOME PAGE</h1>
-    {/* <div className="min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 flex items-center justify-center">
       <div className="bg-white shadow-2xl rounded-2xl p-10 text-center max-w-md">
         <h1 className="text-4xl font-extrabold text-gray-800 mb-4">
           Tailwind працює! 🚀
@@ -13,6 +13,6 @@ export const HomePage = () => (
           Натисни мене ✨
         </button>
       </div>
-    </div> */}
+    </div>
   </>
 );
