@@ -1,7 +1,7 @@
 export const CartPage = () => {
   return (
     <>
-      <h1>CART PAGE</h1>
+      <h1 className="text-2xl font-bold mb-4">Cart Page</h1>
     </>
   );
 };
