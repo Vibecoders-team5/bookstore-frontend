@@ -1,10 +1,10 @@
 import { cn } from '@/lib/utils';
 import { Link, NavLink } from 'react-router-dom';
 
-import { DropdownSelect } from '@/components/ui/DropdownSelect';
 import { SearchBar } from '@/components/ui/input';
 import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
+import { CategoryDropdown } from '@/components/CategoryDropdown';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -38,22 +38,20 @@ export const Header = () => {
 
   return (
     <>
-      <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-white sticky top-0 z-50 shadow-sm">
+      <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="flex items-center w-full h-full gap-6">
           <Link
             to="/"
-            className="flex items-center justify-center w-24 xl:w-32 h-full transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg" // breakpoint xl:w-32 1200px
+            className="flex items-center justify-center w-24 xl:w-32 h-full transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
           >
             <img
               src="/books/img/nice-books-logo.png"
               alt="nice-books logo"
-              className="h-[22px] xl:h-[28px] w-auto" // breakpoint for xl:h-[28px] 1200px
+              className="h-[22px] xl:h-[28px] w-auto"
             />
           </Link>
 
-          <nav
-            className="hidden sm:flex items-center justify-center h-full gap-8 xl:gap-16" // breakpoint for xl:gap-16 1200px
-          >
+          <nav className="hidden sm:flex items-center justify-center h-full gap-8 xl:gap-16">
             <NavLink to="/" className={navLinkClass}>
               Home
             </NavLink>
@@ -72,15 +70,7 @@ export const Header = () => {
         <div className="hidden xl:flex gap-4 pl-2">
           <SearchBar />
 
-          <DropdownSelect
-            options={[
-              { label: 'Books', value: 'books' },
-              { label: 'Audio Books', value: 'audio' },
-              { label: 'E-books', value: 'ebooks' },
-            ]}
-            placeholder="Choose category"
-            className="w-full sm:w-[176px]"
-          />
+          <CategoryDropdown />
         </div>
 
         <div className="flex h-full">
