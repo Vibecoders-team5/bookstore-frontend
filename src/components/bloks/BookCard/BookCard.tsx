@@ -45,10 +45,10 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
         <div className="flex flex-col">
           {book.priceDiscount ?
             <div className="flex items-center gap-2">
-              <h3 className="h3">{`₴${book.priceDiscount}`}</h3>
-              <h4 className="h4 line-through text-gray-400">{`₴${book.priceRegular}`}</h4>
+              <h3 className="h3">{`$${book.priceDiscount}`}</h3>
+              <h4 className="h4 line-through text-gray-400">{`$${book.priceRegular}`}</h4>
             </div>
-          : <h3 className="h3">{`₴${book.priceRegular}`}</h3>}
+          : <h3 className="h3">{`$${book.priceRegular}`}</h3>}
           <div className="inline-flex gap-1.5">
             <Truck className="text-green-600 w-[22px] h-[22px]" />
             <p className="btn-text text-green-600">In stock</p>

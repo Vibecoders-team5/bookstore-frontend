@@ -117,6 +117,7 @@ html,
 body {
   font-family: 'Manrope', sans-serif;
   background-color: white;
+  overscroll-behavior: none;
   /* background-color: #FAFBFC */
 }
 
