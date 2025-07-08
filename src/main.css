@@ -1,11 +1,10 @@
-/* @config '../tailwind.config.js' */
 @import 'tailwindcss/preflight';
 @tailwind utilities;
 
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -80,7 +79,7 @@
   --sidebar-ring: 147 197 253;
 }
 
-.dark {
+/* .dark {
   --background: 39 39 42;
   --foreground: 248 250 252;
   --card: 39 39 42;
@@ -112,11 +111,12 @@
   --sidebar-accent-foreground: 248 250 252;
   --sidebar-border: 39 39 42;
   --sidebar-ring: 113 113 122;
-}
+} */
 
 html,
 body {
   font-family: 'Manrope', sans-serif;
+  background-color: white;
   /* background-color: #FAFBFC */
 }
 
@@ -204,3 +204,5 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@config '../tailwind.config.js';

@@ -7,9 +7,16 @@ type BookListProps = {
 
 export const BookList: React.FC<BookListProps> = ({ books }) => {
   return (
-    <div className="flex">
+    <div
+      className="grid gap-4 justify-center"
+      style={{
+        gridTemplateColumns: 'repeat(24, 32px)',
+      }}
+    >
       {books.map((book) => (
-        <BookCard key={book.id} book={book} />
+        <div key={book.id} className="col-span-6">
+          <BookCard book={book} />
+        </div>
       ))}
     </div>
   );

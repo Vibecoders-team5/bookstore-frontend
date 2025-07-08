@@ -5,7 +5,7 @@ function wait(delay: number) {
 }
 
 function request<T>(url: string): Promise<T> {
-  return wait(100)
+  return wait(500)
     .then(() => fetch(url))
     .then((res) => {
       if (!res.ok) {
