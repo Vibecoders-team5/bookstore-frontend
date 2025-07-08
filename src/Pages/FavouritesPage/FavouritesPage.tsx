@@ -1,14 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { PaginationButton } from '../../components/ui/Buttons/PaginationButton';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { HeartButton } from '../../components/ui/Buttons/HeartButton';
 
 export const FavouritesPage = () => {
   return (
     <>
       <h1>FAVOURITES PAGE</h1>
-      <div className="inline-flex items-center justify-center gap-4">
-        <Button variant="paginationArrow" disabled>
+      <div className="h-8 inline-flex items-center justify-center gap-4">
+        <Button variant="paginationArrow" size="s32" disabled>
           <ChevronLeft />
         </Button>
         <div className="inline-flex items-center justify-center gap-2">
@@ -19,9 +18,6 @@ export const FavouritesPage = () => {
         <Button variant="paginationArrow">
           <ChevronRight />
         </Button>
-      </div>
-      <div>
-        <HeartButton />
       </div>
     </>
   );

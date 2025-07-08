@@ -11,7 +11,10 @@ export const PaginationButton: React.FC<PaginationButtonProps> = ({ num }) => {
   return (
     <Button
       variant="default"
-      className={cn({ 'bg-[#313237] text-white border-[#313237]': isSelected })}
+      size="s32"
+      className={cn({
+        'bg-[#313237] text-white border-[#313237]': isSelected,
+      })}
       onClick={() => setIsSelected(!isSelected)}
     >
       {num}

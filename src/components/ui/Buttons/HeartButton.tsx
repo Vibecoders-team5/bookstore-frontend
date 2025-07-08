@@ -7,7 +7,11 @@ export const HeartButton = () => {
   const [isSelected, setIsSelected] = useState(false);
 
   return (
-    <Button variant="defaultHeart" onClick={() => setIsSelected(!isSelected)}>
+    <Button
+      variant="defaultHeart"
+      size="s40"
+      onClick={() => setIsSelected(!isSelected)}
+    >
       <Heart
         className={cn('h-full', {
           'text-red-500 fill-red-500': isSelected,

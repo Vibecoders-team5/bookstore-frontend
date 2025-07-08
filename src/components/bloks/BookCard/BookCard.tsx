@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import { Truck } from 'lucide-react';
 import { AddButton } from '@/components/ui/Buttons/AddButton';
 import { HeartButton } from '@/components/ui/Buttons/HeartButton';
+import { HeadphonesRound } from '@/components/ui/Icons/HeadphonesRound';
 
 export const BookCard = () => {
   return (
-    <div className="w-[272px] h-[506px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-sm">
+    <div className="w-[272px] h-[506px] relative flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-sm">
+      <HeadphonesRound />
       <Link to="/">
         <img src="/images/5thDiscipline.png" alt="5th discipline" />
       </Link>
