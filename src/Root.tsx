@@ -20,6 +20,7 @@ export const Root = () => (
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />} />
         <Route path="home" element={<Navigate to="/" replace />} />
+
         <Route path="paper">
           <Route index element={<PaperPage />} />
         </Route>
@@ -35,6 +36,9 @@ export const Root = () => (
         <Route path="cart">
           <Route index element={<CartPage />} />
         </Route>
+
+        <Route path="contacts" element={<CartPage />} />
+        <Route path="rights" element={<CartPage />} />
         <Route path="*" element={<h1>Page not found</h1>} />
       </Route>
     </Routes>
