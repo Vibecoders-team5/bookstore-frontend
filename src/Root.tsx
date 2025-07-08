@@ -13,6 +13,7 @@ import {
   KindlePage,
   PaperPage,
 } from './Pages';
+import { BookPage } from './Pages/BookPage/BookPage';
 
 export const Root = () => (
   <Router>
@@ -21,18 +22,25 @@ export const Root = () => (
         <Route index element={<HomePage />} />
         <Route path="home" element={<Navigate to="/" replace />} />
 
-        <Route path="paper">
+        <Route path="paperback">
           <Route index element={<PaperPage />} />
+          <Route path=":bookSlug?" element={<BookPage />} />
         </Route>
+
         <Route path="kindle">
           <Route index element={<KindlePage />} />
+          <Route path=":bookSlug?" element={<BookPage />} />
         </Route>
+
         <Route path="audiobook">
           <Route index element={<AudiobookPage />} />
+          <Route path=":bookSlug?" element={<BookPage />} />
         </Route>
+
         <Route path="favourites">
           <Route index element={<FavouritesPage />} />
         </Route>
+
         <Route path="cart">
           <Route index element={<CartPage />} />
         </Route>

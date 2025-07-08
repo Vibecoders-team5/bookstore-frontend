@@ -55,7 +55,7 @@ export const Header = () => {
             <NavLink to="/" className={navLinkClass}>
               Home
             </NavLink>
-            <NavLink to="/paper" className={navLinkClass}>
+            <NavLink to="/paperback" className={navLinkClass}>
               Paper
             </NavLink>
             <NavLink to="/kindle" className={navLinkClass}>
