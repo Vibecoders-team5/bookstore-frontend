@@ -6,22 +6,12 @@ import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 
-// interface BookGalleryProps {
-//   images: string[];
-// }
-// { images }: BookGalleryProps
+interface BookGalleryProps {
+  images: string[];
+}
 
-export function BookGallery() {
+export function BookGallery({ images }: BookGalleryProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
-
-  const images = [
-    '/books/img/paperback/chip-war/uk/00.webp',
-    '/books/img/paperback/chip-war/uk/01.webp',
-    '/books/img/paperback/chip-war/uk/02.webp',
-    '/books/img/paperback/chip-war/uk/03.webp',
-    '/books/img/paperback/chip-war/uk/04.webp',
-    '/books/img/paperback/chip-war/uk/05.webp',
-  ];
 
   return (
     <div className="flex gap-8 w-fit">
@@ -30,8 +20,8 @@ export function BookGallery() {
         direction="vertical"
         slidesPerView={6}
         spaceBetween={8}
-        freeMode={true}
-        watchSlidesProgress={true}
+        freeMode
+        watchSlidesProgress
         modules={[Thumbs, FreeMode]}
         className="w-[80px] h-[520px]"
       >
