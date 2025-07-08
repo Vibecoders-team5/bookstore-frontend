@@ -3,38 +3,48 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-import ConstitutionDay from 'public/books/img/testbanner1.png';
-import Constitution from 'public/books/img/testbanner22.png';
+import ConstitutionDayDesktop from 'public/books/img/testbanner1.png';
+import ConstitutionDayTablet from 'public/books/img/testbannerTablet1.png';
 
-const SLIDE_WIDTH = 1040;
-const WRAPPER_WIDTH = 1136;
-const SLIDE_HEIGHT = 400;
-const WRAPPER_HEIGHT = 432;
-const TRANSITION_DURATION = 0.7;
+import ConstitutionDesktop from 'public/books/img/testbanner22.png';
+import ConstitutionTablet from 'public/books/img/testbannerTablet2.png';
 
-const images = [ConstitutionDay, Constitution];
+const images = [
+  {
+    desktop: ConstitutionDayDesktop,
+    tablet: ConstitutionDayTablet,
+  },
+  {
+    desktop: ConstitutionDesktop,
+    tablet: ConstitutionTablet,
+  },
+];
 
 const SlideImage = ({
-  src,
+  srcDesktop,
+  srcTablet,
   zIndex,
   opacityFrom,
   opacityTo,
   keyProp,
 }: {
-  src: string;
+  srcDesktop: string;
+  srcTablet: string;
   zIndex: number;
   opacityFrom: number;
   opacityTo: number;
   keyProp: string;
 }) => (
-  <motion.img
+  <motion.picture
     key={keyProp}
-    src={src}
     initial={{ opacity: opacityFrom }}
     animate={{ opacity: opacityTo }}
-    transition={{ duration: TRANSITION_DURATION, ease: 'easeInOut' }}
-    className={`absolute top-0 left-0 w-full h-full object-cover z-${zIndex}`}
-  />
+    transition={{ duration: 0.7, ease: 'easeInOut' }}
+    className={`absolute top-0 left-0 w-full h-full z-${zIndex}`}
+  >
+    <source srcSet={srcTablet} media="(max-width: 1023px)" />
+    <img src={srcDesktop} alt="" className="w-full h-full object-cover" />
+  </motion.picture>
 );
 
 export default function BannerSlider() {
@@ -52,20 +62,13 @@ export default function BannerSlider() {
   const goToPrev = () => goTo(currentSlide - 1);
 
   useEffect(() => {
-    const timeout = setTimeout(
-      () => setPrevSlide(null),
-      TRANSITION_DURATION * 1000,
-    );
+    const timeout = setTimeout(() => setPrevSlide(null), 700);
     return () => clearTimeout(timeout);
   }, [currentSlide]);
 
   return (
-    <div
-      className={`flex flex-col items-center max-w-[${WRAPPER_WIDTH}px] w-full mx-auto`}
-    >
-      <div
-        className={`flex w-full h-[${WRAPPER_HEIGHT}px] items-center justify-between gap-2`}
-      >
+    <div className="flex flex-col items-center max-w-[1136px] w-full mx-auto">
+      <div className="flex w-full h-[432px] items-center justify-between gap-2">
         <Button
           variant="ghost"
           onClick={goToPrev}
@@ -74,13 +77,11 @@ export default function BannerSlider() {
           <ChevronLeft />
         </Button>
 
-        <div
-          className={`relative w-[${SLIDE_WIDTH}px] h-[${SLIDE_HEIGHT}px] overflow-hidden rounded-2xl`}
-          style={{ backgroundColor: 'black' }}
-        >
+        <div className="relative h-[336px] lg:h-[400px] overflow-hidden rounded-2xl bg-black w-[490px] lg:w-[1040px]">
           {prevSlide !== null && (
             <SlideImage
-              src={images[prevSlide]}
+              srcDesktop={images[prevSlide].desktop}
+              srcTablet={images[prevSlide].tablet}
               zIndex={10}
               opacityFrom={1}
               opacityTo={0}
@@ -89,7 +90,8 @@ export default function BannerSlider() {
           )}
 
           <SlideImage
-            src={images[currentSlide]}
+            srcDesktop={images[currentSlide].desktop}
+            srcTablet={images[currentSlide].tablet}
             zIndex={20}
             opacityFrom={0}
             opacityTo={1}
@@ -111,7 +113,7 @@ export default function BannerSlider() {
           <button
             key={index}
             onClick={() => goTo(index)}
-            className={`w-[14px] h-[4px] transition-colors duration-300 rounded-full ${
+            className={`w-[14px] h-[4px] transition-colors duration-300 ${
               index === currentSlide ? 'bg-[#313237]' : 'bg-[#E2E6E9]'
             }`}
             aria-label={`Go to slide ${index + 1}`}
