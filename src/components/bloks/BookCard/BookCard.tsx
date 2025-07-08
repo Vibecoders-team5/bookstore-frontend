@@ -4,12 +4,20 @@ import { AddButton } from '@/components/ui/Buttons/AddButton';
 import { HeartButton } from '@/components/ui/Buttons/HeartButton';
 import { HeadphonesRound } from '@/components/ui/Icons/HeadphonesRound';
 
-export const BookCard = () => {
+type BookCardProps = {
+  image?: string;
+  imgSize?: string;
+};
+
+export const BookCard = ({
+  image = '/images/5thDiscipline.png',
+  imgSize = '',
+}: BookCardProps) => {
   return (
     <div className="w-[272px] h-[506px] relative flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-sm">
       <HeadphonesRound />
       <Link to="/">
-        <img src="/images/5thDiscipline.png" alt="5th discipline" />
+        <img src={image} alt="5th discipline" className={imgSize} />
       </Link>
       <div className="flex flex-col gap-2">
         <div>

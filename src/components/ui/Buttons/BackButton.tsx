@@ -4,14 +4,12 @@ import { Button } from '@/components/ui/button';
 
 export function BackButton() {
   return (
-    <div>
-      <Button
-        variant="ghost"
-        size="sm"
-        className="inline-flex text-[#89939A] hover:text-[#313237]"
-      >
-        <ChevronLeft className="text-[#313237]" /> Back
-      </Button>
-    </div>
+    <Button
+      variant="ghost"
+      size="sm"
+      className="inline-flex text-[#89939A] hover:text-[#313237]"
+    >
+      <ChevronLeft className="text-[#313237]" /> Back
+    </Button>
   );
 }
