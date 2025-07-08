@@ -19,18 +19,22 @@ const buttonVariants = cva(
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
         addToCartNormal:
-          'w-[160px] h-[40px] rounded-[8px] bg-[#313237] text-white hover:shadow-[0_0_13px_0_#17203166]',
-        addToCartAdded:
-          'w-[160px] h-[40px] rounded-[8px] bg-white text-[#27AE60]',
+          'rounded-[8px] bg-[#313237] text-white hover:shadow-[0_0_13px_0_#17203166]',
+        addToCartAdded: 'rounded-[8px] bg-white text-[#27AE60]',
         default:
-          'w-8 h-8 rounded-lg border-gray-200 border hover:border-[#313237]',
+          'rounded-lg border-gray-200 border hover:border-[#313237] box-border',
+        defaultHeart:
+          'rounded-lg border-gray-200 border hover:border-[#313237]',
         paginationArrow: 'w-8 h-8 rounded-lg',
       },
       size: {
+        s32: 'size-8',
+        s40: 'size-10',
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
         sm: 'h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5',
         lg: 'h-10 rounded-md px-6 has-[>svg]:px-4',
         icon: 'size-9',
+        custom: '',
       },
     },
     defaultVariants: {

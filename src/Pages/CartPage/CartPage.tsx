@@ -1,1 +1,7 @@
-export const CartPage = () => <h1>CART PAGE</h1>;
+export const CartPage = () => {
+  return (
+    <>
+      <h1>CART PAGE</h1>
+    </>
+  );
+};

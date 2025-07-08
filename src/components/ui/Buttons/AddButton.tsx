@@ -19,6 +19,8 @@ export function AddButton() {
     >
       <Button
         variant={added ? 'addToCartAdded' : 'addToCartNormal'}
+        size="custom"
+        className="w-40 h-10"
         onClick={handleClick}
       >
         {added ? 'Added' : 'Add to cart'}
