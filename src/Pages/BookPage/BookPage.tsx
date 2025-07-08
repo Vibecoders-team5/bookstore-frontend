@@ -37,7 +37,7 @@ export const BookPage: React.FC = () => {
   const imageUrls = book.images.map((p) => `/books/${p}`);
 
   return (
-    <div className="mx-auto px-4 space-y-12">
+    <div className="py-[24px] space-y-[40px]">
       <div className="space-y-1">
         <BreadcrumbSection />
         <h1 className="text-[32px] font-bold leading-[44px] text-[#313237]">
@@ -45,19 +45,21 @@ export const BookPage: React.FC = () => {
         </h1>
         <p className="text-[#89939A] text-base font-medium">{book.author}</p>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-12 gap-16">
-        <div className="xl:col-span-5 flex justify-center">
+
+      <div className="flex flex-col xl:flex-row gap-12">
+        <div className="flex-1 flex">
           <BookGallery images={imageUrls} />
         </div>
-        <div className="xl:col-span-7">
+        <div className="w-[320px]">
           <BookDetails book={book} />
         </div>
       </div>
-      <div className="xl:col-span-12 grid grid-cols-1 xl:grid-cols-12 gap-8">
-        <div className="xl:col-span-7">
+
+      <div className="flex flex-col xl:flex-row gap-12">
+        <div className="flex-1">
           <BookAbout />
         </div>
-        <div className="xl:col-span-5">
+        <div className="w-[320px]">
           <BookCharacteristics />
         </div>
       </div>

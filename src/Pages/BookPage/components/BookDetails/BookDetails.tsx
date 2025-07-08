@@ -31,11 +31,11 @@ export function BookDetails({ book }: Props) {
       <div className="border-t border-[#89939A] pt-6">
         <div className="flex items-center gap-2 mb-4">
           <p className="text-[32px] font-bold">
-            ₴{book.priceDiscount || book.priceRegular}
+            ${book.priceDiscount || book.priceRegular}
           </p>
           {book.priceDiscount && (
             <p className="line-through text-[#89939A] text-[22px] font-medium">
-              ₴{book.priceRegular}
+              ${book.priceRegular}
             </p>
           )}
         </div>

@@ -41,11 +41,11 @@ export function BookGallery({ images }: BookGalleryProps) {
       <Swiper
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Thumbs]}
-        className="w-[480px] h-[520px] flex items-center justify-center"
+        className="w-[480px] h-[520px] flex items-center justify-center rounded-md"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-full flex items-center justify-center rounded-md">
               <img
                 src={src}
                 alt={`image ${index}`}
