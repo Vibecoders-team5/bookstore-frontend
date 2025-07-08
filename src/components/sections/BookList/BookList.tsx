@@ -8,10 +8,13 @@ type BookListProps = {
 export const BookList: React.FC<BookListProps> = ({ books }) => {
   return (
     <div
-      className="grid gap-4 justify-center"
-      style={{
-        gridTemplateColumns: 'repeat(24, 32px)',
-      }}
+      className="
+        grid
+        gap-4
+        justify-center
+        grid-cols-[repeat(12,32px)]
+        sm:grid-cols-[repeat(24,32px)]
+      "
     >
       {books.map((book) => (
         <div key={book.id} className="col-span-6">
