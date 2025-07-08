@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["vite/client"],
+    "types": ["vite/client", "./src/types/swiper"],
     "target": "ES2022",
     "jsx": "react-jsx",
     "useDefineForClassFields": true,
