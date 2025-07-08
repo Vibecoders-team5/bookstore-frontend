@@ -5,11 +5,11 @@ export const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="section flex-grow">
+      <main className="section flex-grow pt-12 xl:pt-16">
         <div className="container">
           <Outlet />
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );
