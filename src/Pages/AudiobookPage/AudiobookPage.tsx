@@ -4,18 +4,6 @@ export const AudiobookPage = () => {
   return (
     <>
       <h1 className="btn-text">AUDIOBOOK PAGE</h1>
-      <br />
-      <DropdownSelect
-        options={[
-          { label: 'Books', value: 'books' },
-          { label: 'Audio Books', value: 'audio' },
-          { label: 'E-books', value: 'ebooks' },
-        ]}
-        placeholder="Choose category"
-        className="w-full sm:w-[176px]"
-      />
-
-      <br />
 
       <DropdownSelect
         label="Sort by"
@@ -27,7 +15,6 @@ export const AudiobookPage = () => {
         defaultValue="newest"
         className="w-[136px] sm:w-[186px] xl:w-[176px]"
       />
-
       <br />
 
       <DropdownSelect
