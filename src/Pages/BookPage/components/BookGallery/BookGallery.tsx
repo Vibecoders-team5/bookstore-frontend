@@ -6,6 +6,11 @@ import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 
+// interface BookGalleryProps {
+//   images: string[];
+// }
+// { images }: BookGalleryProps
+
 export function BookGallery() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
@@ -15,6 +20,7 @@ export function BookGallery() {
     '/books/img/paperback/chip-war/uk/02.webp',
     '/books/img/paperback/chip-war/uk/03.webp',
     '/books/img/paperback/chip-war/uk/04.webp',
+    '/books/img/paperback/chip-war/uk/05.webp',
   ];
 
   return (
@@ -22,7 +28,7 @@ export function BookGallery() {
       <Swiper
         onSwiper={setThumbsSwiper}
         direction="vertical"
-        slidesPerView={5}
+        slidesPerView={6}
         spaceBetween={8}
         freeMode={true}
         watchSlidesProgress={true}
@@ -31,11 +37,11 @@ export function BookGallery() {
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="w-[80px] h-[80px] overflow-hidden rounded-lg border border-transparent hover:border-gray-300 transition-all">
+            <div className="w-[80px] h-[80px] flex items-center justify-center rounded-lg border border-[#E2E6E9] hover:border-[#313237] swiper-slide-thumb-active:border-[#313237] transition-all">
               <img
                 src={src}
                 alt={`thumb ${index}`}
-                className="rounded-md object-contain w-full h-[80px] cursor-pointer"
+                className="w-[64px] h-[64px] object-contain rounded-md cursor-pointer"
               />
             </div>
           </SwiperSlide>
@@ -45,15 +51,17 @@ export function BookGallery() {
       <Swiper
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Thumbs]}
-        className="w-[332px] h-[600px]"
+        className="w-[480px] h-[520px] flex items-center justify-center"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <img
-              src={src}
-              alt={`image ${index}`}
-              className="w-full h-full object-cover rounded-md"
-            />
+            <div className="w-full h-full flex items-center justify-center">
+              <img
+                src={src}
+                alt={`image ${index}`}
+                className="w-full h-full object-contain rounded-md"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
