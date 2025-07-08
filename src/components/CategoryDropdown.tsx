@@ -7,7 +7,7 @@ export const CategoryDropdown = () => {
   return (
     <DropdownSelect
       options={[
-        { label: 'Books', value: '/paper' },
+        { label: 'Books', value: '/paperback' },
         { label: 'Audio Books', value: '/audiobook' },
         { label: 'E-books', value: '/kindle' },
       ]}
