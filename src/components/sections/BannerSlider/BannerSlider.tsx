@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-import ConstitutionDayDesktop from 'public/books/img/testbanner1.png';
-import ConstitutionDayTablet from 'public/books/img/testbannerTablet1.png';
+const ConstitutionDayDesktop = 'books/img/testbanner1.png';
+const ConstitutionDayTablet = 'books/img/testbannerTablet1.png';
 
-import ConstitutionDesktop from 'public/books/img/testbanner22.png';
-import ConstitutionTablet from 'public/books/img/testbannerTablet2.png';
+const ConstitutionDesktop = 'books/img/testbanner22.png';
+const ConstitutionTablet = 'books/img/testbannerTablet2.png';
 
 const images = [
   {
