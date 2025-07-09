@@ -82,13 +82,13 @@ export const Header = () => {
           </button>
 
           <Link
-            to="/favorites-page"
+            to="/favourites"
             className={cn(baseIconClass, 'hidden sm:flex')}
           >
             <Heart size={16} />
           </Link>
 
-          <Link to="/cart-page" className={cn(baseIconClass, 'hidden sm:flex')}>
+          <Link to="/cart" className={cn(baseIconClass, 'hidden sm:flex')}>
             <div className="relative">
               <ShoppingBag size={16} />
               {totalCount > 0 && (
