@@ -4,7 +4,6 @@ import { Link, NavLink } from 'react-router-dom';
 import { SearchBar } from '@/components/ui/input';
 import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
-import { CategoryDropdown } from '@/components/CategoryDropdown';
 import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
 import { CategoryDropdown } from '@/components/bloks/CategoryDropdown';
