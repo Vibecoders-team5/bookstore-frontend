@@ -6,10 +6,13 @@ import { EmptyCart } from '@/Pages/CartPage/EmptyCart';
 import { Book } from '@/types/Book';
 import { useState } from 'react';
 import { CartSummary } from './CartSummary';
+// import { useBookStore } from '@/store/useBookStore';
 
 export type CartItem = Book & { quantity: number };
 
 export const CartPage = () => {
+  // const { removeFromCart, addToCart } = useBookStore();
+  // const cart = useBookStore(state => state.cart);
   const raw = JSON.parse(localStorage.getItem('cart') || '[]');
   const normalized = raw.map((book: CartItem) => ({
     ...book,
@@ -34,6 +37,7 @@ export const CartPage = () => {
     const updated = booksInCart.filter((book) => book.id !== id);
     setBooksInCart(updated);
     localStorage.setItem('cart', JSON.stringify(updated));
+    // removeFromCart(book);
   };
 
   const handleIncrement = (id: string) => {
@@ -44,6 +48,7 @@ export const CartPage = () => {
     );
     setBooksInCart(updated);
     localStorage.setItem('cart', JSON.stringify(updated));
+    // removeFromCart(book);
   };
 
   const handleDecrement = (id: string) => {
