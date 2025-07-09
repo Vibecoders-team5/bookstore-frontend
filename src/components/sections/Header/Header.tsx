@@ -7,15 +7,17 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
 import { CategoryDropdown } from '@/components/bloks/CategoryDropdown';
+import { useBookStore } from '@/store/useBookStore';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
 
-  //const totalCount = useCartStore((state) => state.totalCount); для керування відображення counter in cart icon
-  const totalCount = 12; // заглушка
-  //const totalFavorites = useCartStore((state) => state.totalCount); для керування відображення counter in cart icon
-  const totalFavorites = 6; // заглушка
+  const cart = useBookStore((state) => state.cart);
+  const favourites = useBookStore((state) => state.favourites);
+
+  const totalCount = cart.length;
+  const totalFavorites = favourites.length;
 
   const handleSearchToggle = () => {
     setIsSearchVisible((prev) => !prev);

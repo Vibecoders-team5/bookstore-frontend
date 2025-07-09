@@ -9,25 +9,33 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { toggleItemInStorage } from '@/utils/toggleItemInStorage';
+import { useBookStore } from '@/store/useBookStore';
 
 type BookCardProps = {
   book: Book;
 };
 
 export const BookCard: React.FC<BookCardProps> = ({ book }) => {
-  const handleAddToCart = () => toggleItemInStorage('cart', book);
-  const handleAddToFavourites = () => toggleItemInStorage('favourites', book);
+  const { addToCart, removeFromCart, addToFavourites, removeFromFavourites } =
+    useBookStore();
 
-  const cart: Book[] = JSON.parse(localStorage.getItem('cart') || '[]');
-  const favourites: Book[] = JSON.parse(
-    localStorage.getItem('favourites') || '[]',
-  );
+  const cart = useBookStore((state) => state.cart);
+  const favourites = useBookStore((state) => state.favourites);
 
   const someCallback = (item: Book) => item.id === book.id;
 
   const isBookInCart = cart.some(someCallback);
   const isBookInFavourites = favourites.some(someCallback);
+
+  const toggleAddToCart = () => {
+    return isBookInCart ? removeFromCart(book) : addToCart(book);
+  };
+
+  const toggleAddToFavourites = () => {
+    return isBookInFavourites ?
+        removeFromFavourites(book)
+      : addToFavourites(book);
+  };
 
   return (
     <div className="w-[272px] h-[506px] relative flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-sm bg-white">
@@ -69,9 +77,9 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
         </div>
       </div>
       <div className="inline-flex gap-2">
-        <AddButton onClick={handleAddToCart} isSelected={isBookInCart} />
+        <AddButton onClick={toggleAddToCart} isSelected={isBookInCart} />
         <HeartButton
-          onClick={handleAddToFavourites}
+          onClick={toggleAddToFavourites}
           isSelected={isBookInFavourites}
         />
       </div>
