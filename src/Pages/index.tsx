@@ -4,3 +4,7 @@ export * from './KindlePage/KindlePage';
 export * from './AudiobookPage/AudiobookPage';
 export * from './FavouritesPage/FavouritesPage';
 export * from './CartPage/CartPage';
+export * from './ContactsPage/ContactsPage';
+export * from './RightsPage/RightsPage';
+export * from './BookPage/BookPage';
+export * from './NotFoundPage/NotFoundPage';

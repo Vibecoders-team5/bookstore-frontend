@@ -1,32 +1,24 @@
-import { DropdownSelect } from '@/components/ui/DropdownSelect';
+import { CatalogTemplate } from '@/components/sections/CatalogTemplate/CatalogTemplate';
+import { getPaperBooks } from '@/services/booksAPI';
+import { Book } from '@/types/Book';
+import { useEffect, useState } from 'react';
 
 export const AudiobookPage = () => {
+  const [paperBooks, setPaperBooks] = useState<Book[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    getPaperBooks()
+      .then((books) => setPaperBooks(books))
+      .finally(() => setIsLoading(false));
+  }, []);
+
   return (
-    <>
-      <h1 className="btn-text">AUDIOBOOK PAGE</h1>
-
-      <DropdownSelect
-        label="Sort by"
-        options={[
-          { label: 'Newest', value: 'newest' },
-          { label: 'Price: Low to High', value: 'low-high' },
-          { label: 'Price: High to Low', value: 'high-low' },
-        ]}
-        defaultValue="newest"
-        className="w-[136px] sm:w-[186px] xl:w-[176px]"
-      />
-      <br />
-
-      <DropdownSelect
-        label="Items per page"
-        options={[
-          { label: '16', value: '16' },
-          { label: '24', value: '24' },
-          { label: '48', value: '48' },
-        ]}
-        defaultValue="16"
-        className="w-[136px] xl:w-[128px]"
-      />
-    </>
+    <CatalogTemplate
+      books={paperBooks}
+      isLoading={isLoading}
+      title={'Audiobooks'}
+    />
   );
 };

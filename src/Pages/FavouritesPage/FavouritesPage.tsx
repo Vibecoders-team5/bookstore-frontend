@@ -1,5 +1,6 @@
 import { BookList } from '@/components/sections/BookList/BookList';
 import { BackButton } from '@/components/ui/Buttons/BackButton';
+import { HeartButton } from '@/components/ui/Buttons/HeartButton';
 import { useBookStore } from '@/store/useBookStore';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,7 +17,15 @@ export const FavouritesPage = () => {
           <h1 className="h1">Favourites</h1>
           <p>{`${favourites.length} items`}</p>
         </div>
-        <BookList books={favourites} />
+        {favourites.length ?
+          <BookList books={favourites} />
+        : <h3 className="h3">
+            <span className="inline-flex items-center gap-1">
+              Nothing in favourites yet 😢. Cammon push that{' '}
+              <HeartButton onClick={() => navigate(-1)} /> button.
+            </span>
+          </h3>
+        }
       </div>
     </div>
   );
