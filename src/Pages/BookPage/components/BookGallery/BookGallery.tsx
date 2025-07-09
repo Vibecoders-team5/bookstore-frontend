@@ -6,22 +6,12 @@ import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 
-// interface BookGalleryProps {
-//   images: string[];
-// }
-// { images }: BookGalleryProps
+interface BookGalleryProps {
+  images: string[];
+}
 
-export function BookGallery() {
+export function BookGallery({ images }: BookGalleryProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
-
-  const images = [
-    '/books/img/paperback/chip-war/uk/00.webp',
-    '/books/img/paperback/chip-war/uk/01.webp',
-    '/books/img/paperback/chip-war/uk/02.webp',
-    '/books/img/paperback/chip-war/uk/03.webp',
-    '/books/img/paperback/chip-war/uk/04.webp',
-    '/books/img/paperback/chip-war/uk/05.webp',
-  ];
 
   return (
     <div className="flex gap-8 w-fit">
@@ -30,8 +20,8 @@ export function BookGallery() {
         direction="vertical"
         slidesPerView={6}
         spaceBetween={8}
-        freeMode={true}
-        watchSlidesProgress={true}
+        freeMode
+        watchSlidesProgress
         modules={[Thumbs, FreeMode]}
         className="w-[80px] h-[520px]"
       >
@@ -51,15 +41,15 @@ export function BookGallery() {
       <Swiper
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Thumbs]}
-        className="w-[480px] h-[520px] flex items-center justify-center"
+        className="w-[480px] h-[520px]"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-full flex items-center justify-center rounded-md overflow-hidden">
               <img
                 src={src}
                 alt={`image ${index}`}
-                className="w-full h-full object-contain rounded-md"
+                className="w-full h-full object-contain"
               />
             </div>
           </SwiperSlide>
