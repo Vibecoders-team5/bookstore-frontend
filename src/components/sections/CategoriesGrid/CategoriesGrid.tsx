@@ -25,7 +25,7 @@ const categories = [
 
 export const CategoriesGrid = () => {
   return (
-    <div className="w-[1136px] mx-auto mt-[80px]">
+    <div className="w-[1136px] mx-auto mt-12">
       <h1 className="font-bold text-[2rem] text-[#313237] mb-[23px]">
         Shop by category
       </h1>

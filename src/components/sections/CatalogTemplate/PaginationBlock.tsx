@@ -59,7 +59,7 @@ export const PaginationBlock: React.FC<PaginationBlockProps> = ({
   const visibleButtons = buttons.slice(startPage - 1, endPage);
 
   return (
-    <div className="h-8 inline-flex items-center justify-center gap-4">
+    <div className="h-8 inline-flex items-center justify-center gap-4 pb-16">
       <Button
         variant="paginationArrow"
         size="s32"
