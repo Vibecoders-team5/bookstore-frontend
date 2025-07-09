@@ -32,7 +32,7 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
 
   return (
     <Carousel className="max-w-[1136px] mx-auto mt-[80px]">
-      <div className="flex items-center justify-between px-4 mb-[23px]">
+      <div className="flex items-center justify-between mb-[23px]">
         <h1 className="font-bold text-[2rem] text-[#313237]">{title}</h1>
         <div className="flex space-x-2">
           <CarouselPrevious />
