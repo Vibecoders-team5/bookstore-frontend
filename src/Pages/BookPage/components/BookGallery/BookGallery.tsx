@@ -14,20 +14,40 @@ export function BookGallery({ images }: BookGalleryProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
-    <div className="flex gap-8 w-fit">
+    <div className="flex flex-col-reverse sm:flex-row gap-2 sm:gap-4 items-center">
+      {/* додам w-fit або не додам бо тоді не працює*/}
+
       <Swiper
         onSwiper={setThumbsSwiper}
-        direction="vertical"
-        slidesPerView={6}
-        spaceBetween={8}
+        modules={[Thumbs, FreeMode]}
         freeMode
         watchSlidesProgress
-        modules={[Thumbs, FreeMode]}
-        className="w-[80px] h-[520px]"
+        breakpoints={{
+          0: {
+            direction: 'horizontal',
+            slidesPerView: 4,
+            spaceBetween: 8,
+          },
+          640: {
+            direction: 'vertical',
+            slidesPerView: 6,
+            spaceBetween: 8,
+          },
+        }}
+        className="
+          w-full max-w-[320px] h-[80px]
+          sm:w-[80px] sm:h-[520px]
+          "
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="w-[80px] h-[80px] flex items-center justify-center rounded-lg border border-[#E2E6E9] hover:border-[#313237] swiper-slide-thumb-active:border-[#313237] transition-all">
+            <div
+              className="
+              w-[80px] h-[80px] flex items-center justify-center rounded-lg
+              border border-[#E2E6E9] hover:border-[#313237]
+              swiper-slide-thumb-active:border-[#313237] transition-all
+            "
+            >
               <img
                 src={src}
                 alt={`thumb ${index}`}
@@ -41,7 +61,7 @@ export function BookGallery({ images }: BookGalleryProps) {
       <Swiper
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Thumbs]}
-        className="w-[480px] h-[520px]"
+        className="h-[520px] sm:w-[480px] sm:h-[520px] w-full max-w-[480px]"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>

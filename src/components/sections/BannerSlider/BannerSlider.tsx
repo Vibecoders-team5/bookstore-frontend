@@ -9,7 +9,6 @@ import ConstitutionDayTablet from '/books/img/testbannerTablet1.png';
 import ConstitutionDesktop from '/books/img/testbanner22.png';
 import ConstitutionTablet from '/books/img/testbannerTablet2.png';
 
-
 const images = [
   {
     desktop: ConstitutionDayDesktop,
