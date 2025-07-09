@@ -12,10 +12,11 @@ import {
   HomePage,
   KindlePage,
   PaperPage,
+  BookPage,
+  ContactsPage,
+  RightsPage,
+  NotFoundPage,
 } from './Pages';
-import { BookPage } from './Pages/BookPage/BookPage';
-import { ContactsPage } from './Pages/ContactsPage/ContactsPage';
-import { RightsPage } from './Pages/RightsPage/RightsPage';
 
 export const Root = () => (
   <Router>
@@ -49,7 +50,7 @@ export const Root = () => (
 
         <Route path="contacts" element={<ContactsPage />} />
         <Route path="rights" element={<RightsPage />} />
-        <Route path="*" element={<h1>Page not found</h1>} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   </Router>

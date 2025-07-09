@@ -3,7 +3,7 @@ import { getPaperBooks } from '@/services/booksAPI';
 import { Book } from '@/types/Book';
 import { useEffect, useState } from 'react';
 
-export const AudioCatalog = () => {
+export const AudiobookPage = () => {
   const [paperBooks, setPaperBooks] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
