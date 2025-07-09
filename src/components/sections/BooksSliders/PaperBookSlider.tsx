@@ -40,9 +40,12 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
         </div>
       </div>
 
-      <CarouselContent className="-ml-4">
+      <CarouselContent className="flex -ml-4">
         {books.slice(0, 10).map((book) => (
-          <CarouselItem key={book.slug} className="pl-4 basis-[25%]">
+          <CarouselItem
+            key={book.slug}
+            className="pl-4 basis-full md:basis-1/3 lg:basis-1/4"
+          >
             <BookCard book={book} />
           </CarouselItem>
         ))}
