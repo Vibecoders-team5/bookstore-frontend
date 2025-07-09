@@ -11,9 +11,11 @@ export const BookAbout = ({ book }: Props) => {
         About
       </h2>
 
-      <div className="border-t border-custom-border pt-4 flex flex-col gap-4 text-[14px] leading-[21px] text-custom-textPrimary">
+      <div className="border-t border-[#E2E6E9] pt-4 flex flex-col gap-4 text-[14px] leading-[21px] text-custom-textPrimary">
         {book.description.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
+          <p key={index} className={index === 0 ? 'font-bold' : ''}>
+            {paragraph}
+          </p>
         ))}
       </div>
     </section>

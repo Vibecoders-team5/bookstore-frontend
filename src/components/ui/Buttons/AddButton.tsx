@@ -12,6 +12,7 @@ type AddButtonProps = {
     | 's40'
     | 'icon'
     | 'customAddButton'
+    | 'bookPageAddButton'
     | null
     | undefined;
 };
