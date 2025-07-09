@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { DropdownSelect } from './ui/DropdownSelect';
+import { DropdownSelect } from '../ui/DropdownSelect';
 
 export const CategoryDropdown = () => {
   const navigate = useNavigate();

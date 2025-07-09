@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { SearchBar } from '@/components/ui/input';
 import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
-import { CategoryDropdown } from '@/components/CategoryDropdown';
+import { CategoryDropdown } from '@/components/bloks/CategoryDropdown';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
