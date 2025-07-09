@@ -1,5 +1,4 @@
 import { createRoot } from 'react-dom/client';
-import 'bulma/css/bulma.css';
 import './main.css';
 import { Root } from './Root';
 
