@@ -9,13 +9,26 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { toggleItemInStorage } from '@/utils/toggleItemInStorage';
 
 type BookCardProps = {
   book: Book;
 };
 
 export const BookCard: React.FC<BookCardProps> = ({ book }) => {
-  console.log(book.images);
+  const handleAddToCart = () => toggleItemInStorage('cart', book);
+  const handleAddToFavourites = () => toggleItemInStorage('favourites', book);
+
+  const cart: Book[] = JSON.parse(localStorage.getItem('cart') || '[]');
+  const favourites: Book[] = JSON.parse(
+    localStorage.getItem('favourites') || '[]',
+  );
+
+  const someCallback = (item: Book) => item.id === book.id;
+
+  const isBookInCart = cart.some(someCallback);
+  const isBookInFavourites = favourites.some(someCallback);
+
   return (
     <div className="w-[272px] h-[506px] relative flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-sm bg-white">
       <HeadphonesRound />
@@ -56,8 +69,11 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
         </div>
       </div>
       <div className="inline-flex gap-2">
-        <AddButton />
-        <HeartButton />
+        <AddButton onClick={handleAddToCart} isSelected={isBookInCart} />
+        <HeartButton
+          onClick={handleAddToFavourites}
+          isSelected={isBookInFavourites}
+        />
       </div>
     </div>
   );

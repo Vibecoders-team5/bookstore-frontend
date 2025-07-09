@@ -1,20 +1,29 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
-export function AddButton() {
-  const [added, setAdded] = useState(false);
+type AddButtonProps = {
+  onClick?: () => void;
+  isSelected?: boolean;
+};
+
+export const AddButton: React.FC<AddButtonProps> = ({
+  onClick = () => {},
+  isSelected = false,
+}) => {
+  const [isButtonSelected, setIsButtonSelected] = useState(isSelected);
 
   const handleClick = () => {
-    setAdded((prev) => !prev);
+    setIsButtonSelected((prev) => !prev);
+    onClick();
   };
 
   return (
     <Button
-      variant={added ? 'addToCartAdded' : 'addToCartNormal'}
+      variant={isButtonSelected ? 'addToCartAdded' : 'addToCartNormal'}
       size="customAddButton"
       onClick={handleClick}
     >
-      {added ? 'Added' : 'Add to cart'}
+      {isButtonSelected ? 'Added' : 'Add to cart'}
     </Button>
   );
-}
+};
