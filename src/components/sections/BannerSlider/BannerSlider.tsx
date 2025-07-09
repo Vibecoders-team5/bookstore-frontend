@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -51,15 +51,29 @@ export default function BannerSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState<number | null>(null);
 
-  const goTo = (index: number) => {
-    if (index !== currentSlide) {
-      setPrevSlide(currentSlide);
-      setCurrentSlide((index + images.length) % images.length);
-    }
-  };
+  const goTo = useCallback(
+    (index: number) => {
+      if (index !== currentSlide) {
+        setPrevSlide(currentSlide);
+        setCurrentSlide((index + images.length) % images.length);
+      }
+    },
+    [currentSlide],
+  );
 
-  const goToNext = () => goTo(currentSlide + 1);
+  const goToNext = useCallback(() => {
+    goTo(currentSlide + 1);
+  }, [goTo, currentSlide]);
+
   const goToPrev = () => goTo(currentSlide - 1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNext();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [goToNext]);
 
   useEffect(() => {
     const timeout = setTimeout(() => setPrevSlide(null), 700);
@@ -67,17 +81,20 @@ export default function BannerSlider() {
   }, [currentSlide]);
 
   return (
-    <div className="flex flex-col items-center max-w-[1136px] w-full mx-auto">
+    <div className="flex mt-[32px] flex-col items-center max-w-[1136px] w-full mx-auto">
       <div className="flex w-full h-[432px] items-center justify-between gap-2">
         <Button
           variant="ghost"
           onClick={goToPrev}
-          className="z-30 w-12 h-12 bg-white p-2 flex items-center justify-center"
+          className="z-30 w-12 h-[320px] bg-white p-2 flex items-center justify-center"
         >
           <ChevronLeft />
         </Button>
 
-        <div className="relative h-[336px] lg:h-[400px] overflow-hidden rounded-2xl bg-black w-[490px] lg:w-[1040px]">
+        <a
+          href="#/paperback"
+          className="relative h-[336px] lg:h-[400px] overflow-hidden rounded-2xl bg-black w-[490px] lg:w-[1040px]"
+        >
           {prevSlide !== null && (
             <SlideImage
               srcDesktop={images[prevSlide].desktop}
@@ -97,27 +114,31 @@ export default function BannerSlider() {
             opacityTo={1}
             keyProp={`current-${currentSlide}`}
           />
-        </div>
+        </a>
 
         <Button
           variant="ghost"
           onClick={goToNext}
-          className="z-30 w-12 h-12 bg-white p-2 flex items-center justify-center"
+          className="z-30 w-12 h-[320px] bg-white p-2 flex items-center justify-center"
         >
           <ChevronRight />
         </Button>
       </div>
 
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-2 -mt-[15px]">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goTo(index)}
-            className={`w-[14px] h-[4px] transition-colors duration-300 ${
-              index === currentSlide ? 'bg-[#313237]' : 'bg-[#E2E6E9]'
-            }`}
+            className={`w-5 h-5 flex items-center justify-center transition-colors duration-300 group`}
             aria-label={`Go to slide ${index + 1}`}
-          />
+          >
+            <span
+              className={`w-[14px] h-[4px] ${
+                index === currentSlide ? 'bg-[#313237]' : 'bg-[#E2E6E9]'
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>

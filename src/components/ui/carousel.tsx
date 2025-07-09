@@ -129,11 +129,6 @@ function Carousel({
         data-slot="carousel"
         {...props}
       >
-        <div className="flex justify-end space-x-2 mb-2 px-4">
-          <CarouselPrevious />
-          <CarouselNext />
-        </div>
-
         {children}
       </div>
     </CarouselContext.Provider>
