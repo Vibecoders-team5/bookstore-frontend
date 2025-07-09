@@ -1,6 +1,6 @@
-import Banner1 from 'public/books/img/category-paperback.webp';
-import Banner2 from 'public/books/img/category-audiobook.webp';
-import Banner3 from 'public/books/img/category-kindle.webp';
+const Banner1 = 'books/img/category-paperback.webp';
+const Banner2 = 'books/img/category-audiobook.webp';
+const Banner3 = 'books/img/category-kindle.webp';
 
 const categories = [
   {
