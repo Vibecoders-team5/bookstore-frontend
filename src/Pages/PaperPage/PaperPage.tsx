@@ -41,7 +41,7 @@ export function PaperPage() {
 
   return (
     <div className="w-full flex justify-center pt-16">
-      <div className="w-full max-w-[1136px] min-w-0">
+      <div className="w-full max-w-284 min-w-0">
         <div className="flex flex-col gap-2 mb-10">
           <h1 className="h1">Paper Books</h1>
           <p className="body-text">{`${booksLength} books`}</p>
