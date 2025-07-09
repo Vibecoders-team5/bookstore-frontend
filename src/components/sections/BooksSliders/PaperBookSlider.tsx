@@ -42,13 +42,8 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
 
       <CarouselContent className="-ml-4">
         {books.slice(0, 10).map((book) => (
-          <CarouselItem
-            key={book.slug}
-            className="pl-4 basis-[25%] w-[272px] h-[506px]"
-          >
-            <div className="overflow-hidden">
-              <BookCard book={book} />
-            </div>
+          <CarouselItem key={book.slug} className="pl-4 basis-[25%]">
+            <BookCard book={book} />
           </CarouselItem>
         ))}
       </CarouselContent>
