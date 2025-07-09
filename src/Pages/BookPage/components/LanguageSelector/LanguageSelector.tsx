@@ -16,6 +16,10 @@ export const LanguageSelector = ({ book }: Props) => {
   const [selected, setSelected] = useState(book.lang);
   const [isLoading, setIsLoading] = useState(false);
 
+  //   useEffect(() => {
+  //   setSelected(book.lang);
+  // }, [book.lang]);
+
   const handleChange = async (langCode: string) => {
     if (selected === langCode) return;
 

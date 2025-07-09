@@ -9,6 +9,7 @@ import { BookDetails } from '../BookPage/components/BookDetails/BookDetails';
 import { BookGallery } from '../BookPage/components/BookGallery/BookGallery';
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { BreadcrumbSection } from './components/BreadcrumbSection/BreadcrumbSection';
+import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 
 export const BookPage: React.FC = () => {
   const { bookSlug } = useParams<{ bookSlug: string }>();
@@ -39,7 +40,13 @@ export const BookPage: React.FC = () => {
   return (
     <div className="flex flex-col py-[24px]">
       <div className="mb-[24px]">
-        <BreadcrumbSection />
+        <BreadcrumbSection
+          type={type}
+          category={
+            Array.isArray(book.category) ? book.category[0] : book.category
+          }
+          bookName={book.name}
+        />
       </div>
       <div className="mb-10">
         <h1 className="text-[32px] font-bold leading-[41px] text-[#313237]">
@@ -60,8 +67,11 @@ export const BookPage: React.FC = () => {
         </div>
       </div>
 
-      <BookAbout />
-      <BookCharacteristics />
+      <div className="flex mt-16 gap-[80px] items-start">
+        <BookAbout book={book} />
+        <BookCharacteristics book={book} />
+      </div>
+      <PaperBookSlider />
     </div>
   );
 };
