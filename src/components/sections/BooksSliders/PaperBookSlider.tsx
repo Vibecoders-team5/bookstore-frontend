@@ -7,9 +7,15 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from '@/components/ui/carousel';
 
-export function PaperBookSlider() {
+type PaperBookSliderProps = {
+  title?: string;
+};
+
+export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
   const [books, setBooks] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -25,19 +31,22 @@ export function PaperBookSlider() {
   }
 
   return (
-    <Carousel className="max-w-[1136px] mx-auto">
+    <Carousel className="max-w-[1136px] mx-auto mt-[80px]">
+      <div className="flex items-center justify-between mb-[23px]">
+        <h1 className="font-bold text-[2rem] text-[#313237]">{title}</h1>
+        <div className="flex space-x-2">
+          <CarouselPrevious />
+          <CarouselNext />
+        </div>
+      </div>
+
       <CarouselContent className="-ml-4">
         {books.slice(0, 10).map((book) => (
-          <CarouselItem
-            key={book.slug}
-            className="pl-4 basis-[25%] w-[272px] h-[506px]"
-          >
-            <div className="overflow-hidden">
-              <BookCard book={book} />
-            </div>
+          <CarouselItem key={book.slug} className="pl-4 basis-[25%]">
+            <BookCard book={book} />
           </CarouselItem>
         ))}
       </CarouselContent>
     </Carousel>
   );
-}
+};

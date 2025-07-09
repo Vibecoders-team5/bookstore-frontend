@@ -1,6 +1,6 @@
 export const BookLoader = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-white/70">
       <div className="relative flex w-[150px] h-fit items-center justify-end">
         <svg
           className="w-full h-auto drop-shadow-[10px_10px_5px_rgba(0,0,0,0.14)]"

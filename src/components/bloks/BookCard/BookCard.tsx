@@ -38,7 +38,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   };
 
   return (
-    <div className="w-[272px] h-[506px] relative flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-sm bg-white">
+    <div className="w-full max-w-[272px] relative flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-lg bg-white">
       <HeadphonesRound />
       <Link to={`/${book.type}/${book.slug}`}>
         <div className="w-full h-[263px]">
@@ -77,7 +77,11 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
         </div>
       </div>
       <div className="inline-flex gap-2">
-        <AddButton onClick={toggleAddToCart} isSelected={isBookInCart} />
+        <AddButton
+          onClick={toggleAddToCart}
+          isSelected={isBookInCart}
+          size={'customAddButton'}
+        />
         <HeartButton
           onClick={toggleAddToFavourites}
           isSelected={isBookInFavourites}
