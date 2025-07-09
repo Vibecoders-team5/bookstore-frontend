@@ -4,11 +4,22 @@ import { Button } from '@/components/ui/button';
 type AddButtonProps = {
   onClick?: () => void;
   isSelected?: boolean;
+  size?:
+    | 'default'
+    | 'sm'
+    | 'lg'
+    | 's32'
+    | 's40'
+    | 'icon'
+    | 'customAddButton'
+    | null
+    | undefined;
 };
 
 export const AddButton: React.FC<AddButtonProps> = ({
   onClick = () => {},
   isSelected = false,
+  size,
 }) => {
   const [isButtonSelected, setIsButtonSelected] = useState(isSelected);
 
@@ -20,7 +31,7 @@ export const AddButton: React.FC<AddButtonProps> = ({
   return (
     <Button
       variant={isButtonSelected ? 'addToCartAdded' : 'addToCartNormal'}
-      size="customAddButton"
+      size={size}
       onClick={handleClick}
     >
       {isButtonSelected ? 'Added' : 'Add to cart'}

@@ -52,7 +52,7 @@ export function PaperPage() {
         </div>
         <BookList books={visibleBooks} />
         {shouldPagginationShow && (
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center pt-10">
             <PaginationBlock
               totalBooks={booksLength}
               perPage={currentPerPage}

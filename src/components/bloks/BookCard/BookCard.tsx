@@ -77,7 +77,11 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
         </div>
       </div>
       <div className="inline-flex gap-2">
-        <AddButton onClick={toggleAddToCart} isSelected={isBookInCart} />
+        <AddButton
+          onClick={toggleAddToCart}
+          isSelected={isBookInCart}
+          size={'customAddButton'}
+        />
         <HeartButton
           onClick={toggleAddToFavourites}
           isSelected={isBookInFavourites}
