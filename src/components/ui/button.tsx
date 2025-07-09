@@ -28,6 +28,8 @@ const buttonVariants = cva(
         paginationArrow: 'w-8 h-8 rounded-lg',
         selected:
           'rounded-[8px] bg-[#313237] text-white hover:shadow-[0_0_13px_0_#17203166]',
+        backToTop:
+          'uppercase text-[#89939A] hover:text-[#313237] transition-colors',
       },
       size: {
         s32: 'size-8',

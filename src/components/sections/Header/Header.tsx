@@ -5,6 +5,8 @@ import { SearchBar } from '@/components/ui/input';
 import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
 import { CategoryDropdown } from '@/components/CategoryDropdown';
+import { Button } from '@/components/ui/button';
+import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -12,6 +14,8 @@ export const Header = () => {
 
   //const totalCount = useCartStore((state) => state.totalCount); для керування відображення counter in cart icon
   const totalCount = 12; // заглушка
+  //const totalFavorites = useCartStore((state) => state.totalCount); для керування відображення counter in cart icon
+  const totalFavorites = 6; // заглушка
 
   const handleSearchToggle = () => {
     setIsSearchVisible((prev) => !prev);
@@ -34,13 +38,15 @@ export const Header = () => {
     );
 
   const baseIconClass =
-    'flex items-center justify-center w-12 h-full xl:w-[64px] border-l border-[#E2E6E9] text-[#89939A] transition duration-200 transform hover:scale-110 hover:text-[#313237]';
-
+    'flex items-center justify-center w-12 h-full xl:w-[64px] border-l border-[#E2E6E9] text-[#89939A] transition duration-200 hover:text-[#313237] group';
+  const iconScaleClass =
+    'transition duration-200 transform group-hover:scale-110';
   return (
     <>
       <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="flex items-center w-full h-full gap-6">
           <Link
+            aria-label="Go to Home page"
             to="/"
             className="flex items-center justify-center w-24 xl:w-32 h-full transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
           >
@@ -74,37 +80,50 @@ export const Header = () => {
         </div>
 
         <div className="flex h-full">
-          <button
+          <Button
             onClick={handleSearchToggle}
-            className={cn(baseIconClass, 'sm:flex xl:hidden hidden')}
+            className={cn(
+              baseIconClass,
+              'sm:flex xl:hidden hidden rounded-none',
+            )}
+            size="icon"
+            variant="ghost"
           >
-            <Search size={16} />
-          </button>
+            <Search size={16} className={iconScaleClass} />
+          </Button>
 
           <Link
-            to="/favourites"
+            to="favourites"
             className={cn(baseIconClass, 'hidden sm:flex')}
+            aria-label="Go to Favourites page"
           >
-            <Heart size={16} />
-          </Link>
-
-          <Link to="/cart" className={cn(baseIconClass, 'hidden sm:flex')}>
-            <div className="relative">
-              <ShoppingBag size={16} />
-              {totalCount > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-[#EB5757] text-white text-[9px] font-semibold rounded-full w-[14px] h-[14px] flex items-center justify-center">
-                  {totalCount}
-                </span>
+            <div className={cn('relative', iconScaleClass)}>
+              <Heart size={16} />
+              {totalFavorites > 0 && (
+                <NotificationHeaderBtn counter={totalFavorites} />
               )}
             </div>
           </Link>
 
-          <button
+          <Link
+            to="/cart"
+            className={cn(baseIconClass, 'hidden sm:flex')}
+            aria-label="Go to Cart page"
+          >
+            <div className={cn('relative', iconScaleClass)}>
+              <ShoppingBag size={16} />
+              {totalCount > 0 && <NotificationHeaderBtn counter={totalCount} />}
+            </div>
+          </Link>
+
+          <Button
             onClick={handleMenuToggle}
             className={cn(baseIconClass, 'sm:hidden border-l-0')}
+            size="icon"
+            variant="ghost"
           >
-            <Menu size={16} />
-          </button>
+            <Menu size={16} className={iconScaleClass} />
+          </Button>
         </div>
       </header>
 

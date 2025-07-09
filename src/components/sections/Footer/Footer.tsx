@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { ChevronUpIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +16,7 @@ export const Footer = () => {
         />
       </Link>
 
-      <nav className="flex flex-col sm:flex-row justify-around items-start sm:items-center w-full max-w-[368px] gap-4 xl:gap-6">
+      <nav className="flex flex-col sm:flex-row justify-around items-start sm:items-center w-full max-w-[368px] h-8 gap-4 xl:gap-6">
         <a
           className="uppercase hover:text-[#313237]"
           href="https://github.com/Vibecoders-team5/bookstore-frontend"
@@ -32,14 +33,14 @@ export const Footer = () => {
         </Link>
       </nav>
 
-      <button
-        aria-label="Back to top"
-        className="flex items-center self-center gap-4 shrink-0  cursor-pointer uppercase text-[#89939A] hover:text-[#313237] transition-colors"
+      <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        variant="backToTop"
+        className="self-center"
       >
         <span>Back to top</span>
         <ChevronUpIcon size={16} />
-      </button>
+      </Button>
     </footer>
   );
 };
