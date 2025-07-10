@@ -15,25 +15,24 @@ export function BookGallery({ images }: BookGalleryProps) {
 
   return (
     <div className="flex flex-col-reverse sm:flex-row items-start w-full gap-4">
-      <div className="w-full sm:w-20">
+      <div className="min-w-[344px] sm:w-40">
         <Swiper
+          className="max-w-[440px] mx-auto h-20 sm:h-[520px]"
           onSwiper={setThumbsSwiper}
           modules={[Thumbs, FreeMode]}
           freeMode
           watchSlidesProgress
+          spaceBetween={8}
           breakpoints={{
             0: {
               direction: 'horizontal',
-              slidesPerView: 4,
-              spaceBetween: 8,
+              slidesPerView: 5,
             },
             640: {
               direction: 'vertical',
               slidesPerView: 6,
-              spaceBetween: 8,
             },
           }}
-          className="w-full h-20 sm:h-[520px]"
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
