@@ -32,8 +32,8 @@ export const CartPage = () => {
         </div>
 
         {cart.length ?
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 lg:justify-center">
-            <div className="flex flex-col gap-4 lg:max-w-150 xl:max-w-188">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 lg:justify-center flex-shrink">
+            <div className="flex flex-col gap-4 flex-1 min-w-75 lg:max-w-188 flex-shrink">
               {cart.map((book) => (
                 <BookCompactCard
                   key={book.slug}
