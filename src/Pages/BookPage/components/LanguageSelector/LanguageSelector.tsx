@@ -15,17 +15,17 @@ export const LanguageSelector = ({ book }: Props) => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(book.lang);
   const [isLoading, setIsLoading] = useState(false);
-
-  //   useEffect(() => {
-  //   setSelected(book.lang);
-  // }, [book.lang]);
+  //   const currentLang = book.lang;
 
   const handleChange = async (langCode: string) => {
+    //  if (langCode === currentLang) return;
     if (selected === langCode) return;
 
     setIsLoading(true);
     setSelected(langCode);
 
+    //  const newSlug = `${book.namespaceId}-${langCode}-${book.type}`;
+    //  navigate(`/${book.type}/${newSlug}`);
     try {
       const books = await getPaperBooks();
       const matchedBook = books.find(
@@ -52,10 +52,10 @@ export const LanguageSelector = ({ book }: Props) => {
           <BookLoader />
         </div>
       )}
-
       <div className="flex flex-col gap-2">
         <div className="flex gap-2">
           {book.langAvailable.map((langCode) => {
+            //   const isSelected = langCode === currentLang;
             const label = getLabel(langCode);
 
             return (

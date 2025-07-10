@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useMatch, useParams } from 'react-router-dom';
 import { getBookBySlug } from '@/services/getBookBySlug';
 import { Book } from '@/types/Book';
 
@@ -13,17 +13,11 @@ import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSli
 
 export const BookPage: React.FC = () => {
   const { bookSlug } = useParams<{ bookSlug: string }>();
-  const location = useLocation();
   const [book, setBook] = useState<Book | null>(null);
+  const [isLoading, setLoading] = useState(false);
+  const match = useMatch('/:type/:bookSlug');
 
-  const type = location.pathname.split('/')[1] as
-    | 'paperback'
-    | 'kindle'
-    | 'audiobook';
-
-  {
-    /* перепрацювати */
-  }
+  const type = match?.params.type as 'paperback' | 'kindle' | 'audiobook';
 
   useEffect(() => {
     if (!bookSlug || !type) return;
@@ -32,11 +26,13 @@ export const BookPage: React.FC = () => {
       .then(setBook)
       .catch((err) => {
         console.error(err);
-      });
+      })
+      .finally(() => setLoading(false));
   }, [bookSlug, type]);
 
-  console.log(book);
-  if (!book) return <BookLoader />;
+
+  if (isLoading || !book) return <BookLoader />;
+
 
   const imageUrls = book.images.map((p) => `/books/${p}`);
 
