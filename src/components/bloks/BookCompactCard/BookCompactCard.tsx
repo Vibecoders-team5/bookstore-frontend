@@ -1,23 +1,22 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { CartItem } from '@/Pages';
+import { useBookStore } from '@/store/useBookStore';
 import { Minus, Plus, X } from 'lucide-react';
 
 type BookCompactCardProps = {
   book: CartItem;
   showActions: boolean;
-  onRemove?: (id: string) => void;
-  onIncrement?: (id: string) => void;
-  onDecrement?: (id: string) => void;
 };
 
 export const BookCompactCard = ({
   book,
   showActions,
-  onRemove = () => {},
-  onIncrement = () => {},
-  onDecrement = () => {},
 }: BookCompactCardProps) => {
+  const removeFromCart = useBookStore((state) => state.removeFromCart);
+  const increaseQuantity = useBookStore((state) => state.increaseQuantity);
+  const decreaseQuantity = useBookStore((state) => state.decreaseQuantity);
+
   return (
     <article
       className={cn(
@@ -32,7 +31,7 @@ export const BookCompactCard = ({
               className="text-[#B4BDC3] hover:text-[#313237]"
               size="icon"
               variant="ghost"
-              onClick={() => onRemove(book.id)}
+              onClick={() => removeFromCart(book.id)}
             >
               <X size={16} />
             </Button>
@@ -60,7 +59,7 @@ export const BookCompactCard = ({
               className="w-8 h-8 text-[#B4BDC3] hover:text-[#313237]"
               size="icon"
               variant="ghost"
-              onClick={() => onDecrement(book.id)}
+              onClick={() => decreaseQuantity(book.id)}
             >
               <Minus size={16} />
             </Button>
@@ -73,7 +72,7 @@ export const BookCompactCard = ({
               className="w-8 h-8 text-[#B4BDC3] hover:text-[#313237]"
               size="icon"
               variant="ghost"
-              onClick={() => onIncrement(book.id)}
+              onClick={() => increaseQuantity(book.id)}
             >
               <Plus size={16} />
             </Button>

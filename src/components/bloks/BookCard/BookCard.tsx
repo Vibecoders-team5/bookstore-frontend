@@ -28,7 +28,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   const isBookInFavourites = favourites.some(someCallback);
 
   const toggleAddToCart = () => {
-    return isBookInCart ? removeFromCart(book) : addToCart(book);
+    return isBookInCart ? removeFromCart(book.id) : addToCart(book);
   };
 
   const toggleAddToFavourites = () => {
