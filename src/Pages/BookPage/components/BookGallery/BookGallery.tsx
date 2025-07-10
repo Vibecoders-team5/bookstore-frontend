@@ -15,9 +15,9 @@ export function BookGallery({ images }: BookGalleryProps) {
 
   return (
     <div className="flex flex-col-reverse sm:flex-row items-start w-full gap-4">
-      <div className="min-w-[344px] sm:w-40">
+      <div className="w-full sm:w-20">
         <Swiper
-          className="max-w-[440px] mx-auto h-20 sm:h-[520px]"
+          className="mx-auto h-20 sm:h-[520px]"
           onSwiper={setThumbsSwiper}
           modules={[Thumbs, FreeMode]}
           freeMode
