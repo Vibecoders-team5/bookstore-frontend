@@ -17,7 +17,7 @@ export const Header = () => {
   const cart = useBookStore((state) => state.cart);
   const favourites = useBookStore((state) => state.favourites);
 
-  const totalCount = cart.length;
+  const totalCount = cart.reduce((sum, book) => sum + book.quantity, 0);
   const totalFavorites = favourites.length;
 
   const handleSearchToggle = () => {

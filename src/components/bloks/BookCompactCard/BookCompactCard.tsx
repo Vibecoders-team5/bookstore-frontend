@@ -1,28 +1,29 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { CartItem } from '@/Pages';
+import { useBookStore } from '@/store/useBookStore';
 import { Minus, Plus, X } from 'lucide-react';
 
 type BookCompactCardProps = {
   book: CartItem;
   showActions: boolean;
-  onRemove?: (id: string) => void;
-  onIncrement?: (id: string) => void;
-  onDecrement?: (id: string) => void;
 };
 
 export const BookCompactCard = ({
   book,
   showActions,
-  onRemove = () => {},
-  onIncrement = () => {},
-  onDecrement = () => {},
 }: BookCompactCardProps) => {
+  const removeFromCart = useBookStore((state) => state.removeFromCart);
+  const increaseQuantity = useBookStore((state) => state.increaseQuantity);
+  const decreaseQuantity = useBookStore((state) => state.decreaseQuantity);
+
   return (
     <article
       className={cn(
-        'flex justify-between p-4 sm:px-6 gap-4 border border-[#E2E6E9] rounded-[16px]',
-        showActions ? 'flex-col sm:flex-row' : 'flex-row',
+        'flex justify-between gap-4 sm:gap-8 border border-[#E2E6E9] ',
+        showActions ?
+          'flex-col sm:flex-row p-4 sm:px-6 rounded-[16px]'
+        : 'flex-row p-1 sm:px-2 rounded-[10px]',
       )}
     >
       <div className="flex items-center gap-4 sm:gap-6 min-w-0">
@@ -32,13 +33,18 @@ export const BookCompactCard = ({
               className="text-[#B4BDC3] hover:text-[#313237]"
               size="icon"
               variant="ghost"
-              onClick={() => onRemove(book.id)}
+              onClick={() => removeFromCart(book.id)}
             >
               <X size={16} />
             </Button>
           )}
 
-          <div className="flex w-20 h-20">
+          <div
+            className={cn('flex', {
+              'w-14 h-14': !showActions,
+              'w-20 h-20': showActions,
+            })}
+          >
             <img
               className="w-full h-full object-contain"
               src={`/books/${book.images[0]}`}
@@ -48,7 +54,7 @@ export const BookCompactCard = ({
         </div>
 
         <div className="flex-grow min-w-0">
-          <h5 className=" h5 text-[#313237] truncate">{book.name}</h5>
+          <h5 className="h5 text-[#313237] truncate">{book.name}</h5>
           <p className="body-text text-[#89939A] truncate">{book.author}</p>
         </div>
       </div>
@@ -60,7 +66,7 @@ export const BookCompactCard = ({
               className="w-8 h-8 text-[#B4BDC3] hover:text-[#313237]"
               size="icon"
               variant="ghost"
-              onClick={() => onDecrement(book.id)}
+              onClick={() => decreaseQuantity(book.id)}
             >
               <Minus size={16} />
             </Button>
@@ -73,14 +79,19 @@ export const BookCompactCard = ({
               className="w-8 h-8 text-[#B4BDC3] hover:text-[#313237]"
               size="icon"
               variant="ghost"
-              onClick={() => onIncrement(book.id)}
+              onClick={() => increaseQuantity(book.id)}
             >
               <Plus size={16} />
             </Button>
           </div>
         )}
 
-        <h3 className="text-[20px] sm:text-[22px] font-[600] text-[#313237]">
+        <h3
+          className={cn('font-[600] text-[#313237] w-20 text-right', {
+            'text-[20px] sm:text-[22px]': showActions,
+            'text-[16px]': !showActions,
+          })}
+        >
           {`$${book.priceDiscount ? book.priceDiscount : book.priceRegular}`}
         </h3>
       </div>

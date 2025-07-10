@@ -15,7 +15,7 @@ export function BookDetails({ book }: Props) {
   const isBookInCart = cart.some((item) => item === book);
 
   const toggleAddToCart = () => {
-    return isBookInCart ? removeFromCart(book) : addToCart(book);
+    return isBookInCart ? removeFromCart(book.id) : addToCart(book);
   };
 
   return (
