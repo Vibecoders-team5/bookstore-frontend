@@ -25,18 +25,18 @@ const categories = [
 
 export const CategoriesGrid = () => {
   return (
-    <div className="w-[1136px] mx-auto mt-12">
+    <div className="max-w-[1136px] flex flex-wrap mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-12">
       <h1 className="font-bold text-[2rem] text-[#313237] mb-[23px]">
         Shop by category
       </h1>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full">
         {categories.map(({ image, link, title, subtitle }) => (
           <a
             key={title}
             href={link}
             className="block w-full overflow-hidden group"
           >
-            <div className="aspect-[368/289] overflow-hidden rounded-lg">
+            <div className="aspect-square sm:aspect-[368/289] overflow-hidden rounded-lg">
               <img
                 src={image}
                 alt={title}
@@ -44,7 +44,7 @@ export const CategoriesGrid = () => {
               />
             </div>
 
-            <h2 className="mt-4 text-3xl text-[#313237] font-semibold">
+            <h2 className="mt-4 text-5 text-[#313237] font-semibold">
               {title}
             </h2>
             <h3 className="mt-1 text-sm text-[#89939A] font-medium">
