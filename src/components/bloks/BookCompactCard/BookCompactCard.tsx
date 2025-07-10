@@ -2,10 +2,12 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { CartItem } from '@/Pages';
 import { useBookStore } from '@/store/useBookStore';
+import { Book } from '@/types/Book';
 import { Minus, Plus, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 type BookCompactCardProps = {
-  book: CartItem;
+  book: CartItem | Book;
   showActions: boolean;
 };
 
@@ -13,20 +15,34 @@ export const BookCompactCard = ({
   book,
   showActions,
 }: BookCompactCardProps) => {
+  const navigate = useNavigate();
   const removeFromCart = useBookStore((state) => state.removeFromCart);
   const increaseQuantity = useBookStore((state) => state.increaseQuantity);
   const decreaseQuantity = useBookStore((state) => state.decreaseQuantity);
+  const { setQuery } = useBookStore();
+
+  const isCartItem = (book: Book | CartItem): book is CartItem => {
+    return 'quantity' in book;
+  };
+
+  const handleCardClick = () => {
+    navigate(`/${book.type}/${book.slug}`);
+    setQuery('');
+  };
 
   return (
     <article
       className={cn(
-        'flex justify-between gap-4 sm:gap-8 border border-[#E2E6E9] ',
+        'flex justify-between gap-4 sm:gap-8 border border-[#E2E6E9] bg-white hover:shadow-md mb-1',
         showActions ?
           'flex-col sm:flex-row p-4 sm:px-6 rounded-[16px]'
         : 'flex-row p-1 sm:px-2 rounded-[10px]',
       )}
     >
-      <div className="flex items-center gap-4 sm:gap-6 min-w-0">
+      <div
+        className="flex items-center gap-4 sm:gap-6 min-w-0 cursor-pointer"
+        onClick={handleCardClick}
+      >
         <div className="flex items-center gap-4 sm:gap-6">
           {showActions && (
             <Button
@@ -60,7 +76,7 @@ export const BookCompactCard = ({
       </div>
 
       <div className="flex items-center justify-between gap-4 xl:gap-6">
-        {showActions && (
+        {showActions && isCartItem(book) && (
           <div className="flex justify-between items-center">
             <Button
               className="w-8 h-8 text-[#B4BDC3] hover:text-[#313237]"

@@ -3,22 +3,49 @@ import { Link, NavLink } from 'react-router-dom';
 
 import { SearchBar } from '@/components/ui/input';
 import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
 import { CategoryDropdown } from '@/components/bloks/CategoryDropdown';
 import { useBookStore } from '@/store/useBookStore';
-// import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
+import { getSearchResults } from '@/utils/getSearchResults';
+import { getPaperBooks } from '@/services/booksAPI';
+import { Book } from '@/types/Book';
+import { SearchDropdown } from './SearchDropdown';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
+  const [books, setBooks] = useState<Book[]>([]);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    getPaperBooks().then((booksFromServer) => setBooks(booksFromServer));
+  }, []);
+
+  const query = useBookStore((state) => state.query);
   const cart = useBookStore((state) => state.cart);
   const favourites = useBookStore((state) => state.favourites);
+  const { setQuery } = useBookStore();
 
   const totalCount = cart.reduce((sum, book) => sum + book.quantity, 0);
   const totalFavorites = favourites.length;
+
+  const searchResults = getSearchResults(books, query);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setQuery('');
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [setQuery]);
 
   const handleSearchToggle = () => {
     setIsSearchVisible((prev) => !prev);
@@ -76,9 +103,9 @@ export const Header = () => {
           </nav>
         </div>
 
-        <div className="hidden xl:flex gap-4 pl-2">
+        <div className="relative hidden xl:flex gap-4 pl-2" ref={dropdownRef}>
           <SearchBar />
-
+          <SearchDropdown results={searchResults} />
           <CategoryDropdown />
         </div>
 
@@ -136,14 +163,6 @@ export const Header = () => {
           <button onClick={() => setIsSearchVisible(false)}>Close</button>
         </div>
       )}
-
-      {/* {totalCount && (
-        <div className="flex flex-col absolute z-99 gap-4 flex-grow max-w-[752px] bg-white/80 top-17 right-80">
-          {cart.map((book) => (
-            <BookCompactCard key={book.slug} book={book} showActions={false} />
-          ))}
-        </div>
-      )} */}
 
       {isModalVisible && (
         <div className="fixed top-12 left-0 w-full h-screen bg-white z-40 sm:hidden shadow-md">
