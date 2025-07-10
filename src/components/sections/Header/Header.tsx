@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
 import { CategoryDropdown } from '@/components/bloks/CategoryDropdown';
 import { useBookStore } from '@/store/useBookStore';
+import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -44,7 +45,7 @@ export const Header = () => {
   const iconScaleClass =
     'transition duration-200 transform group-hover:scale-110';
   return (
-    <>
+    <div className="relative">
       <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="flex items-center w-full h-full gap-6">
           <Link
@@ -136,6 +137,14 @@ export const Header = () => {
         </div>
       )}
 
+      {totalCount && (
+        <div className="flex flex-col absolute z-99 gap-4 flex-grow max-w-[752px] bg-white/80 top-17 right-80">
+          {cart.map((book) => (
+            <BookCompactCard key={book.slug} book={book} showActions={false} />
+          ))}
+        </div>
+      )}
+
       {isModalVisible && (
         <div className="fixed top-12 left-0 w-full h-screen bg-white z-40 sm:hidden shadow-md">
           <div className="p-4">
@@ -144,6 +153,6 @@ export const Header = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };

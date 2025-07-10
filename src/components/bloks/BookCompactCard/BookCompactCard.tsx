@@ -1,10 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { CartItem } from '@/Pages';
+// import { CartItem } from '@/Pages';
+import { Book } from '@/types/Book';
 import { Minus, Plus, X } from 'lucide-react';
 
 type BookCompactCardProps = {
-  book: CartItem;
+  book: Book;
   showActions: boolean;
   onRemove?: (id: string) => void;
   onIncrement?: (id: string) => void;
@@ -21,7 +22,7 @@ export const BookCompactCard = ({
   return (
     <article
       className={cn(
-        'flex justify-between p-4 sm:px-6 gap-4 border border-[#E2E6E9] rounded-[16px]',
+        'flex justify-between p-4 sm:px-6 gap-4 border border-[#E2E6E9] rounded-[16px] bg-white',
         showActions ? 'flex-col sm:flex-row' : 'flex-row',
       )}
     >
@@ -65,9 +66,9 @@ export const BookCompactCard = ({
               <Minus size={16} />
             </Button>
 
-            <span className="body-text text-[#313237] px-3">
+            {/* <span className="body-text text-[#313237] px-3">
               {book.quantity}
-            </span>
+            </span> */}
 
             <Button
               className="w-8 h-8 text-[#B4BDC3] hover:text-[#313237]"
