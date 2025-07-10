@@ -30,7 +30,9 @@ export const BookPage: React.FC = () => {
       .finally(() => setLoading(false));
   }, [bookSlug, type]);
 
+
   if (isLoading || !book) return <BookLoader />;
+
 
   const imageUrls = book.images.map((p) => `/books/${p}`);
 

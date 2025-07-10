@@ -31,7 +31,7 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
   }
 
   return (
-    <Carousel className="max-w-[1136px] mx-auto mt-[80px] pb-8">
+    <Carousel className="max-w-[1136px] mx-auto mt-20 pb-8">
       <div className="flex items-center justify-between mb-[23px]">
         <h1 className="font-bold text-[2rem] text-[#313237]">{title}</h1>
         <div className="flex space-x-2">
@@ -44,7 +44,7 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
         {books.slice(0, 10).map((book) => (
           <CarouselItem
             key={book.slug}
-            className="pl-4 basis-full md:basis-1/3 lg:basis-1/4"
+            className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
           >
             <BookCard book={book} />
           </CarouselItem>
