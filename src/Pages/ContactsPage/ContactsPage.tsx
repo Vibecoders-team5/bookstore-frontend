@@ -16,7 +16,7 @@ export const ContactsPage = () => {
     {
       name: 'Anastasiia Zuieva',
       position: 'Product Manager',
-      image: 'books/img/contactsphotonika.jpg',
+      image: 'books/img/contactsphotonastya.png',
       description:
         'Praesent commodo cursus magna, vel scelerisque nisl consectetur. Sed posuere consectetur est at lobortis. Integer posuere erat a ante.',
       telegram: 'https://t.me/anastasiia_zuieva',
