@@ -12,6 +12,7 @@ type Props = {
 export function BookDetails({ book }: Props) {
   const { addToCart, removeFromCart } = useBookStore();
   const cart = useBookStore((state) => state.cart);
+  //   const book = useBookStore((s) => s.currentBook);
   const isBookInCart = cart.some((item) => item === book);
 
   const toggleAddToCart = () => {
@@ -44,7 +45,7 @@ export function BookDetails({ book }: Props) {
         </p>
 
         <div className="mb-4">
-          <LanguageSelector book={book} />
+          <LanguageSelector />
         </div>
 
         <div className="border-t border-[#E2E6E9] pt-4">

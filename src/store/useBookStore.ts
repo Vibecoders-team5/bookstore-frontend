@@ -5,6 +5,8 @@ export type CartItem = Book & { quantity: number };
 interface BookStore {
   cart: CartItem[];
   favourites: Book[];
+  currentBook: Book | null;
+  bookVariants: Book[];
 
   addToCart: (book: Book) => void;
   removeFromCart: (id: string) => void;
@@ -13,11 +15,19 @@ interface BookStore {
 
   addToFavourites: (book: Book) => void;
   removeFromFavourites: (book: Book) => void;
+
+  setCurrentBook: (book: Book) => void;
+  setBookVariants: (books: Book[]) => void;
 }
 
 export const useBookStore = create<BookStore>((set) => ({
   cart: JSON.parse(localStorage.getItem('cart') || '[]'),
   favourites: JSON.parse(localStorage.getItem('favourites') || '[]'),
+  currentBook: null,
+  bookVariants: [],
+
+  setCurrentBook: (book) => set({ currentBook: book }),
+  setBookVariants: (books) => set({ bookVariants: books }),
 
   addToCart: (book) => {
     set((state) => {
