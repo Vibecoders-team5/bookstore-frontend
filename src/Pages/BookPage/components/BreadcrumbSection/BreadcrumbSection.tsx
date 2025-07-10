@@ -20,7 +20,7 @@ export const BreadcrumbSection = ({ type, category, bookName }: Props) => {
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink
-            href="/home"
+            href="/"
             className="flex items-center text-[#313237] transition-transform hover:-translate-y-1"
           >
             <House className="w-4 h-4" />
@@ -31,7 +31,7 @@ export const BreadcrumbSection = ({ type, category, bookName }: Props) => {
 
         <BreadcrumbItem className="hidden sm:flex">
           <BreadcrumbLink
-            href={`/type=${type}`}
+            href={`/${type}`}
             className="text-[#313237] hover:underline"
           >
             {type}
@@ -41,15 +41,19 @@ export const BreadcrumbSection = ({ type, category, bookName }: Props) => {
         <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC] hidden sm:block" />
 
         <BreadcrumbItem className="hidden sm:flex">
-          <BreadcrumbLink href={`/type=${type}`}>{category}</BreadcrumbLink>
+          <BreadcrumbLink
+            href={`/${type}`}
+            className="text-[#313237] hover:underline"
+          >
+            {category}
+          </BreadcrumbLink>
         </BreadcrumbItem>
 
         <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC] hidden sm:block" />
 
         <BreadcrumbItem className="flex sm:hidden">
           <BreadcrumbLink
-            href="#"
-            onClick={(e) => e.preventDefault()}
+            href={`/${type}`}
             className="text-[#313237] hover:underline"
           >
             …
@@ -59,7 +63,7 @@ export const BreadcrumbSection = ({ type, category, bookName }: Props) => {
         <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC] flex sm:hidden" />
 
         <BreadcrumbItem>
-          <BreadcrumbPage className="text-[#89939A] font-bold whitespace-nowrap overflow-hidden truncate max-w-[120px] sm:max-w-[200px] md:max-w-[300px] xl:max-w-none xl:whitespace-normal xl:overflow-visible">
+          <BreadcrumbPage className="text-[#89939A] text-[12px] sm:text-[14px] font-bold">
             {bookName}
           </BreadcrumbPage>
         </BreadcrumbItem>
