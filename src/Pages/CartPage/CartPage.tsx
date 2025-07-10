@@ -80,7 +80,7 @@ export const CartPage = () => {
               <BookCompactCard
                 key={book.slug}
                 book={book}
-                showActions={true}
+                showActions={false}
                 onRemove={handleRemove}
                 onIncrement={handleIncrement}
                 onDecrement={handleDecrement}
