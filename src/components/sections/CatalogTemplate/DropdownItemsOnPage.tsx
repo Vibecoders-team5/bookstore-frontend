@@ -4,6 +4,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 export const DropdownItemsOnPage = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const currentPerPage = searchParams.get('perPage');
+
   const itemsOnPageOptions: Option[] = [
     { label: '4', value: '4' },
     { label: '8', value: '8' },
@@ -21,7 +23,7 @@ export const DropdownItemsOnPage = () => {
     <DropdownSelect
       options={itemsOnPageOptions}
       placeholder="16"
-      defaultValue="16"
+      defaultValue={currentPerPage ?? '16'}
       label="Items on page"
       className="w-32 h-15"
       onChange={handleItemsChange}
