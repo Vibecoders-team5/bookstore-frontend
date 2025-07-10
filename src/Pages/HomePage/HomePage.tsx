@@ -3,7 +3,6 @@ import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSli
 import { CategoriesGrid } from '@/components/sections/CategoriesGrid/CategoriesGrid';
 
 export const HomePage = () => (
-  // можливо тут додати якісь класи
   <div>
     <BannerSlider />
     <PaperBookSlider title="New Books" />
