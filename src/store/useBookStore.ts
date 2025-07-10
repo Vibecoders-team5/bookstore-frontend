@@ -5,6 +5,9 @@ export type CartItem = Book & { quantity: number };
 interface BookStore {
   cart: CartItem[];
   favourites: Book[];
+  query: string;
+
+  setQuery: (query: string) => void;
 
   addToCart: (book: Book) => void;
   removeFromCart: (id: string) => void;
@@ -18,6 +21,12 @@ interface BookStore {
 export const useBookStore = create<BookStore>((set) => ({
   cart: JSON.parse(localStorage.getItem('cart') || '[]'),
   favourites: JSON.parse(localStorage.getItem('favourites') || '[]'),
+  query: '',
+
+  setQuery: (query) => {
+    const normalizedQuery = query.trim().toLowerCase();
+    set(() => ({ query: normalizedQuery }));
+  },
 
   addToCart: (book) => {
     set((state) => {

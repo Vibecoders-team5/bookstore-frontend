@@ -25,7 +25,7 @@ export const CartPage = () => {
       <h1 className="text-[32px] sm:text-[48px] font-[700] mb-8">Cart</h1>
       {cart.length ?
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-4 xl:justify-center ">
-          <div className="flex flex-col gap-4 flex-grow xl:max-w-[752px]">
+          <div className="flex flex-col gap-3 flex-grow xl:max-w-[752px]">
             {cart.map((book) => (
               <BookCompactCard key={book.slug} book={book} showActions={true} />
             ))}

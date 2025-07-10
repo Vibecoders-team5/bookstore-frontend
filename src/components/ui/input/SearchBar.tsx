@@ -1,19 +1,31 @@
 import { Input } from '@/components/ui/input/input';
+import { useBookStore } from '@/store/useBookStore';
 import { Search } from 'lucide-react';
-import { useState } from 'react';
+import debounce from 'lodash/debounce';
+import { useEffect, useMemo, useState } from 'react';
 
 export function SearchBar() {
-  const [query, setQuery] = useState('');
+  const { setQuery } = useBookStore();
+  const query = useBookStore((state) => state.query);
+  const [inputValue, setInputValue] = useState(query);
 
-  const handleSearch = () => {
-    // I'll add the real logic later
-    console.log('test', query);
-    setQuery('');
+  useEffect(() => {
+    setInputValue(query);
+  }, [query]);
+
+  const debouncedSetQuery = useMemo(
+    () => debounce((value: string) => setQuery(value), 300),
+    [setQuery],
+  );
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setInputValue(value);
+    debouncedSetQuery(value);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleSearch();
   };
 
   return (
@@ -25,8 +37,8 @@ export function SearchBar() {
       <Input
         type="text"
         placeholder="Find a book or author"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={inputValue}
+        onChange={handleChange}
       />
     </form>
   );
