@@ -12,7 +12,7 @@ type Props = {
 export function BookDetails({ book }: Props) {
   const { addToCart, removeFromCart } = useBookStore();
   const cart = useBookStore((state) => state.cart);
-  const isBookInCart = cart.some((item) => item.id === book.id);
+  const isBookInCart = cart.some((item) => item === book);
 
   const toggleAddToCart = () => {
     return isBookInCart ? removeFromCart(book.id) : addToCart(book);
