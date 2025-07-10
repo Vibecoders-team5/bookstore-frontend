@@ -16,45 +16,45 @@ type Props = {
 
 export const BreadcrumbSection = ({ type, category, bookName }: Props) => {
   return (
-    <Breadcrumb className="flex items-center gap-1 sm:gap-2 font-bold uppercase text-[12px] sm:text-[14px]">
+    <Breadcrumb className="flex items-center gap-1 sm:gap-2 text-[12px] sm:text-[14px]">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink
             href="/"
             className="flex items-center text-[#313237] transition-transform hover:-translate-y-1"
           >
-            <House className="w-4 h-4" />
+            <House className="w-5 h-5" />
           </BreadcrumbLink>
         </BreadcrumbItem>
 
-        <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC]" />
+        <BreadcrumbSeparator className="w-3 h-3 text-[#C5C9CC]" />
 
         <BreadcrumbItem className="hidden sm:flex">
           <BreadcrumbLink
             href={`/${type}`}
-            className="text-[#313237] hover:underline"
+            className="text-[#3a3c40] hover:underline hover:text-[#3a3c40] first-letter:uppercase"
           >
             {type}
           </BreadcrumbLink>
         </BreadcrumbItem>
 
-        <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC] hidden sm:block" />
+        <BreadcrumbSeparator className="w-3 h-3 text-[#C5C9CC] hidden sm:block" />
 
         <BreadcrumbItem className="hidden sm:flex">
           <BreadcrumbLink
             href={`/${type}`}
-            className="text-[#313237] hover:underline"
+            className="text-[#3a3c40] hover:underline hover:text-[#3a3c40] first-letter:uppercase"
           >
             {category}
           </BreadcrumbLink>
         </BreadcrumbItem>
 
-        <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC] hidden sm:block" />
+        <BreadcrumbSeparator className="w-3 h-3 text-[#C5C9CC] hidden sm:block" />
 
         <BreadcrumbItem className="flex sm:hidden">
           <BreadcrumbLink
             href={`/${type}`}
-            className="text-[#313237] hover:underline"
+            className="text-[#3a3c40] hover:underline"
           >
             …
           </BreadcrumbLink>
@@ -63,7 +63,7 @@ export const BreadcrumbSection = ({ type, category, bookName }: Props) => {
         <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC] flex sm:hidden" />
 
         <BreadcrumbItem>
-          <BreadcrumbPage className="text-[#89939A] text-[12px] sm:text-[14px] font-bold">
+          <BreadcrumbPage className="text-[#89939A] text-[12px] sm:text-[14px] font-medium">
             {bookName}
           </BreadcrumbPage>
         </BreadcrumbItem>

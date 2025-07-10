@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
-import { getBookAndVariants } from '@/services/getBookBySlug';
+import { getBookAndVariants } from '@/services/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
 
 import { BookAbout } from '../BookPage/components/BookAbout/BookAbout';
@@ -14,7 +14,6 @@ import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSli
 export const BookPage: React.FC = () => {
   const { setCurrentBook, setBookVariants, currentBook: book } = useBookStore();
   const [isLoading, setLoading] = useState(false);
-
   const { bookSlug } = useParams<{ bookSlug: string }>();
   const type = useMatch('/:type/:bookSlug')?.params.type as
     | 'paperback'
@@ -60,14 +59,14 @@ export const BookPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
           <BookGallery images={imageUrls} />
           <div>
             <BookDetails book={book} />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
           <BookAbout book={book} />
           <BookCharacteristics book={book} />
         </div>

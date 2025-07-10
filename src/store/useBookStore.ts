@@ -6,10 +6,10 @@ interface BookStore {
   cart: CartItem[];
   favourites: Book[];
   query: string;
-
-  setQuery: (query: string) => void;
   currentBook: Book | null;
   bookVariants: Book[];
+
+  setQuery: (query: string) => void;
 
   addToCart: (book: Book) => void;
   removeFromCart: (id: string) => void;
