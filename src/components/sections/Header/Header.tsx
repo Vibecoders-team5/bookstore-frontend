@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
 import { CategoryDropdown } from '@/components/bloks/CategoryDropdown';
 import { useBookStore } from '@/store/useBookStore';
-import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
+// import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -137,13 +137,13 @@ export const Header = () => {
         </div>
       )}
 
-      {totalCount && (
+      {/* {totalCount && (
         <div className="flex flex-col absolute z-99 gap-4 flex-grow max-w-[752px] bg-white/80 top-17 right-80">
           {cart.map((book) => (
             <BookCompactCard key={book.slug} book={book} showActions={false} />
           ))}
         </div>
-      )}
+      )} */}
 
       {isModalVisible && (
         <div className="fixed top-12 left-0 w-full h-screen bg-white z-40 sm:hidden shadow-md">
