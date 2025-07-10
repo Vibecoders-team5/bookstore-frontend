@@ -64,6 +64,7 @@ export const LanguageSelector = ({ book }: Props) => {
                 variant={selected === langCode ? 'selected' : 'default'}
                 size="sm"
                 onClick={() => handleChange(langCode)}
+                disabled={isLoading}
                 className={cn(
                   'w-[45px] h-[35px] px-0 py-0 text-[14px] leading-6',
                   selected !== langCode && 'text-custom-textPrimary',
