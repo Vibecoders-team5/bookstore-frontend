@@ -35,12 +35,13 @@ export const CatalogTemplate: React.FC<CatalogTemplateProps> = ({
     currentPage,
   );
   return (
-    <div className="w-full flex justify-center pt-16">
+    <div className="w-full flex justify-center pt-8 sm:pt-16 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-284 min-w-0">
-        <div className="flex flex-col gap-2 mb-10">
-          <h1 className="h1">{title}</h1>
+        <div className="flex flex-col gap-2 mb-8 sm:mb-10">
+          <h1 className="text-[32px] sm:text-[48px] font-[700]">{title}</h1>
           <p className="body-text">{`${booksLength} books`}</p>
         </div>
+
         <div className="flex gap-4 mb-6">
           <DropdownSortBy />
           <DropdownItemsOnPage />
