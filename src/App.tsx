@@ -5,7 +5,8 @@ export const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="section flex-grow pt-12 xl:pt-16">
+      <main className="section flex-grow">
+        {/* pt-12 xl:pt-16 deleted these classes */}
         <Outlet />
       </main>
       <Footer />

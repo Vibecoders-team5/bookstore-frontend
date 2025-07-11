@@ -40,7 +40,7 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
         </div>
       </div>
 
-      <CarouselContent className="flex -ml-4">
+      <CarouselContent className="flex sm:-ml-4 sm:justify-start justify-center">
         {books.slice(0, 10).map((book) => (
           <CarouselItem
             key={book.slug}

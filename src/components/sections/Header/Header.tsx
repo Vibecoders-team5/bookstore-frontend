@@ -73,7 +73,7 @@ export const Header = () => {
     'transition duration-200 transform group-hover:scale-110';
   return (
     <div className="relative">
-      <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
+      <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-white/70 fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="flex items-center w-full h-full gap-6">
           <Link
             aria-label="Go to Home page"

@@ -22,7 +22,7 @@ export const Root = () => (
   <Router>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<HomePage />} />
+        <Route index element={<HomePage key={'home'} />} />
         <Route path="home" element={<Navigate to="/" replace />} />
 
         <Route path="paperback">
