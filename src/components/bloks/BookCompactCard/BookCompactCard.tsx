@@ -32,24 +32,25 @@ export const BookCompactCard = ({
 
   return (
     <article
+      onClick={handleCardClick}
       className={cn(
-        'flex justify-between gap-4 sm:gap-8 border border-[#E2E6E9] bg-white hover:shadow-md mb-1',
+        'flex justify-between gap-4 cursor-pointer sm:gap-8 border border-[#E2E6E9] bg-white hover:shadow-md mb-1',
         showActions ?
           'flex-col sm:flex-row p-4 sm:px-6 rounded-[16px]'
         : 'flex-row p-1 sm:px-2 rounded-[10px]',
       )}
     >
-      <div
-        className="flex items-center gap-4 sm:gap-6 min-w-0 cursor-pointer"
-        onClick={handleCardClick}
-      >
+      <div className="flex items-center gap-4 sm:gap-6 min-w-0 cursor-pointer">
         <div className="flex items-center gap-4 sm:gap-6">
           {showActions && (
             <Button
-              className="text-[#B4BDC3] hover:text-[#313237]"
+              className="text-[#B4BDC3] cursor-pointer hover:text-[#313237]"
               size="icon"
               variant="ghost"
-              onClick={() => removeFromCart(book.id)}
+              onClick={(event) => {
+                removeFromCart(book.id);
+                event.stopPropagation();
+              }}
             >
               <X size={16} />
             </Button>
@@ -77,9 +78,12 @@ export const BookCompactCard = ({
 
       <div className="flex items-center justify-between gap-4 xl:gap-6">
         {showActions && isCartItem(book) && (
-          <div className="flex justify-between items-center">
+          <div
+            className="flex justify-between items-center"
+            onClick={(event) => event.stopPropagation()}
+          >
             <Button
-              className="w-8 h-8 text-[#B4BDC3] hover:text-[#313237]"
+              className="w-8 h-8 cursor-pointer text-[#B4BDC3] hover:text-[#313237]"
               size="icon"
               variant="ghost"
               onClick={() => decreaseQuantity(book.id)}
@@ -92,7 +96,7 @@ export const BookCompactCard = ({
             </span>
 
             <Button
-              className="w-8 h-8 text-[#B4BDC3] hover:text-[#313237]"
+              className="w-8 h-8 cursor-pointer text-[#B4BDC3] hover:text-[#313237]"
               size="icon"
               variant="ghost"
               onClick={() => increaseQuantity(book.id)}

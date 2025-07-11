@@ -34,7 +34,7 @@ export const useBookStore = create<BookStore>((set) => ({
   setBookVariants: (books) => set({ bookVariants: books }),
 
   setQuery: (query) => {
-    const normalizedQuery = query.trim().toLowerCase();
+    const normalizedQuery = query.trim();
     set(() => ({ query: normalizedQuery }));
   },
 
