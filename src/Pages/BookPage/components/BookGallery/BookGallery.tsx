@@ -26,7 +26,11 @@ export function BookGallery({ images }: BookGalleryProps) {
           breakpoints={{
             0: {
               direction: 'horizontal',
-              slidesPerView: 5,
+              slidesPerView: 3,
+            },
+            360: {
+              direction: 'horizontal',
+              slidesPerView: 4,
             },
             640: {
               direction: 'vertical',
@@ -51,7 +55,7 @@ export function BookGallery({ images }: BookGalleryProps) {
       <Swiper
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Thumbs]}
-        className="w-full max-w-[480px] aspect-[4/5] sm:h-[520px]"
+        className="w-full aspect-[4/5] sm:h-[520px] flex-1 min-w-0"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>

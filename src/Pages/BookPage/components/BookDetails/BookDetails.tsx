@@ -11,6 +11,13 @@ type Props = {
 };
 
 export function BookDetails({ book }: Props) {
+  const bookDetailsData = [
+    { label: 'Author', value: book.author },
+    { label: 'Cover type', value: book.coverType },
+    { label: 'Number of pages', value: book.numberOfPages },
+    { label: 'Year of publication', value: book.publicationYear },
+  ];
+
   const addToCart = useBookStore((state) => state.addToCart);
   const removeFromCart = useBookStore((state) => state.removeFromCart);
   const increaseQuantity = useBookStore((state) => state.increaseQuantity);
@@ -95,7 +102,7 @@ export function BookDetails({ book }: Props) {
             )}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-full overflow-hidden">
             <AddButton
               onClick={toggleAddToCart}
               isSelected={isSelected}
@@ -121,30 +128,27 @@ export function BookDetails({ book }: Props) {
               </button>
             </div>
 
-            <HeartButton onClick={toggleFavourite} isSelected={isFavourite} />
+            <HeartButton
+              onClick={toggleFavourite}
+              isSelected={isFavourite}
+              size="adaptiveHeart"
+            />
           </div>
         </div>
       </div>
 
       <div className="pt-[24px] text-[#89939A] text-[14px] font-medium leading-[21px]">
-        <div className="flex justify-between py-1">
-          <span>Author</span>
-          <span className="text-[#313237] text-[14px]">{book.author}</span>
-        </div>
-        <div className="border-t border-[#E2E6E9] flex justify-between py-1">
-          <span>Cover type</span>
-          <span className="text-[#313237]">{book.coverType}</span>
-        </div>
-        <div className="border-t border-[#E2E6E9] flex justify-between py-1">
-          <span>Number of pages</span>
-          <span className="text-[#313237]">{book.numberOfPages}</span>
-        </div>
-        <div className="border-t border-[#E2E6E9] flex justify-between py-1">
-          <span>Year of publication</span>
-          <span className="text-[#313237] text-[14px]">
-            {book.publicationYear}
-          </span>
-        </div>
+        {bookDetailsData.map(({ label, value }, index) => (
+          <div
+            key={label}
+            className={`flex justify-between py-1 ${
+              index > 0 ? 'border-t border-[#E2E6E9]' : ''
+            }`}
+          >
+            <span>{label}</span>
+            <span className="text-[#313237] text-[14px]">{value}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
