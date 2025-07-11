@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Frame from 'public/books/img/letsexplore.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +59,7 @@ export const ScrollSection = () => {
       </div>
       <div className="image-container absolute top-0 left-0 right-0 w-full h-screen overflow-hidden z-[2] [perspective:500px]">
         <img
-          src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp"
+          src={Frame}
           alt="image"
           className="w-full h-full object-cover object-center"
         />

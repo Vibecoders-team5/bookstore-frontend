@@ -1,8 +1,7 @@
 import { cn } from '@/lib/utils';
 import { Link, NavLink } from 'react-router-dom';
 
-import { SearchBar } from '@/components/ui/input';
-import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
+import { Heart, Menu, Search, ShoppingBag, SquareX } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
@@ -12,6 +11,7 @@ import { getPaperBooks } from '@/services/booksAPI';
 import { Book } from '@/types/Book';
 import { SearchDropdown } from './components/SearchDropdown';
 import { CategoryDropdown } from './components/CategoryDropdown';
+import { SearchBar } from './components/SearchBar';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -83,7 +83,7 @@ export const Header = () => {
             <img
               src="/books/img/nice-books-logo.png"
               alt="nice-books logo"
-              className="h-[22px] xl:h-[28px] w-auto"
+              className="h-[22px] xl:h-[37px] w-auto"
             />
           </Link>
 
@@ -103,7 +103,7 @@ export const Header = () => {
           </nav>
         </div>
 
-        <div className="relative hidden xl:flex gap-4 pl-2" ref={dropdownRef}>
+        <div className="relative hidden lg:flex gap-4 pl-2" ref={dropdownRef}>
           <SearchBar />
           <SearchDropdown results={searchResults} />
           <CategoryDropdown />
@@ -114,7 +114,7 @@ export const Header = () => {
             onClick={handleSearchToggle}
             className={cn(
               baseIconClass,
-              'sm:flex xl:hidden hidden rounded-none',
+              'sm:flex lg:hidden hidden rounded-none',
             )}
             size="icon"
             variant="ghost"
@@ -158,9 +158,14 @@ export const Header = () => {
       </header>
 
       {isSearchVisible && (
-        <div className="w-full px-4 py-2 bg-white shadow-sm sticky top-12 z-40">
-          <SearchBar />
-          <button onClick={() => setIsSearchVisible(false)}>Close</button>
+        <div>
+          <div className="fixed top-[54px] right-[148px] z-50 bg-white/90 rounded-md shadow-md px-2 py-2 w-[478px] flex items-center gap-2">
+            <button onClick={() => setIsSearchVisible(false)}>
+              <SquareX className="opacity-40 hover:opacity-80 size-7" />
+            </button>
+            <SearchBar />
+          </div>
+          <SearchDropdown results={searchResults} />
         </div>
       )}
 
