@@ -49,12 +49,12 @@ export const ScrollSection = () => {
         <section
           className="section hero w-full h-screen bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/books/img/bg-library.jpg)',
+            backgroundImage: 'url(/books/img/backgroundwithwhite.png)',
           }}
         />
-        <section className="flex items-center justify-center h-screen text-white text-[8vw] font-bold text-center">
+        {/* <section className="flex items-center justify-center h-screen text-white text-[8vw] font-bold text-center">
           New Worlds
-        </section>
+        </section> */}
       </div>
       <div className="image-container absolute top-0 left-0 right-0 w-full h-screen overflow-hidden z-[2] [perspective:500px]">
         <img
@@ -62,12 +62,12 @@ export const ScrollSection = () => {
           alt="image"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-white text-[5vw] font-bold select-none pointer-events-none leading-none text-center">
-            <div className="-translate-x-[3vw]">New</div>
-            <div>Worlds</div>
-          </div>
-        </div>
+        {/* <div className="absolute inset-0 flex items-center justify-center"> */}
+        {/* <div className="text-white text-[5vw] font-bold select-none pointer-events-none leading-none text-center"> */}
+        {/* <div className="-translate-x-[3vw]">New</div>
+            <div>Worlds</div> */}
+        {/* </div> */}
+        {/* </div> */}
       </div>
     </div>
   );

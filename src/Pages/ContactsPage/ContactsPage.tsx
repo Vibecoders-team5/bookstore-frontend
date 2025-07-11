@@ -3,7 +3,7 @@ import { members } from '@/data/members.ts';
 
 export const ContactsPage = () => {
   return (
-    <div className="max-w-[1136px] mx-auto px-4 mt-12">
+    <div className="max-w-[1136px] mx-auto px-4 mt-25">
       <h2 className="text-[2rem] font-bold text-[#313237] mb-8 text-center">
         Meet Our Team
       </h2>
