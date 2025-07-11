@@ -8,7 +8,7 @@ export const ContactsPage = () => {
         Meet Our Team
       </h2>
 
-      <div className="flex gap-6 overflow-x-auto pb-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {members.map(
           (
             {
@@ -25,7 +25,7 @@ export const ContactsPage = () => {
           ) => (
             <div
               key={index}
-              className="w-[260px] h-[400px] flex flex-col justify-between items-center border border-gray-200 rounded-lg bg-white p-4 hover:shadow-md"
+              className="h-[400px] flex flex-col justify-between items-center border border-gray-200 rounded-lg bg-white p-4 hover:shadow-md"
             >
               <div className="flex flex-col items-center">
                 <img
@@ -41,7 +41,7 @@ export const ContactsPage = () => {
               </div>
 
               <div className="w-full flex flex-col items-center mt-auto">
-                <div className="w-30 h-px bg-[#89939A] mb-4" />
+                <div className="w-40 h-px bg-[#89939A] mb-4 mx-auto" />
 
                 <div className="flex space-x-3">
                   <a
