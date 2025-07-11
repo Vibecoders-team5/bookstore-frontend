@@ -2,7 +2,7 @@ import { BookList } from '@/components/sections/BookList/BookList';
 import { BackButton } from '@/components/ui/Buttons/BackButton';
 import { useBookStore } from '@/store/useBookStore';
 import { useNavigate } from 'react-router-dom';
-import { EmptyFavourites } from './EmptyFavourites';
+import { EmptyFavourites } from './components/EmptyFavourites';
 
 export const FavouritesPage = () => {
   const favourites = useBookStore((state) => state.favourites);

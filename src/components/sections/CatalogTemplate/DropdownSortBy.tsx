@@ -1,4 +1,4 @@
-import { DropdownSelect, Option } from '@/components/ui/DropdownSelect';
+import { DropdownSelect, Option } from '@/components/ui/Dropdowns';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
 export const DropdownSortBy = () => {

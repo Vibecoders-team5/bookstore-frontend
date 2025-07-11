@@ -6,12 +6,12 @@ import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
-import { CategoryDropdown } from '@/components/bloks/CategoryDropdown';
 import { useBookStore } from '@/store/useBookStore';
 import { getSearchResults } from '@/utils/getSearchResults';
 import { getPaperBooks } from '@/services/booksAPI';
 import { Book } from '@/types/Book';
-import { SearchDropdown } from './SearchDropdown';
+import { SearchDropdown } from './components/SearchDropdown';
+import { CategoryDropdown } from './components/CategoryDropdown';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
