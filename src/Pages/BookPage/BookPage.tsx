@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
-import { getBookBySlug } from '@/services/getBookBySlug';
-import { Book } from '@/types/Book';
+import { getBookAndVariants } from '@/services/getBookAndVariants';
+import { useBookStore } from '@/store/useBookStore';
 
 import { BookAbout } from '../BookPage/components/BookAbout/BookAbout';
 import { BookCharacteristics } from '../BookPage/components/BookCharacteristics/BookCharacteristics';
@@ -12,23 +12,26 @@ import { BreadcrumbSection } from './components/BreadcrumbSection/BreadcrumbSect
 import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 
 export const BookPage: React.FC = () => {
-  const { bookSlug } = useParams<{ bookSlug: string }>();
-  const [book, setBook] = useState<Book | null>(null);
+  const { setCurrentBook, setBookVariants, currentBook: book } = useBookStore();
   const [isLoading, setLoading] = useState(false);
-  const match = useMatch('/:type/:bookSlug');
-
-  const type = match?.params.type as 'paperback' | 'kindle' | 'audiobook';
+  const { bookSlug } = useParams<{ bookSlug: string }>();
+  const type = useMatch('/:type/:bookSlug')?.params.type as
+    | 'paperback'
+    | 'kindle'
+    | 'audiobook';
 
   useEffect(() => {
     if (!bookSlug || !type) return;
+    setLoading(true);
 
-    getBookBySlug(type, bookSlug)
-      .then(setBook)
-      .catch((err) => {
-        console.error(err);
+    getBookAndVariants(type, bookSlug)
+      .then(({ current, variants }) => {
+        setCurrentBook(current);
+        setBookVariants(variants);
       })
+      .catch(console.error)
       .finally(() => setLoading(false));
-  }, [bookSlug, type]);
+  }, [type, bookSlug, setCurrentBook, setBookVariants]);
 
   if (isLoading || !book) return <BookLoader />;
 
@@ -56,14 +59,14 @@ export const BookPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
           <BookGallery images={imageUrls} />
           <div>
             <BookDetails book={book} />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
           <BookAbout book={book} />
           <BookCharacteristics book={book} />
         </div>
