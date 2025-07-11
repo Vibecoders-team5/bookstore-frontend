@@ -1,4 +1,4 @@
-import { Input } from '@/components/ui/input/input';
+import { Input } from '@/components/ui/Input/input';
 import { useBookStore } from '@/store/useBookStore';
 import { Search } from 'lucide-react';
 import debounce from 'lodash/debounce';

@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 import { Link, NavLink } from 'react-router-dom';
 
-import { SearchBar } from '@/components/ui/input';
+import { SearchBar } from '@/components/ui/Input';
 import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
