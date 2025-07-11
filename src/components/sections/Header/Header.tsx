@@ -6,12 +6,12 @@ import { Heart, Menu, Search, ShoppingBag } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
-import { CategoryDropdown } from '@/components/bloks/CategoryDropdown';
 import { useBookStore } from '@/store/useBookStore';
 import { getSearchResults } from '@/utils/getSearchResults';
 import { getPaperBooks } from '@/services/booksAPI';
 import { Book } from '@/types/Book';
-import { SearchDropdown } from './SearchDropdown';
+import { SearchDropdown } from './components/SearchDropdown';
+import { CategoryDropdown } from './components/CategoryDropdown';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -59,10 +59,10 @@ export const Header = () => {
     cn(
       'relative h-full flex items-center justify-center uppercase transition-colors duration-200 group',
       {
-        'text-[#313237] after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:bg-[#313237] after:w-full after:scale-x-100 after:origin-center after:transition-transform after:duration-300':
+        'text-[#b3b2aa] after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:bg-[#b3b2aa] after:w-full after:scale-x-100 after:origin-center after:transition-transform after:duration-300':
           isActive,
 
-        'text-[#89939A] hover:text-[#313237] after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:bg-[#313237] after:w-full after:scale-x-0 after:origin-center after:transition-transform after:duration-300 group-hover:after:scale-x-100':
+        'text-white hover:text-[#313237] after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:bg-[#313237] after:w-full after:scale-x-0 after:origin-center after:transition-transform after:duration-300 group-hover:after:scale-x-100':
           !isActive,
       },
     );
@@ -73,7 +73,7 @@ export const Header = () => {
     'transition duration-200 transform group-hover:scale-110';
   return (
     <div className="relative">
-      <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-white/70 fixed top-0 left-0 right-0 z-50 shadow-sm">
+      <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-[#493929] fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="flex items-center w-full h-full gap-6">
           <Link
             aria-label="Go to Home page"
