@@ -1,7 +1,4 @@
-import { useEffect, useState } from 'react';
-import { getPaperBooks } from '@/services/booksAPI';
 import { Book } from '@/types/Book';
-import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { BookCard } from '@/components/bloks/BookCard/BookCard';
 import {
   Carousel,
@@ -12,24 +9,14 @@ import {
 } from '@/components/ui/carousel';
 
 type PaperBookSliderProps = {
+  books: Book[];
   title?: string;
 };
 
-export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
-  const [books, setBooks] = useState<Book[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    setIsLoading(true);
-    getPaperBooks()
-      .then(setBooks)
-      .finally(() => setIsLoading(false));
-  }, []);
-
-  if (isLoading) {
-    return <BookLoader />;
-  }
-
+export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({
+  books,
+  title,
+}) => {
   return (
     <Carousel className="max-w-284 mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-20 pb-8">
       <div className="flex items-center justify-between mb-[23px]">
@@ -41,7 +28,7 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({ title }) => {
       </div>
 
       <CarouselContent className="flex sm:-ml-4 sm:justify-start justify-center">
-        {books.slice(0, 10).map((book) => (
+        {books.map((book) => (
           <CarouselItem
             key={book.slug}
             className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
