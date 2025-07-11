@@ -9,7 +9,7 @@ export const FavouritesPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full flex justify-center py-10">
+    <div className="w-full flex justify-center py-25">
       <div className="w-full max-w-284 min-w-0">
         <BackButton onClick={() => navigate(-1)} />
 

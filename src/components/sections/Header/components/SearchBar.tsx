@@ -1,8 +1,8 @@
-import { Input } from '@/components/ui/input/input';
 import { useBookStore } from '@/store/useBookStore';
 import { Search } from 'lucide-react';
 import debounce from 'lodash/debounce';
 import { useEffect, useMemo, useState } from 'react';
+import { OurInput } from '@/components/ui/OurInput/OurInput';
 
 export function SearchBar() {
   const { setQuery } = useBookStore();
@@ -29,16 +29,17 @@ export function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative w-[290px] h-[40px]">
+    <form onSubmit={handleSubmit} className="relative w-[280px] h-7 xl:h-10">
       <Search
         className="absolute left-4 top-1/2 -translate-y-1/2 text-[#B4BDC3]"
         size={18}
       />
-      <Input
+      <OurInput
         type="text"
         placeholder="Find a book or author"
         value={inputValue}
         onChange={handleChange}
+        className="w-full"
       />
     </form>
   );

@@ -12,7 +12,7 @@ export const CategoryDropdown = () => {
         { label: 'E-books', value: '/kindle' },
       ]}
       placeholder="Choose category"
-      className="w-full sm:w-[176px]"
+      className="w-full sm:w-[176px] text-[#B4BDC3] h-7 xl:h-10"
       onChange={(value) => {
         navigate(value);
       }}
