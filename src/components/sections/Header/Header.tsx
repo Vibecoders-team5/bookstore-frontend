@@ -83,7 +83,7 @@ export const Header = () => {
             <img
               src="/books/img/nice-books-logo.png"
               alt="nice-books logo"
-              className="h-[22px] xl:h-[28px] w-auto"
+              className="h-[22px] xl:h-[37px] w-auto"
             />
           </Link>
 
