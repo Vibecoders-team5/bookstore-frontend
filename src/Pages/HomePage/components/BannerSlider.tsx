@@ -34,7 +34,7 @@ const SlideImage = ({
   keyProp,
 }: {
   srcDesktop: string;
-  srcTablet: string;
+  srcTablet?: string;
   zIndex: number;
   opacityFrom: number;
   opacityTo: number;
@@ -113,7 +113,7 @@ export default function BannerSlider() {
 
           <SlideImage
             srcDesktop={images[currentSlide].desktop}
-            srcTablet={images[currentSlide].tablet}
+            // srcTablet={images[currentSlide].tablet}
             zIndex={20}
             opacityFrom={0}
             opacityTo={1}
