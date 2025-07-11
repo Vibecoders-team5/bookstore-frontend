@@ -1,7 +1,7 @@
-import BannerSlider from '@/components/sections/BannerSlider/BannerSlider';
+import BannerSlider from '@/Pages/HomePage/components/BannerSlider';
 import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
-import { CategoriesGrid } from '@/components/sections/CategoriesGrid/CategoriesGrid';
-import { ScrollSection } from './ScrollSection';
+import { CategoriesGrid } from '@/Pages/HomePage/components/CategoriesGrid';
+import { ScrollSection } from './components/ScrollSection';
 
 export const HomePage = () => {
   return (

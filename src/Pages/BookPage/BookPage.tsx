@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
-import { getBookAndVariants } from '@/services/getBookAndVariants';
+import { getBookAndVariants } from '@/utils/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
 
 import { BookAbout } from '../BookPage/components/BookAbout/BookAbout';
