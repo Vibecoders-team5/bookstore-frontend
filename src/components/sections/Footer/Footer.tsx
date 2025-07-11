@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between w-full px-8 xl:px-36 py-8 gap-8 bg-white text-[#89939A] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+    <footer className="flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between w-full px-8 xl:px-36 py-8 gap-8 bg-[#493929] text-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
       <Link
         to="/"
         className="flex items-center justify-center shrink-0 transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
@@ -36,7 +36,7 @@ export const Footer = () => {
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         variant="backToTop"
-        className="self-center"
+        className="self-center text-white"
       >
         <span>Back to top</span>
         <ChevronUpIcon size={16} />
