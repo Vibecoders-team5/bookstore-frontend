@@ -26,7 +26,7 @@ export const DropdownSortBy = () => {
       placeholder="Newest"
       defaultValue={currentSort ?? 'newest'}
       label="Sort by"
-      className="w-[176px] h-15"
+      className="w-[176px] h-15 text-black/80"
       onChange={handleSortChange}
     />
   );

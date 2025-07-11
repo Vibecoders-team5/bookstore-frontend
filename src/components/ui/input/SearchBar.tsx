@@ -29,7 +29,7 @@ export function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative w-[290px] h-[40px]">
+    <form onSubmit={handleSubmit} className="relative w-[280px] h-7 xl:h-10">
       <Search
         className="absolute left-4 top-1/2 -translate-y-1/2 text-[#B4BDC3]"
         size={18}
@@ -39,6 +39,7 @@ export function SearchBar() {
         placeholder="Find a book or author"
         value={inputValue}
         onChange={handleChange}
+        className="w-full"
       />
     </form>
   );
