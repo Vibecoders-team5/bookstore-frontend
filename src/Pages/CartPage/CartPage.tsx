@@ -1,7 +1,7 @@
 import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
-import { EmptyCart } from '@/Pages/CartPage/EmptyCart';
+import { EmptyCart } from '@/Pages/CartPage/components/EmptyCart';
 import { Book } from '@/types/Book';
-import { CartSummary } from './CartSummary';
+import { CartSummary } from './components/CartSummary';
 import { useBookStore } from '@/store/useBookStore';
 import { BackButton } from '@/components/ui/Buttons/BackButton';
 import { useNavigate } from 'react-router-dom';

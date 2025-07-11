@@ -1,5 +1,5 @@
+import { client } from '@/services/fetchClient';
 import { Book } from '@/types/Book';
-import { client } from './fetchClient';
 
 export const getBookAndVariants = async (
   type: 'paperback' | 'kindle' | 'audiobook',
