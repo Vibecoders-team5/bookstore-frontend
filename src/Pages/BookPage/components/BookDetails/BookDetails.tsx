@@ -11,12 +11,18 @@ type Props = {
 };
 
 export function BookDetails({ book }: Props) {
-  const cart = useBookStore((state) => state.cart);
   const addToCart = useBookStore((state) => state.addToCart);
   const removeFromCart = useBookStore((state) => state.removeFromCart);
   const increaseQuantity = useBookStore((state) => state.increaseQuantity);
   const decreaseQuantity = useBookStore((state) => state.decreaseQuantity);
+  const addToFavourites = useBookStore((state) => state.addToFavourites);
+  const removeFromFavourites = useBookStore(
+    (state) => state.removeFromFavourites,
+  );
+  const cart = useBookStore((state) => state.cart);
+  const favourites = useBookStore((state) => state.favourites);
 
+  const isFavourite = favourites.some((fav) => fav.id === book.id);
   const cartItem = cart.find((item) => item.id === book.id);
 
   const quantity = cartItem?.quantity || 0;
@@ -38,6 +44,14 @@ export function BookDetails({ book }: Props) {
   const handleMinus = () => {
     if (quantity > 1) decreaseQuantity(book.id);
     else if (quantity === 1) removeFromCart(book.id);
+  };
+
+  const toggleFavourite = () => {
+    if (isFavourite) {
+      removeFromFavourites(book);
+    } else {
+      addToFavourites(book);
+    }
   };
 
   return (
@@ -88,7 +102,6 @@ export function BookDetails({ book }: Props) {
               size="bookPageAddButton"
             />
 
-            {/* {cartItem && ( */}
             <div className="flex items-center border border-[#E2E6E9] rounded-md px-2">
               <button
                 className="text-[#B4BDC3] hover:text-[#313237] w-6.5 h-10 flex items-center justify-center"
@@ -108,7 +121,7 @@ export function BookDetails({ book }: Props) {
               </button>
             </div>
 
-            <HeartButton />
+            <HeartButton onClick={toggleFavourite} isSelected={isFavourite} />
           </div>
         </div>
       </div>
