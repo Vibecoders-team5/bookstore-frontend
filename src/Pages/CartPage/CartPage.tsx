@@ -23,11 +23,11 @@ export const CartPage = () => {
   const totalQuantity = cart.reduce((sum, book) => sum + book.quantity, 0);
 
   return (
-    <div className="w-full flex justify-center px-4 sm:px-6 xl:px-8 pt-10 pb-8 sm:pb-16">
+    <div className="w-full flex justify-center px-4 sm:px-6 xl:px-8 pt-25 pb-8 sm:pb-16">
       <div className="w-full max-w-284 min-w-0">
         <BackButton onClick={() => navigate(-1)} />
 
-        <div className="mb-8 sm:mb-10 pt-4">
+        <div className="mb-8 sm:mb-10 pt-2">
           <h1 className="text-[32px] sm:text-[48px] font-[700]">Cart</h1>
           <p>{`${totalQuantity} items`}</p>
         </div>

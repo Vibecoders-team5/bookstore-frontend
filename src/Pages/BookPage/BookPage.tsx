@@ -10,9 +10,13 @@ import { BookGallery } from '../BookPage/components/BookGallery/BookGallery';
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { BreadcrumbSection } from './components/BreadcrumbSection/BreadcrumbSection';
 import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
+import { Book } from '@/types/Book';
+import { getPaperBooks } from '@/services/booksAPI';
+import { getRandomBooks } from '@/utils/getRandomBooks';
 
 export const BookPage: React.FC = () => {
   const { setCurrentBook, setBookVariants, currentBook: book } = useBookStore();
+  const [books, setBooks] = useState<Book[]>([]);
   const [isLoading, setLoading] = useState(false);
   const { bookSlug } = useParams<{ bookSlug: string }>();
   const type = useMatch('/:type/:bookSlug')?.params.type as
@@ -23,6 +27,8 @@ export const BookPage: React.FC = () => {
   useEffect(() => {
     if (!bookSlug || !type) return;
     setLoading(true);
+
+    getPaperBooks().then((b) => setBooks(b));
 
     getBookAndVariants(type, bookSlug)
       .then(({ current, variants }) => {
@@ -69,7 +75,7 @@ export const BookPage: React.FC = () => {
           <BookCharacteristics book={book} />
         </div>
 
-        <PaperBookSlider title="You might like" />
+        <PaperBookSlider books={getRandomBooks(books)} title="You might like" />
       </div>
     </div>
   );
