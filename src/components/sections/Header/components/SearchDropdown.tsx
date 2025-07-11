@@ -15,7 +15,7 @@ export const SearchDropdown: React.FC<SearchDropdownProps> = ({ results }) => {
   return (
     <div
       className={cn(
-        'absolute z-50 top-13 right-46 max-w-[482px] w-[482px] flex flex-col px-2 bg-white/90 rounded-md shadow-md overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out',
+        'absolute z-50 top-24 lg:top-13 right-36 lg:right-46 max-w-[482px] w-[482px] flex flex-col px-2 bg-white/90 rounded-md shadow-md overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out',
         isOpen ?
           'max-h-[350px] opacity-100 pointer-events-auto overflow-y-auto'
         : 'max-h-0 opacity-0 pointer-events-none overflow-hidden',
