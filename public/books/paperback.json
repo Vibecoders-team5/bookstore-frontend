@@ -170,7 +170,6 @@
     "images": [
       "img/paperback/graphic-design-the-new-basics/uk/00.webp",
       "img/paperback/graphic-design-the-new-basics/uk/01.webp",
-      "img/paperback/graphic-design-the-new-basics/uk/02.webp",
       "img/paperback/graphic-design-the-new-basics/uk/03.webp",
       "img/paperback/graphic-design-the-new-basics/uk/04.webp",
       "img/paperback/graphic-design-the-new-basics/uk/05.webp",
@@ -1295,6 +1294,948 @@
       "Доповнене видання класичного бестселера, що ґрунтується на п'ятнадцятирічному досвіді реалізації концепцій Пітера Сенджі.",
       "Панівна система управління приречена: часи, коли нездатність скористатися колективним розумом, властивим ефективній спільній роботі, компенсують тяжкою працею, позаду. Це не екологічно і точно не ефективно. А єдиною стійкою перевагою організацій у сучасному світі є здатність навчатися швидше за конкурентів.",
       "Пітер Сенджі доводить, що лідери компаній і організацій, позбуваючись перешкод і стереотипів стосовно навчання і приймаючи нові стратегії, які вивільняють істинні колективні прагнення, допомагають своїм же працівникам досягати високих результатів. Опанування уроків, описаних у «П’ятій дисципліні», допоможе навчитися бачити навколишній світ по-новому, запалити іскру творчості й звільнитися від обмежень та стереотипів усім, хто цього по-справжньому прагне: і компаніям, які працюють за принципами сталого розвитку, і організаціям, що вирішують соціальні проблеми — вуличного бандитизму, зміни систем шкільної освіти, сприяння економічному розвитку чи боротьби з бідністю. А керівники здобудуть знання про п’ять базових складників успіху: постійне самовдосконалення кожного працівника, інтелектуальну модель, загальне бачення, навчання команд і — найголовнішу, п'яту дисципліну, що дасть змогу поєднувати мозаїку миттєвих подій у чітку картину — мислення системами."
+    ]
+  },
+  {
+    "id": "d4e97dbf-1984-4f84-a984-000000000001",
+    "type": "paperback",
+    "namespaceId": "1984",
+    "name": "1984",
+    "slug": "1984-uk-hardcover",
+    "priceRegular": 22,
+    "priceDiscount": 17.5,
+    "images": [
+      "img/paperback/1984/uk/00.webp",
+      "img/paperback/1984/uk/01.webp",
+      "img/paperback/1984/uk/02.webp",
+      "img/paperback/1984/uk/03.webp",
+      "img/paperback/1984/uk/04.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "George Orwell",
+    "coverType": "hardcover",
+    "numberOfPages": 312,
+    "publicationYear": 2015,
+    "publication": "Zhupansky Publishing",
+    "format": "130x210 mm",
+    "illustrations": false,
+    "category": [
+      "Science fiction",
+      "Dystopia",
+      "Teen dystopian books",
+      "Dystopian genre books",
+      "Fiction",
+      "Banned books that became classics"
+    ],
+    "description": [
+      "Бажаєте розібратися у реаліях сьогодення? Тоді радимо придбати книгу «1984». Дивно, але реалії твору, написаного у жанрі антиутопії більше 60 років тому, у деталях збігаються з тими, що ми спостерігаємо у наші дні.",
+      "Незважаючи на художню вигадку, книга настільки реалістична, що перевертає свідомість, причому так, що хочеться перевернути її назад.",
+      "У творі представлено суспільство майбутнього, де йде війна усіх проти всіх. Події розгортаються у державі під назвою Океанія, де панує жорстокий тоталітаризм.",
+      "Головний герой працює у Міністерстві Правди, вилучаючи з документів те, що не відповідає пропаганді, але в глибині душі мріє про революцію та вільне мислення."
+    ]
+  },
+  {
+    "id": "d4e97dbf-mana-4f84-a984-000000000001",
+    "type": "paperback",
+    "namespaceId": "manacled",
+    "name": "Заковані",
+    "slug": "manacled-uk-hardcover",
+    "priceRegular": 22,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/manacled/uk/00.webp",
+      "img/paperback/manacled/uk/01.webp",
+      "img/paperback/manacled/uk/02.webp",
+      "img/paperback/manacled/uk/03.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "SenLinYu",
+    "coverType": "hardcover",
+    "numberOfPages": 312,
+    "publicationYear": 2015,
+    "publication": "Dramione Publishing",
+    "format": "130x210 mm",
+    "illustrations": true,
+    "category": [
+      "Romance",
+      "Our product manager's favorite",
+      "Dramione",
+      "Teen dystopian books",
+      "Fiction"
+    ],
+    "description": [
+      "After the war, in order to consolidate his power, Voldemort resorts to a program of increasing the birth rate and regeneration of the magical population.",
+      "Hermione Granger has a secret, hidden and protected by her mind, which threatens the existence of the new regime. So she is sent as a prisoner to the Supreme Governor, to be controlled and used as a surrogate mother.",
+      "Until her mind is finally broken."
+    ]
+  },
+  {
+    "id": "d4e97dbf-mana34-4f84-a984-000000000001",
+    "type": "paperback",
+    "namespaceId": "manacled",
+    "name": "Manacled",
+    "slug": "manacled-en-hardcover",
+    "priceRegular": 30,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/manacled/en/00.webp",
+      "img/paperback/manacled/en/01.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "SenLinYu",
+    "coverType": "hardcover",
+    "numberOfPages": 315,
+    "publicationYear": 2020,
+    "publication": "Dramione Publishing",
+    "format": "130x210 mm",
+    "illustrations": true,
+    "category": [
+      "Teen dystopian books",
+      "Our product manager's favorite",
+      "Dramione",
+      "Romance",
+      "Fiction"
+    ],
+    "description": [
+      "After the war, in order to consolidate his power, Voldemort resorts to a program of increasing the birth rate and regeneration of the magical population.",
+      "Hermione Granger has a secret, hidden and protected by her mind, which threatens the existence of the new regime. So she is sent as a prisoner to the Supreme Governor, to be controlled and used as a surrogate mother.",
+      "Until her mind is finally broken."
+    ]
+  },
+  {
+    "id": "e9b82d84-19844-4a1f-92bb-000000000002",
+    "type": "paperback",
+    "namespaceId": "1984",
+    "name": "1984",
+    "slug": "1984-en-paperback",
+    "priceRegular": 24.2,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/1984/en/00.webp",
+      "img/paperback/1984/en/01.webp",
+      "img/paperback/1984/en/02.webp",
+      "img/paperback/1984/en/03.webp",
+      "img/paperback/1984/en/04.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "George Orwell",
+    "coverType": "paperback",
+    "numberOfPages": 284,
+    "publicationYear": 2021,
+    "publication": "Alma Books",
+    "format": "129x198 mm",
+    "illustrations": false,
+    "category": [
+      "Classic prose",
+      "Dystopia",
+      "Classic fiction",
+      "Utopian and dystopian science fiction"
+    ],
+    "description": [
+      "Eric Blair (1903-50), better known by his pen name George Orwell, was a novelist, journalist and critic, best remembered for his seminal novels 1984 and Animal Farm, and for works of non-fiction such as The Road to Wigan Pier and Homage to Catalonia.",
+      "Ravaged by years of war and civil conflict, Britain has changed its name to Airstrip One and become part of Oceania - one of the three totalitarian blocks dominating the world - ruled by a mysterious leader called Big Brother who keeps the population in thrall through strict surveillance and brutal police repression.",
+      "In a society where the individual is suppressed and turned into an \"unperson\" for not conforming, and where not only personal thought, but also historical record and language itself are constantly being manipulated by the ruling regime, Ministry of Truth worker Winston Smith tries to make sense of the rebellious thoughts and passions that are stirring inside him, and finds himself impotent against the inexorable machine that surrounds him and threatens to crush him at any time.",
+      "Arguably the greatest dystopian novel of all time and the most influential post-war work of fiction - which enriched the English language with words such as \"Newspeak\", \"doublethink\" and \"thoughtcrime\" - Nineteen Eighty-Four is a riveting read and a groundbreaking exploration of mass surveillance, censorship and mind control, which has a deep resonance with the world we live in."
+    ]
+  },
+  {
+    "id": "f7a1e7dc-4f21-4c1f-8b25-000000000003",
+    "type": "paperback",
+    "namespaceId": "red-dragon",
+    "name": "Червоний Дракон",
+    "slug": "red-dragon-uk-hardcover",
+    "priceRegular": 20.9,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/red-dragon/uk/00.webp",
+      "img/paperback/red-dragon/uk/01.webp",
+      "img/paperback/red-dragon/uk/02.webp",
+      "img/paperback/red-dragon/uk/03.webp",
+      "img/paperback/red-dragon/uk/04.webp",
+      "img/paperback/red-dragon/uk/05.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Thomas Harris",
+    "coverType": "hardcover",
+    "numberOfPages": 400,
+    "publicationYear": 2023,
+    "publication": "Книжковий клуб \"Клуб Сімейного Дозвілля\"",
+    "format": "135x205 mm",
+    "illustrations": false,
+    "category": [
+      "Psychological thriller",
+      "Classic prose",
+      "Our Tech&Team lead's favorite"
+    ],
+    "description": [
+      "З того часу як слідчий Вілл Ґрем спіймав та посадив за ґрати сенсаційного злочинця — колишнього психіатра Ганнібала Лектера, минуло 5 років. Вілл перебуває на заслуженій пенсії й не збирається повертатися до роботи, яка коштувала йому здоров’я.",
+      "Однак в Америці з’являється новий серійний убивця, який жорстоко розправився з двома сім’ями і, схоже, не планує зупинятися. Тож Ґрем змушений взятися за цю справу.",
+      "Опрацьовуючи її матеріали, слідчий розуміє: без допомоги Ганнібала зупинити подібні злочини неможливо. А маніяк за ґратами однак уже не зможе нашкодити. Правда ж?",
+      "Культовий роман, в якому вперше з’являється епічний персонаж — серійний вбивця та канібал Ганнібал Лектер та єдиний раз, коли героєм є Вілл Ґрем — профайлер ФБР."
+    ]
+  },
+  {
+    "id": "a2b1b6fe-1984-42ab-a133-000000000004",
+    "type": "paperback",
+    "namespaceId": "red-dragon",
+    "name": "Red Dragon",
+    "slug": "red-dragon-en-paperback",
+    "priceRegular": 25.4,
+    "priceDiscount": 20,
+    "images": [
+      "img/paperback/red-dragon/en/00.webp",
+      "img/paperback/red-dragon/en/01.webp",
+      "img/paperback/red-dragon/en/02.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Thomas Harris",
+    "coverType": "paperback",
+    "numberOfPages": 432,
+    "publicationYear": 2021,
+    "publication": "Arrow",
+    "format": "129x198 mm",
+    "illustrations": false,
+    "category": [
+      "Psychological thriller",
+      "Movie tie-in & adaptations",
+      "Classic prose",
+      "Our Tech&Team lead's favorite"
+    ],
+    "description": [
+      "Will Graham was a brilliant profiler of criminals for the FBI — until he suffered terrible injuries in the process of capturing Dr Hannibal 'the Cannibal' Lecter.",
+      "Years later, a serial killer nicknamed 'the Tooth Fairy' is massacring entire families each full moon. With the FBI desperate for progress, Will reluctantly agrees to consult.",
+      "But he soon realises that he alone can't crack the case; he needs the help of the only mind even better than his own at understanding the mentalities of psychopaths — the mind of Hannibal Lecter.",
+      "But Hannibal is playing his own twisted game from the asylum for the criminally insane. Will isn't alone in getting advice from the cannibal. So is the Tooth Fairy — the man haunted by visions of the murderous Red Dragon..."
+    ]
+  },
+  {
+    "id": "d1d8845e-3478-42bb-a9f2-000000000005",
+    "type": "paperback",
+    "namespaceId": "the-surgeon",
+    "name": "Хірург",
+    "slug": "the-surgeon-uk-hardcover",
+    "priceRegular": 15.9,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/the-surgeon/uk/00.webp",
+      "img/paperback/the-surgeon/uk/01.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Tess Gerritsen",
+    "coverType": "hardcover",
+    "numberOfPages": 352,
+    "publicationYear": 2016,
+    "publication": "Family Leisure Book Club",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": [
+      "Police procedural",
+      "Female detective",
+      "Psychological thriller",
+      "Our tech team leader's family favorite"
+    ],
+    "description": [
+      "• Світовий бестселер",
+      "Він приходить лише у ночі. Безшумно проникає у дім. Крадеться до спальні, де тільки но прокинувшись від сну, самотні жінки потрапляють до приголомшливого кошмару. Зважаючи на те, що він робить зі своїми жертвами, можна припустити, що злодій знається на медицині. Саме через це його називають Хірург.",
+      "Томас Мур та Джейн Ріццолі розслідують серію страшенних вбивств. Злочинець наслідує почерк серійного маніяка, якого було вбито два роки тому. Він копією навіть такі дрібні деталі, про які мало кому відомо.",
+      "Остання з жертв загиблого маніяка Кетрін Корделл, вбила його, та саме через це стає метою нового вбивці. Із кожною наступною жертвою невідомий наближається до Кетрін.",
+      "Саме Томасу та Джейн доведеться зупинити геніального вбивцю, чого б це не коштувало."
+    ]
+  },
+  {
+    "id": "f947b991-1234-42ee-a3d2-000000000006",
+    "type": "paperback",
+    "namespaceId": "the-surgeon",
+    "name": "The Surgeon",
+    "slug": "the-surgeon-en-paperback",
+    "priceRegular": 15.5,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/the-surgeon/en/00.webp",
+      "img/paperback/the-surgeon/en/01.webp",
+      "img/paperback/the-surgeon/en/02.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Tess Gerritsen",
+    "coverType": "paperback",
+    "numberOfPages": 432,
+    "publicationYear": 2022,
+    "publication": "Penguin",
+    "format": "127x198 mm",
+    "illustrations": false,
+    "category": [
+      "Police procedural",
+      "Female detective",
+      "Crime thriller",
+      "Psychological thriller",
+      "Our tech team leader's family favorite",
+      "Crime noir"
+    ],
+    "description": [
+      "A killer is targeting lone women, torturing and murdering them. The precision of his methods leads Detective Jane Rizzoli to suspect he is medically trained.",
+      "Then Jane makes a terrifying discovery. Years ago a young woman was assaulted in a similar way. She escaped by shooting her attacker dead.",
+      "So why does it feel like he's stalking her again?"
+    ]
+  },
+  {
+    "id": "0c9110d7-f394-4dc2-87fb-000000000007",
+    "type": "paperback",
+    "namespaceId": "the-apprentice",
+    "name": "Асистент",
+    "slug": "the-apprentice-uk-hardcover",
+    "priceRegular": 16.5,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/the-apprentice/uk/00.webp",
+      "img/paperback/the-apprentice/uk/01.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Tess Gerritsen",
+    "coverType": "hardcover",
+    "numberOfPages": 368,
+    "publicationYear": 2017,
+    "publication": "Family Leisure Book Club",
+    "format": "135x205 mm",
+    "illustrations": false,
+    "category": [
+      "Police procedural",
+      "Female detective",
+      "Crime thriller",
+      "Our tech team leader's family favorite"
+    ],
+    "description": [
+      "Анотація «Асистент. Книга 2», Тесс Ґеррітсен",
+      "Вже пройшов рік, як детективка Джейн Ріццолі вистежила серійного маніяка Воррена Гойта на прізвисько Хірург...",
+      "Градус напруги зростає, підвищуючи температуру й без того спекотного літа у Бостоні...",
+      "«Асистент» продовжує історію книги «Хірург» у серії «Ріццолі та Айлз» від Тесс Ґеррітсен..."
+    ]
+  },
+  {
+    "id": "3c118a89-2c6d-4bd3-8e9d-000000000008",
+    "type": "paperback",
+    "namespaceId": "the-apprentice",
+    "name": "The Apprentice",
+    "slug": "the-apprentice-en-paperback",
+    "priceRegular": 13.9,
+    "priceDiscount": 10,
+    "images": [
+      "img/paperback/the-apprentice/en/00.webp",
+      "img/paperback/the-apprentice/en/01.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Tess Gerritsen",
+    "coverType": "paperback",
+    "numberOfPages": 416,
+    "publicationYear": 2010,
+    "publication": "Transworld Digital",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": ["Thriller", "Our tech team leader's family favorite"],
+    "description": [
+      "A series of horrific murders seem disturbingly familiar to Detective Jane Rizzoli. They remind her and Forensic Pathologist Maura Isles of those committed by a killer known as The Surgeon, who they recently put behind bars.",
+      "While they’re still trying to track down the new killer, the unthinkable happens: The Surgeon escapes.",
+      "Suddenly, Jane is chasing not one but two brilliant and twisted minds, united by one goal..."
+    ]
+  },
+  {
+    "id": "8e77917e-6c03-48f5-9276-000000000009",
+    "type": "paperback",
+    "namespaceId": "iron-flame",
+    "name": "Залізне полум’я",
+    "slug": "iron-flame-uk-hardcover",
+    "priceRegular": 24.5,
+    "priceDiscount": 19.5,
+    "images": [
+      "img/paperback/iron-flame/uk/00.webp",
+      "img/paperback/iron-flame/uk/01.webp",
+      "img/paperback/iron-flame/uk/02.webp",
+      "img/paperback/iron-flame/uk/03.webp",
+      "img/paperback/iron-flame/uk/04.webp",
+      "img/paperback/iron-flame/uk/05.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Rebecca Yarros",
+    "coverType": "hardcover",
+    "numberOfPages": 736,
+    "publicationYear": 2024,
+    "publication": "Family Leisure Book Club",
+    "format": "175x245 mm",
+    "illustrations": false,
+    "category": [
+      "Fantasy",
+      "Dark fantasy",
+      "Epic fantasy",
+      "Sword and sorcery",
+      "Our tech team leader's family favorite"
+    ],
+    "description": [
+      "У перший рік деякі з нас втрачають життя.",
+      "На другий рік ми втрачаємо свою людяність.",
+      "Багато хто очікував, що Вайолет Сорренґейл загине під час свого першого року навчання у Військовому коледжі Басґіат...",
+      "Проте самого бажання вижити цього року буде недостатньо. Адже Вайолет знає страшну таємницю, яку століттями приховували у Наваррі."
+    ]
+  },
+  {
+    "id": "bd813d39-0af5-4e3c-b1c7-000000000010",
+    "type": "paperback",
+    "namespaceId": "iron-flame",
+    "name": "Iron Flame",
+    "slug": "iron-flame-en-hardcover",
+    "priceRegular": 22.9,
+    "priceDiscount": 20,
+    "images": [
+      "img/paperback/iron-flame/en/00.webp",
+      "img/paperback/iron-flame/en/01.webp",
+      "img/paperback/iron-flame/en/02.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Rebecca Yarros",
+    "coverType": "hardcover",
+    "numberOfPages": 640,
+    "publicationYear": 2023,
+    "publication": "Piatkus Books",
+    "format": "156x240 mm",
+    "illustrations": false,
+    "category": [
+      "Emotional struggle",
+      "Fantasy",
+      "Young adult fiction",
+      "Epic fantasy",
+      "Our tech team leader's family favorite"
+    ],
+    "description": [
+      "She survived her first year at Basgiath War College... but the danger is only beginning.",
+      "Now the real training begins, and Violet's already wondering how she'll get through...",
+      "Although Violet's body might be weaker and frailer than everyone else's, she still has her wits, and a will of iron.",
+      "But a determination to survive won't be enough this year. Because Violet knows the real secret hidden for centuries at Basgiath War College."
+    ]
+  },
+  {
+    "id": "c4b22864-9ae4-4c63-9850-000000000011",
+    "type": "paperback",
+    "namespaceId": "fourth-wing",
+    "name": "Четверте крило",
+    "slug": "fourth-wing-uk-hardcover",
+    "priceRegular": 23.9,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/fourth-wing/uk/00.webp",
+      "img/paperback/fourth-wing/uk/01.webp",
+      "img/paperback/fourth-wing/uk/02.webp",
+      "img/paperback/fourth-wing/uk/03.webp",
+      "img/paperback/fourth-wing/uk/04.webp",
+      "img/paperback/fourth-wing/uk/05.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Rebecca Yarros",
+    "coverType": "hardcover",
+    "numberOfPages": 528,
+    "publicationYear": 2024,
+    "publication": "Family Leisure Book Club",
+    "format": "170x245 mm",
+    "illustrations": false,
+    "category": [
+      "Fantasy",
+      "Dark fantasy",
+      "Romantic fantasy",
+      "Our tech team leader's family favorite"
+    ],
+    "description": [
+      "Дракон без свого вершника — це трагедія.",
+      "Вершник без свого дракона — це смерть.",
+      "Пориньте в жорстокий світ військового коледжу для вершників драконів! Тут народжується еліта! Або помирає...",
+      "І, щоб побачити наступний схід сонця, дівчині знадобляться весь її розум і вся удача."
+    ]
+  },
+  {
+    "id": "fdaebba6-1d9f-4d95-8779-000000000012",
+    "type": "paperback",
+    "namespaceId": "fourth-wing",
+    "name": "Fourth Wing",
+    "slug": "fourth-wing-en-paperback",
+    "priceRegular": 21.5,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/fourth-wing/en/00.webp",
+      "img/paperback/fourth-wing/en/01.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Rebecca Yarros",
+    "coverType": "paperback",
+    "numberOfPages": 512,
+    "publicationYear": 2023,
+    "publication": "Piatkus Books",
+    "format": "153x234 mm",
+    "illustrations": false,
+    "category": [
+      "Fantasy",
+      "Young adult fiction",
+      "Sword and sorcery",
+      "Romantic fantasy",
+      "Our tech team leader's family favorite"
+    ],
+    "description": [
+      "Welcome to the brutal and elite world of Basgiath War College, where everyone has an agenda, and every night could be your last...",
+      "Now, the commanding general - also known as her tough-as-talons mother - has ordered Violet to join the hundreds of candidates striving to become the elite of Navarre: dragon riders.",
+      "With fewer dragons willing to bond than cadets, most would kill Violet to better their own chances of success.",
+      "Alliances will be forged. Lives will be lost. Traitors will become allies . . . or even lovers. But sleep with one eye open because once you enter, there are only two ways out: graduate or die."
+    ]
+  },
+  {
+    "id": "91dbe269-29a0-4d3e-8447-000000000013",
+    "type": "paperback",
+    "namespaceId": "onyx-storm",
+    "name": "Оніксова буря",
+    "slug": "onyx-storm-uk-hardcover",
+    "priceRegular": 25.9,
+    "priceDiscount": 21.2,
+    "images": [
+      "img/paperback/onyx-storm/uk/00.webp",
+      "img/paperback/onyx-storm/uk/01.webp",
+      "img/paperback/onyx-storm/uk/02.webp",
+      "img/paperback/onyx-storm/uk/03.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Rebecca Yarros",
+    "coverType": "hardcover",
+    "numberOfPages": 640,
+    "publicationYear": 2025,
+    "publication": "Family Leisure Book Club",
+    "format": "170x245 mm",
+    "illustrations": false,
+    "category": [
+      "Fantasy",
+      "Epic fantasy",
+      "Romantic fantasy",
+      "Our tech team leader's family favorite"
+    ],
+    "description": [
+      "Вайолет Сорренґейл провела у Військовому коледжі Басґіат вже майже вісімнадцять місяців...",
+      "Тепер найціннішим ресурсом стає час, якого ніколи не буває вдосталь. Велика битва розпочалася...",
+      "«Оніксова буря» продовжує епічну серію роментезі «Емпіреї» авторки бестселерів Ребекки Яррос...",
+      "Книга зацікавить шанувальників серії та поціновувачів епічного романтичного фентезі з масштабними сутичками, політичними інтригами й пристрасними любовними сценами."
+    ]
+  },
+  {
+    "id": "1f8f95b2-52cb-4139-a8c0-000000000014",
+    "type": "paperback",
+    "namespaceId": "onyx-storm",
+    "name": "Onyx Storm",
+    "slug": "onyx-storm-en-paperback",
+    "priceRegular": 23.9,
+    "priceDiscount": 18.3,
+    "images": [
+      "img/paperback/onyx-storm/en/00.webp",
+      "img/paperback/onyx-storm/en/01.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Rebecca Yarros",
+    "coverType": "paperback",
+    "numberOfPages": 544,
+    "publicationYear": 2025,
+    "publication": "Piatkus Books",
+    "format": "153x234 mm",
+    "illustrations": false,
+    "category": [
+      "Fantasy",
+      "Epic fantasy",
+      "Romantic fantasy",
+      "BookTok hits",
+      "Our tech team leader's family favorite"
+    ],
+    "description": [
+      "DON'T BE THE LAST TO DISCOVER THE SERIES THAT EVERYONE CAN'T STOP TALKING ABOUT...",
+      "Now Violet must journey beyond the failing Aretian wards to seek allies from unfamiliar lands...",
+      "She will do anything to save what she loves — her dragons, her family, her home, and him.",
+      "But a storm is coming... and not everyone can survive its wrath."
+    ]
+  },
+  {
+    "id": "04f0f96e-0631-4a87-8015-000000000015",
+    "type": "paperback",
+    "namespaceId": "the-silence-of-the-lambs",
+    "name": "Мовчання ягнят",
+    "slug": "the-silence-of-the-lambs-uk-hardcover",
+    "priceRegular": 18.9,
+    "priceDiscount": 18,
+    "images": [
+      "img/paperback/the-silence-of-the-lambs/uk/00.webp",
+      "img/paperback/the-silence-of-the-lambs/uk/01.webp",
+      "img/paperback/the-silence-of-the-lambs/uk/02.webp",
+      "img/paperback/the-silence-of-the-lambs/uk/03.webp",
+      "img/paperback/the-silence-of-the-lambs/uk/04.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Thomas Harris",
+    "coverType": "hardcover",
+    "numberOfPages": 400,
+    "publicationYear": 2023,
+    "publication": "Family Leisure Book Club",
+    "format": "135x205 mm",
+    "illustrations": false,
+    "category": [
+      "Psychological thriller",
+      "Movie tie-in & adaptations",
+      "Classic prose",
+      "Our Tech&Team lead's favorite"
+    ],
+    "description": [
+      "Убивця і колишній судовий психіатр Ганнібал Лектер усе ще перебуває в тюремній психіатричній лікарні.",
+      "Цього разу до нього по допомогу у встановленні особистості чергового серійного злочинця звертається молода стажистка ФБР Кларіс Старлінг.",
+      "І поки між ними зав’язуються непрості стосунки, маніяк на прізвисько Баффало Білл викрадає доньку сенатора.",
+      "У ФБР є три дні, щоб знайти дівчину, а для Ганнібала це шанс на укладання вигідної угоди. Яким він неодмінно скористається…"
+    ]
+  },
+  {
+    "id": "629b7e28-e627-41db-921a-000000000016",
+    "type": "paperback",
+    "namespaceId": "the-silence-of-the-lambs",
+    "name": "The Silence of the Lambs",
+    "slug": "the-silence-of-the-lambs-en-paperback",
+    "priceRegular": 15.5,
+    "priceDiscount": 15,
+    "images": [
+      "img/paperback/the-silence-of-the-lambs/en/00.webp",
+      "img/paperback/the-silence-of-the-lambs/en/01.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Thomas Harris",
+    "coverType": "paperback",
+    "numberOfPages": 432,
+    "publicationYear": 2009,
+    "publication": "Arrow",
+    "format": "129x198 mm",
+    "illustrations": false,
+    "category": [
+      "Female detective",
+      "Psychological thriller",
+      "Women criminals",
+      "Our Tech&Team lead's favorite"
+    ],
+    "description": [
+      "FBI trainee Clarice Starling has an elusive serial killer to hunt. Only one man can help: psychopathic cannibal Hannibal Lecter.",
+      "The serial killer nicknamed 'Buffalo Bill' has been capturing and starving women, then murdering and skinning them.",
+      "Clarice is assigned to solicit help from imprisoned psychopath Dr Hannibal 'the Cannibal' Lecter, whose insight is second to none.",
+      "But in exchange, Hannibal begins to probe her childhood demons. And women are still disappearing..."
+    ]
+  },
+  {
+    "id": "61f6ddea-83f3-4b56-8941-000000000017",
+    "type": "paperback",
+    "namespaceId": "hannibal",
+    "name": "Ганнібал",
+    "slug": "hannibal-uk-hardcover",
+    "priceRegular": 19.5,
+    "priceDiscount": 19,
+    "images": [
+      "img/paperback/hannibal/uk/00.webp",
+      "img/paperback/hannibal/uk/01.webp",
+      "img/paperback/hannibal/uk/02.webp",
+      "img/paperback/hannibal/uk/03.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Thomas Harris",
+    "coverType": "hardcover",
+    "numberOfPages": 512,
+    "publicationYear": 2018,
+    "publication": "Family Leisure Book Club",
+    "format": "135x205 mm",
+    "illustrations": false,
+    "category": [
+      "Crime thriller",
+      "Psychological thriller",
+      "Our Tech&Team lead's favorite",
+      "Contemporary prose"
+    ],
+    "description": [
+      "Продовження історії моторошного вбивці-інтелектуала Ганнібала Лектера!",
+      "Спецагента ФБР Кларіс Старлінг призначили на чергове завдання. Під час його виконання вона отримує лист від Ганнібала Лектера…",
+      "Але одна з його жертв — Мейсон Верджер — вирішує влаштувати полювання на самого Ганнібала. Мейсон жадає кривавої помсти, мріючи заживо згодувати Лектера свиням.",
+      "Але жертва завжди лишається жертвою, навіть у мисливському екіпіруванні. Чи цього разу вбивця нарешті заплатить за скоєне?"
+    ]
+  },
+  {
+    "id": "f45966fc-4b64-4d9b-bb59-000000000018",
+    "type": "paperback",
+    "namespaceId": "hannibal",
+    "name": "Hannibal",
+    "slug": "hannibal-en-paperback",
+    "priceRegular": 17.9,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/hannibal/en/00.webp",
+      "img/paperback/hannibal/en/01.webp",
+      "img/paperback/hannibal/en/02.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Thomas Harris",
+    "coverType": "paperback",
+    "numberOfPages": 576,
+    "publicationYear": 2009,
+    "publication": "Cornerstone",
+    "format": "129x198 mm",
+    "illustrations": false,
+    "category": [
+      "Detective novels",
+      "Our Tech&Team lead's favorite",
+      "Modern fiction",
+      "Crime fiction"
+    ],
+    "description": [
+      "Hannibal Lecter has been on the run for seven years.",
+      "Seven years after helping FBI Special Agent Clarice Starling bring down Buffalo Bill, her career is collapsing after a failed drug bust.",
+      "Meanwhile, Hannibal is hunted by Mason Verger, a psychopathic former patient obsessed with feeding him to wild boars.",
+      "It’s been seven years to lay plans for the next meeting..."
+    ]
+  },
+  {
+    "id": "d3e0d152-4ed7-404f-8f37-000000000019",
+    "type": "paperback",
+    "namespaceId": "anne-of-green-gables",
+    "name": "Енн із Зелених Дахів",
+    "slug": "anne-of-green-gables-uk-hardcover",
+    "priceRegular": 17.4,
+    "priceDiscount": 16.3,
+    "images": [
+      "img/paperback/anne-of-green-gables/uk/00.webp",
+      "img/paperback/anne-of-green-gables/uk/01.webp",
+      "img/paperback/anne-of-green-gables/uk/02.webp",
+      "img/paperback/anne-of-green-gables/uk/03.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Lucy Maud Montgomery",
+    "coverType": "hardcover",
+    "numberOfPages": 320,
+    "publicationYear": 2023,
+    "publication": "Urbino",
+    "format": "135x205 mm",
+    "illustrations": false,
+    "category": [
+      "Children's classics",
+      "Literature",
+      "Historical fiction",
+      "Young adult fiction",
+      "Nika's favorite",
+      "Books by age",
+      "Coming-of-age novels",
+      "Notable literary debuts",
+      "Feel-good spring reads"
+    ],
+    "description": [
+      "Події цієї чудової книжки відбуваються в далекій Канаді, на острові Принца Едварда.",
+      "На фермі Зелені Дахи живуть немолоді вже брат із сестрою, Метью й Марілла Катберти...",
+      "Проте їхньому здивуванню не було меж, коли виявилося, що замість хлопця до них прибула руденька худорлява дівчина, Енн Ширлі...",
+      "І в цієї незвичайної істоти виявилася напрочуд химерна вдача!"
+    ]
+  },
+  {
+    "id": "6842fe8b-58c4-4c8a-9de1-000000000020",
+    "type": "paperback",
+    "namespaceId": "anne-of-green-gables",
+    "name": "Anne of Green Gables",
+    "slug": "anne-of-green-gables-en-hardcover",
+    "priceRegular": 18.9,
+    "priceDiscount": 14.2,
+    "images": [
+      "img/paperback/anne-of-green-gables/en/00.webp",
+      "img/paperback/anne-of-green-gables/en/01.webp",
+      "img/paperback/anne-of-green-gables/en/02.webp",
+      "img/paperback/anne-of-green-gables/en/03.webp",
+      "img/paperback/anne-of-green-gables/en/04.webp",
+      "img/paperback/anne-of-green-gables/en/05.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Lucy Maud Montgomery",
+    "coverType": "hardcover",
+    "numberOfPages": 392,
+    "publicationYear": 2017,
+    "publication": "Pan Macmillan",
+    "format": "100x157 mm",
+    "illustrations": false,
+    "category": [
+      "Children's classics",
+      "Popular psychology",
+      "Classic prose",
+      "Stories about friendship, relationships and love",
+      "Nika's favorite",
+      "Classic fiction"
+    ],
+    "description": [
+      "When red-headed orphan Anne Shirley arrives at Green Gables, she feels sure she's found the home she has always longed for.",
+      "Her new adoptive parents, the Cuthberts, are less certain — they had asked the orphanage for a boy.",
+      "But before long, Anne's irrepressible optimism and loving nature charms them.",
+      "A celebration of the transformative power of love, this children's classic is a warm and funny portrait of a girl given a second chance at life."
+    ]
+  },
+  {
+    "id": "dc7d7c0a-8c1e-4fc0-a42d-000000000021",
+    "type": "paperback",
+    "namespaceId": "the-book-thief",
+    "name": "Крадійка книжок",
+    "slug": "the-book-thief-uk-hardcover",
+    "priceRegular": 22.5,
+    "priceDiscount": 19.4,
+    "images": [
+      "img/paperback/the-book-thief/uk/00.webp",
+      "img/paperback/the-book-thief/uk/01.webp",
+      "img/paperback/the-book-thief/uk/02.webp",
+      "img/paperback/the-book-thief/uk/03.webp",
+      "img/paperback/the-book-thief/uk/04.webp",
+      "img/paperback/the-book-thief/uk/05.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Markus Zusak",
+    "coverType": "hardcover",
+    "numberOfPages": 528,
+    "publicationYear": 2024,
+    "publication": "Family Leisure Book Club",
+    "format": "135x205 mm",
+    "illustrations": true,
+    "category": [
+      "Contemporary prose",
+      "Historical fiction",
+      "War fiction",
+      "Cozy winter reading",
+      "Nika's favorite",
+      "Notable literary debuts",
+      "Books about books"
+    ],
+    "description": [
+      "Вражаюча історія, яку розповідає... Смерть!",
+      "До влади в Німеччині прийшли фашисти. Вперше Смерть побачив маленьку Лізель, коли прийшов забрати душу її братика...",
+      "Він приходив до її будинку, де, ризикуючи життям, родина переховувала єврея. Він слухав, як Лізель читала книжки під час бомбардувань.",
+      "Смерть завжди був поруч. Під час останньої зустрічі він розкриє крадійці книжок свою найбільшу таємницю..."
+    ]
+  },
+  {
+    "id": "6b1f3778-dc89-4265-a28a-000000000022",
+    "type": "paperback",
+    "namespaceId": "the-book-thief",
+    "name": "The Book Thief",
+    "slug": "the-book-thief-en-paperback",
+    "priceRegular": 19.8,
+    "priceDiscount": 19,
+    "images": [
+      "img/paperback/the-book-thief/en/00.webp",
+      "img/paperback/the-book-thief/en/01.webp",
+      "img/paperback/the-book-thief/en/02.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Markus Zusak",
+    "coverType": "paperback",
+    "numberOfPages": 560,
+    "publicationYear": 2016,
+    "publication": "Black Swan",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": [
+      "Historical disciplines",
+      "Loneliness",
+      "Historical fiction",
+      "War fiction",
+      "Nika's favorite",
+      "Coming-of-age story"
+    ],
+    "description": [
+      "Here is a small fact — you are going to die.",
+      "1939. Nazi Germany. The country is holding its breath. Death has never been busier.",
+      "Liesel, a nine-year-old girl, is living with a foster family on Himmel Street. Her parents have been taken away to a concentration camp.",
+      "Liesel steals books. This is her story. And Death is the narrator."
+    ]
+  },
+  {
+    "id": "a4ec57aa-775b-4c92-a840-000000000023",
+    "type": "paperback",
+    "namespaceId": "the-catcher-in-the-rye",
+    "name": "Ловець у житі",
+    "slug": "the-catcher-in-the-rye-uk-hardcover",
+    "priceRegular": 16.9,
+    "priceDiscount": 16,
+    "images": [
+      "img/paperback/the-catcher-in-the-rye/uk/00.webp",
+      "img/paperback/the-catcher-in-the-rye/uk/01.webp",
+      "img/paperback/the-catcher-in-the-rye/uk/02.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "J. D. Salinger",
+    "coverType": "hardcover",
+    "numberOfPages": 240,
+    "publicationYear": 2022,
+    "publication": "BookChef",
+    "format": "135x205 mm",
+    "illustrations": false,
+    "category": [
+      "Classic prose",
+      "Coming-of-age novels",
+      "Notable literary debuts",
+      "100 Years of Goodreads Hits",
+      "Nika's favorite"
+    ],
+    "description": [
+      "Дж. Д. Селінджер (1919–2010) — американський письменник, знаний романом «Ловець у житі», а також своїм відлюдництвом.",
+      "Історію життя Голдена Колфілда — проблеми дорослішання, підліткова туга та бунтарство — 2005 року додали до списку 100 найліпших англомовних творів за версією Time...",
+      "Публікацію та поширення твору часто намагалися заборонити через суд, що тільки посилювало бажання кожного підлітка дістатися рядків цієї книги."
+    ]
+  },
+  {
+    "id": "2d6c063f-9d33-4763-bd20-000000000024",
+    "type": "paperback",
+    "namespaceId": "the-catcher-in-the-rye",
+    "name": "The Catcher in the Rye",
+    "slug": "the-catcher-in-the-rye-en-paperback",
+    "priceRegular": 14.3,
+    "priceDiscount": 14,
+    "images": [
+      "img/paperback/the-catcher-in-the-rye/en/00.webp",
+      "img/paperback/the-catcher-in-the-rye/en/01.webp",
+      "img/paperback/the-catcher-in-the-rye/en/02.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "J. D. Salinger",
+    "coverType": "paperback",
+    "numberOfPages": 240,
+    "publicationYear": 2019,
+    "publication": "Penguin",
+    "format": "126x198 mm",
+    "illustrations": false,
+    "category": [
+      "Fiction",
+      "Contemporary prose",
+      "Modern fiction",
+      "Coming-of-age story",
+      "Nika's favorite"
+    ],
+    "description": [
+      "The Catcher in the Rye is J. D. Salinger's world-famous novel of disaffected youth.",
+      "Holden Caulfield is a seventeen-year-old dropout navigating the challenges of growing up while dissecting the 'phony' aspects of society.",
+      "Written with disarming frankness and charisma, it remains a universally loved classic of 20th-century literature.",
+      "J. D. Salinger's only novel, published in 1951, has sold over 65 million copies worldwide."
     ]
   }
 ]
