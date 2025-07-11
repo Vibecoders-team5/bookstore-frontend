@@ -15,12 +15,14 @@ type AddButtonProps = {
     | 'bookPageAddButton'
     | null
     | undefined;
+  className?: string;
 };
 
 export const AddButton: React.FC<AddButtonProps> = ({
   onClick = () => {},
   isSelected = false,
   size,
+  className,
 }) => {
   //   const [isButtonSelected, setIsButtonSelected] = useState(isSelected);
 
@@ -34,6 +36,7 @@ export const AddButton: React.FC<AddButtonProps> = ({
       variant={isSelected ? 'addToCartAdded' : 'addToCartNormal'}
       size={size}
       onClick={handleClick}
+      className={className}
     >
       {isSelected ? 'Added' : 'Add to cart'}
     </Button>
