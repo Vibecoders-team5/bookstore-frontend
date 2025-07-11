@@ -61,9 +61,7 @@ export const BookPage: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
           <BookGallery images={imageUrls} />
-          <div>
-            <BookDetails book={book} />
-          </div>
+          <BookDetails book={book} />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">

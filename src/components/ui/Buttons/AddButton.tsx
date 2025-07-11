@@ -22,10 +22,7 @@ export const AddButton: React.FC<AddButtonProps> = ({
   isSelected = false,
   size,
 }) => {
-  //   const [isButtonSelected, setIsButtonSelected] = useState(isSelected);
-
   const handleClick = () => {
-    //  setIsButtonSelected((prev) => !prev);
     onClick();
   };
 
