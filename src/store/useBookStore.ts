@@ -6,6 +6,8 @@ interface BookStore {
   cart: CartItem[];
   favourites: Book[];
   query: string;
+  currentBook: Book | null;
+  bookVariants: Book[];
 
   setQuery: (query: string) => void;
 
@@ -16,12 +18,20 @@ interface BookStore {
 
   addToFavourites: (book: Book) => void;
   removeFromFavourites: (book: Book) => void;
+
+  setCurrentBook: (book: Book) => void;
+  setBookVariants: (books: Book[]) => void;
 }
 
 export const useBookStore = create<BookStore>((set) => ({
   cart: JSON.parse(localStorage.getItem('cart') || '[]'),
   favourites: JSON.parse(localStorage.getItem('favourites') || '[]'),
+  currentBook: null,
+  bookVariants: [],
   query: '',
+
+  setCurrentBook: (book) => set({ currentBook: book }),
+  setBookVariants: (books) => set({ bookVariants: books }),
 
   setQuery: (query) => {
     const normalizedQuery = query.trim();

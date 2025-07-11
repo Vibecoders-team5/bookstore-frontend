@@ -17,7 +17,7 @@ export const BookCharacteristics = ({ book }: Props) => {
   ];
 
   return (
-    <section className="w-full max-w-[640px]">
+    <section className="w-full max-w-[640px] mx-auto lg:mx-0">
       <h2 className="text-[24px] font-bold leading-[31px] text-custom-textPrimary mb-4">
         Characteristics
       </h2>

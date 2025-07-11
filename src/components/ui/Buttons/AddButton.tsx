@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
 type AddButtonProps = {
@@ -22,20 +22,20 @@ export const AddButton: React.FC<AddButtonProps> = ({
   isSelected = false,
   size,
 }) => {
-  const [isButtonSelected, setIsButtonSelected] = useState(isSelected);
+  //   const [isButtonSelected, setIsButtonSelected] = useState(isSelected);
 
   const handleClick = () => {
-    setIsButtonSelected((prev) => !prev);
+    //  setIsButtonSelected((prev) => !prev);
     onClick();
   };
 
   return (
     <Button
-      variant={isButtonSelected ? 'addToCartAdded' : 'addToCartNormal'}
+      variant={isSelected ? 'addToCartAdded' : 'addToCartNormal'}
       size={size}
       onClick={handleClick}
     >
-      {isButtonSelected ? 'Added' : 'Add to cart'}
+      {isSelected ? 'Added' : 'Add to cart'}
     </Button>
   );
 };

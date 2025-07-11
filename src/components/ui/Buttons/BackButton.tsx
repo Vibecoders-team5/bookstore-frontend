@@ -12,7 +12,7 @@ export const BackButton: React.FC<BackButtonProps> = ({
     <Button
       variant="ghost"
       size="sm"
-      className="inline-flex text-[#89939A] hover:text-[#313237] p-0"
+      className="inline-flex text-[#89939A] hover:text-[#313237] !pl-0"
       onClick={onClick}
     >
       <ChevronLeft className="text-[#313237]" /> Back

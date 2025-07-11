@@ -53,7 +53,7 @@ function Carousel({
     {
       ...opts,
       axis: orientation === 'horizontal' ? 'x' : 'y',
-      align: 'start',
+      align: 'center',
     },
     plugins,
   );
