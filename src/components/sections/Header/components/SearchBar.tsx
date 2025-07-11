@@ -1,8 +1,8 @@
-import { Input } from '@/components/ui/Input/input';
 import { useBookStore } from '@/store/useBookStore';
 import { Search } from 'lucide-react';
 import debounce from 'lodash/debounce';
 import { useEffect, useMemo, useState } from 'react';
+import { OurInput } from '@/components/ui/OurInput/OurInput';
 
 export function SearchBar() {
   const { setQuery } = useBookStore();
@@ -34,7 +34,7 @@ export function SearchBar() {
         className="absolute left-4 top-1/2 -translate-y-1/2 text-[#B4BDC3]"
         size={18}
       />
-      <Input
+      <OurInput
         type="text"
         placeholder="Find a book or author"
         value={inputValue}

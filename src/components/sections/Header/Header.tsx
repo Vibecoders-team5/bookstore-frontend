@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
 import { Link, NavLink } from 'react-router-dom';
 
-import { SearchBar } from '@/components/ui/Input';
 import { Heart, Menu, Search, ShoppingBag, SquareX } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +11,7 @@ import { getPaperBooks } from '@/services/booksAPI';
 import { Book } from '@/types/Book';
 import { SearchDropdown } from './components/SearchDropdown';
 import { CategoryDropdown } from './components/CategoryDropdown';
+import { SearchBar } from './components/SearchBar';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
