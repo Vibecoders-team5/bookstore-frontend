@@ -12,6 +12,7 @@ import { Book } from '@/types/Book';
 import { SearchDropdown } from './components/SearchDropdown';
 import { CategoryDropdown } from './components/CategoryDropdown';
 import { SearchBar } from './components/SearchBar';
+import { RadioPlayer } from '../RadioPlayer/RadioPlayer';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -71,6 +72,7 @@ export const Header = () => {
     'flex items-center justify-center w-12 h-full xl:w-[64px] border-l border-[#E2E6E9] text-[#89939A] transition duration-200 hover:text-[#313237] group';
   const iconScaleClass =
     'transition duration-200 transform group-hover:scale-110';
+
   return (
     <div className="relative">
       <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-[#493929] fixed top-0 left-0 right-0 z-50 shadow-sm">
@@ -154,6 +156,9 @@ export const Header = () => {
           >
             <Menu size={16} className={iconScaleClass} />
           </Button>
+        </div>
+        <div>
+          <RadioPlayer />
         </div>
       </header>
 
