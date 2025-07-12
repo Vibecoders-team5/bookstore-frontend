@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-import { Heart, Menu, Search, ShoppingBag, SquareX } from 'lucide-react';
+import { Heart, Menu, Search, ShoppingBag, SquareX, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
@@ -12,17 +12,26 @@ import { Book } from '@/types/Book';
 import { SearchDropdown } from './components/SearchDropdown';
 import { CategoryDropdown } from './components/CategoryDropdown';
 import { SearchBar } from './components/SearchBar';
+import { MobileMenu } from './components/MobileMenu';
+import { DesktopNav } from './components/DescktopNav';
 import { RadioPlayer } from '../RadioPlayer/RadioPlayer';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
-  const [isModalVisible, setModalVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [books, setBooks] = useState<Book[]>([]);
+
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     getPaperBooks().then((booksFromServer) => setBooks(booksFromServer));
   }, []);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const query = useBookStore((state) => state.query);
   const cart = useBookStore((state) => state.cart);
@@ -52,30 +61,14 @@ export const Header = () => {
     setIsSearchVisible((prev) => !prev);
   };
 
-  const handleMenuToggle = () => {
-    setModalVisible((prev) => !prev);
-  };
-
-  const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    cn(
-      'relative h-full flex items-center justify-center uppercase transition-colors duration-200 group',
-      {
-        'text-[#b3b2aa] after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:bg-[#b3b2aa] after:w-full after:scale-x-100 after:origin-center after:transition-transform after:duration-300':
-          isActive,
-
-        'text-white hover:text-[#313237] after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:bg-[#313237] after:w-full after:scale-x-0 after:origin-center after:transition-transform after:duration-300 group-hover:after:scale-x-100':
-          !isActive,
-      },
-    );
-
   const baseIconClass =
-    'flex items-center justify-center w-12 h-full xl:w-[64px] border-l border-[#E2E6E9] text-[#89939A] transition duration-200 hover:text-[#313237] group';
+    'flex items-center justify-center w-12 h-full lg:w-[64px] border-l border-[#E2E6E9] text-[#89939A] transition duration-200 hover:text-[#313237] group';
   const iconScaleClass =
     'transition duration-200 transform group-hover:scale-110';
 
   return (
     <div className="relative">
-      <header className="flex items-center justify-between gap-6 w-full h-12 xl:h-16 bg-[#493929] fixed top-0 left-0 right-0 z-50 shadow-sm">
+      <header className="flex items-center justify-between gap-6 w-full h-12 lg:h-16 bg-[#493929] fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="flex items-center w-full h-full gap-6">
           <Link
             aria-label="Go to Home page"
@@ -89,23 +82,13 @@ export const Header = () => {
             />
           </Link>
 
-          <nav className="hidden sm:flex items-center justify-center h-full gap-8 xl:gap-16">
-            <NavLink to="/" className={navLinkClass}>
-              Home
-            </NavLink>
-            <NavLink to="/paperback" className={navLinkClass}>
-              Paper
-            </NavLink>
-            <NavLink to="/kindle" className={navLinkClass}>
-              Kindle
-            </NavLink>
-            <NavLink to="/audiobook" className={navLinkClass}>
-              Audiobook
-            </NavLink>
-          </nav>
+          <DesktopNav />
         </div>
 
-        <div className="relative hidden lg:flex gap-4 pl-2" ref={dropdownRef}>
+        <div
+          className="relative hidden lg:flex lg:justify-end w-full gap-4 pl-2"
+          ref={dropdownRef}
+        >
           <SearchBar />
           <SearchDropdown results={searchResults} />
           <CategoryDropdown />
@@ -149,12 +132,14 @@ export const Header = () => {
           </Link>
 
           <Button
-            onClick={handleMenuToggle}
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             className={cn(baseIconClass, 'sm:hidden border-l-0')}
             size="icon"
             variant="ghost"
           >
-            <Menu size={16} className={iconScaleClass} />
+            {isMobileMenuOpen ?
+              <X size={16} className={iconScaleClass} />
+            : <Menu size={16} className={iconScaleClass} />}
           </Button>
         </div>
         <div>
@@ -174,14 +159,15 @@ export const Header = () => {
         </div>
       )}
 
-      {isModalVisible && (
-        <div className="fixed top-12 left-0 w-full h-screen bg-white z-40 sm:hidden shadow-md">
-          <div className="p-4">
-            <p className="text-lg font-semibold">Mobile Menu</p>
-            {/* MODAL MENU */}
-          </div>
-        </div>
-      )}
+      <MobileMenu
+        key={location.pathname}
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        searchResults={searchResults}
+        dropdownRef={dropdownRef}
+        totalCount={totalCount}
+        totalFavorites={totalFavorites}
+      />
     </div>
   );
 };

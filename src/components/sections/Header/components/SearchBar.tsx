@@ -29,7 +29,10 @@ export function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative w-[280px] h-7 xl:h-10">
+    <form
+      onSubmit={handleSubmit}
+      className=" flex flex-1 relative sm:max-w-[280px] h-10"
+    >
       <Search
         className="absolute left-4 top-1/2 -translate-y-1/2 text-[#B4BDC3]"
         size={18}
