@@ -2237,5 +2237,529 @@
       "Written with disarming frankness and charisma, it remains a universally loved classic of 20th-century literature.",
       "J. D. Salinger's only novel, published in 1951, has sold over 65 million copies worldwide."
     ]
+  },
+  {
+    "id": "generated-uuid-hp1-uk",
+    "type": "paperback",
+    "namespaceId": "harry-potter-1",
+    "name": "Гаррі Поттер і філософський камінь",
+    "slug": "harry-potter-1-uk-paperback",
+    "priceRegular": 9.5,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-1/uk/00.webp",
+      "img/paperback/harry-potter-1/uk/01.webp",
+      "img/paperback/harry-potter-1/uk/02.webp",
+      "img/paperback/harry-potter-1/uk/03.webp",
+      "img/paperback/harry-potter-1/uk/04.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Joanne K. Rowling",
+    "coverType": "paperback",
+    "numberOfPages": 320,
+    "publicationYear": 2017,
+    "publication": "A‑ba‑ba‑ha‑la‑ma‑ha",
+    "format": "130x210 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "Гаррі Поттер — сирота й живе із Дурслями... Новий друг передає Поттеру листа-запрошення до школи магії Гоґвортс.",
+      "Проте скоро Гаррі розкриває страшну правду про смерть своїх батьків і загрозу, що нависла над чарівним світом. Разом із друзями він рішуче бореться зі злом."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp1-en",
+    "type": "paperback",
+    "namespaceId": "harry-potter-1",
+    "name": "Harry Potter and the Philosopher’s Stone",
+    "slug": "harry-potter-1-en-paperback",
+    "priceRegular": 52.99,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-1/en/00.webp",
+      "img/paperback/harry-potter-1/en/01.webp",
+      "img/paperback/harry-potter-1/en/02.webp",
+      "img/paperback/harry-potter-1/en/03.webp",
+      "img/paperback/harry-potter-1/en/04.webp",
+      "img/paperback/harry-potter-1/en/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "Joanne K. Rowling",
+    "coverType": "paperback",
+    "numberOfPages": 352,
+    "publicationYear": 2014,
+    "publication": "Bloomsbury Publishing",
+    "format": "198x129 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive... On his eleventh birthday, Rubeus Hagrid bursts in with astonishing news: Harry is a wizard and has a place at Hogwarts School of Witchcraft and Wizardry.",
+      "In his first year, Harry befriends Ron and Hermione and uncovers the dark past behind his parents' death, while confronting a dark force threatening the magical world."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp2-uk",
+    "type": "hardcover",
+    "namespaceId": "harry-potter-2",
+    "name": "Гаррі Поттер і таємна кімната",
+    "slug": "harry-potter-2-uk-hardcover",
+    "priceRegular": 12.2,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-2/uk/00.webp",
+      "img/paperback/harry-potter-2/uk/01.webp",
+      "img/paperback/harry-potter-2/uk/02.webp",
+      "img/paperback/harry-potter-2/uk/03.webp",
+      "img/paperback/harry-potter-2/uk/04.webp",
+      "img/paperback/harry-potter-2/uk/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Джоан Роулінґ",
+    "coverType": "hardcover",
+    "numberOfPages": 352,
+    "publicationYear": 2002,
+    "publication": "A‑ba‑ba‑ha‑la‑ma‑ha",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "description": [
+      "Гаррі повертається до Гоґвортсу, незважаючи на таємничу погрозу: хтось або щось відкрито Таємну кімнату та паралізує школярів.",
+      "Разом із Роном та Герміоною він розслідує жахливі напади, знаходить підказки від ельфа-домовика Добі та усвідомлює силу спадку Слизерина.",
+      "На їхньому шляху: привид, загадкова істота під замком і дослідження власного минулого Гаррі, усе це — у захопливому змаганні за порятунок Гоґвортсу."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp2-en",
+    "type": "paperback",
+    "namespaceId": "harry-potter-2",
+    "name": "Harry Potter and the Chamber of Secrets",
+    "slug": "harry-potter-2-en-paperback",
+    "priceRegular": 54.99,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-2/en/00.webp",
+      "img/paperback/harry-potter-2/en/01.webp",
+      "img/paperback/harry-potter-2/en/02.webp",
+      "img/paperback/harry-potter-2/en/03.webp",
+      "img/paperback/harry-potter-2/en/04.webp",
+      "img/paperback/harry-potter-2/en/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "J.K. Rowling",
+    "coverType": "paperback",
+    "numberOfPages": 384,
+    "publicationYear": 2014,
+    "publication": "Bloomsbury Publishing",
+    "format": "198x129 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "Harry returns to Hogwarts despite dire warnings not to—and soon the school is plagued by mysterious attacks that leave students paralyzed. Strange voices echo through empty corridors, and chilling messages warn that the Chamber of Secrets has been opened.",
+      "With Ron and Hermione at his side, Harry races to uncover the identity of the Heir of Slytherin. Along the way, they encounter a cunning ghost, a sinister creature hidden beneath the school, and dark secrets tied to Harry’s own past. It’s a thrilling race against time as Hogwarts teeters on the brink of disaster."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp3-uk",
+    "type": "paperback",
+    "namespaceId": "harry-potter-3",
+    "name": "Гаррі Поттер і в’язень Азкабану",
+    "slug": "harry-potter-3-uk-paperback",
+    "priceRegular": 35.56,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-3/uk/00.webp",
+      "img/paperback/harry-potter-3/uk/01.webp",
+      "img/paperback/harry-potter-3/uk/02.webp",
+      "img/paperback/harry-potter-3/uk/03.webp",
+      "img/paperback/harry-potter-3/uk/04.webp",
+      "img/paperback/harry-potter-3/uk/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Джоан Роулінґ",
+    "coverType": "hardcover",
+    "numberOfPages": 336,
+    "publicationYear": 2017,
+    "publication": "A‑ba‑ba‑ha‑la‑ma‑ha",
+    "format": "226x267 mm",
+    "illustrations": true,
+    "category": [
+      "Фентезі",
+      "Дитяча література",
+      "Молодіжна література",
+      "Ілюстроване видання"
+    ],
+    "description": [
+      "Гаррі проводить чергові літні канікули у дядька й тітки, тікає з дому та потрапляє на дивакуватий Лицарський автобус, що прямує до Алеї Діаґон.",
+      "Навколо ходять чутки про втечу Сіріуса Блека — небезпечного в’язня Азкабану, якого вважають пособником Волдеморта. Дементори охороняють Гоґвортс, висмоктуючи радість у дітей.",
+      "Гаррі, разом з Роном і Герміоною, розслідує темні загадки минулого, стикається із привидами та зрадою — іронічно, навіть не підозрюючи, який поворот чекає в кінці та які зв’язки сплітають його з Блеком."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp3-en",
+    "type": "paperback",
+    "namespaceId": "harry-potter-3",
+    "name": "Harry Potter and the Prisoner of Azkaban",
+    "slug": "harry-potter-3-en-paperback",
+    "priceRegular": 62.5,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-3/en/00.webp",
+      "img/paperback/harry-potter-3/en/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "J.K. Rowling",
+    "coverType": "paperback",
+    "numberOfPages": 480,
+    "publicationYear": 2018,
+    "publication": "Bloomsbury Publishing",
+    "format": "198x129 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "Harry’s third year at Hogwarts begins with a dramatic ride on the Knight Bus and news of the dangerous escaped prisoner, Sirius Black, believed to be seeking him.",
+      "Mysterious Dementors guard the school, draining happiness from students with their chilling presence. With Ron and Hermione's help, Harry uncovers hidden truths about his past, faces unexpected betrayal, and learns about powerful magic—including the Patronus Charm—as he races to protect Hogwarts from unfolding threats."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp4-uk",
+    "type": "paperback",
+    "namespaceId": "harry-potter-4",
+    "name": "Гаррі Поттер і Келих Вогню",
+    "slug": "harry-potter-4-uk-paperback",
+    "priceRegular": 16.67,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-4/uk/00.webp",
+      "img/paperback/harry-potter-4/uk/01.webp",
+      "img/paperback/harry-potter-4/uk/02.webp",
+      "img/paperback/harry-potter-4/uk/03.webp",
+      "img/paperback/harry-potter-4/uk/04.webp",
+      "img/paperback/harry-potter-4/uk/05.webp",
+      "img/paperback/harry-potter-4/uk/06.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Джоан Роулінґ",
+    "coverType": "paperback",
+    "numberOfPages": 672,
+    "publicationYear": 2014,
+    "publication": "A‑ba‑ba‑ha‑la‑ma‑ha",
+    "format": "135x205 mm",
+    "illustrations": false,
+    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "description": [
+      "Гаррі входить у четвертий рік навчання без усвідомлення, що потрапить до Тричаклунського турніру — надзвичайно небезпечного змагання між трьома школами магії.",
+      "Після жахливих видінь Чорної Мітки, Гаррі опиняється серед учасників турніру, проходить через поєдинок з огнедишним драконом, рятує Рона від водяників і долає лабіринт у компанії Седріка Діґорі.",
+      "Але справжня загроза — повернення Темного Лорда: у фіналі змагань оживає спадок Волдеморта, і Гаррі мусить вибрати між честю й виживанням, розкриваючи темну інтригу, що переслідує його з дитинства."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp4-en",
+    "type": "paperback",
+    "namespaceId": "harry-potter-4",
+    "name": "Harry Potter and the Goblet of Fire",
+    "slug": "harry-potter-4-en-paperback",
+    "priceRegular": 49.99,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-4/en/00.webp",
+      "img/paperback/harry-potter-4/en/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "J.K. Rowling",
+    "coverType": "paperback",
+    "numberOfPages": 640,
+    "publicationYear": 2014,
+    "publication": "Bloomsbury Publishing",
+    "format": "198x129 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "Harry returns for his fourth year at Hogwarts unexpectedly chosen as a competitor in the dangerous Triwizard Tournament—an inter-school magical competition full of deadly challenges.",
+      "He faces a fire-breathing dragon, a rescue from the depths of the Black Lake, and a treacherous maze alongside Cedric Diggory. But the real threat emerges when Lord Voldemort returns to full power in a climactic confrontation, forcing Harry to confront betrayal, sacrifice, and the darkest implications of his destiny.",
+      "With Ron and Hermione by his side, Harry learns courage, resilience, and the painful cost of growing up in a world where innocence is shattered by real evil."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp5-uk",
+    "type": "paperback",
+    "namespaceId": "harry-potter-5",
+    "name": "Гаррі Поттер і Орден Фенікса",
+    "slug": "harry-potter-5-uk-paperback",
+    "priceRegular": 12.5,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-5/uk/00.webp",
+      "img/paperback/harry-potter-5/uk/01.webp",
+      "img/paperback/harry-potter-5/uk/02.webp",
+      "img/paperback/harry-potter-5/uk/03.webp",
+      "img/paperback/harry-potter-5/uk/04.webp",
+      "img/paperback/harry-potter-5/uk/05.webp",
+      "img/paperback/harry-potter-5/uk/06.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Джоан Роулінґ",
+    "coverType": "paperback",
+    "numberOfPages": 816,
+    "publicationYear": 2014,
+    "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "description": [
+      "Гаррі повертається до Гоґвортсу у п’ятий рік навчання, стикаючись із найтемнішими випробуваннями — після атаки дементорів на Дадлі він викликає Патронус і опиняється під загрозою суду в Міністерстві магії.",
+      "У цей час таємна організація Орден Фенікса веде опір Волдеморту, а в школі царює сувора Інквізиторка Амбрідж, яка суворо обмежує свободу учнів і змушує Гаррі створити “Армію Дамблдора” для підготовки до протистояння з темною магією.",
+      "Сюжет загострюється: Орден бореться з тінями, таємниці ґрунтуватися у пророцтві, і Гаррі мусить обрати між всесильною владою та дружбою, зіштовхнувшись із величезною відповідальністю та жорстокими реаліями світу чарів."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp5-en",
+    "type": "paperback",
+    "namespaceId": "harry-potter-5",
+    "name": "Harry Potter and the Order of the Phoenix",
+    "slug": "harry-potter-5-en-paperback",
+    "priceRegular": 51.2,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-5/en/00.webp",
+      "img/paperback/harry-potter-5/en/01.webp",
+      "img/paperback/harry-potter-5/en/02.webp",
+      "img/paperback/harry-potter-5/en/03.webp",
+      "img/paperback/harry-potter-5/en/04.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "J.K. Rowling",
+    "coverType": "paperback",
+    "numberOfPages": 816,
+    "publicationYear": 2014,
+    "publication": "Bloomsbury Publishing",
+    "format": "198x129 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "In his fifth year at Hogwarts, Harry faces his darkest challenges yet: after a chilling Dementor attack on his cousin Dudley, he conjures a Patronus and lands in hot water with the Ministry of Magic.",
+      "Meanwhile, the secret Order of the Phoenix rallies to fight Voldemort’s rise, while Hogwarts is taken over by the tyrannical Professor Umbridge—prompting the formation of Dumbledore’s Army as Harry, Ron, and Hermione train students in defensive magic.",
+      "Tensions escalate as prophecy, politics, and personal loyalties collide. Harry must balance friendship and power, confront the harsh realities of authority, and prepare for the unavoidable return of true evil."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp6-en",
+    "type": "paperback",
+    "namespaceId": "harry-potter-6",
+    "name": "Harry Potter and the Half‑Blood Prince",
+    "slug": "harry-potter-6-en-paperback",
+    "priceRegular": 62.0,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-6/en/00.webp",
+      "img/paperback/harry-potter-6/en/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "J.K. Rowling",
+    "coverType": "paperback",
+    "numberOfPages": 560,
+    "publicationYear": 2014,
+    "publication": "Bloomsbury Publishing",
+    "format": "198x129 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "In his sixth year at Hogwarts, Harry discovers a mysterious potions textbook annotated by the enigmatic 'Half‑Blood Prince', which gives him an edge in Potions class and leads him deeper into magical secrets.",
+      "As Voldemort's power grows, Dumbledore and Harry investigate the Dark Lord's past, uncovering crucial memories and Horcrux revelations. Amid heartbreak and betrayal, they confront hidden dangers in the wizarding world.",
+      "This darker, emotionally charged installment explores love, death, trust, and redemption—culminating in a thrilling and tragic climax that changes the course of Harry’s journey."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp6-uk",
+    "type": "paperback",
+    "namespaceId": "harry-potter-6",
+    "name": "Гаррі Поттер і Напівкровний Принц",
+    "slug": "harry-potter-6-uk-paperback",
+    "priceRegular": 11.67,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-6/uk/00.webp",
+      "img/paperback/harry-potter-6/uk/01.webp",
+      "img/paperback/harry-potter-6/uk/02.webp",
+      "img/paperback/harry-potter-6/uk/03.webp",
+      "img/paperback/harry-potter-6/uk/04.webp",
+      "img/paperback/harry-potter-6/uk/05.webp",
+      "img/paperback/harry-potter-6/uk/06.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Джоан Роулінґ",
+    "coverType": "paperback",
+    "numberOfPages": 576,
+    "publicationYear": 2013,
+    "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "description": [
+      "Гаррі розпочинає шостий рік у Гоґвортсі під керівництвом Альбуса Дамблдора, досліджуючи темне минуле Волдеморта та користуючись незвичним підручником із закляттями, підписаним «Напівкровним Принцом».",
+      "Водночас Дамблдор і Гаррі збирають спогади про Волдеморта, відкривають доленосні Горкрукси та готуються до неминучого протистояння зі смертежерами.",
+      "Цей том стає глибоко емоційним: зрада, любов і жорстокі втрати, які формують героя, призводять до кульмінації, що назавжди змінює хід Гарріної історії."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp7-uk",
+    "type": "paperback",
+    "namespaceId": "harry-potter-7",
+    "name": "Гаррі Поттер і Смертельні реліквії",
+    "slug": "harry-potter-7-uk-paperback",
+    "priceRegular": 12.5,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-7/uk/00.webp",
+      "img/paperback/harry-potter-7/uk/01.webp",
+      "img/paperback/harry-potter-7/uk/02.webp",
+      "img/paperback/harry-potter-7/uk/03.webp",
+      "img/paperback/harry-potter-7/uk/04.webp",
+      "img/paperback/harry-potter-7/uk/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Джоан Роулінґ",
+    "coverType": "paperback",
+    "numberOfPages": 637,
+    "publicationYear": 2021,
+    "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "description": [
+      "Гаррі, Рон і Герміона залишають Дурслів назавжди, щоб завершити пошуки та знищення Горкруксів — об'єктів, що утримують частини душі Волдеморта.",
+      "Перебуваючи втікачами, вони занурюються у темну історію магічної війни, розкривають таємниці Родини Поттерів і Смертельні реліквії — потужні й небезпечні артефакти.",
+      "Супротив стикається з зрадою, жертвою й неймовірним ризиком, поки вони готуються до остаточної війни з Волдемортом. Це кульмінаційна подорож за дружбу, долю і свободу всього магічного світу."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp7-en",
+    "type": "paperback",
+    "namespaceId": "harry-potter-7",
+    "name": "Harry Potter and the Deathly Hallows",
+    "slug": "harry-potter-7-en-paperback",
+    "priceRegular": 63.49,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-7/en/00.webp",
+      "img/paperback/harry-potter-7/en/01.webp",
+      "img/paperback/harry-potter-7/en/02.webp",
+      "img/paperback/harry-potter-7/en/03.webp",
+      "img/paperback/harry-potter-7/en/04.webp",
+      "img/paperback/harry-potter-7/en/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "J.K. Rowling",
+    "coverType": "paperback",
+    "numberOfPages": 640,
+    "publicationYear": 2014,
+    "publication": "Bloomsbury Publishing",
+    "format": "198x129 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "In the final installment of the Harry Potter series, Harry, Ron and Hermione set out on their most dangerous mission yet: to track down and destroy the Horcruxes—the key to Voldemort's immortality.",
+      "Without the guidance of their professors or the protection of Hogwarts, the trio must rely on one another more than ever. Dark forces close in, alliances shift, and secrets long buried come to light.",
+      "As the wizarding world descends into war, the ultimate battle between good and evil approaches. Harry must face his destiny—and make the ultimate sacrifice to save those he loves."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp8-en",
+    "type": "paperback",
+    "namespaceId": "harry-potter-8",
+    "name": "Harry Potter and the Cursed Child",
+    "slug": "harry-potter-8-en-paperback",
+    "priceRegular": 62.99,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-8/en/00.webp",
+      "img/paperback/harry-potter-8/en/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "J.K. Rowling, Jack Thorne, John Tiffany",
+    "coverType": "paperback",
+    "numberOfPages": 336,
+    "publicationYear": 2017,
+    "publication": "Arthur A. Levine Books / Scholastic",
+    "format": "198x129 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Drama", "Young adult"],
+    "description": [
+      "Nineteen years after Voldemort’s defeat, Harry Potter is now a Ministry of Magic official and father of three. When his youngest son Albus is sorted into Slytherin, their relationship grows strained.",
+      "Albus befriends Scorpius Malfoy, and together they uncover a dangerous secret involving a time-turner that could change history. As past and present collide, both father and son learn that darkness sometimes comes from unexpected places.",
+      "This official play script explores legacy, friendship, choice, and the consequences of wielding magic—marking a powerful return to the wizarding world."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp8-uk",
+    "type": "paperback",
+    "namespaceId": "harry-potter-8",
+    "name": "Гаррі Поттер і прокляте дитя",
+    "slug": "harry-potter-8-uk-paperback",
+    "priceRegular": 12.99,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-8/uk/00.webp",
+      "img/paperback/harry-potter-8/uk/01.webp",
+      "img/paperback/harry-potter-8/uk/02.webp",
+      "img/paperback/harry-potter-8/uk/03.webp",
+      "img/paperback/harry-potter-8/uk/04.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Джоан Роулінґ, Джек Торн, Джон Тіффані",
+    "coverType": "paperback",
+    "numberOfPages": 336,
+    "publicationYear": 2017,
+    "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": ["Фентезі", "Драма", "Молодіжна література"],
+    "description": [
+      "Минає дев’ятнадцять років після поразки Волдеморта. Гаррі Поттер працює в Міністерстві магії та виховує трьох дітей.",
+      "Його молодший син Альбус потрапляє до Слизерина і відчуває тиск родинної спадщини. Його дружба зі Скорпіусом Мелфоєм стає початком подорожі, що веде до небезпечної магії часу.",
+      "Минаючи межі минулого і теперішнього, батько й син дізнаються, що тінь може впасти навіть на найсвітліше ім’я. Це офіційна п’єса-вистава про силу вибору, прощення і відповідальність за спадщину."
+    ]
+  },
+  {
+    "id": "generated-uuid-pokyn-yesli-kohayesh",
+    "type": "paperback",
+    "namespaceId": "pokyn-yesli-kohayesh",
+    "name": "Покинь, якщо кохаєш",
+    "slug": "pokyn-yesli-kohayesh-uk-paperback",
+    "priceRegular": 9.99,
+    "priceDiscount": null,
+    "images": ["img/paperback/pokyn-yesli-kohayesh/uk/00.webp"],
+    "langAvailable": ["uk"],
+    "lang": "uk",
+    "author": "Oksana Kovalenko",
+    "coverType": "paperback",
+    "numberOfPages": 320,
+    "publicationYear": 2024,
+    "publication": "Sunrise Publishing",
+    "format": "140x210 mm",
+    "illustrations": false,
+    "category": ["Romance", "Drama"],
+    "description": [
+      "Яскравий і дещо мелодраматичний сюжет роману виявляється вдалою ширмою, за якою поміщено міркування про актуальні суспільно-психологічні проблеми, одна з яких — насильство в сім’ї.",
+      "Головна героїня Лілі, прототипом якої частково постає сама авторка, втрачає тата й знову поринає в спогади про непросте дитинство.",
+      "Будинок її батьків, шанованих і пристойних громадян, ніколи не був затишним сімейним гніздечком, адже Лілі з мамою жили в постійному напруженні через агресивний характер тата.",
+      "Нарешті дівчина готова ступити на власний шлях і збудувати свою родину.",
+      "Однак їй не вдасться знайти спокій, поки вона не здолає всіх тіней минулого й не наважиться розірвати зачароване коло, сплетене з правди, страху, прощення, нерішучості й любові."
+    ]
   }
 ]
