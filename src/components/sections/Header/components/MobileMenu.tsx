@@ -28,7 +28,11 @@ export const MobileMenu = ({
 }: MobileMenuProps) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      const originalOverflow = document.body.style.overflow;
+
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      }
 
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Escape') {
@@ -39,7 +43,7 @@ export const MobileMenu = ({
       document.addEventListener('keydown', handleKeyDown);
 
       return () => {
-        document.body.style.overflow = '';
+        document.body.style.overflow = originalOverflow;
         document.removeEventListener('keydown', handleKeyDown);
       };
     } else {
