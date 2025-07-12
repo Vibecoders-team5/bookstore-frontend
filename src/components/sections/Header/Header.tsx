@@ -15,6 +15,7 @@ import { SearchBar } from './components/SearchBar';
 import { MobileMenu } from './components/MobileMenu';
 import { DesktopNav } from './components/DescktopNav';
 import { RadioPlayer } from '../RadioPlayer/RadioPlayer';
+import { BookmarkToggle } from './components/BookmarkToggle';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -146,6 +147,7 @@ export const Header = () => {
           <RadioPlayer />
         </div>
       </header>
+      <BookmarkToggle />
 
       {isSearchVisible && (
         <div>
