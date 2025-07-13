@@ -17,7 +17,7 @@ export function getVisibleBooks(
           return book1.name.localeCompare(book2.name);
 
         case 'newest':
-          return book1.publicationYear - book2.publicationYear;
+          return book2.publicationYear - book1.publicationYear;
 
         case 'cheapest':
           return price1 - price2;

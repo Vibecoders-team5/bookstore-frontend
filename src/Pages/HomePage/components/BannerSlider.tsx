@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-import ConstitutionDayDesktop from 'public/books/img/tetsbanner1.png';
+import ConstitutionDayDesktop from '/books/img/tetsbanner1.png';
 import ConstitutionDayTablet from '/books/img/testbannerTablet1.png';
 
 import ConstitutionDesktop from '/books/img/testbanner22.png';
