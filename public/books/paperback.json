@@ -2356,7 +2356,12 @@
     "publication": "Bloomsbury Publishing",
     "format": "198x129 mm",
     "illustrations": false,
-    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "category": [
+      "Fantasy",
+      "Children's literature",
+      "Young adult",
+      "Our product manager's favorite"
+    ],
     "description": [
       "Harry returns to Hogwarts despite dire warnings not to—and soon the school is plagued by mysterious attacks that leave students paralyzed. Strange voices echo through empty corridors, and chilling messages warn that the Chamber of Secrets has been opened.",
       "With Ron and Hermione at his side, Harry races to uncover the identity of the Heir of Slytherin. Along the way, they encounter a cunning ghost, a sinister creature hidden beneath the school, and dark secrets tied to Harry’s own past. It’s a thrilling race against time as Hogwarts teeters on the brink of disaster."
@@ -2391,7 +2396,8 @@
       "Фентезі",
       "Дитяча література",
       "Молодіжна література",
-      "Ілюстроване видання"
+      "Ілюстроване видання",
+      "Our product manager's favorite"
     ],
     "description": [
       "Гаррі проводить чергові літні канікули у дядька й тітки, тікає з дому та потрапляє на дивакуватий Лицарський автобус, що прямує до Алеї Діаґон.",
@@ -3205,8 +3211,8 @@
     "namespaceId": "dotnet",
     "name": "Web API Development for the Absolute Beginner",
     "slug": "web-api-development-dotnet7-en",
-    "priceRegular": 29,
-    "priceDiscount": 27,
+    "priceRegular": 5,
+    "priceDiscount": 0.99,
     "images": ["img/paperback/webapi/en/00.webp"],
     "langAvailable": ["en"],
     "lang": "en",
