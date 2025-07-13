@@ -128,11 +128,7 @@ export function BookDetails({ book }: Props) {
               </button>
             </div>
 
-            <HeartButton
-              onClick={toggleFavourite}
-              isSelected={isFavourite}
-              size="adaptiveHeart"
-            />
+            <HeartButton onClick={toggleFavourite} isSelected={isFavourite} />
           </div>
         </div>
       </div>
