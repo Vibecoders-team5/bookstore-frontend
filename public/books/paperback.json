@@ -2834,5 +2834,546 @@
       "Along the way, they encounter new allies, a menagerie of peculiar animals, and unexpected surprises.",
       "Complete with mesmerizing vintage photographs, this new adventure will delight readers of all ages."
     ]
+  },
+  {
+    "id": "d3158f47-68b4-4c83-9f1c-000000000029",
+    "type": "paperback",
+    "namespaceId": "remain-nameless",
+    "name": "Remain Nameless",
+    "slug": "remain-nameless-en-paperback",
+    "priceRegular": 34,
+    "priceDiscount": 22.9,
+    "images": [
+      "img/paperback/remain-nameless/en/00.webp",
+      "img/paperback/remain-nameless/en/01.webp",
+      "img/paperback/remain-nameless/en/02.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "HeyJude",
+    "coverType": "paperback",
+    "numberOfPages": 763,
+    "publicationYear": 2022,
+    "publication": "Fanfiction",
+    "format": "A5",
+    "illustrations": false,
+    "category": [
+      "Drama",
+      "Romance",
+      "Our product manager's favorite",
+      "Hurt/Comfort",
+      "Friends to Lovers"
+    ],
+    "description": [
+      "The monotony of Draco Malfoy's daily routine has become both a lifeline and a noose.",
+      "But a new habit of morning coffee with Hermione Granger quickly becomes the reason he gets out of bed and forces him to reconsider his priorities.",
+      "Hermione is trying to live her life, piecing together fragments of existence and struggling to make sense of it all.",
+      "Why is morning coffee with Draco Malfoy the only thing that makes sense anymore?"
+    ]
+  },
+  {
+    "id": "d3158f47-68b4-4c83-9f1c-000000000029",
+    "type": "paperback",
+    "namespaceId": "remain-nameless",
+    "name": "Залишайся безіменним",
+    "slug": "remain-nameless-uk-paperback",
+    "priceRegular": 20,
+    "priceDiscount": 13,
+    "images": [
+      "img/paperback/remain-nameless/uk/00.webp",
+      "img/paperback/remain-nameless/uk/01.webp",
+      "img/paperback/remain-nameless/uk/02.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "HeyJude",
+    "coverType": "paperback",
+    "numberOfPages": 763,
+    "publicationYear": 2022,
+    "publication": "Fanfiction",
+    "format": "A5",
+    "illustrations": false,
+    "category": [
+      "Fanfiction",
+      "Drama",
+      "Romance",
+      "Our product manager's favorite",
+      "Friends to Lovers"
+    ],
+    "description": [
+      "Монотонність щоденної рутини Драко Мелфоя стала водночас і рятівним колом, і зашморгом.",
+      "Але нова звичка — пити каву з Герміоною Ґрейнджер — швидко стає єдиною причиною вставати з ліжка щодня і змушує його переосмислити свої пріоритети.",
+      "Герміона намагається жити своїм життям, збираючи фрагменти існування і не в змозі скласти повну картину свого світу.",
+      "Чому ранкова кава з Драко Мелфоєм — єдине, що зараз має сенс?"
+    ]
+  },
+  {
+    "id": "f27811c2-a2de-4c12-9c3d-000000000030",
+    "type": "paperback",
+    "namespaceId": "die-verwandlung",
+    "name": "Die Verwandlung",
+    "slug": "die-verwandlung-en-paperback",
+    "priceRegular": 13.2,
+    "priceDiscount": 11.2,
+    "images": ["img/paperback/die-verwandlung/en/00.webp"],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "Franz Kafka",
+    "coverType": "paperback",
+    "numberOfPages": 126,
+    "publicationYear": 1986,
+    "publication": "Taylor & Francis",
+    "format": "129x198 mm",
+    "illustrations": false,
+    "category": [
+      "Literary Criticism",
+      "Modern Prose",
+      "Biographical Fiction",
+      "Family Saga",
+      "Satire",
+      "Alternate History",
+      "Dystopia"
+    ],
+    "description": [
+      "Franz Kafka is one of the most important figures in twentieth-century culture. The fascination of his work has long since reached international proportions, and the concept 'Kafkaesque' has entered the English Language as an everyday part of speech.",
+      "This new edition of Kafka's famous story contains a critical introduction and notes which help to explain how the author achieves his particular effects.",
+      "The editors are concerned less with what the story means than with how it blocks and baffles its reader, provoking them into interpretation.",
+      "Careful attention is paid to the text's openness, Kafka's use of language, and the biographical and cultural influences behind the writing.",
+      "A select vocabulary aimed at the demands of senior pupils is also included, based on the original hardback edition."
+    ]
+  },
+  {
+    "id": "f27811c2-a2de-4c12-9c3d-000000000030",
+    "type": "paperback",
+    "namespaceId": "die-verwandlung",
+    "name": "Перетворення",
+    "slug": "die-verwandlung-uk-paperback",
+    "priceRegular": 9.4,
+    "priceDiscount": 8.6,
+    "images": [
+      "img/paperback/die-verwandlung/uk/00.webp",
+      "img/paperback/die-verwandlung/uk/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Franz Kafka",
+    "coverType": "paperback",
+    "numberOfPages": 287,
+    "publicationYear": 2017,
+    "publication": "Знання",
+    "format": "110x170 мм",
+    "illustrations": false,
+    "category": [
+      "Modern Prose",
+      "Biographical Fiction",
+      "Family Saga",
+      "Satire",
+      "Alternate History",
+      "Dystopia"
+    ],
+    "description": [
+      "До пропонованої збірки увійшли оповідання Франца Кафки (1883—1924), які мають здебільшого фантастичний сюжет, тісно вплетений автором у реальність.",
+      "Найнеймовірніше в цих творах відбувається у найбуденнішій обстановці, вони вражають дивним поєднанням трагічного й іронічного, абсурдного та закономірного.",
+      "Потрапляючи в незвичайні обставини, герої Кафки відчайдушно прагнуть врятуватися, однак на них усюди чатує фатум.",
+      "Письменник змальовує складний світ людських стосунків, нездатність багатьох до справжньої любові та милосердя і в такий спосіб протестує проти безглуздості й одноманітності життя."
+    ]
+  },
+  {
+    "id": "book-looking-for-alaska-en",
+    "type": "paperback",
+    "namespaceId": "looking-for-alaska",
+    "name": "Looking for Alaska",
+    "slug": "looking-for-alaska-en-paperback",
+    "priceRegular": 16,
+    "priceDiscount": 15,
+    "images": [
+      "img/paperback/looking-for-alaska/en/00.webp",
+      "img/paperback/looking-for-alaska/en/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "John Green",
+    "coverType": "hardcover",
+    "numberOfPages": 288,
+    "publicationYear": 2025,
+    "publication": "HarperCollins Publishers",
+    "format": "141x222x25 mm",
+    "illustrations": false,
+    "category": [
+      "School Fiction",
+      "Coming of Age",
+      "Young Adult Romance",
+      "Teen Friendship"
+    ],
+    "description": [
+      "The unmissable first novel from bestselling and award-winning author of THE FAULT IN OUR STARS and TURTLES ALL THE WAY DOWN.",
+      "BEFORE. Miles Halter’s whole life has been one big non-event until he starts at anything-but-boring Culver Creek Boarding School and meets Alaska Young. Gorgeous, clever, funny and utterly fascinating, she pulls Miles into her world, launches him into a new life, and steals his heart.",
+      "But when tragedy strikes, and Miles comes face-to-face with death, he discovers the value of living and loving unconditionally.",
+      "AFTER: Nothing will ever be the same.",
+      "Poignant, funny, heartbreaking and compelling, this novel will stay with you forever."
+    ]
+  },
+  {
+    "id": "book-looking-for-alaska-uk",
+    "type": "paperback",
+    "namespaceId": "looking-for-alaska",
+    "name": "В пошуках Аляски",
+    "slug": "looking-for-alaska-uk-paperback",
+    "priceRegular": 16,
+    "priceDiscount": 13,
+    "images": [
+      "img/paperback/looking-for-alaska/uk/00.webp",
+      "img/paperback/looking-for-alaska/uk/01.webp",
+      "img/paperback/looking-for-alaska/uk/02.webp",
+      "img/paperback/looking-for-alaska/uk/03.webp",
+      "img/paperback/looking-for-alaska/uk/04.webp",
+      "img/paperback/looking-for-alaska/uk/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "John Green",
+    "coverType": "hardcover",
+    "numberOfPages": 288,
+    "publicationYear": 2025,
+    "publication": "HarperCollins Publishers",
+    "format": "141x222x25 мм",
+    "illustrations": false,
+    "category": [
+      "School Fiction",
+      "Coming of Age",
+      "Young Adult Romance",
+      "Teen Friendship"
+    ],
+    "description": [
+      "Книга «В пошуках Аляски» – Інтригуючий світ Майлза Холтера.",
+      "Майлз Холтер, головний герой роману, є товстуном, якого ніхто не помічає, окрім його батьків. Його пошуки великого 'Можливо' приводять його до приватної школи, де розпочинається справжнє життя.",
+      "Один із ключових аспектів роману – це глибоке зображення підліткового досвіду з його складністю, відкриттями й внутрішніми переживаннями.",
+      "Кожен персонаж має свою унікальну трагедію і глибину, що робить роман багатогранним і життєвим.",
+      "«В пошуках Аляски» — це повість про дружбу, перші кохання, втрати, самоідентифікацію і дорослішання, яка зворушує до глибини душі."
+    ]
+  },
+  {
+    "id": "book-chronicles-of-narnia-en",
+    "type": "paperback",
+    "namespaceId": "chronicles-of-narnia",
+    "name": "The Chronicles of Narnia",
+    "slug": "chronicles-of-narnia-en-paperback",
+    "priceRegular": 28,
+    "priceDiscount": 23,
+    "images": [
+      "img/paperback/chronicles-of-narnia/en/00.webp",
+      "img/paperback/chronicles-of-narnia/en/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "Clive Staples Lewis",
+    "coverType": "softcover",
+    "numberOfPages": 396,
+    "publicationYear": 2016,
+    "publication": "HarperCollins Publishers",
+    "format": "280x220 mm",
+    "illustrations": true,
+    "category": [
+      "Children's Literary Classics",
+      "Fairy Tales and Myths",
+      "Fantasy",
+      "Movie Tie-ins",
+      "Epic Fantasy Cycles"
+    ],
+    "description": [
+      "A beautifully designed colouring book, using the original, stunning illustrations by Pauline Baynes - a perfect gift for fans of The Chronicles of Narnia, and for anyone, of any age, who enjoys colouring in.",
+      "Step through the wardrobe and enter the magical world of Narnia - a glorious land of centaurs, fauns and Aslan, the great lion. Join Peter, Susan, Edmund and Lucy on their adventures and let your imagination run free as they stand against the White Witch, voyage across the seas and face a last ferocious battle to save Narnia.",
+      "This beautifully designed colouring book contains iconic, original artwork from all seven stories in The Chronicles of Narnia. It also includes intricate patterns - created using characters and elements unique to Narnia - delightful maps and inspirational quotes for you to colour in.",
+      "The official The Chronicles of Narnia Colouring Book - celebrating this classic, epic and much-loved series."
+    ]
+  },
+  {
+    "id": "book-chronicles-of-narnia-uk",
+    "type": "paperback",
+    "namespaceId": "chronicles-of-narnia",
+    "name": "Хроніки Нарнії. Повна історія чарівного світу",
+    "slug": "chronicles-of-narnia-uk-paperback",
+    "priceRegular": 28,
+    "priceDiscount": 25,
+    "images": [
+      "img/paperback/chronicles-of-narnia/uk/00.webp",
+      "img/paperback/chronicles-of-narnia/uk/01.webp",
+      "img/paperback/chronicles-of-narnia/uk/02.webp",
+      "img/paperback/chronicles-of-narnia/uk/03.webp",
+      "img/paperback/chronicles-of-narnia/uk/04.webp",
+      "img/paperback/chronicles-of-narnia/uk/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Clive Staples Lewis",
+    "coverType": "hardcover",
+    "numberOfPages": 912,
+    "publicationYear": 2024,
+    "publication": "Книжковий клуб \"Клуб Сімейного Дозвілля\"",
+    "format": "150x220 mm",
+    "illustrations": true,
+    "category": [
+      "Children's Literary Classics",
+      "Fairy Tales and Myths",
+      "Fantasy",
+      "Movie Tie-ins",
+      "Epic Fantasy Cycles"
+    ],
+    "description": [
+      "Найулюбленіша книжка читачів кількох поколінь, у якій письменник та філософ Клайв Стейплз Льюїс гармонійно поєднав героїв давніх англійських казок, античних міфів і легенд, християнські ідеї добра, прощення та милосердя із захопливою, барвистою, чарівною фантазією про величезний світ.",
+      "Пітер, Сьюзан, Едмунд і Люсі випадково потрапляють у Нарнію — чарівну країну, що відчиняє двері лише тим, хто щиро вірить у дива. Аслан, Біла Чаклунка, розмовляючі звірі та битви добра зі злом — усе це оживає на сторінках семи частин хроніки.",
+      "Під час війни Льюїс дав прихисток дітям-евакуйованим, і саме тоді народилася ідея Нарнії. Сьогодні її читають понад 40 мовами, і це одна з найулюбленіших книжок усіх часів.",
+      "«Хроніки Нарнії» — це подорож у дитинство, у світ віри в добро і дива, які завжди перемагають темряву."
+    ]
+  },
+  {
+    "id": "book-twilight-en",
+    "type": "paperback",
+    "namespaceId": "twilight",
+    "name": "Twilight",
+    "slug": "twilight-en-paperback",
+    "priceRegular": 19,
+    "priceDiscount": 10,
+    "images": [
+      "img/paperback/twilight/en/00.webp",
+      "img/paperback/twilight/en/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "Stephenie Meyer",
+    "coverType": "softcover",
+    "numberOfPages": 464,
+    "publicationYear": 2007,
+    "publication": "Atom Books, Little, Brown Book Group",
+    "format": "135x190 mm",
+    "illustrations": false,
+    "category": [
+      "Movie Tie-ins",
+      "Teen Fiction",
+      "Vampire Romance",
+      "English Books",
+      "Fiction in Other Languages"
+    ],
+    "description": [
+      "When Isabella Swan moves to the gloomy town of Forks and meets the mysterious, alluring Edward Cullen, her life takes a thrilling and terrifying turn.",
+      "With his porcelain skin, golden eyes, mesmerizing voice, and supernatural gifts, Edward is both irresistible and impenetrable. Up until now, he has managed to keep his true identity hidden, but Bella is determined to uncover his dark secret.",
+      "What Bella doesn't realize is that the closer she gets to him, the more she is putting herself and those around her at risk. And it might be too late to turn back…",
+      "Deeply seductive and irresistibly compelling, *Twilight* is an extraordinary love story that will stay with you long after you have turned the final page."
+    ]
+  },
+  {
+    "id": "book-twilight-uk",
+    "type": "paperback",
+    "namespaceId": "twilight",
+    "name": "Сутінки",
+    "slug": "twilight-uk-paperback",
+    "priceRegular": 19,
+    "priceDiscount": 10,
+    "images": [
+      "img/paperback/twilight/uk/00.webp",
+      "img/paperback/twilight/uk/01.webp",
+      "img/paperback/twilight/uk/02.webp",
+      "img/paperback/twilight/uk/03.webp",
+      "img/paperback/twilight/uk/04.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Stephenie Meyer",
+    "coverType": "hardcover",
+    "numberOfPages": 384,
+    "publicationYear": 2024,
+    "publication": "КМ-БУКС",
+    "format": "135x205x27 mm",
+    "illustrations": false,
+    "category": [
+      "Movie Tie-ins",
+      "Teen Fiction",
+      "Vampire Romance",
+      "Fiction",
+      "Famous Love Stories: Classic and Modern"
+    ],
+    "description": [
+      "Буття у похмурому містечку Форкс, куди Белла Свон змушена перебратися, спершу видається напрочуд нудним. Аж поки вона не зустрічає загадкового й принадного Едварда Каллена — тоді в її світ вдираються страх і небезпека.",
+      "Едвард, із його порцеляновою шкірою, золотавими очима, чарівливим голосом і надприродними здібностями, водночас таємничий і звабливий. Досі йому вдавалося зберегти свої темні секрети, та Белла затялася викрити їх.",
+      "От тільки Белла поки що не усвідомлює: близькість до Едварда ставить під загрозу не лише її власне життя, а й життя її рідних. Ще трошки — і вороття не буде...",
+      "*Сутінки* — глибоко зваблива й емоційна історія кохання, яка ще довго залишатиметься у памʼяті після останньої сторінки."
+    ]
+  },
+  {
+    "id": "book-webapi-dotnet7-en",
+    "type": "paperback",
+    "namespaceId": "dotnet",
+    "name": "Web API Development for the Absolute Beginner",
+    "slug": "web-api-development-dotnet7-en",
+    "priceRegular": 29,
+    "priceDiscount": 27,
+    "images": ["img/paperback/webapi/en/00.webp"],
+    "langAvailable": ["en"],
+    "lang": "en",
+    "author": "Irina Dominte",
+    "coverType": "softcover",
+    "numberOfPages": 414,
+    "publicationYear": 2023,
+    "publication": "APress",
+    "format": "155x235 mm",
+    "illustrations": false,
+    "category": [
+      "Programming",
+      ".NET Development",
+      "Web API",
+      "Beginner’s Guides",
+      "Backend Development"
+    ],
+    "description": [
+      "If you are a developer who wants to learn the basic skills of web and application programming interfaces (APIs) with .NET, this book is your complete introduction. The book takes a learn-by-experience approach. You will hit the ground running with a sample project that has everything you need to be wired up.",
+      "As you follow along, you will learn simple and intuitive conventions that will free you from some of the more tedious decisions and work, in order to allow you to focus on the business requirements required by your team.",
+      "You will learn the building blocks of Web API and how to leverage them to have a well-rounded API. Understanding these small but important tricks will make development faster, easier, and more pleasant. For our coach.",
+      "By the end of the book you will have a fully functional API, and you will be better prepared for an interview for a .NET backend developer job."
+    ]
+  },
+  {
+    "id": "book-heaven-blessing-uk",
+    "type": "paperback",
+    "namespaceId": "heaven-blessing",
+    "name": "Благословення Небесного Урядника. Том 1",
+    "slug": "heaven-blessing-vol1-uk",
+    "priceRegular": 32,
+    "priceDiscount": 30,
+    "images": [
+      "img/paperback/heaven-blessing/uk/00.webp",
+      "img/paperback/heaven-blessing/uk/01.webp",
+      "img/paperback/heaven-blessing/uk/02.webp",
+      "img/paperback/heaven-blessing/uk/03.webp",
+      "img/paperback/heaven-blessing/uk/04.webp",
+      "img/paperback/heaven-blessing/uk/05.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Mo Xiang Tong Xiu",
+    "coverType": "hardcover",
+    "numberOfPages": 352,
+    "publicationYear": 2025,
+    "publication": "BookChef",
+    "format": "130x200 мм",
+    "illustrations": true,
+    "category": [
+      "Fantasy",
+      "Sword and Sorcery",
+      "Top Sellers 2025",
+      "Our product manager's favorite"
+    ],
+    "description": [
+      "Боги винагородили Сє Ляня, принца королівства Сяньле, прийнявши його у свій світ. Він став божественною суттю у сімнадцять років, усе життя тренуючись, аби досягти досконалості. Люди любили його за земного життя, проте тепер йому заборонено втручатися у справи смертних. Коли його королівство зазнає невдач, Сє Лянь порушує правило — і втрачає віру людей.",
+      "Через 800 років він знову підноситься як небесний урядник, очищаючи світ від злих духів. Там він зустрічає таємничого юнака Саньлана, що приховує похмурі таємниці. Попри попередження інших богів, Сє Лянь не може відвернутися — і вперше за довгий час почувається не самотнім.",
+      "Це повільна, чуттєва розповідь про стійкість, біль, прийняття й віру. Восьмитомна сага в жанрі даньмей натхнена китайським фольклором, де розкриваються глибокі теми через поетичну прозу та складні долі героїв."
+    ]
+  },
+  {
+    "id": "book-heaven-blessing-en",
+    "type": "paperback",
+    "namespaceId": "heaven-blessing",
+    "name": "Heaven Official's Blessing. Vol. 1",
+    "slug": "heaven-blessing-vol1-en",
+    "priceRegular": 35,
+    "priceDiscount": 32.99,
+    "images": [
+      "img/paperback/heaven-blessing/en/00.webp",
+      "img/paperback/heaven-blessing/en/01.webp",
+      "img/paperback/heaven-blessing/en/02.webp",
+      "img/paperback/heaven-blessing/en/03.webp",
+      "img/paperback/heaven-blessing/en/04.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Mo Xiang Tong Xiu",
+    "coverType": "hardcover",
+    "numberOfPages": 352,
+    "publicationYear": 2025,
+    "publication": "BookChef",
+    "format": "130x200 mm",
+    "illustrations": true,
+    "category": [
+      "Fantasy",
+      "Sword and Sorcery",
+      "Top Sellers 2025",
+      "Our product manager's favorite"
+    ],
+    "description": [
+      "Heaven Official’s Blessing follows Xie Lian, crown prince of Xianle, who becomes a god at seventeen. Cast down after disobeying the rules and losing believers, he ascends once more 800 years later as a lowly heavenly official.",
+      "While banished to the mortal realm to exorcise spirits, he encounters Hua Cheng — a powerful, charming youth with a mysterious past and dangerous identity. Despite warnings, Xie Lian finds comfort in his presence and a sense of connection he hasn't felt in centuries.",
+      "This danmei fantasy epic blends Chinese folklore, mythology, and slow-burning romance between men. With lyrical prose and deep emotional arcs, the story explores devotion, pain, resilience, and destiny — making it beloved among readers worldwide."
+    ]
+  },
+  {
+    "id": "book-heaven-blessing-2-uk",
+    "type": "paperback",
+    "namespaceId": "heaven-blessing-2",
+    "name": "Благословення Небесного Урядника. Том 2",
+    "slug": "heaven-blessing-vol2-uk",
+    "priceRegular": 34,
+    "priceDiscount": 32.99,
+    "images": [
+      "img/paperback/heaven-blessing-2/uk/00.webp",
+      "img/paperback/heaven-blessing-2/uk/01.webp",
+      "img/paperback/heaven-blessing-2/uk/02.webp",
+      "img/paperback/heaven-blessing-2/uk/03.webp",
+      "img/paperback/heaven-blessing-2/uk/04.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Mo Xiang Tong Xiu",
+    "coverType": "hardcover",
+    "numberOfPages": 400,
+    "publicationYear": 2025,
+    "publication": "BookChef",
+    "format": "130x200 мм",
+    "illustrations": true,
+    "category": [
+      "Fantasy",
+      "Epic Fantasy",
+      "Romantic Fantasy",
+      "Readers’ Choice May",
+      "Our product manager's favorite"
+    ],
+    "description": [
+      "Сє Лянь думає, що події на перевалі Баньюе залишилися позаду, але він глибоко помиляється. Його кличуть назад на небеса, де він повинен постати перед самим Небесним Імператором, Цзюнь Ву. При дворі він знову стає вигнанцем. Коли генерал Пей намагається перекласти вину на нього, ситуація ускладнюється.",
+      "Завдяки заступництву Господаря Вітрів Сє Лянь отримує ще один шанс — але пов’язаний він із небезпечним дорученням у Місті Привидів. Там урядник знову зустрічає Саньлана, який виявляється не ким іншим, як могутнім Хва Ченом — Королем Привидів.",
+      "Ця частина розкриває глибші теми — від суспільного осуду до крихкості репутації. Роман порушує питання корупції, влади, любові й жертовності. Авторка виводить даньмей-фентезі на новий рівень, поєднуючи поезію, міфологію та моральний конфлікт. Пряме продовження першої частини, ця книга є обов'язковою для фанатів серії."
+    ]
+  },
+  {
+    "id": "book-heaven-blessing-2-en",
+    "type": "paperback",
+    "namespaceId": "heaven-blessing-2",
+    "name": "Heaven Official's Blessing. Vol. 2",
+    "slug": "heaven-blessing-vol2-en",
+    "priceRegular": 35,
+    "priceDiscount": 31.99,
+    "images": [
+      "img/paperback/heaven-blessing-2/en/00.webp",
+      "img/paperback/heaven-blessing-2/en/01.webp",
+      "img/paperback/heaven-blessing-2/en/02.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Mo Xiang Tong Xiu",
+    "coverType": "hardcover",
+    "numberOfPages": 400,
+    "publicationYear": 2025,
+    "publication": "BookChef",
+    "format": "130x200 mm",
+    "illustrations": true,
+    "category": [
+      "Fantasy",
+      "Epic Fantasy",
+      "Our product manager's favorite",
+      "Romantic Fantasy",
+      "Readers’ Choice May"
+    ],
+    "description": [
+      "Xie Lian thinks the events at Banyue Pass are behind him—but he’s wrong. Summoned back to the heavens, he must face the Heavenly Emperor Jun Wu. Once again an outcast, Xie Lian is blamed for a tragedy he didn’t cause. Only Wind Master’s intervention spares him.",
+      "Assigned to investigate the eerie Ghost City, Xie Lian unexpectedly reunites with San Lang, who is revealed to be Hua Cheng—Ghost King and one of the Four Calamities. Despite his fearsome reputation, Hua Cheng shows unwavering devotion to the prince.",
+      "This installment delves into themes of corruption, public perception, love, and sacrifice. It’s a lyrical and philosophical continuation of the danmei fantasy epic, filled with layered characters and mythological depth. A must-read sequel for fans of volume one."
+    ]
   }
 ]
