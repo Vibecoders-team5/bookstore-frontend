@@ -2237,5 +2237,78 @@
       "Written with disarming frankness and charisma, it remains a universally loved classic of 20th-century literature.",
       "J. D. Salinger's only novel, published in 1951, has sold over 65 million copies worldwide."
     ]
+  },
+  {
+    "id": "57d1cfa2-32f0-4a61-9d0d-000000000027",
+    "type": "paperback",
+    "namespaceId": "hollow-city",
+    "name": "Місто Порожніх. Втеча з Дому дивних дітей",
+    "slug": "hollow-city-uk-hardcover",
+    "priceRegular": 18.2,
+    "priceDiscount": 18,
+    "images": [
+      "img/paperback/hollow-city/uk/00.webp",
+      "img/paperback/hollow-city/uk/01.webp",
+      "img/paperback/hollow-city/uk/02.webp",
+      "img/paperback/hollow-city/uk/03.webp",
+      "img/paperback/hollow-city/uk/04.webp"
+    ],
+    "langAvailable": ["uk"],
+    "lang": "uk",
+    "author": "Ransom Riggs",
+    "coverType": "hardcover",
+    "numberOfPages": 464,
+    "publicationYear": 2014,
+    "publication": "Family Leisure Book Club",
+    "format": "130x210 mm",
+    "illustrations": true,
+    "category": [
+      "Adventure books for children",
+      "Children’s horror",
+      "Mystical thriller",
+      "Horror",
+      "Teen fiction",
+      "Contemporary prose"
+    ],
+    "description": [
+      "Руїни великого міста... загадкова небезпека... Джейкоб та його друзі опинилися в самому епіцентрі темних подій.",
+      "Вони шукають спосіб зняти закляття з наставниці міс Сапсан.",
+      "Монстри з порожніми очима переслідують їх, а дар Джейкоба чути і розуміти цих істот відкриває нові загрози.",
+      "Історія про втечу, відчай і відвагу, ілюстрована рідкісними фото з минулого."
+    ]
+  },
+  {
+    "id": "57d1cfa2-32f0-4a61-9d0d-000000000028",
+    "type": "paperback",
+    "namespaceId": "hollow-city",
+    "name": "Hollow City. The Second Novel of Miss Peregrine's Peculiar Children",
+    "slug": "hollow-city-en-paperback",
+    "priceRegular": 18.2,
+    "priceDiscount": 18,
+    "images": [
+      "img/paperback/hollow-city/en/00.webp",
+      "img/paperback/hollow-city/en/01.webp",
+      "img/paperback/hollow-city/en/02.webp",
+      "img/paperback/hollow-city/en/03.webp"
+    ],
+    "langAvailable": ["en"],
+    "lang": "en",
+    "author": "Ransom Riggs",
+    "coverType": "paperback",
+    "numberOfPages": 416,
+    "publicationYear": 2015,
+    "publication": "Quirk Books",
+    "format": "132x206 mm",
+    "illustrations": true,
+    "category": [
+      "Children’s horror",
+      "Children’s / teen fiction: ghosts & horror"
+    ],
+    "description": [
+      "This second novel begins in 1940, immediately after the first book ended.",
+      "Having escaped Miss Peregrine's island, Jacob and his new friends must journey to London — the peculiar capital of the world.",
+      "Along the way, they encounter new allies, a menagerie of peculiar animals, and unexpected surprises.",
+      "Complete with mesmerizing vintage photographs, this new adventure will delight readers of all ages."
+    ]
   }
 ]
