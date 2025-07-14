@@ -18,4 +18,6 @@ export interface Book {
   illustrations: boolean;
   category: string[];
   description: string[];
+  narrator: string;
+  listeningLength: number;
 }

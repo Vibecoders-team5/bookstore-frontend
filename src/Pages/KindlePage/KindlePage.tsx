@@ -1,22 +1,22 @@
 import { CatalogTemplate } from '@/components/sections/CatalogTemplate/CatalogTemplate';
-import { getPaperBooks } from '@/services/booksAPI';
+import { getKindleBooks } from '@/services/booksAPI';
 import { Book } from '@/types/Book';
 import { useEffect, useState } from 'react';
 
 export const KindlePage = () => {
-  const [paperBooks, setPaperBooks] = useState<Book[]>([]);
+  const [kindleBooks, setKindleBooks] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
-    getPaperBooks()
-      .then((books) => setPaperBooks(books))
+    getKindleBooks()
+      .then((books) => setKindleBooks(books))
       .finally(() => setIsLoading(false));
   }, []);
 
   return (
     <CatalogTemplate
-      books={paperBooks}
+      books={kindleBooks}
       isLoading={isLoading}
       title={'Kindle books'}
     />
