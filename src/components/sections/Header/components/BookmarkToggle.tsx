@@ -1,10 +1,13 @@
+import { useThemeStore } from '@/store/useThemeStore';
 import cn from 'classnames';
-import { Settings, Sun } from 'lucide-react';
+import { Moon, Settings, Sun } from 'lucide-react';
 import { useState } from 'react';
 
 export const BookmarkToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [language, setLanguage] = useState('EN');
+
+  const { theme, toggleTheme } = useThemeStore();
 
   return (
     <div
@@ -24,12 +27,19 @@ export const BookmarkToggle = () => {
       >
         <>
           <button
-            onClick={(e) => e.stopPropagation()}
+            aria-label="Toggle theme"
             className="mt-5 text-xl hover:scale-110 transition cursor-pointer"
             title="Theme"
+            onClick={(e) => {
+              toggleTheme();
+              e.stopPropagation();
+            }}
           >
-            <Sun />
+            {theme === 'light' ?
+              <Sun />
+            : <Moon />}
           </button>
+
           <button
             onClick={(e) => {
               setLanguage((prev) => (prev === 'EN' ? 'UA' : 'EN'));
@@ -40,6 +50,7 @@ export const BookmarkToggle = () => {
           >
             {language}
           </button>
+
           <button
             className="mt-13 text-sm transition-transform duration-700 ease-in-out cursor-pointer hover:rotate-360"
             title="Settings"

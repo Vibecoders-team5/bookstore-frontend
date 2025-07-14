@@ -79,7 +79,7 @@
   --sidebar-ring: 147 197 253;
 }
 
-/* .dark {
+.dark {
   --background: 39 39 42;
   --foreground: 248 250 252;
   --card: 39 39 42;
@@ -111,7 +111,7 @@
   --sidebar-accent-foreground: 248 250 252;
   --sidebar-border: 39 39 42;
   --sidebar-ring: 113 113 122;
-} */
+}
 
 html,
 body {
