@@ -2,9 +2,12 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Thumbs, FreeMode } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
+
 import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
+
+import { Zoom } from 'swiper/modules';
 
 interface BookGalleryProps {
   images: string[];
@@ -40,7 +43,7 @@ export function BookGallery({ images }: BookGalleryProps) {
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
-              <div className="w-[80px] h-[80px] flex items-center justify-center rounded-lg border border-[#E2E6E9] hover:border-[#313237] transition-all">
+              <div className="w-[80px] h-[80px] flex items-center justify-center rounded-lg border hover:border-[#313237] transition-all">
                 <img
                   src={src}
                   alt={`thumb ${index}`}
@@ -54,12 +57,13 @@ export function BookGallery({ images }: BookGalleryProps) {
 
       <Swiper
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[Thumbs]}
+        modules={[Thumbs, Zoom]}
+        zoom={true}
         className="w-full aspect-[4/5] sm:h-[520px] flex-1 min-w-0"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full h-full flex items-center justify-center rounded-md overflow-hidden">
+            <div className="swiper-zoom-container w-full h-full flex items-center justify-center rounded-md cursor:zoom-in">
               <img
                 src={src}
                 alt={`image ${index}`}
