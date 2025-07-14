@@ -80,7 +80,7 @@
 }
 
 .dark {
-  --background: 39 39 42;
+  --background: #443e32;
   --foreground: 248 250 252;
   --card: 39 39 42;
   --card-foreground: 248 250 252;
@@ -119,6 +119,7 @@ body {
   background-color: white;
   overscroll-behavior: none;
   /* background-color: #FAFBFC */
+  background-color: var(--background);
 }
 
 .h1 {
