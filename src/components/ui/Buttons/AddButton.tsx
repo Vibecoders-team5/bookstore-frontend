@@ -1,5 +1,6 @@
 // import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 
 type AddButtonProps = {
   onClick?: () => void;
@@ -27,6 +28,7 @@ export const AddButton: React.FC<AddButtonProps> = ({
   const handleClick = () => {
     onClick();
   };
+  const { t } = useTranslation();
 
   return (
     <Button
@@ -35,7 +37,7 @@ export const AddButton: React.FC<AddButtonProps> = ({
       onClick={handleClick}
       className={className}
     >
-      {isSelected ? 'Added' : 'Add to cart'}
+      {isSelected ? t('added') : t('addToCart')}
     </Button>
   );
 };

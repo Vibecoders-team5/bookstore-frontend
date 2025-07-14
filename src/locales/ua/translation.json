@@ -16,4 +16,23 @@
   "fav": "Обране",
   "items": "товарів",
   "emptyFav": "Ваш список обраного сумує...<br />Подаруйте йому книжку — і він усміхнеться!"
+  "category": "Категорії",
+  "selectlanguage": "Обрати мову",
+  "languageSelector": "УКР",
+  "addToCart": "Додати у кошик",
+  "added": "Додано",
+  "author": "Автор",
+  "cover": "Тип обкладинки",
+  "listening": "Тривалість",
+  "narrator": "Виконавець",
+  "numberOfPages": "Кількість сторінок",
+  "yearOfPublication": "Рік видання",
+  "publication": "Видавництво",
+  "format": "Формат",
+  "language": "Мова",
+  "illustrations": "Ілюстрації",
+  "illustrationsTrue": "З ілюстраціями",
+  "illustrationsFalse": "Немає ілюстрацій",
+  "characteristics": "Характеристики",
+  "bookAbout": "Опис книги"
 }
