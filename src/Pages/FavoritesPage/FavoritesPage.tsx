@@ -14,8 +14,8 @@ export const FavoritesPage = () => {
         <BackButton onClick={() => navigate(-1)} />
 
         <div className="mb-10 pt-4">
-          <h1 className="h1">Favorites</h1>
-          <p>{`${favorites.length} items`}</p>
+          <h1 className="h1 dark:text-white">Favorites</h1>
+          <p className="dark:text-white">{`${favorites.length} items`}</p>
         </div>
         {favorites.length ?
           <BookList books={favorites} />

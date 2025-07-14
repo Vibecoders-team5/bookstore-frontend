@@ -68,11 +68,12 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
 
         <div className="flex flex-col items-end sm:items-start flex-shrink-0">
           {book.priceDiscount ?
-            <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center">
+            <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center h-15 sm:h-auto">
               <h3 className="text-[20px] sm:text-[22px] font-[700] dark:text-white">{`$${book.priceDiscount}`}</h3>
               <h4 className="text-[16px] sm:text-[20px] font-[600] line-through text-gray-400 dark:text-[#7e746a]">{`$${book.priceRegular}`}</h4>
             </div>
-          : <h3 className="h3 dark:text-white">{`$${book.priceRegular}`}</h3>}
+          : <h3 className="h3 dark:text-white h-15 sm:h-auto">{`$${book.priceRegular}`}</h3>
+          }
           <div className="inline-flex gap-1.5">
             <Truck className="text-green-600 dark:text-[#93785c] w-[22px] h-[22px]" />
             <p className="btn-text text-green-600 dark:text-[#93785c] ">

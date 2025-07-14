@@ -66,7 +66,9 @@ export const PaginationBlock: React.FC<PaginationBlockProps> = ({
         disabled={+currentPage === 1}
         onClick={() => handlePageChangeArrow('left')}
       >
-        <ChevronLeft className="dark:stroke-white" />
+        <span className="block transform transition-transform duration-200 hover:scale-160">
+          <ChevronLeft className="dark:stroke-white" />
+        </span>
       </Button>
 
       <div className="inline-flex items-center justify-center gap-2">
@@ -77,10 +79,13 @@ export const PaginationBlock: React.FC<PaginationBlockProps> = ({
 
       <Button
         variant="paginationArrow"
+        size="s32"
         disabled={+currentPage === endPage}
         onClick={() => handlePageChangeArrow('right')}
       >
-        <ChevronRight className="dark:stroke-white" />
+        <span className="block transform transition-transform duration-200 hover:scale-160">
+          <ChevronRight className="dark:stroke-white" />
+        </span>
       </Button>
     </div>
   );
