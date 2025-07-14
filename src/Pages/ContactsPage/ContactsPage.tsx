@@ -7,7 +7,7 @@ export const ContactsPage = () => {
 
   return (
     <div className="max-w-[1136px] mx-auto px-4 mt-25">
-      <h2 className="text-[2rem] font-bold text-[#313237] mb-8 text-center">
+      <h2 className="text-[2rem] font-bold text-[#313237] mb-8 text-center dark:text-white">
         {t('meetOurTeam')}
       </h2>
 
@@ -28,7 +28,7 @@ export const ContactsPage = () => {
           ) => (
             <div
               key={index}
-              className="h-[400px] flex flex-col justify-between items-center border border-gray-200 rounded-lg bg-white p-4 hover:shadow-md"
+              className="h-[400px] flex flex-col justify-between items-center border border-gray-200 rounded-lg bg-white dark:bg-[#35291d] dark:border-[#2b1b14] p-4 hover:shadow-md"
             >
               <div className="flex flex-col items-center">
                 <img
@@ -36,9 +36,13 @@ export const ContactsPage = () => {
                   alt={name}
                   className="w-[100px] h-[100px] rounded-full object-cover mb-4"
                 />
-                <h3 className="text-lg font-semibold text-[#313237]">{name}</h3>
-                <p className="text-sm text-[#89939A] mb-7">{position}</p>
-                <p className="text-sm text-[#6c6c76] text-center w-full mb-4">
+                <h3 className="text-lg font-semibold text-[#313237] dark:text-white">
+                  {name}
+                </h3>
+                <p className="text-sm text-[#89939A] dark:text-[#ead7d1] mb-7">
+                  {position}
+                </p>
+                <p className="text-sm text-[#6c6c76] dark:text-[#ead7d1] text-center w-full mb-4">
                   {description}
                 </p>
               </div>
@@ -54,7 +58,7 @@ export const ContactsPage = () => {
                   >
                     <Send
                       size={20}
-                      className="text-[#313237] hover:text-[#27AE60]"
+                      className="text-[#313237] dark:text-white hover:text-[#27AE60] dark:hover:text-[#9effc6]"
                     />
                   </a>
                   <a
@@ -64,7 +68,7 @@ export const ContactsPage = () => {
                   >
                     <Linkedin
                       size={20}
-                      className="text-[#313237] hover:text-[#27AE60]"
+                      className="text-[#313237] dark:text-white hover:text-[#27AE60] dark:hover:text-[#9effc6]"
                     />
                   </a>
                   <a
@@ -74,13 +78,13 @@ export const ContactsPage = () => {
                   >
                     <Github
                       size={20}
-                      className="text-[#313237] hover:text-[#27AE60]"
+                      className="text-[#313237] dark:text-white hover:text-[#27AE60] dark:hover:text-[#9effc6]"
                     />
                   </a>
                   <a href={email ? `mailto:${email}` : '#'}>
                     <Mail
                       size={20}
-                      className="text-[#313237] hover:text-[#27AE60]"
+                      className="text-[#313237] dark:text-white hover:text-[#27AE60] dark:hover:text-[#9effc6]"
                     />
                   </a>
                 </div>

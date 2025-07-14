@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between w-full px-8 xl:px-36 py-8 gap-8 bg-[#493929] dark:bg-[#35291d] text-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+    <footer className="flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between w-full px-8 xl:px-36 py-8 gap-8 bg-[#493929] dark:bg-[#35291d] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
       <Link
         to="/"
         className="flex items-center justify-center shrink-0 transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
@@ -18,19 +18,25 @@ export const Footer = () => {
         />
       </Link>
 
-      <nav className="flex flex-col sm:flex-row justify-around items-start sm:items-center w-full max-w-[368px] h-8 gap-4 xl:gap-6">
+      <nav className="flex flex-col sm:flex-row justify-around items-start sm:items-center w-full max-w-[368px] h-8 gap-4 xl:gap-6 dark:text-white/80">
         <a
-          className="uppercase hover:text-[#313237]"
+          className="uppercase hover:text-[#313237] dark:hover:text-white/60"
           href="https://github.com/Vibecoders-team5/bookstore-frontend"
           target="_blank"
           rel="noopener noreferrer"
         >
           GitHub
         </a>
-        <Link to="/contacts" className="uppercase hover:text-[#313237]">
+        <Link
+          to="/contacts"
+          className="uppercase hover:text-[#313237] dark:hover:text-white/60"
+        >
           {t('contacts')}
         </Link>
-        <Link to="/rights" className="uppercase hover:text-[#313237]">
+        <Link
+          to="/rights"
+          className="uppercase hover:text-[#313237] dark:hover:text-white/60"
+        >
           {t('rights')}
         </Link>
       </nav>
@@ -38,7 +44,7 @@ export const Footer = () => {
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         variant="backToTop"
-        className="self-center text-white"
+        className="self-center text-white/80  dark:hover:text-white/70"
       >
         <span>{t('backToTop')}</span>
         <ChevronUpIcon size={16} />

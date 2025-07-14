@@ -31,7 +31,11 @@ export function DropdownSelect({
 }: DropdownSelectProps) {
   return (
     <div className={cn('flex flex-col gap-1', className)}>
-      {label && <label className="small-text text-[#89939A]">{label}</label>}
+      {label && (
+        <label className="small-text text-[#89939A] dark:text-white">
+          {label}
+        </label>
+      )}
 
       <Select defaultValue={defaultValue} onValueChange={onChange}>
         <SelectTrigger>
