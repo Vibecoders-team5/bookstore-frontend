@@ -1,22 +1,17 @@
 import { CatalogTemplate } from '@/components/sections/CatalogTemplate/CatalogTemplate';
-import { getPaperBooks } from '@/services/booksAPI';
-import { Book } from '@/types/Book';
-import { useEffect, useState } from 'react';
+import { useFetchBooksStore } from '@/store/useFetchBooksStore';
+import { useEffect } from 'react';
 
 export const KindlePage = () => {
-  const [paperBooks, setPaperBooks] = useState<Book[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const { kindleBooks, isLoading, fetchKindleBooks } = useFetchBooksStore();
 
   useEffect(() => {
-    setIsLoading(true);
-    getPaperBooks()
-      .then((books) => setPaperBooks(books))
-      .finally(() => setIsLoading(false));
-  }, []);
+    fetchKindleBooks();
+  }, [fetchKindleBooks]);
 
   return (
     <CatalogTemplate
-      books={paperBooks}
+      books={kindleBooks}
       isLoading={isLoading}
       title={'Kindle books'}
     />

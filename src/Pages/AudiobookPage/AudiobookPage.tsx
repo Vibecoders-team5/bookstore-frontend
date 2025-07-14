@@ -1,22 +1,17 @@
 import { CatalogTemplate } from '@/components/sections/CatalogTemplate/CatalogTemplate';
-import { getPaperBooks } from '@/services/booksAPI';
-import { Book } from '@/types/Book';
-import { useEffect, useState } from 'react';
+import { useFetchBooksStore } from '@/store/useFetchBooksStore';
+import { useEffect } from 'react';
 
 export const AudiobookPage = () => {
-  const [paperBooks, setPaperBooks] = useState<Book[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const { audioBooks, isLoading, fetchAudioBooks } = useFetchBooksStore();
 
   useEffect(() => {
-    setIsLoading(true);
-    getPaperBooks()
-      .then((books) => setPaperBooks(books))
-      .finally(() => setIsLoading(false));
-  }, []);
+    fetchAudioBooks();
+  }, [fetchAudioBooks]);
 
   return (
     <CatalogTemplate
-      books={paperBooks}
+      books={audioBooks}
       isLoading={isLoading}
       title={'Audiobooks'}
     />

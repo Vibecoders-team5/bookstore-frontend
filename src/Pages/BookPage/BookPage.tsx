@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
 import { getBookAndVariants } from '@/utils/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
@@ -10,14 +10,13 @@ import { BookGallery } from '../BookPage/components/BookGallery/BookGallery';
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { BreadcrumbSection } from './components/BreadcrumbSection/BreadcrumbSection';
 import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
-import { Book } from '@/types/Book';
-import { getPaperBooks } from '@/services/booksAPI';
+
 import { getRandomBooks } from '@/utils/getRandomBooks';
+import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 
 export const BookPage: React.FC = () => {
   const { setCurrentBook, setBookVariants, currentBook: book } = useBookStore();
-  const [books, setBooks] = useState<Book[]>([]);
-  const [isLoading, setLoading] = useState(false);
+  const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
   const { bookSlug } = useParams<{ bookSlug: string }>();
   const type = useMatch('/:type/:bookSlug')?.params.type as
     | 'paperback'
@@ -26,18 +25,15 @@ export const BookPage: React.FC = () => {
 
   useEffect(() => {
     if (!bookSlug || !type) return;
-    setLoading(true);
-
-    getPaperBooks().then((b) => setBooks(b));
+    fetchAllBooks();
 
     getBookAndVariants(type, bookSlug)
       .then(({ current, variants }) => {
         setCurrentBook(current);
         setBookVariants(variants);
       })
-      .catch(console.error)
-      .finally(() => setLoading(false));
-  }, [type, bookSlug, setCurrentBook, setBookVariants]);
+      .catch(console.error);
+  }, [type, bookSlug, setCurrentBook, setBookVariants, fetchAllBooks]);
 
   if (isLoading || !book) return <BookLoader />;
 
@@ -75,7 +71,10 @@ export const BookPage: React.FC = () => {
           <BookCharacteristics book={book} />
         </div>
 
-        <PaperBookSlider books={getRandomBooks(books)} title="You might like" />
+        <PaperBookSlider
+          books={getRandomBooks(allBooks)}
+          title="You might like"
+        />
       </div>
     </div>
   );

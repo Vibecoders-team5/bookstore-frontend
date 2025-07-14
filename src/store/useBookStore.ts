@@ -4,20 +4,20 @@ export type CartItem = Book & { quantity: number };
 
 interface BookStore {
   cart: CartItem[];
-  favourites: Book[];
+  favorites: Book[];
   query: string;
   currentBook: Book | null;
   bookVariants: Book[];
-
-  setQuery: (query: string) => void;
 
   addToCart: (book: Book) => void;
   removeFromCart: (id: string) => void;
   increaseQuantity: (id: string) => void;
   decreaseQuantity: (id: string) => void;
 
-  addToFavourites: (book: Book) => void;
-  removeFromFavourites: (book: Book) => void;
+  addToFavorites: (book: Book) => void;
+  removeFromFavorites: (book: Book) => void;
+
+  setQuery: (query: string) => void;
 
   setCurrentBook: (book: Book) => void;
   setBookVariants: (books: Book[]) => void;
@@ -25,10 +25,10 @@ interface BookStore {
 
 export const useBookStore = create<BookStore>((set) => ({
   cart: JSON.parse(localStorage.getItem('cart') || '[]'),
-  favourites: JSON.parse(localStorage.getItem('favourites') || '[]'),
+  favorites: JSON.parse(localStorage.getItem('favorites') || '[]'),
+  query: '',
   currentBook: null,
   bookVariants: [],
-  query: '',
 
   setCurrentBook: (book) => set({ currentBook: book }),
   setBookVariants: (books) => set({ bookVariants: books }),
@@ -88,19 +88,19 @@ export const useBookStore = create<BookStore>((set) => ({
     });
   },
 
-  addToFavourites: (book) => {
+  addToFavorites: (book) => {
     set((state) => {
-      const updated = [...state.favourites, book];
-      localStorage.setItem('favourites', JSON.stringify(updated));
-      return { favourites: updated };
+      const updated = [...state.favorites, book];
+      localStorage.setItem('favorites', JSON.stringify(updated));
+      return { favorites: updated };
     });
   },
 
-  removeFromFavourites: (book) => {
+  removeFromFavorites: (book) => {
     set((state) => {
-      const updated = state.favourites.filter((b) => b.id !== book.id);
-      localStorage.setItem('favourites', JSON.stringify(updated));
-      return { favourites: updated };
+      const updated = state.favorites.filter((b) => b.id !== book.id);
+      localStorage.setItem('favorites', JSON.stringify(updated));
+      return { favorites: updated };
     });
   },
 }));

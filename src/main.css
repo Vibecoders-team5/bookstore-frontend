@@ -176,6 +176,11 @@ body {
   letter-spacing: -0.01em;
 }
 
+.font-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px #e2e2e2;
+}
+
 .btn-text {
   font-family: inherit;
   font-weight: 700;

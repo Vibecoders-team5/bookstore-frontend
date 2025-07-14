@@ -2301,10 +2301,10 @@
   },
   {
     "id": "generated-uuid-hp2-uk",
-    "type": "hardcover",
+    "type": "paperback",
     "namespaceId": "harry-potter-2",
     "name": "Гаррі Поттер і таємна кімната",
-    "slug": "harry-potter-2-uk-hardcover",
+    "slug": "harry-potter-2-uk-paperback",
     "priceRegular": 12.2,
     "priceDiscount": null,
     "images": [

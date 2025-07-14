@@ -16,25 +16,23 @@ type BookCardProps = {
 };
 
 export const BookCard: React.FC<BookCardProps> = ({ book }) => {
-  const { addToCart, removeFromCart, addToFavourites, removeFromFavourites } =
+  const { addToCart, removeFromCart, addToFavorites, removeFromFavorites } =
     useBookStore();
 
   const cart = useBookStore((state) => state.cart);
-  const favourites = useBookStore((state) => state.favourites);
+  const favorites = useBookStore((state) => state.favorites);
 
   const someCallback = (item: Book) => item.id === book.id;
 
   const isBookInCart = cart.some(someCallback);
-  const isBookInFavourites = favourites.some(someCallback);
+  const isBookInFavorites = favorites.some(someCallback);
 
   const toggleAddToCart = () => {
     return isBookInCart ? removeFromCart(book.id) : addToCart(book);
   };
 
-  const toggleAddToFavourites = () => {
-    return isBookInFavourites ?
-        removeFromFavourites(book)
-      : addToFavourites(book);
+  const toggleAddToFavorites = () => {
+    return isBookInFavorites ? removeFromFavorites(book) : addToFavorites(book);
   };
 
   return (
@@ -90,8 +88,8 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
           className="flex-1"
         />
         <HeartButton
-          onClick={toggleAddToFavourites}
-          isSelected={isBookInFavourites}
+          onClick={toggleAddToFavorites}
+          isSelected={isBookInFavorites}
         />
       </div>
     </div>
@@ -145,8 +143,8 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
       size={'customAddButton'}
     />
     <HeartButton
-      onClick={toggleAddToFavourites}
-      isSelected={isBookInFavourites}
+      onClick={toggleAddToFavorites}
+      isSelected={isBookInFavorites}
     />
   </div>
 </div>; */

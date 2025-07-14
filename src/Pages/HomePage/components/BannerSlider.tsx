@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-import ConstitutionDayDesktop from '/books/img/tetsbanner1.png';
-import ConstitutionDayTablet from '/books/img/testbannerTablet1.png';
+import ConstitutionDayDesktop from '/books/img/banner/tetsbanner1.png';
+import ConstitutionDayTablet from '/books/img/banner/testbannerTablet1.png';
 
-import ConstitutionDesktop from '/books/img/testbanner22.png';
-import ConstitutionTablet from '/books/img/testbannerTablet2.png';
+import ConstitutionDesktop from '/books/img/banner/testbanner22.png';
+import ConstitutionTablet from '/books/img/banner/testbannerTablet2.png';
 
-import ConstitutionDesktop3 from '/books/img/testbanner3.png';
+import ConstitutionDesktop3 from '/books/img/banner/testbanner3.png';
 
 const images = [
   {

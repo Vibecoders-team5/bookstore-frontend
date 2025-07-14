@@ -11,11 +11,15 @@ import { House } from 'lucide-react';
 
 type Props = {
   type: string;
-  category: string;
+  category?: string;
   bookName: string;
 };
 
-export const BreadcrumbSection = ({ type, category, bookName }: Props) => {
+export const BreadcrumbSection = ({
+  type,
+  category = 'No category',
+  bookName,
+}: Props) => {
   return (
     <Breadcrumb className="flex items-center gap-1 sm:gap-2 text-[12px] sm:text-[14px]">
       <BreadcrumbList>

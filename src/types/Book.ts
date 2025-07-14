@@ -10,12 +10,14 @@ export interface Book {
   langAvailable: string[];
   lang: string;
   author: string;
-  coverType: string;
-  numberOfPages: number;
+  coverType?: string | null;
+  numberOfPages?: number;
+  format?: string | null;
+  illustrations?: boolean;
+  narrator?: string;
+  listeningLength?: number;
   publicationYear: number;
   publication: string;
-  format: string;
-  illustrations: boolean;
-  category: string[];
+  category?: string[];
   description: string[];
 }

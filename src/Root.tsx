@@ -8,7 +8,7 @@ import { App } from './App';
 import {
   AudiobookPage,
   CartPage,
-  FavouritesPage,
+  FavoritesPage,
   HomePage,
   KindlePage,
   PaperPage,
@@ -40,8 +40,8 @@ export const Root = () => (
           <Route path=":bookSlug?" element={<BookPage />} />
         </Route>
 
-        <Route path="favourites">
-          <Route index element={<FavouritesPage />} />
+        <Route path="favorites">
+          <Route index element={<FavoritesPage />} />
         </Route>
 
         <Route path="cart">
