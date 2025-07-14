@@ -28,11 +28,11 @@ export const RightsPage = () => {
 
   return (
     <div className="max-w-[1136px] mx-auto mt-[64px]">
-      <h2 className="font-extrabold text-[2rem] text-[#313237] mb-[23px]">
+      <h2 className="font-extrabold text-[2rem] text-[#313237] dark:text-white/80  mb-[23px]">
         Terms of Use — Nice Books👌
       </h2>
 
-      <p className="text-base text-[#313237]">
+      <p className="text-base text-[#313237] dark:text-[#d6c5b1]">
         Welcome to Nice Books — a place where books live online! To ensure our
         service is convenient, safe, and understandable for all users, we’ve
         created these simple yet important rules.
@@ -40,10 +40,10 @@ export const RightsPage = () => {
 
       {sections.map(({ title, text }, index) => (
         <div key={index}>
-          <h3 className="mt-8 text-2xl text-[#313237] font-bold mb-[30px]">
+          <h3 className="mt-8 text-2xl text-[#313237] dark:text-white/70 font-bold mb-[30px]">
             {title}
           </h3>
-          <p className="mb-[40px] text-[#6c6c76]">{text}</p>
+          <p className="mb-[40px] text-[#6c6c76] dark:text-[#c5bbb0]">{text}</p>
         </div>
       ))}
     </div>
