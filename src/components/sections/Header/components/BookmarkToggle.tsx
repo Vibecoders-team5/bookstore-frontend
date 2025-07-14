@@ -28,7 +28,7 @@ export const BookmarkToggle = () => {
       onClick={() => setIsOpen((prev) => !prev)}
     >
       <div
-        className={`flex flex-col items-center justify-start w-10 h-50 text-white bg-[#93785c] shadow-lg`}
+        className={`flex flex-col items-center justify-start w-10 h-50 text-white bg-[#665d4b] shadow-lg`}
         style={{
           clipPath:
             'polygon(0 0, 100% 0, 100% 85%, 75% 100%, 50% 90%, 25% 100%, 0 85%)',

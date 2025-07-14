@@ -4,47 +4,47 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 import ConstitutionDayDesktop from '/books/img/banner/tetsbanner1.png';
-import ConstitutionDayTablet from '/books/img/banner/bannerTablet1.png';
-import ConstitutionDayMobile from '/books/img/banner/mobileBanner1.png';
+// import ConstitutionDayTablet from '/books/img/banner/bannerTablet1.png';
+// import ConstitutionDayMobile from '/books/img/banner/mobileBanner1.png';
 
 import AuthorDesktop from '/books/img/banner/testbanner22.png';
-import AuthorTablet from '/books/img/banner/bannerTablet2.png';
-import AuthorMobile from '/books/img/banner/mobileBanner2.png';
+// import AuthorTablet from '/books/img/banner/bannerTablet2.png';
+// import AuthorMobile from '/books/img/banner/mobileBanner2.png';
 
 import BestsellersDesktop from '/books/img/banner/testbanner3.png';
-import BestsellersTablet from '/books/img/banner/bannerTablet3.png';
-import BestsellersMobile from '/books/img/banner/mobileBanner3.png';
+// import BestsellersTablet from '/books/img/banner/bannerTablet3.png';
+// import BestsellersMobile from '/books/img/banner/mobileBanner3.png';
 
 const images = [
   {
     desktop: ConstitutionDayDesktop,
-    tablet: ConstitutionDayTablet,
-    mobile: ConstitutionDayMobile,
+    // tablet: ConstitutionDayTablet,
+    // mobile: ConstitutionDayMobile,
   },
   {
     desktop: AuthorDesktop,
-    tablet: AuthorTablet,
-    mobile: AuthorMobile,
+    // tablet: AuthorTablet,
+    // mobile: AuthorMobile,
   },
   {
     desktop: BestsellersDesktop,
-    tablet: BestsellersTablet,
-    mobile: BestsellersMobile,
+    // tablet: BestsellersTablet,
+    // mobile: BestsellersMobile,
   },
 ];
 
 const SlideImage = ({
   srcDesktop,
-  srcTablet,
-  srcMobile,
+  // srcTablet,
+  // srcMobile,
   zIndex,
   opacityFrom,
   opacityTo,
   keyProp,
 }: {
   srcDesktop: string;
-  srcTablet: string;
-  srcMobile: string;
+  // srcTablet: string;
+  // srcMobile: string;
   zIndex: number;
   opacityFrom: number;
   opacityTo: number;
@@ -57,8 +57,8 @@ const SlideImage = ({
     transition={{ duration: 0.7, ease: 'easeInOut' }}
     className={`absolute top-0 left-0 w-full h-full z-[${zIndex}]`}
   >
-    <source srcSet={srcMobile} media="(max-width: 639px)" />
-    <source srcSet={srcTablet} media="(max-width: 1023px)" />
+    {/* <source srcSet={srcMobile} media="(max-width: 639px)" />
+    <source srcSet={srcTablet} media="(max-width: 1023px)" /> */}
     <img src={srcDesktop} alt="" className="w-full h-full object-cover" />
   </motion.picture>
 );
@@ -114,8 +114,8 @@ export default function BannerSlider() {
           {prevSlide !== null && (
             <SlideImage
               srcDesktop={images[prevSlide].desktop}
-              srcTablet={images[prevSlide].tablet}
-              srcMobile={images[currentSlide].mobile}
+              // srcTablet={images[prevSlide].tablet}
+              // srcMobile={images[currentSlide].mobile}
               zIndex={10}
               opacityFrom={1}
               opacityTo={0}
@@ -125,8 +125,8 @@ export default function BannerSlider() {
 
           <SlideImage
             srcDesktop={images[currentSlide].desktop}
-            srcTablet={images[currentSlide].tablet}
-            srcMobile={images[currentSlide].mobile}
+            // srcTablet={images[currentSlide].tablet}
+            // srcMobile={images[currentSlide].mobile}
             zIndex={20}
             opacityFrom={0}
             opacityTo={1}
