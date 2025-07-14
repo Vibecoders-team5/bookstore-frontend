@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { useTranslation } from 'react-i18next';
 
 interface NavListProps {
   navLinkClass: ({ isActive }: { isActive: boolean }) => string;
@@ -10,8 +11,10 @@ export const NavList = ({
   navLinkClass,
   layout = 'horizontal',
 }: NavListProps) => {
+  const { t } = useTranslation();
+
   const navLinks = [
-    { to: '/', label: 'Home' },
+    { to: '/', label: t('home') },
     { to: '/paperback', label: 'Paper' },
     { to: '/kindle', label: 'Kindle' },
     { to: '/audiobook', label: 'Audiobook' },
