@@ -36,7 +36,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   };
 
   return (
-    <div className="w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-lg bg-white">
+    <div className="dark:bg-black w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-lg bg-white">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
         <div className="relative w-52 h-66">
           <HeadphonesRound />
