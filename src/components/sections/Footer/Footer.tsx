@@ -20,7 +20,7 @@ export const Footer = () => {
 
       <nav className="flex flex-col sm:flex-row justify-around items-start sm:items-center w-full max-w-[368px] h-8 gap-4 xl:gap-6 dark:text-white/80">
         <a
-          className="uppercase hover:text-[#313237] dark:hover:text-white/60"
+          className="uppercase text-white/80 hover:text-white"
           href="https://github.com/Vibecoders-team5/bookstore-frontend"
           target="_blank"
           rel="noopener noreferrer"
@@ -29,14 +29,11 @@ export const Footer = () => {
         </a>
         <Link
           to="/contacts"
-          className="uppercase hover:text-[#313237] dark:hover:text-white/60"
+          className="uppercase text-white/80 hover:text-white"
         >
           {t('contacts')}
         </Link>
-        <Link
-          to="/rights"
-          className="uppercase hover:text-[#313237] dark:hover:text-white/60"
-        >
+        <Link to="/rights" className="uppercase text-white/80 hover:text-white">
           {t('rights')}
         </Link>
       </nav>
@@ -44,7 +41,7 @@ export const Footer = () => {
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         variant="backToTop"
-        className="self-center text-white/80  dark:hover:text-white/70"
+        className="self-center text-white/80  hover:text-white"
       >
         <span>{t('backToTop')}</span>
         <ChevronUpIcon size={16} />

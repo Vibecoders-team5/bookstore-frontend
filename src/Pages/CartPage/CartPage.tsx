@@ -40,8 +40,10 @@ export const CartPage = () => {
         <BackButton onClick={() => navigate(-1)} />
 
         <div className="mb-8 sm:mb-10 pt-2">
-          <h1 className="text-[36px] sm:text-5xl font-bold">{t('cart')}</h1>
-          <p>{`${totalQuantity} ${t('items')}`}</p>
+          <h1 className="text-[36px] sm:text-5xl font-bold dark:text-white">
+            {t('cart')}
+          </h1>
+          <p className="dark:text-white">{`${totalQuantity} ${t('items')}`}</p>
         </div>
 
         {cart.length ?
