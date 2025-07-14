@@ -34,7 +34,7 @@ export function SearchBar() {
       className=" flex flex-1 relative sm:max-w-[280px] h-10"
     >
       <Search
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-[#B4BDC3]"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-[#B4BDC3] dark:text-white/80"
         size={18}
       />
       <OurInput
@@ -42,7 +42,7 @@ export function SearchBar() {
         placeholder="Find a book or author"
         value={inputValue}
         onChange={handleChange}
-        className="w-full"
+        className="w-full dark:text-white dark:placeholder:text-white/80 dark:placeholder:font-[600]"
       />
     </form>
   );
