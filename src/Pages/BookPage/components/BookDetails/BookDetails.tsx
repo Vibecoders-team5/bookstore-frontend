@@ -62,9 +62,9 @@ export function BookDetails({ book }: Props) {
   };
 
   return (
-    <div className="w-full max-w-[400px] mx-auto lg:mx-0 flex flex-col gap-6 text-[16px] text-[#313237]">
+    <div className="w-full max-w-[400px] mx-auto lg:mx-0 flex flex-col gap-6 text-[16px] text-[#313237]  dark:text-white">
       <div>
-        <p className="text-[#89939A] text-[16px] font-bold leading-[24px] mb-2">
+        <p className="text-[#89939A]  dark:text-white/80 text-[16px] font-bold leading-[24px] mb-2">
           Category
         </p>
         {book.category && book.category.length > 0 && (
@@ -72,7 +72,7 @@ export function BookDetails({ book }: Props) {
             {book.category.slice(0, 6).map((cat, index) => (
               <p
                 key={index}
-                className="px-3 py-1 border border-[#E2E6E9] rounded-md w-fit text-[14px] font-medium leading-[21px] text-[#313237]"
+                className="px-3 py-1 border border-[#E2E6E9]  dark:bg-white/20 rounded-md w-fit text-[14px] font-medium leading-[21px] text-[#313237]  dark:text-white/80"
               >
                 {cat}
               </p>
@@ -81,8 +81,8 @@ export function BookDetails({ book }: Props) {
         )}
       </div>
 
-      <div className="border-t border-[#E2E6E9] pt-4">
-        <p className="text-[#89939A] text-[16px] font-bold leading-[24px] mb-2">
+      <div className="border-t border-[#E2E6E9]  pt-4">
+        <p className="text-[#89939A]  dark:text-white/80 text-[16px] font-bold leading-[24px] mb-2">
           Select language
         </p>
 
@@ -107,11 +107,12 @@ export function BookDetails({ book }: Props) {
               onClick={toggleAddToCart}
               isSelected={isSelected}
               size="bookPageAddButton"
+              className="dark:bg-white/40 dark:border dark:border-white/10 dark:hover:border-white/60 cursor-pointer"
             />
 
-            <div className="flex items-center border border-[#E2E6E9] rounded-md px-2">
+            <div className="flex items-center box-border border border-[#E2E6E9] rounded-md px-2">
               <button
-                className="text-[#B4BDC3] hover:text-[#313237] w-6.5 h-10 flex items-center justify-center"
+                className="text-[#B4BDC3] hover:text-[#313237] dark:hover:text-white w-6.5 h-10 flex items-center justify-center"
                 onClick={handleMinus}
                 disabled={quantity === 0}
               >
@@ -121,7 +122,7 @@ export function BookDetails({ book }: Props) {
               <span className="px-2">{quantity || 0}</span>
 
               <button
-                className="text-[#B4BDC3] hover:text-[#313237] w-6.5 h-10 flex items-center justify-center"
+                className="text-[#B4BDC3] hover:text-[#313237]  dark:hover:text-white  w-6.5 h-10 flex items-center justify-center"
                 onClick={handlePlus}
               >
                 <Plus size={14} />
@@ -141,8 +142,10 @@ export function BookDetails({ book }: Props) {
               index > 0 ? 'border-t border-[#E2E6E9]' : ''
             }`}
           >
-            <span>{label}</span>
-            <span className="text-[#313237] text-[14px]">{value}</span>
+            <span className="dark:text-[#ad9c89]">{label}</span>
+            <span className="text-[#313237] text-[14px] dark:text-white/90">
+              {value}
+            </span>
           </div>
         ))}
       </div>

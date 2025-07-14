@@ -66,7 +66,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
           </div>
         </Link>
 
-        <div className="flex flex-col items-end sm:items-start flex-shrink-0">
+        <div className="flex flex-col items-end sm:items-start flex-shrink-0 min-h-14">
           {book.priceDiscount ?
             <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center h-15 sm:h-auto">
               <h3 className="text-[20px] sm:text-[22px] font-[700] dark:text-white">{`$${book.priceDiscount}`}</h3>

@@ -53,10 +53,10 @@ export const BookPage: React.FC = () => {
         </div>
 
         <div className="mb-10">
-          <h1 className="text-[32px] font-bold leading-[41px] text-[#313237]">
+          <h1 className="text-[32px] font-bold leading-[41px] text-[#313237] dark:text-white">
             {book.name}
           </h1>
-          <p className="text-[#89939A] text-[14px] leading-[21px] font-medium">
+          <p className="text-[#89939A] dark:text-white text-[14px] leading-[21px] font-medium">
             {book.author}
           </p>
         </div>
