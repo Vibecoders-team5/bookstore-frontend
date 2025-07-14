@@ -5,13 +5,13 @@ type Props = {
 };
 
 export const BookCharacteristics = ({ book }: Props) => {
-  const items: [string, string | number][] = [
+  const items: [string, string | number | null][] = [
     ['Author', book.author],
-    ['Cover type', book.coverType],
-    ['Number of pages', book.numberOfPages],
+    ['Cover type', book.coverType ?? null],
+    ['Number of pages', book.numberOfPages ?? null],
     ['Year of publication', book.publicationYear],
     ['Publication', book.publication],
-    ['Format', book.format],
+    ['Format', book.format ?? null],
     ['Language', book.lang.toUpperCase() === 'UK' ? 'UA' : 'ENG'],
     ['Illustrations', book.illustrations ? 'Yes' : 'No illustrations'],
   ];

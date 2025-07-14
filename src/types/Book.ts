@@ -10,7 +10,7 @@ export interface Book {
   langAvailable: string[];
   lang: string;
   author: string;
-  coverType?: string | null;
+  coverType?: string | number | null;
   numberOfPages?: number;
   format?: string | null;
   illustrations?: boolean;
