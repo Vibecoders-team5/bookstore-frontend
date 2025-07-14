@@ -1,29 +1,32 @@
 import { Book } from '@/types/Book';
+import { useBookStore } from '@/store/useBookStore';
+import { useTranslation } from 'react-i18next';
 
 import { AddButton } from '@/components/ui/Buttons/AddButton';
 import { HeartButton } from '@/components/ui/Buttons/HeartButton';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
-import { useBookStore } from '@/store/useBookStore';
-import { Minus, Plus } from 'lucide-react';
 import { formatListeningLength } from '../FormatListeningLength/formatListeningLength';
+import { Minus, Plus } from 'lucide-react';
 
 type Props = {
   book: Book;
 };
 
 export function BookDetails({ book }: Props) {
+  const { t } = useTranslation();
+
   const bookDetailsData: [string, string | number | null][] = [
-    ['Author', book.author],
-    ['Cover type', book.coverType ?? null],
+    [t('author'), book.author],
+    [t('cover'), book.coverType ?? null],
     [
-      'Listening Length',
+      t('listening'),
       book.listeningLength !== null && book.listeningLength !== undefined ?
         formatListeningLength(book.listeningLength)
       : null,
     ],
-    ['Narrator', book.narrator ?? null],
-    ['Number of pages', book.numberOfPages ?? null],
-    ['Year of publication', book.publicationYear],
+    [t('narrator'), book.narrator ?? null],
+    [t('numberOfPages'), book.numberOfPages ?? null],
+    [t('yearOfPublication'), book.publicationYear],
   ];
 
   const filteredDetails = bookDetailsData.filter(([, value]) => value !== null);
@@ -73,7 +76,7 @@ export function BookDetails({ book }: Props) {
     <div className="w-full max-w-[400px] mx-auto lg:mx-0 flex flex-col gap-6 text-[16px] text-[#313237]">
       <div>
         <p className="text-[#89939A] text-[16px] font-bold leading-[24px] mb-2">
-          Category
+          {t('category')}
         </p>
         {book.category && book.category.length > 0 && (
           <div className="flex flex-wrap gap-2">
@@ -91,7 +94,7 @@ export function BookDetails({ book }: Props) {
 
       <div className="border-t border-[#E2E6E9] pt-4">
         <p className="text-[#89939A] text-[16px] font-bold leading-[24px] mb-2">
-          Select language
+          {t('selectlanguage')}
         </p>
 
         <div className="mb-4">
