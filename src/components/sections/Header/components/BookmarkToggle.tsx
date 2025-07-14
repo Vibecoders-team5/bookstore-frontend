@@ -8,9 +8,14 @@ export const BookmarkToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { i18n } = useTranslation();
 
+  const langMap = {
+    en: 'EN',
+    uk: 'UA',
+  };
+
   const languageToggle = (
     e: React.MouseEvent<HTMLButtonElement>,
-    lang: 'ua' | 'en',
+    lang: 'uk' | 'en',
   ) => {
     i18n.changeLanguage(lang);
     e.stopPropagation();
@@ -51,12 +56,12 @@ export const BookmarkToggle = () => {
 
           <button
             onClick={(e) =>
-              languageToggle(e, i18n.language === 'en' ? 'ua' : 'en')
+              languageToggle(e, i18n.language === 'en' ? 'uk' : 'en')
             }
             className="mt-3 text-md font-bold hover:scale-110 transition cursor-pointer"
             title="Languages"
           >
-            {i18n.language.toUpperCase()}
+            {langMap[i18n.language as 'en' | 'uk']}
           </button>
 
           <button
