@@ -4,9 +4,9 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
-@theme inline {
+/* @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -42,7 +42,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-}
+} */
 
 :root {
   --radius: 0.625rem;
@@ -79,7 +79,7 @@
   --sidebar-ring: 147 197 253;
 }
 
-/* .dark {
+.dark {
   --background: 39 39 42;
   --foreground: 248 250 252;
   --card: 39 39 42;
@@ -111,7 +111,7 @@
   --sidebar-accent-foreground: 248 250 252;
   --sidebar-border: 39 39 42;
   --sidebar-ring: 113 113 122;
-} */
+}
 
 html,
 body {
@@ -202,13 +202,13 @@ body {
   line-height: 15px;
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
 
 @config '../tailwind.config.js';

@@ -14,6 +14,7 @@ module.exports = {
     'aria-[selected=true]',
     'aria-[checked=true]',
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '640px',
