@@ -10,6 +10,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { useBookStore } from '@/store/useBookStore';
+import { useTranslation } from 'react-i18next';
 
 type BookCardProps = {
   book: Book;
@@ -18,6 +19,7 @@ type BookCardProps = {
 export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   const { addToCart, removeFromCart, addToFavorites, removeFromFavorites } =
     useBookStore();
+  const { t } = useTranslation();
 
   const cart = useBookStore((state) => state.cart);
   const favorites = useBookStore((state) => state.favorites);
@@ -77,7 +79,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
           <div className="inline-flex gap-1.5">
             <Truck className="text-green-600 dark:text-[#93785c] w-[22px] h-[22px]" />
             <p className="btn-text text-green-600 dark:text-[#93785c] ">
-              In stock
+              {t('inStock')}
             </p>
           </div>
         </div>
