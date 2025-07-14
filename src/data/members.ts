@@ -50,8 +50,8 @@ export const members = [
     description:
       'Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet. Donec ullamcorper nulla non metus auctor fringilla.',
     telegram: 'https://t.me/liduska_05',
-    linkedin: '',
-    github: '',
-    email: '',
+    linkedin: 'https://www.linkedin.com/in/lidiia-tsymborovych-898977342/',
+    github: 'https://github.com/lidiia-tsymborovych',
+    email: 'lidacimborovich@icloud.com',
   },
 ];

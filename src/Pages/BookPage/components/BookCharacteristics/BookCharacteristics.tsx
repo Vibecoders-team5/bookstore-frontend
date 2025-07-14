@@ -37,7 +37,7 @@ export const BookCharacteristics = ({ book }: Props) => {
 
   return (
     <section className="w-full max-w-[640px] mx-auto lg:mx-0">
-      <h2 className="text-[24px] font-bold leading-[31px] text-custom-textPrimary mb-4">
+      <h2 className="text-[24px] font-bold leading-[31px] text-custom-textPrimary dark:text-white mb-4">
         {t('characteristics')}
       </h2>
 
@@ -50,10 +50,10 @@ export const BookCharacteristics = ({ book }: Props) => {
               ${idx > 0 ? 'border-t border-[#E2E6E9]' : ''}
             `}
           >
-            <span className="text-[#89939A] text-[14px] font-medium leading-[21px]">
+            <span className="text-[#89939A] dark:text-[#ad9c89] text-[14px] font-medium leading-[21px]">
               {label}
             </span>
-            <span className="text-[#313237] text-[14px] font-medium leading-[21px]">
+            <span className="text-[#313237] dark:text-white/90 text-[14px] font-medium leading-[21px]">
               {value}
             </span>
           </div>
