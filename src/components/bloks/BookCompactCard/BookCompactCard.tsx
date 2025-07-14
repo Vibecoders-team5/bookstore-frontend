@@ -35,7 +35,7 @@ export const BookCompactCard = ({
     <article
       onClick={handleCardClick}
       className={cn(
-        'flex justify-between gap-4 cursor-pointer sm:gap-8 border border-[#E2E6E9] bg-white hover:shadow-md mb-1',
+        'flex justify-between gap-4 cursor-pointer sm:gap-8 border border-[#E2E6E9] dark:border-[#35291d] bg-white dark:bg-[#35291d] hover:shadow-md mb-1',
         showActions ?
           'flex-col sm:flex-row p-4 sm:px-6 rounded-[16px]'
         : 'flex-row p-1 sm:px-2 rounded-[10px]',
@@ -45,7 +45,7 @@ export const BookCompactCard = ({
         <div className="flex items-center gap-4 sm:gap-6">
           {showActions && (
             <Button
-              className="text-[#B4BDC3] cursor-pointer hover:text-[#313237]"
+              className="text-[#B4BDC3] dark:text-white/50 cursor-pointer hover:text-[#313237]"
               size="icon"
               variant="ghost"
               onClick={(event) => {
@@ -72,10 +72,10 @@ export const BookCompactCard = ({
         </div>
 
         <div className="flex-grow min-w-0">
-          <h5 className="h5 text-[#313237] truncate">
+          <h5 className="h5 text-[#313237] dark:text-white truncate">
             {highlightMatches(book.name, query || '')}
           </h5>
-          <p className="body-text text-[#89939A] truncate">
+          <p className="body-text text-[#89939A] dark:text-white/50 truncate">
             {highlightMatches(book.author, query || '')}
           </p>
         </div>
@@ -88,7 +88,7 @@ export const BookCompactCard = ({
             onClick={(event) => event.stopPropagation()}
           >
             <Button
-              className="w-8 h-8 cursor-pointer text-[#B4BDC3] hover:text-[#313237]"
+              className="w-8 h-8 cursor-pointer text-[#B4BDC3] dark:text-white/50 dark:hover:text-white hover:text-[#313237]"
               size="icon"
               variant="ghost"
               onClick={() => decreaseQuantity(book.id)}
@@ -96,12 +96,12 @@ export const BookCompactCard = ({
               <Minus size={16} />
             </Button>
 
-            <span className="body-text text-[#313237] px-3">
+            <span className="body-text text-[#313237] dark:text-white px-3">
               {book.quantity}
             </span>
 
             <Button
-              className="w-8 h-8 cursor-pointer text-[#B4BDC3] hover:text-[#313237]"
+              className="w-8 h-8 cursor-pointer text-[#B4BDC3] hover:text-[#313237] dark:text-white/50 dark:hover:text-white"
               size="icon"
               variant="ghost"
               onClick={() => increaseQuantity(book.id)}
@@ -112,10 +112,13 @@ export const BookCompactCard = ({
         )}
 
         <h3
-          className={cn('font-[600] text-[#313237] w-20 text-right', {
-            'text-[20px] sm:text-[22px]': showActions,
-            'text-[16px]': !showActions,
-          })}
+          className={cn(
+            'font-[600] text-[#313237] dark:text-white w-20 text-right',
+            {
+              'text-[20px] sm:text-[22px]': showActions,
+              'text-[16px]': !showActions,
+            },
+          )}
         >
           {`$${book.priceDiscount ? book.priceDiscount : book.priceRegular}`}
         </h3>

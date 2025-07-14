@@ -2,9 +2,11 @@ import { CatalogTemplate } from '@/components/sections/CatalogTemplate/CatalogTe
 
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const KindlePage = () => {
   const { kindleBooks, isLoading, fetchKindleBooks } = useFetchBooksStore();
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchKindleBooks();
@@ -14,7 +16,7 @@ export const KindlePage = () => {
     <CatalogTemplate
       books={kindleBooks}
       isLoading={isLoading}
-      title={'Kindle books'}
+      title={t('kindleBooks')}
     />
   );
 };
