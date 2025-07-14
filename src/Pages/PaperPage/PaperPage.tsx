@@ -1,18 +1,13 @@
-import { useEffect, useState } from 'react';
-import { getPaperBooks } from '@/services/booksAPI';
-import { Book } from '@/types/Book';
+import { useEffect } from 'react';
 import { CatalogTemplate } from '@/components/sections/CatalogTemplate/CatalogTemplate';
+import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 
 export const PaperPage = () => {
-  const [paperBooks, setPaperBooks] = useState<Book[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const { paperBooks, isLoading, fetchPaperBooks } = useFetchBooksStore();
 
   useEffect(() => {
-    setIsLoading(true);
-    getPaperBooks()
-      .then((books) => setPaperBooks(books))
-      .finally(() => setIsLoading(false));
-  }, []);
+    fetchPaperBooks();
+  }, [fetchPaperBooks]);
 
   return (
     <CatalogTemplate

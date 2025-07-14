@@ -88,8 +88,8 @@ export const MobileMenu = ({
 
         <div className="flex w-full mt-auto border-t border-[#E2E6E9]">
           <Link
-            to="/favourites"
-            aria-label="Go to Favourites page"
+            to="/favorites"
+            aria-label="Go to Favorites page"
             className="flex-1 border-r border-[#E2E6E9]"
           >
             <div className="flex flex-col items-center justify-center py-6 relative">

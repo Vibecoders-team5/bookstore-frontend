@@ -2,10 +2,10 @@ import { BookList } from '@/components/sections/BookList/BookList';
 import { BackButton } from '@/components/ui/Buttons/BackButton';
 import { useBookStore } from '@/store/useBookStore';
 import { useNavigate } from 'react-router-dom';
-import { EmptyFavourites } from './components/EmptyFavourites';
+import { EmptyFavorites } from './components/EmptyFavorites';
 
-export const FavouritesPage = () => {
-  const favourites = useBookStore((state) => state.favourites);
+export const FavoritesPage = () => {
+  const favorites = useBookStore((state) => state.favorites);
   const navigate = useNavigate();
 
   return (
@@ -14,12 +14,12 @@ export const FavouritesPage = () => {
         <BackButton onClick={() => navigate(-1)} />
 
         <div className="mb-10 pt-4">
-          <h1 className="h1">Favourites</h1>
-          <p>{`${favourites.length} items`}</p>
+          <h1 className="h1">Favorites</h1>
+          <p>{`${favorites.length} items`}</p>
         </div>
-        {favourites.length ?
-          <BookList books={favourites} />
-        : <EmptyFavourites />}
+        {favorites.length ?
+          <BookList books={favorites} />
+        : <EmptyFavorites />}
       </div>
     </div>
   );

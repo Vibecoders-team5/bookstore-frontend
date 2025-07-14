@@ -3,23 +3,24 @@ import { cn } from '@/lib/utils';
 import { CartItem } from '@/Pages';
 import { useBookStore } from '@/store/useBookStore';
 import { Book } from '@/types/Book';
+import { highlightMatches } from '@/utils/highlightMatches';
 import { Minus, Plus, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 type BookCompactCardProps = {
   book: CartItem | Book;
   showActions: boolean;
+  query?: string;
 };
 
 export const BookCompactCard = ({
   book,
   showActions,
+  query,
 }: BookCompactCardProps) => {
   const navigate = useNavigate();
-  const removeFromCart = useBookStore((state) => state.removeFromCart);
-  const increaseQuantity = useBookStore((state) => state.increaseQuantity);
-  const decreaseQuantity = useBookStore((state) => state.decreaseQuantity);
-  const { setQuery } = useBookStore();
+  const { removeFromCart, increaseQuantity, decreaseQuantity, setQuery } =
+    useBookStore();
 
   const isCartItem = (book: Book | CartItem): book is CartItem => {
     return 'quantity' in book;
@@ -71,8 +72,12 @@ export const BookCompactCard = ({
         </div>
 
         <div className="flex-grow min-w-0">
-          <h5 className="h5 text-[#313237] truncate">{book.name}</h5>
-          <p className="body-text text-[#89939A] truncate">{book.author}</p>
+          <h5 className="h5 text-[#313237] truncate">
+            {highlightMatches(book.name, query || '')}
+          </h5>
+          <p className="body-text text-[#89939A] truncate">
+            {highlightMatches(book.author, query || '')}
+          </p>
         </div>
       </div>
 

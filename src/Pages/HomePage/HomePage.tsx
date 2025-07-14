@@ -2,22 +2,19 @@ import BannerSlider from '@/Pages/HomePage/components/BannerSlider';
 import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 import { CategoriesGrid } from '@/Pages/HomePage/components/CategoriesGrid';
 import { ScrollSection } from './components/ScrollSection';
-import { useEffect, useState } from 'react';
-import { Book } from '@/types/Book';
-import { getPaperBooks } from '@/services/booksAPI';
+import { useEffect } from 'react';
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { getNewestBooks } from '@/utils/getNewestBooks';
 import { getRandomBooks } from '@/utils/getRandomBooks';
+import { MovingRows } from './components/MovingRows';
+import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 
 export const HomePage = () => {
-  const [books, setBooks] = useState<Book[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
+
   useEffect(() => {
-    setIsLoading(true);
-    getPaperBooks()
-      .then(setBooks)
-      .finally(() => setIsLoading(false));
-  }, []);
+    fetchAllBooks();
+  }, [fetchAllBooks]);
 
   if (isLoading) {
     return <BookLoader />;
@@ -27,9 +24,13 @@ export const HomePage = () => {
       <ScrollSection />
       <section className="relative z-[2]">
         <BannerSlider />
-        <PaperBookSlider books={getNewestBooks(books)} title="New Books" />
+        <PaperBookSlider books={getNewestBooks(allBooks)} title="New Books" />
+        <MovingRows />
         <CategoriesGrid />
-        <PaperBookSlider books={getRandomBooks(books)} title="You might like" />
+        <PaperBookSlider
+          books={getRandomBooks(allBooks)}
+          title="You might like"
+        />
       </section>
     </>
   );

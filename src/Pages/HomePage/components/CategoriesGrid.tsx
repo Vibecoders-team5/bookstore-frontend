@@ -1,6 +1,6 @@
-const Banner1 = '/books/img/paperbookcategory.jpg';
-const Banner2 = '/books/img/audiobookcategory.jpg';
-const Banner3 = '/books/img/kindlebookcategory.jpg';
+const Banner1 = '/books/img/categories/paperbookcategory.jpg';
+const Banner2 = '/books/img/categories/audiobookcategory.jpg';
+const Banner3 = '/books/img/categories/kindlebookcategory.jpg';
 
 const categories = [
   {

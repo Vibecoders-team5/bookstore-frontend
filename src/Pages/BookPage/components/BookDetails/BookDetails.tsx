@@ -22,14 +22,14 @@ export function BookDetails({ book }: Props) {
   const removeFromCart = useBookStore((state) => state.removeFromCart);
   const increaseQuantity = useBookStore((state) => state.increaseQuantity);
   const decreaseQuantity = useBookStore((state) => state.decreaseQuantity);
-  const addToFavourites = useBookStore((state) => state.addToFavourites);
-  const removeFromFavourites = useBookStore(
-    (state) => state.removeFromFavourites,
+  const addToFavorites = useBookStore((state) => state.addToFavorites);
+  const removeFromFavorites = useBookStore(
+    (state) => state.removeFromFavorites,
   );
   const cart = useBookStore((state) => state.cart);
-  const favourites = useBookStore((state) => state.favourites);
+  const favorites = useBookStore((state) => state.favorites);
 
-  const isFavourite = favourites.some((fav) => fav.id === book.id);
+  const isFavourite = favorites.some((fav) => fav.id === book.id);
   const cartItem = cart.find((item) => item.id === book.id);
 
   const quantity = cartItem?.quantity || 0;
@@ -55,9 +55,9 @@ export function BookDetails({ book }: Props) {
 
   const toggleFavourite = () => {
     if (isFavourite) {
-      removeFromFavourites(book);
+      removeFromFavorites(book);
     } else {
-      addToFavourites(book);
+      addToFavorites(book);
     }
   };
 

@@ -23,7 +23,12 @@ export const SearchDropdown: React.FC<SearchDropdownProps> = ({ results }) => {
     >
       {hasResults ?
         results.map((book) => (
-          <BookCompactCard key={book.slug} book={book} showActions={false} />
+          <BookCompactCard
+            key={book.slug}
+            book={book}
+            showActions={false}
+            query={query}
+          />
         ))
       : <div className="flex flex-col items-center justify-center text-center gap-4 py-20">
           <img

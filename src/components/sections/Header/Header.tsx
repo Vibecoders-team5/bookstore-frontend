@@ -15,6 +15,7 @@ import { SearchBar } from './components/SearchBar';
 import { MobileMenu } from './components/MobileMenu';
 import { DesktopNav } from './components/DescktopNav';
 import { RadioPlayer } from '../RadioPlayer/RadioPlayer';
+import { BookmarkToggle } from './components/BookmarkToggle';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -35,11 +36,11 @@ export const Header = () => {
 
   const query = useBookStore((state) => state.query);
   const cart = useBookStore((state) => state.cart);
-  const favourites = useBookStore((state) => state.favourites);
+  const favorites = useBookStore((state) => state.favorites);
   const { setQuery } = useBookStore();
 
   const totalCount = cart.reduce((sum, book) => sum + book.quantity, 0);
-  const totalFavorites = favourites.length;
+  const totalFavorites = favorites.length;
 
   const searchResults = getSearchResults(books, query);
 
@@ -108,9 +109,9 @@ export const Header = () => {
           </Button>
 
           <Link
-            to="favourites"
+            to="favorites"
             className={cn(baseIconClass, 'hidden sm:flex')}
-            aria-label="Go to Favourites page"
+            aria-label="Go to Favorites page"
           >
             <div className={cn('relative', iconScaleClass)}>
               <Heart size={16} />
@@ -146,6 +147,7 @@ export const Header = () => {
           <RadioPlayer />
         </div>
       </header>
+      <BookmarkToggle />
 
       {isSearchVisible && (
         <div>
