@@ -1,8 +1,10 @@
 import { Button } from '@/components/ui/button';
+import { Trans, useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 export const EmptyCart = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col items-center justify-center text-center gap-4">
@@ -13,9 +15,11 @@ export const EmptyCart = () => {
       />
 
       <p className="text-[#89939A] dark:text-white/50 text-base sm:text-lg pb-8">
-        Your cart is still sleeping...
-        <br />
-        Add some books to gently wake it up
+        <Trans i18nKey="emptyCart">
+          Your cart is still sleeping...
+          <br />
+          Add some books to gently wake it up
+        </Trans>
       </p>
 
       <Button
@@ -26,7 +30,7 @@ export const EmptyCart = () => {
           navigate('/');
         }}
       >
-        Go back to shopping...
+        {t('backToShopBtn')}
       </Button>
     </div>
   );

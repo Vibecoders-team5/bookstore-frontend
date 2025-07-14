@@ -1,11 +1,14 @@
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { CartItem } from '@/Pages';
-import { useBookStore } from '@/store/useBookStore';
-import { Book } from '@/types/Book';
-import { highlightMatches } from '@/utils/highlightMatches';
-import { Minus, Plus, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { X } from 'lucide-react';
+import { useBookStore } from '@/store/useBookStore';
+
+import { cn } from '@/lib/utils';
+import { highlightMatches } from '@/utils/highlightMatches';
+import { Book } from '@/types/Book';
+
+import { CartItem } from '@/Pages';
+import { Button } from '@/components/ui/button';
+import { QuantityControls } from './components/QuantityControls';
 
 type BookCompactCardProps = {
   book: CartItem | Book;
@@ -19,8 +22,7 @@ export const BookCompactCard = ({
   query,
 }: BookCompactCardProps) => {
   const navigate = useNavigate();
-  const { removeFromCart, increaseQuantity, decreaseQuantity, setQuery } =
-    useBookStore();
+  const { removeFromCart, setQuery } = useBookStore();
 
   const isCartItem = (book: Book | CartItem): book is CartItem => {
     return 'quantity' in book;
@@ -81,35 +83,8 @@ export const BookCompactCard = ({
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-4 xl:gap-6">
-        {showActions && isCartItem(book) && (
-          <div
-            className="flex justify-between items-center"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <Button
-              className="w-8 h-8 cursor-pointer text-[#B4BDC3] dark:text-white/50 dark:hover:text-white hover:text-[#313237]"
-              size="icon"
-              variant="ghost"
-              onClick={() => decreaseQuantity(book.id)}
-            >
-              <Minus size={16} />
-            </Button>
-
-            <span className="body-text text-[#313237] dark:text-white px-3">
-              {book.quantity}
-            </span>
-
-            <Button
-              className="w-8 h-8 cursor-pointer text-[#B4BDC3] hover:text-[#313237] dark:text-white/50 dark:hover:text-white"
-              size="icon"
-              variant="ghost"
-              onClick={() => increaseQuantity(book.id)}
-            >
-              <Plus size={16} />
-            </Button>
-          </div>
-        )}
+      <div className="flex items-center justify-between pl-11 lg:pl-0">
+        {showActions && isCartItem(book) && <QuantityControls book={book} />}
 
         <h3
           className={cn(
