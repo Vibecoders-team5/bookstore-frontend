@@ -11,12 +11,12 @@ export const FavoritesPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full flex justify-center py-25">
+    <div className="w-full flex justify-center py-25 px-4 sm:px-6">
       <div className="w-full max-w-284 min-w-0">
         <BackButton onClick={() => navigate(-1)} />
 
-        <div className="mb-10 pt-4">
-          <h1 className="h1">{t('fav')}</h1>
+        <div className="mb-8 sm:mb-10 pt-2">
+          <h1 className="text-[36px] sm:text-5xl font-bold">{t('fav')}</h1>
           <p>{`${favorites.length} ${t('items')}`}</p>
         </div>
         {favorites.length ?

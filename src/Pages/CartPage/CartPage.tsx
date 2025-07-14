@@ -1,11 +1,14 @@
-import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
-import { EmptyCart } from '@/Pages/CartPage/components/EmptyCart';
-import { Book } from '@/types/Book';
-import { CartSummary } from './components/CartSummary';
-import { useBookStore } from '@/store/useBookStore';
-import { BackButton } from '@/components/ui/Buttons/BackButton';
+import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useBookStore } from '@/store/useBookStore';
+
+import { Book } from '@/types/Book';
+import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
+import { BackButton } from '@/components/ui/Buttons/BackButton';
+
+import { CartSummary } from './components/CartSummary';
+import { EmptyCart } from './components/EmptyCart';
 
 export type CartItem = Book & { quantity: number };
 
@@ -14,16 +17,22 @@ export const CartPage = () => {
   const cart = useBookStore((state) => state.cart);
   const { t } = useTranslation();
 
-  const totalPrice =
-    Math.round(
-      cart.reduce(
-        (sum, book) =>
-          sum + (book.priceDiscount ?? book.priceRegular) * book.quantity,
-        0,
-      ) * 100,
-    ) / 100;
+  const totalPrice = useMemo(
+    () =>
+      Math.round(
+        cart.reduce(
+          (sum, book) =>
+            sum + (book.priceDiscount ?? book.priceRegular) * book.quantity,
+          0,
+        ) * 100,
+      ) / 100,
+    [cart],
+  );
 
-  const totalQuantity = cart.reduce((sum, book) => sum + book.quantity, 0);
+  const totalQuantity = useMemo(
+    () => cart.reduce((sum, book) => sum + book.quantity, 0),
+    [cart],
+  );
 
   return (
     <div className="w-full flex justify-center px-4 sm:px-6 xl:px-8 pt-25 pb-8 sm:pb-16">
@@ -31,7 +40,7 @@ export const CartPage = () => {
         <BackButton onClick={() => navigate(-1)} />
 
         <div className="mb-8 sm:mb-10 pt-2">
-          <h1 className="text-[32px] sm:text-[48px] font-[700]">{t('cart')}</h1>
+          <h1 className="text-[36px] sm:text-5xl font-bold">{t('cart')}</h1>
           <p>{`${totalQuantity} ${t('items')}`}</p>
         </div>
 

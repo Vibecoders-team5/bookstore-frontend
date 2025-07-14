@@ -1,3 +1,6 @@
+import { useTranslation } from 'react-i18next';
+
+import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DialogHeader } from '@/components/ui/dialog';
 import {
@@ -9,8 +12,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@radix-ui/react-dialog';
-import { X } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 
 type CartSummaryProps = {
   totalPrice: number;
@@ -21,8 +22,8 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full lg:max-w-[368px] lg:h-[188px] dark:text-white dark:bg-[#35291d] bg-white border dark:border-[#35291d] border-[#E2E6E9] rounded-[16px] p-6 flex flex-col lg:flex-shrink-0 gap-4 justify-between items-center text-center">
-      <span className="text-[22px] sm:text-[32px] font-[700]">
+    <div className="w-full lg:max-w-92 lg:h-47 dark:text-white dark:bg-[#35291d] bg-white border dark:border-[#35291d] border-[#E2E6E9] rounded-2xl p-6 flex flex-col lg:flex-shrink-0 gap-4 justify-between items-center text-center">
+      <span className="text-[22px] sm:text-[32px] font-bold">
         ${totalPrice}
       </span>
       <span className="body-text">{`${t('totalFor')} ${quantity} ${t('items')}`}</span>
@@ -31,14 +32,14 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
         <DialogTrigger asChild>
           <Button
             variant="addToCartNormal"
-            className="w-full btn-text h-12 dark:bg-white dark:text-[#493929] rounded-[8px] hover:cursor-pointer"
+            className="w-full btn-text h-12 dark:bg-white dark:text-[#493929] rounded-lg hover:cursor-pointer"
             size="customAddButton"
           >
             {t('checkout')}
           </Button>
         </DialogTrigger>
 
-        <DialogOverlay className="fixed inset-0 bg-[rgba(0,0,0,0.8)]" />
+        <DialogOverlay className="fixed inset-0 bg-black/80" />
 
         <DialogContent
           className="fixed top-1/2 left-1/2 w-160 max-w-[90vw] -translate-x-1/2 -translate-y-1/2
@@ -52,7 +53,7 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
             <DialogTitle className="text-2xl font-semibold mb-3 text-center">
               {t('whoops')}
             </DialogTitle>
-            <DialogDescription className="mx-auto max-w-[420px] text-center text-muted-foreground">
+            <DialogDescription className="mx-auto max-w-105 text-center text-muted-foreground">
               {t('hustling')}
             </DialogDescription>
           </DialogHeader>
