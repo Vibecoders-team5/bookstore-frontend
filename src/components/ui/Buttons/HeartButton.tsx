@@ -6,13 +6,11 @@ import { useState } from 'react';
 type HeartButtonProps = {
   onClick?: () => void;
   isSelected?: boolean;
-  size?: 'default' | 's40' | 'adaptiveHeart';
 };
 
 export const HeartButton: React.FC<HeartButtonProps> = ({
   onClick = () => {},
   isSelected = false,
-  size,
 }) => {
   const [isButtonSelected, setIsButtonSelected] = useState(isSelected);
 
@@ -24,7 +22,7 @@ export const HeartButton: React.FC<HeartButtonProps> = ({
   return (
     <Button
       variant="defaultHeart"
-      size={size}
+      size="s40"
       onClick={handleClick}
       className="shrink-0"
     >

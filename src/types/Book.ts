@@ -20,4 +20,6 @@ export interface Book {
   publication: string;
   category?: string[];
   description: string[];
+  narrator: string;
+  listeningLength: number;
 }
