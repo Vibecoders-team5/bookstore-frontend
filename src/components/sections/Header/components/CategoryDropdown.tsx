@@ -14,7 +14,7 @@ export const CategoryDropdown = () => {
         { label: t('kindle'), value: '/kindle' },
       ]}
       placeholder={t('chooseCat')}
-      className="w-full sm:w-[176px] text-[#B4BDC3] h-10"
+      className="w-full sm:w-[176px] text-[#B4BDC3] dark:text-white/80"
       onChange={(value) => {
         navigate(value);
       }}

@@ -24,11 +24,13 @@ export const HeartButton: React.FC<HeartButtonProps> = ({
       variant="defaultHeart"
       size="s40"
       onClick={handleClick}
-      className="shrink-0"
+      className="shrink-0  dark:bg-white/40 dark:border-white/10 dark:hover:border-white/60"
     >
       <Heart
         className={cn('h-full', {
-          'text-red-500 fill-red-500': isButtonSelected,
+          'text-red-500 fill-red-500 dark:fill-white  dark:text-white':
+            isButtonSelected,
+          'dark:stroke-white ': !isButtonSelected,
         })}
       />
     </Button>

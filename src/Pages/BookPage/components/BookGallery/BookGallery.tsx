@@ -43,7 +43,7 @@ export function BookGallery({ images }: BookGalleryProps) {
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
-              <div className="w-[80px] h-[80px] flex items-center justify-center rounded-lg border hover:border-[#313237] transition-all">
+              <div className="w-[80px] h-[80px] flex items-center justify-center rounded-lg border border-[#E2E6E9] hover:border-[#313237] dark:bg-white/20 dark:border-white/20 dark:hover:bg-white/40 transition-all">
                 <img
                   src={src}
                   alt={`thumb ${index}`}
@@ -63,7 +63,7 @@ export function BookGallery({ images }: BookGalleryProps) {
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="swiper-zoom-container w-full h-full flex items-center justify-center rounded-md cursor:zoom-in">
+            <div className="swiper-zoom-container w-full h-full flex items-center justify-center rounded-md">
               <img
                 src={src}
                 alt={`image ${index}`}

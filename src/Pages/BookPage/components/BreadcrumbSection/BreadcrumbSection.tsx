@@ -26,7 +26,7 @@ export const BreadcrumbSection = ({
         <BreadcrumbItem>
           <BreadcrumbLink
             asChild
-            className="flex items-center text-[#313237] transition-transform hover:-translate-y-1"
+            className="flex items-center text-[#313237] dark:text-white/80 transition-transform hover:-translate-y-1"
           >
             <Link to="/">
               <House className="w-5 h-5" />
@@ -39,7 +39,7 @@ export const BreadcrumbSection = ({
         <BreadcrumbItem className="hidden sm:flex">
           <BreadcrumbLink
             asChild
-            className="text-[#3a3c40] hover:underline hover:text-[#3a3c40] first-letter:uppercase"
+            className="text-[#3a3c40] dark:text-white/80 hover:underline hover:text-[#3a3c40] first-letter:uppercase"
           >
             <Link to={`/${type}`}>{type}</Link>
           </BreadcrumbLink>
@@ -50,7 +50,7 @@ export const BreadcrumbSection = ({
         <BreadcrumbItem className="hidden sm:flex">
           <BreadcrumbLink
             asChild
-            className="text-[#3a3c40] hover:underline hover:text-[#3a3c40] first-letter:uppercase"
+            className="text-[#3a3c40] dark:text-white/80 hover:underline hover:text-[#3a3c40] first-letter:uppercase"
           >
             <Link to={`/${type}`}>{category}</Link>
           </BreadcrumbLink>
@@ -59,7 +59,10 @@ export const BreadcrumbSection = ({
         <BreadcrumbSeparator className="w-3 h-3 text-[#C5C9CC] hidden sm:block" />
 
         <BreadcrumbItem className="flex sm:hidden">
-          <BreadcrumbLink asChild className="text-[#3a3c40] hover:underline">
+          <BreadcrumbLink
+            asChild
+            className="text-[#3a3c40] dark:text-white/80 hover:underline"
+          >
             <Link to={`/${type}`}>...</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -67,7 +70,7 @@ export const BreadcrumbSection = ({
         <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC] flex sm:hidden" />
 
         <BreadcrumbItem>
-          <BreadcrumbPage className="text-[#89939A] text-[12px] sm:text-[14px] font-medium">
+          <BreadcrumbPage className="text-[#89939A] dark:text-white/80 text-[12px] sm:text-[14px] font-medium">
             {bookName}
           </BreadcrumbPage>
         </BreadcrumbItem>
