@@ -8,9 +8,11 @@ import { getNewestBooks } from '@/utils/getNewestBooks';
 import { getRandomBooks } from '@/utils/getRandomBooks';
 import { MovingRows } from './components/MovingRows';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
+import { useTranslation } from 'react-i18next';
 
 export const HomePage = () => {
   const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchAllBooks();
@@ -24,12 +26,15 @@ export const HomePage = () => {
       <ScrollSection />
       <section className="relative z-[2]">
         <BannerSlider />
-        <PaperBookSlider books={getNewestBooks(allBooks)} title="New Books" />
+        <PaperBookSlider
+          books={getNewestBooks(allBooks)}
+          title={t('newBooks')}
+        />
         <MovingRows />
         <CategoriesGrid />
         <PaperBookSlider
           books={getRandomBooks(allBooks)}
-          title="You might like"
+          title={t('UMayLike')}
         />
       </section>
     </>

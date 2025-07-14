@@ -1,29 +1,35 @@
+import { useFetchBooksStore } from '@/store/useFetchBooksStore';
+import { useTranslation } from 'react-i18next';
+
 const Banner1 = '/books/img/categories/paperbookcategory.jpg';
 const Banner2 = '/books/img/categories/audiobookcategory.jpg';
 const Banner3 = '/books/img/categories/kindlebookcategory.jpg';
 
-const categories = [
-  {
-    image: Banner1,
-    link: '#/paperback',
-    title: 'Paper books',
-    subtitle: '10,305 books',
-  },
-  {
-    image: Banner2,
-    link: '#/audiobook',
-    title: 'Audiobooks',
-    subtitle: '10,305 books',
-  },
-  {
-    image: Banner3,
-    link: '#/kindle',
-    title: 'Kindle books',
-    subtitle: '10,305 books',
-  },
-];
-
 export const CategoriesGrid = () => {
+  const { paperBooks, kindleBooks, audioBooks } = useFetchBooksStore();
+  const { t } = useTranslation();
+
+  const categories = [
+    {
+      image: Banner1,
+      link: '#/paperback',
+      title: t('paper'),
+      subtitle: `${paperBooks.length} ${t('items')}`,
+    },
+    {
+      image: Banner2,
+      link: '#/audiobook',
+      title: t('audiobook'),
+      subtitle: `${audioBooks.length} ${t('items')}`,
+    },
+    {
+      image: Banner3,
+      link: '#/kindle',
+      title: t('kindle'),
+      subtitle: `${kindleBooks.length} ${t('items')}`,
+    },
+  ];
+
   return (
     <div className="max-w-[1136px] flex flex-wrap mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-12">
       <h1 className="font-bold text-[2rem] text-[#313237] mb-[23px]">
