@@ -2,10 +2,19 @@ import { useThemeStore } from '@/store/useThemeStore';
 import cn from 'classnames';
 import { Moon, Settings, Sun } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const BookmarkToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState('EN');
+  const { i18n } = useTranslation();
+
+  const languageToggle = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    lang: 'ua' | 'en',
+  ) => {
+    i18n.changeLanguage(lang);
+    e.stopPropagation();
+  };
 
   const { theme, toggleTheme } = useThemeStore();
 
@@ -41,14 +50,13 @@ export const BookmarkToggle = () => {
           </button>
 
           <button
-            onClick={(e) => {
-              setLanguage((prev) => (prev === 'EN' ? 'UA' : 'EN'));
-              e.stopPropagation();
-            }}
+            onClick={(e) =>
+              languageToggle(e, i18n.language === 'en' ? 'ua' : 'en')
+            }
             className="mt-3 text-md font-bold hover:scale-110 transition cursor-pointer"
             title="Languages"
           >
-            {language}
+            {i18n.language.toUpperCase()}
           </button>
 
           <button
