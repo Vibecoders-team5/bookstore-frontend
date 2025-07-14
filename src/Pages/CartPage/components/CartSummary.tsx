@@ -21,7 +21,7 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full lg:max-w-[368px] lg:h-[188px] bg-white border border-[#E2E6E9] rounded-[16px] p-6 flex flex-col lg:flex-shrink-0 gap-4 justify-between items-center text-center">
+    <div className="w-full lg:max-w-[368px] lg:h-[188px] dark:text-white dark:bg-[#35291d] bg-white border dark:border-[#35291d] border-[#E2E6E9] rounded-[16px] p-6 flex flex-col lg:flex-shrink-0 gap-4 justify-between items-center text-center">
       <span className="text-[22px] sm:text-[32px] font-[700]">
         ${totalPrice}
       </span>
@@ -31,7 +31,7 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
         <DialogTrigger asChild>
           <Button
             variant="addToCartNormal"
-            className="w-full btn-text h-12 rounded-[8px] hover:cursor-pointer"
+            className="w-full btn-text h-12 dark:bg-white dark:text-[#493929] rounded-[8px] hover:cursor-pointer"
             size="customAddButton"
           >
             {t('checkout')}
