@@ -3381,5 +3381,44 @@
       "Assigned to investigate the eerie Ghost City, Xie Lian unexpectedly reunites with San Lang, who is revealed to be Hua Cheng—Ghost King and one of the Four Calamities. Despite his fearsome reputation, Hua Cheng shows unwavering devotion to the prince.",
       "This installment delves into themes of corruption, public perception, love, and sacrifice. It’s a lyrical and philosophical continuation of the danmei fantasy epic, filled with layered characters and mythological depth. A must-read sequel for fans of volume one."
     ]
+  },
+  {
+    "id": "book-toreadors-vasyukivka-uk",
+    "type": "paperback",
+    "namespaceId": "toreadors-vasyukivka",
+    "name": "Тореадори з Васюківки",
+    "slug": "toreadors-vasyukivka-uk",
+    "priceRegular": 13.99,
+    "priceDiscount": 11.99,
+    "images": [
+      "img/paperback/toreadors-vasyukivka/uk/00.webp",
+      "img/paperback/toreadors-vasyukivka/uk/01.webp",
+      "img/paperback/toreadors-vasyukivka/uk/02.webp",
+      "img/paperback/toreadors-vasyukivka/uk/03.webp",
+      "img/paperback/toreadors-vasyukivka/uk/04.webp",
+      "img/paperback/toreadors-vasyukivka/uk/05.webp",
+      "img/paperback/toreadors-vasyukivka/uk/06.webp"
+    ],
+    "langAvailable": ["uk"],
+    "lang": "uk",
+    "author": "Всеволод Нестайко",
+    "coverType": "hardcover",
+    "numberOfPages": 544,
+    "publicationYear": 2013,
+    "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
+    "format": "135x205 мм",
+    "illustrations": true,
+    "category": [
+      "Adventure novels for children",
+      "Contemporary prose",
+      "Humor and satire",
+      "Lidiia's favorite",
+      "Children's literature"
+    ],
+    "description": [
+      "Культовий твір, який увійшов до переліку золотої класики української літератури. Книга відзначена у «Почесному списку Андерсена» і перекладена двадцятьма мовами.",
+      "Історії розповідають про пригоди Яви і Павлуші — двох друзів, які мріють прославитися. Вони будують метро під свинарником, влаштовують кориду з коровою, конструюють підводний човен і шукають шпигунів.",
+      "Незважаючи на веселу форму, книга має глибоку ідею — щиру дружбу, готовність прийти на допомогу і силу дитячої фантазії. Підійде і дітям, і дорослим, хто хоче підняти собі настрій."
+    ]
   }
 ]
