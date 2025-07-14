@@ -1,9 +1,11 @@
 import { Book } from '@/types/Book';
+import { useBookStore } from '@/store/useBookStore';
+import { useTranslation } from 'react-i18next';
 
 import { AddButton } from '@/components/ui/Buttons/AddButton';
 import { HeartButton } from '@/components/ui/Buttons/HeartButton';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
-import { useBookStore } from '@/store/useBookStore';
+import { formatListeningLength } from '../FormatListeningLength/formatListeningLength';
 import { Minus, Plus } from 'lucide-react';
 
 type Props = {
@@ -11,12 +13,23 @@ type Props = {
 };
 
 export function BookDetails({ book }: Props) {
-  const bookDetailsData = [
-    { label: 'Author', value: book.author },
-    { label: 'Cover type', value: book.coverType },
-    { label: 'Number of pages', value: book.numberOfPages },
-    { label: 'Year of publication', value: book.publicationYear },
+  const { t } = useTranslation();
+
+  const bookDetailsData: [string, string | number | null][] = [
+    [t('author'), book.author],
+    [t('cover'), book.coverType ?? null],
+    [
+      t('listening'),
+      book.listeningLength !== null && book.listeningLength !== undefined ?
+        formatListeningLength(book.listeningLength)
+      : null,
+    ],
+    [t('narrator'), book.narrator ?? null],
+    [t('numberOfPages'), book.numberOfPages ?? null],
+    [t('yearOfPublication'), book.publicationYear],
   ];
+
+  const filteredDetails = bookDetailsData.filter(([, value]) => value !== null);
 
   const addToCart = useBookStore((state) => state.addToCart);
   const removeFromCart = useBookStore((state) => state.removeFromCart);
@@ -31,9 +44,7 @@ export function BookDetails({ book }: Props) {
 
   const isFavourite = favorites.some((fav) => fav.id === book.id);
   const cartItem = cart.find((item) => item.id === book.id);
-
   const quantity = cartItem?.quantity || 0;
-
   const isSelected = quantity > 0;
 
   const toggleAddToCart = () => {
@@ -65,7 +76,7 @@ export function BookDetails({ book }: Props) {
     <div className="w-full max-w-[400px] mx-auto lg:mx-0 flex flex-col gap-6 text-[16px] text-[#313237]  dark:text-white">
       <div>
         <p className="text-[#89939A]  dark:text-white/80 text-[16px] font-bold leading-[24px] mb-2">
-          Category
+          {t('category')}
         </p>
         {book.category && book.category.length > 0 && (
           <div className="flex flex-wrap gap-2">
@@ -83,7 +94,7 @@ export function BookDetails({ book }: Props) {
 
       <div className="border-t border-[#E2E6E9]  pt-4">
         <p className="text-[#89939A]  dark:text-white/80 text-[16px] font-bold leading-[24px] mb-2">
-          Select language
+          {t('selectlanguage')}
         </p>
 
         <div className="mb-4">
@@ -135,7 +146,7 @@ export function BookDetails({ book }: Props) {
       </div>
 
       <div className="pt-[24px] text-[#89939A] text-[14px] font-medium leading-[21px]">
-        {bookDetailsData.map(({ label, value }, index) => (
+        {filteredDetails.map(([label, value], index) => (
           <div
             key={label}
             className={`flex justify-between py-1 ${

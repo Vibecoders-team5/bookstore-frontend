@@ -1,8 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { ChevronUpIcon } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between w-full px-8 xl:px-36 py-8 gap-8 bg-[#493929] dark:bg-[#35291d] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
       <Link
@@ -29,13 +31,13 @@ export const Footer = () => {
           to="/contacts"
           className="uppercase hover:text-[#313237] dark:hover:text-white/60"
         >
-          Contacts
+          {t('contacts')}
         </Link>
         <Link
           to="/rights"
           className="uppercase hover:text-[#313237] dark:hover:text-white/60"
         >
-          Rights
+          {t('rights')}
         </Link>
       </nav>
 
@@ -44,7 +46,7 @@ export const Footer = () => {
         variant="backToTop"
         className="self-center text-white/80  dark:hover:text-white/70"
       >
-        <span>Back to top</span>
+        <span>{t('backToTop')}</span>
         <ChevronUpIcon size={16} />
       </Button>
     </footer>

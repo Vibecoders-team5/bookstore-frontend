@@ -1,5 +1,6 @@
 import { ChevronLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 
 type BackButtonProps = {
   onClick?: () => void;
@@ -8,6 +9,7 @@ type BackButtonProps = {
 export const BackButton: React.FC<BackButtonProps> = ({
   onClick = () => {},
 }) => {
+  const { t } = useTranslation();
   return (
     <Button
       variant="ghost"
@@ -16,7 +18,7 @@ export const BackButton: React.FC<BackButtonProps> = ({
       onClick={onClick}
     >
       <ChevronLeft className="text-[#313237] dark:text-white/60" />
-      Back
+      {t('backBtn')}
     </Button>
   );
 };

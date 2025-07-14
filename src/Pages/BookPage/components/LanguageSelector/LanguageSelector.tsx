@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useBookStore } from '@/store/useBookStore';
+import { useTranslation } from 'react-i18next';
 
 export const LanguageSelector = () => {
   const { currentBook: book, bookVariants, setCurrentBook } = useBookStore();
+  const { t } = useTranslation();
 
   const [selected, setSelected] = useState(book?.lang || '');
 
@@ -25,7 +27,8 @@ export const LanguageSelector = () => {
   return (
     <div className="flex gap-2">
       {book.langAvailable.map((lang: string) => {
-        const label = lang.toUpperCase() === 'UK' ? 'UA' : 'ENG';
+        const label =
+          lang.toUpperCase() === 'UK' ? t('languageSelector') : 'ENG';
         const isSelected = selected === lang;
 
         return (

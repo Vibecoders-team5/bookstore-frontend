@@ -3,9 +3,11 @@ import { BackButton } from '@/components/ui/Buttons/BackButton';
 import { useBookStore } from '@/store/useBookStore';
 import { useNavigate } from 'react-router-dom';
 import { EmptyFavorites } from './components/EmptyFavorites';
+import { useTranslation } from 'react-i18next';
 
 export const FavoritesPage = () => {
   const favorites = useBookStore((state) => state.favorites);
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   return (
@@ -14,8 +16,8 @@ export const FavoritesPage = () => {
         <BackButton onClick={() => navigate(-1)} />
 
         <div className="mb-10 pt-4">
-          <h1 className="h1 dark:text-white">Favorites</h1>
-          <p className="dark:text-white">{`${favorites.length} items`}</p>
+          <h1 className="h1 dark:text-white">{t('fav')}</h1>
+          <p className="dark:text-white">{`${favorites.length} ${t('items')}`}</p>
         </div>
         {favorites.length ?
           <BookList books={favorites} />

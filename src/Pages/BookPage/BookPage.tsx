@@ -13,10 +13,12 @@ import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSli
 
 import { getRandomBooks } from '@/utils/getRandomBooks';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
+import { useTranslation } from 'react-i18next';
 
 export const BookPage: React.FC = () => {
   const { setCurrentBook, setBookVariants, currentBook: book } = useBookStore();
   const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
+  const { t } = useTranslation();
   const { bookSlug } = useParams<{ bookSlug: string }>();
   const type = useMatch('/:type/:bookSlug')?.params.type as
     | 'paperback'
@@ -73,7 +75,7 @@ export const BookPage: React.FC = () => {
 
         <PaperBookSlider
           books={getRandomBooks(allBooks)}
-          title="You might like"
+          title={t('UMayLike')}
         />
       </div>
     </div>

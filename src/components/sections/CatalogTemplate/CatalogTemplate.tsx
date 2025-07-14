@@ -7,6 +7,7 @@ import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { DropdownSortBy } from './DropdownSortBy';
 import { DropdownItemsOnPage } from './DropdownItemsOnPage';
 import { PaginationBlock } from './PaginationBlock';
+import { useTranslation } from 'react-i18next';
 
 type CatalogTemplateProps = {
   books: Book[];
@@ -20,6 +21,7 @@ export const CatalogTemplate: React.FC<CatalogTemplateProps> = ({
   title,
 }) => {
   const [searchParams] = useSearchParams();
+  const { t } = useTranslation();
 
   const currentSort = searchParams.get('sort');
   const currentPerPage = searchParams.get('perPage') || '16';
@@ -41,7 +43,7 @@ export const CatalogTemplate: React.FC<CatalogTemplateProps> = ({
           <h1 className="text-[32px] sm:text-[48px] font-[700] dark:text-white">
             {title}
           </h1>
-          <p className="body-text dark:text-white">{`${booksLength} books`}</p>
+          <p className="body-text dark:text-white">{`${booksLength} ${t('items')}`}</p>
         </div>
 
         <div className="flex gap-4 mb-6">

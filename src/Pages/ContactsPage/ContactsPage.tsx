@@ -1,11 +1,14 @@
 import { Mail, Github, Linkedin, Send } from 'lucide-react';
 import { members } from '@/data/members.ts';
+import { useTranslation } from 'react-i18next';
 
 export const ContactsPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-[1136px] mx-auto px-4 mt-25">
       <h2 className="text-[2rem] font-bold text-[#313237] mb-8 text-center dark:text-white">
-        Meet Our Team
+        {t('meetOurTeam')}
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
