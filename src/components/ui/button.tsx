@@ -20,7 +20,7 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline',
         addToCartNormal: 'rounded-sm bg-[#313237] text-white hover:shadow-lg',
         addToCartAdded:
-          'rounded-sm bg-white text-[#27AE60] border border-[#E2E6E9]',
+          'rounded-sm bg-white text-[#27AE60] dark:text-[#35291d] dark:font-[700] border border-[#E2E6E9]',
         default:
           'rounded-lg border-gray-200 border hover:border-[#313237] box-border',
         defaultHeart:

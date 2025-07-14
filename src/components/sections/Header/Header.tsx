@@ -63,7 +63,7 @@ export const Header = () => {
   };
 
   const baseIconClass =
-    'flex items-center justify-center w-12 h-full lg:w-[64px] border-l border-[#E2E6E9] text-[#89939A] transition duration-200 hover:text-[#313237] group';
+    'flex items-center justify-center w-12 h-full lg:w-[64px] border-l border-[#E2E6E9] text-[#89939A] dark:text-white/80 dark:hover:text-white transition duration-200 hover:text-[#313237] group';
   const iconScaleClass =
     'transition duration-200 transform group-hover:scale-110';
 
