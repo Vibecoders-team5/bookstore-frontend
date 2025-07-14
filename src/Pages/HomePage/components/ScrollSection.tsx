@@ -2,6 +2,8 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Frame from 'public/books/img/hero/letsexplore.png';
+import TabletFrame from 'public/books/img/hero/letsexploreTablet.png';
+import MobileFrame from 'public/books/img/hero/letsexploreMobile.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,7 +55,19 @@ export const ScrollSection = () => {
         <img
           src={Frame}
           alt="image"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center hidden lg:block"
+        />
+
+        <img
+          src={TabletFrame}
+          alt="image"
+          className="w-full h-full object-cover object-center hidden sm:block lg:hidden"
+        />
+
+        <img
+          src={MobileFrame}
+          alt="image"
+          className="w-full h-full object-cover object-center block sm:hidden"
         />
       </div>
     </div>

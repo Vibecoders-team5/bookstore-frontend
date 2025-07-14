@@ -97,7 +97,7 @@ export default function BannerSlider() {
   }, [currentSlide]);
 
   return (
-    <div className="flex mt-8 flex-col items-center max-w-[#1136] w-full mx-auto">
+    <div className="flex mt-8 flex-col items-center max-w-[1136px] w-full mx-auto">
       <div className="relative flex w-full items-center justify-between gap-2 h-[100vw] sm:h-108">
         <Button
           variant="ghost"
@@ -145,7 +145,7 @@ export default function BannerSlider() {
         </Button>
       </div>
 
-      <div className="flex justify-center gap-2 -mt-4">
+      <div className="flex justify-center gap-2 mt-4">
         {images.map((_, index) => (
           <button
             key={index}
@@ -156,8 +156,8 @@ export default function BannerSlider() {
             <span
               className={`w-[14px] h-[4px] ${
                 index === currentSlide ?
-                  'bg-[#313237] dark:bg-[#35291d]'
-                : 'bg-[#E2E6E9]'
+                  'bg-[#313237] dark:bg-[#E2E6E9]'
+                : 'bg-[#E2E6E9] dark:bg-[#35291d]'
               }`}
             />
           </button>
