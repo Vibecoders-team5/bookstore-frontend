@@ -3,11 +3,12 @@ import { Search } from 'lucide-react';
 import debounce from 'lodash/debounce';
 import { useEffect, useMemo, useState } from 'react';
 import { OurInput } from '@/components/ui/OurInput/OurInput';
+import { useTranslation } from 'react-i18next';
 
 export function SearchBar() {
-  const { setQuery } = useBookStore();
-  const query = useBookStore((state) => state.query);
+  const { query, setQuery } = useBookStore();
   const [inputValue, setInputValue] = useState(query);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setInputValue(query);
@@ -39,7 +40,7 @@ export function SearchBar() {
       />
       <OurInput
         type="text"
-        placeholder="Find a book or author"
+        placeholder={t('searchPHolder')}
         value={inputValue}
         onChange={handleChange}
         className="w-full"
