@@ -10,18 +10,22 @@ import {
   DialogTrigger,
 } from '@radix-ui/react-dialog';
 import { X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+
 type CartSummaryProps = {
   totalPrice: number;
   quantity: number;
 };
 
 export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full lg:max-w-[368px] lg:h-[188px] dark:text-white dark:bg-[#35291d] bg-white border dark:border-[#35291d] border-[#E2E6E9] rounded-[16px] p-6 flex flex-col lg:flex-shrink-0 gap-4 justify-between items-center text-center">
       <span className="text-[22px] sm:text-[32px] font-[700]">
         ${totalPrice}
       </span>
-      <span className="body-text">Total for {quantity} items</span>
+      <span className="body-text">{`${t('totalFor')} ${quantity} ${t('items')}`}</span>
 
       <Dialog>
         <DialogTrigger asChild>
@@ -30,7 +34,7 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
             className="w-full btn-text h-12 dark:bg-white dark:text-[#493929] rounded-[8px] hover:cursor-pointer"
             size="customAddButton"
           >
-            Checkout
+            {t('checkout')}
           </Button>
         </DialogTrigger>
 
@@ -46,11 +50,10 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
 
           <DialogHeader className="mb-6 text-center">
             <DialogTitle className="text-2xl font-semibold mb-3 text-center">
-              Whoops, not quite ready yet
+              {t('whoops')}
             </DialogTitle>
             <DialogDescription className="mx-auto max-w-[420px] text-center text-muted-foreground">
-              Thanks for your patience — we’re hustling hard to make checkout
-              happen. Almost there!
+              {t('hustling')}
             </DialogDescription>
           </DialogHeader>
 

@@ -5,12 +5,15 @@ import { CartSummary } from './components/CartSummary';
 import { useBookStore } from '@/store/useBookStore';
 import { BackButton } from '@/components/ui/Buttons/BackButton';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export type CartItem = Book & { quantity: number };
 
 export const CartPage = () => {
   const navigate = useNavigate();
   const cart = useBookStore((state) => state.cart);
+  const { t } = useTranslation();
+
   const totalPrice =
     Math.round(
       cart.reduce(
@@ -27,9 +30,9 @@ export const CartPage = () => {
       <div className="w-full max-w-284 min-w-0">
         <BackButton onClick={() => navigate(-1)} />
 
-        <div className="mb-8 sm:mb-10 pt-2 dark:text-white">
-          <h1 className="text-[32px] sm:text-[48px] font-[700]">Cart</h1>
-          <p>{`${totalQuantity} items`}</p>
+        <div className="mb-8 sm:mb-10 pt-2">
+          <h1 className="text-[32px] sm:text-[48px] font-[700]">{t('cart')}</h1>
+          <p>{`${totalQuantity} ${t('items')}`}</p>
         </div>
 
         {cart.length ?

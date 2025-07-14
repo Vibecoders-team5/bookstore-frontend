@@ -1,16 +1,18 @@
 import { DropdownSelect, Option } from '@/components/ui/Dropdowns';
+import { useTranslation } from 'react-i18next';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
 export const DropdownItemsOnPage = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const currentPerPage = searchParams.get('perPage');
 
   const itemsOnPageOptions: Option[] = [
     { label: '4', value: '4' },
     { label: '8', value: '8' },
     { label: '16', value: '16' },
-    { label: 'All', value: 'all' },
+    { label: t('all'), value: 'all' },
   ];
 
   const handleItemsChange = (value: string) => {
@@ -24,7 +26,7 @@ export const DropdownItemsOnPage = () => {
       options={itemsOnPageOptions}
       placeholder="16"
       defaultValue={currentPerPage ?? '16'}
-      label="Items on page"
+      label={t('itemsOnPage')}
       className="w-32 h-15 text-black/80"
       onChange={handleItemsChange}
     />

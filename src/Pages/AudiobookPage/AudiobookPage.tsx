@@ -1,9 +1,11 @@
 import { CatalogTemplate } from '@/components/sections/CatalogTemplate/CatalogTemplate';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const AudiobookPage = () => {
   const { audioBooks, isLoading, fetchAudioBooks } = useFetchBooksStore();
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchAudioBooks();
@@ -13,7 +15,7 @@ export const AudiobookPage = () => {
     <CatalogTemplate
       books={audioBooks}
       isLoading={isLoading}
-      title={'Audiobooks'}
+      title={t('audioBooks')}
     />
   );
 };

@@ -13,19 +13,19 @@ export const CategoriesGrid = () => {
     {
       image: Banner1,
       link: '#/paperback',
-      title: t('paper'),
+      title: t('paperBooks'),
       subtitle: `${paperBooks.length} ${t('items')}`,
     },
     {
       image: Banner2,
       link: '#/audiobook',
-      title: t('audiobook'),
+      title: t('audioBooks'),
       subtitle: `${audioBooks.length} ${t('items')}`,
     },
     {
       image: Banner3,
       link: '#/kindle',
-      title: t('kindle'),
+      title: t('kindleBooks'),
       subtitle: `${kindleBooks.length} ${t('items')}`,
     },
   ];
@@ -33,7 +33,7 @@ export const CategoriesGrid = () => {
   return (
     <div className="max-w-[1136px] flex flex-wrap mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-12">
       <h1 className="font-bold text-[2rem] text-[#313237] dark:text-white mb-[23px]">
-        Shop by category
+        {t('shopByCat')}
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full">
         {categories.map(({ image, link, title, subtitle }) => (
