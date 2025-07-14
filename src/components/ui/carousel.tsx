@@ -187,7 +187,11 @@ function CarouselPrevious({
       data-slot="carousel-previous"
       variant={variant}
       size={size}
-      className={cn('rounded-full', className)}
+      className={cn(
+        'rounded-full dark:text-white text-black transition-opacity',
+        !canScrollPrev && 'opacity-50 cursor-not-allowed',
+        className,
+      )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
@@ -211,7 +215,11 @@ function CarouselNext({
       data-slot="carousel-next"
       variant={variant}
       size={size}
-      className={cn('rounded-full', className)}
+      className={cn(
+        'rounded-full dark:text-white text-black transition-opacity',
+        !canScrollNext && 'opacity-50 cursor-not-allowed',
+        className,
+      )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
