@@ -5,18 +5,28 @@ import { HeartButton } from '@/components/ui/Buttons/HeartButton';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
 import { useBookStore } from '@/store/useBookStore';
 import { Minus, Plus } from 'lucide-react';
+import { formatListeningLength } from '../FormatListeningLength/formatListeningLength';
 
 type Props = {
   book: Book;
 };
 
 export function BookDetails({ book }: Props) {
-  const bookDetailsData = [
-    { label: 'Author', value: book.author },
-    { label: 'Cover type', value: book.coverType },
-    { label: 'Number of pages', value: book.numberOfPages },
-    { label: 'Year of publication', value: book.publicationYear },
+  const bookDetailsData: [string, string | number | null][] = [
+    ['Author', book.author],
+    ['Cover type', book.coverType ?? null],
+    [
+      'Listening Length',
+      book.listeningLength !== null && book.listeningLength !== undefined ?
+        formatListeningLength(book.listeningLength)
+      : null,
+    ],
+    ['Narrator', book.narrator ?? null],
+    ['Number of pages', book.numberOfPages ?? null],
+    ['Year of publication', book.publicationYear],
   ];
+
+  const filteredDetails = bookDetailsData.filter(([, value]) => value !== null);
 
   const addToCart = useBookStore((state) => state.addToCart);
   const removeFromCart = useBookStore((state) => state.removeFromCart);
@@ -31,9 +41,7 @@ export function BookDetails({ book }: Props) {
 
   const isFavourite = favorites.some((fav) => fav.id === book.id);
   const cartItem = cart.find((item) => item.id === book.id);
-
   const quantity = cartItem?.quantity || 0;
-
   const isSelected = quantity > 0;
 
   const toggleAddToCart = () => {
@@ -134,7 +142,7 @@ export function BookDetails({ book }: Props) {
       </div>
 
       <div className="pt-[24px] text-[#89939A] text-[14px] font-medium leading-[21px]">
-        {bookDetailsData.map(({ label, value }, index) => (
+        {filteredDetails.map(([label, value], index) => (
           <div
             key={label}
             className={`flex justify-between py-1 ${
