@@ -1,10 +1,19 @@
 import cn from 'classnames';
 import { Settings, Sun } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const BookmarkToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState('EN');
+  const { i18n } = useTranslation();
+
+  const languageToggle = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    lang: 'ua' | 'en',
+  ) => {
+    i18n.changeLanguage(lang);
+    e.stopPropagation();
+  };
 
   return (
     <div
@@ -31,14 +40,13 @@ export const BookmarkToggle = () => {
             <Sun />
           </button>
           <button
-            onClick={(e) => {
-              setLanguage((prev) => (prev === 'EN' ? 'UA' : 'EN'));
-              e.stopPropagation();
-            }}
+            onClick={(e) =>
+              languageToggle(e, i18n.language === 'en' ? 'ua' : 'en')
+            }
             className="mt-3 text-md font-bold hover:scale-110 transition cursor-pointer"
             title="Languages"
           >
-            {language}
+            {i18n.language.toUpperCase()}
           </button>
           <button
             className="mt-13 text-sm transition-transform duration-700 ease-in-out cursor-pointer hover:rotate-360"
