@@ -4,47 +4,47 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 import ConstitutionDayDesktop from '/books/img/banner/tetsbanner1.png';
-// import ConstitutionDayTablet from '/books/img/banner/bannerTablet1.png';
-// import ConstitutionDayMobile from '/books/img/banner/mobileBanner1.png';
+import ConstitutionDayTablet from '/books/img/banner/bannerTablet1.png';
+import ConstitutionDayMobile from '/books/img/banner/mobileBanner1.png';
 
 import AuthorDesktop from '/books/img/banner/testbanner22.png';
-// import AuthorTablet from '/books/img/banner/bannerTablet2.png';
-// import AuthorMobile from '/books/img/banner/mobileBanner2.png';
+import AuthorTablet from '/books/img/banner/bannerTablet2.png';
+import AuthorMobile from '/books/img/banner/mobileBanner2.png';
 
 import BestsellersDesktop from '/books/img/banner/testbanner3.png';
-// import BestsellersTablet from '/books/img/banner/bannerTablet3.png';
-// import BestsellersMobile from '/books/img/banner/mobileBanner3.png';
+import BestsellersTablet from '/books/img/banner/bannerTablet3.png';
+import BestsellersMobile from '/books/img/banner/mobileBanner3.png';
 
 const images = [
   {
     desktop: ConstitutionDayDesktop,
-    // tablet: ConstitutionDayTablet,
-    // mobile: ConstitutionDayMobile,
+    tablet: ConstitutionDayTablet,
+    mobile: ConstitutionDayMobile,
   },
   {
     desktop: AuthorDesktop,
-    // tablet: AuthorTablet,
-    // mobile: AuthorMobile,
+    tablet: AuthorTablet,
+    mobile: AuthorMobile,
   },
   {
     desktop: BestsellersDesktop,
-    // tablet: BestsellersTablet,
-    // mobile: BestsellersMobile,
+    tablet: BestsellersTablet,
+    mobile: BestsellersMobile,
   },
 ];
 
 const SlideImage = ({
   srcDesktop,
-  // srcTablet,
-  // srcMobile,
+  srcTablet,
+  srcMobile,
   zIndex,
   opacityFrom,
   opacityTo,
   keyProp,
 }: {
   srcDesktop: string;
-  // srcTablet: string;
-  // srcMobile: string;
+  srcTablet: string;
+  srcMobile: string;
   zIndex: number;
   opacityFrom: number;
   opacityTo: number;
@@ -57,8 +57,8 @@ const SlideImage = ({
     transition={{ duration: 0.7, ease: 'easeInOut' }}
     className={`absolute top-0 left-0 w-full h-full z-[${zIndex}]`}
   >
-    {/* <source srcSet={srcMobile} media="(max-width: 639px)" />
-    <source srcSet={srcTablet} media="(max-width: 1023px)" /> */}
+    <source srcSet={srcMobile} media="(max-width: 639px)" />
+    <source srcSet={srcTablet} media="(max-width: 1023px)" />
     <img src={srcDesktop} alt="" className="w-full h-full object-cover" />
   </motion.picture>
 );
@@ -97,25 +97,27 @@ export default function BannerSlider() {
   }, [currentSlide]);
 
   return (
-    <div className="flex mt-[32px] flex-col items-center max-w-[1136px] w-full mx-auto">
-      <div className="flex w-full h-[432px] items-center justify-between gap-2">
+    <div className="flex mt-8 flex-col items-center max-w-[#1136] w-full mx-auto">
+      <div className="relative flex w-full items-center justify-between gap-2 h-[100vw] sm:h-108">
         <Button
           variant="ghost"
           onClick={goToPrev}
-          className="z-30 w-12 h-[320px] bg-white p-2 flex items-center justify-center"
+          className="hidden sm:flex z-30 w-12 h-full dark:text-white bg-white dark:bg-[#443e32] p-2 items-center justify-center"
         >
           <ChevronLeft />
         </Button>
 
         <a
           href="#/paperback"
-          className="relative h-[336px] lg:h-[400px] overflow-hidden rounded-2xl bg-black w-[490px] lg:w-[1040px]"
+          className="relative overflow-hidden bg-black 
+        w-full h-[100vw] sm:h-84 lg:h-100 
+        rounded-none sm:rounded-2xl"
         >
           {prevSlide !== null && (
             <SlideImage
               srcDesktop={images[prevSlide].desktop}
-              // srcTablet={images[prevSlide].tablet}
-              // srcMobile={images[currentSlide].mobile}
+              srcTablet={images[prevSlide].tablet}
+              srcMobile={images[currentSlide].mobile}
               zIndex={10}
               opacityFrom={1}
               opacityTo={0}
@@ -125,8 +127,8 @@ export default function BannerSlider() {
 
           <SlideImage
             srcDesktop={images[currentSlide].desktop}
-            // srcTablet={images[currentSlide].tablet}
-            // srcMobile={images[currentSlide].mobile}
+            srcTablet={images[currentSlide].tablet}
+            srcMobile={images[currentSlide].mobile}
             zIndex={20}
             opacityFrom={0}
             opacityTo={1}
@@ -137,13 +139,13 @@ export default function BannerSlider() {
         <Button
           variant="ghost"
           onClick={goToNext}
-          className="z-30 w-12 h-[320px] bg-white p-2 flex items-center justify-center"
+          className="hidden sm:flex z-30 w-12 h-full bg-white dark:bg-[#443e32] dark:text-white p-2 items-center justify-center"
         >
           <ChevronRight />
         </Button>
       </div>
 
-      <div className="flex justify-center gap-2 -mt-[15px]">
+      <div className="flex justify-center gap-2 -mt-4">
         {images.map((_, index) => (
           <button
             key={index}
@@ -153,7 +155,9 @@ export default function BannerSlider() {
           >
             <span
               className={`w-[14px] h-[4px] ${
-                index === currentSlide ? 'bg-[#313237]' : 'bg-[#E2E6E9]'
+                index === currentSlide ?
+                  'bg-[#313237] dark:bg-[#35291d]'
+                : 'bg-[#E2E6E9]'
               }`}
             />
           </button>

@@ -47,12 +47,7 @@ export const ScrollSection = () => {
   return (
     <div ref={wrapperRef} className="wrapper relative max-w-screen z-[1]">
       <div className="content relative w-full overflow-x-hidden z-[1]">
-        <section
-          className="section hero w-full h-screen bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/books/img/hero/backgroundwithwhite.png)',
-          }}
-        />
+        <section className="section hero w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('/books/img/hero/backgroundwithwhite.png')] dark:bg-[url('/books/img/hero/backgroundwithbrown.jpg')]" />
       </div>
       <div className="image-container absolute top-0 left-0 right-0 w-full h-screen overflow-hidden z-[2] [perspective:500px]">
         <img
