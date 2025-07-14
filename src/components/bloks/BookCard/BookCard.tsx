@@ -36,7 +36,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   };
 
   return (
-    <div className="dark:bg-black w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 hover:shadow-lg bg-white">
+    <div className="dark:bg-[#35291d] w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-[#35291d] hover:shadow-lg bg-white">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
         <div className="relative w-52 h-66">
           <HeadphonesRound />
@@ -56,26 +56,28 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
           <div>
             <Tooltip>
               <TooltipTrigger asChild>
-                <h5 className="h5 truncate ">{book.name}</h5>
+                <h5 className="h5 truncate dark:text-white">{book.name}</h5>
               </TooltipTrigger>
               <TooltipContent className="bg-black text-white">
                 <p>{book.name}</p>
               </TooltipContent>
             </Tooltip>
-            <p className="body-text">{book.author}</p>
+            <p className="body-text dark:text-[#ddd5cc]">{book.author}</p>
           </div>
         </Link>
 
         <div className="flex flex-col items-end sm:items-start flex-shrink-0">
           {book.priceDiscount ?
             <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center">
-              <h3 className="text-[20px] sm:text-[22px] font-[700]">{`$${book.priceDiscount}`}</h3>
-              <h4 className="text-[16px] sm:text-[20px] font-[600] line-through text-gray-400">{`$${book.priceRegular}`}</h4>
+              <h3 className="text-[20px] sm:text-[22px] font-[700] dark:text-white">{`$${book.priceDiscount}`}</h3>
+              <h4 className="text-[16px] sm:text-[20px] font-[600] line-through text-gray-400 dark:text-[#7e746a]">{`$${book.priceRegular}`}</h4>
             </div>
-          : <h3 className="h3">{`$${book.priceRegular}`}</h3>}
+          : <h3 className="h3 dark:text-white">{`$${book.priceRegular}`}</h3>}
           <div className="inline-flex gap-1.5">
-            <Truck className="text-green-600 w-[22px] h-[22px]" />
-            <p className="btn-text text-green-600">In stock</p>
+            <Truck className="text-green-600 dark:text-[#93785c] w-[22px] h-[22px]" />
+            <p className="btn-text text-green-600 dark:text-[#93785c] ">
+              In stock
+            </p>
           </div>
         </div>
       </div>
@@ -85,7 +87,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
           onClick={toggleAddToCart}
           isSelected={isBookInCart}
           size={'customAddButton'}
-          className="flex-1"
+          className="flex-1 dark:bg-white/40 dark:border dark:border-white/10 dark:hover:border-white/60"
         />
         <HeartButton
           onClick={toggleAddToFavorites}

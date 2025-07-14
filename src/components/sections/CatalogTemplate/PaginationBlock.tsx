@@ -66,19 +66,21 @@ export const PaginationBlock: React.FC<PaginationBlockProps> = ({
         disabled={+currentPage === 1}
         onClick={() => handlePageChangeArrow('left')}
       >
-        <ChevronLeft />
+        <ChevronLeft className="dark:stroke-white" />
       </Button>
+
       <div className="inline-flex items-center justify-center gap-2">
         {visibleButtons.map((n) => (
           <PaginationButton key={n} num={n} onClick={handlePageChangeNumber} />
         ))}
       </div>
+
       <Button
         variant="paginationArrow"
         disabled={+currentPage === endPage}
         onClick={() => handlePageChangeArrow('right')}
       >
-        <ChevronRight />
+        <ChevronRight className="dark:stroke-white" />
       </Button>
     </div>
   );

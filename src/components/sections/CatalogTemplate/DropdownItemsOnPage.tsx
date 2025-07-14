@@ -25,7 +25,7 @@ export const DropdownItemsOnPage = () => {
       placeholder="16"
       defaultValue={currentPerPage ?? '16'}
       label="Items on page"
-      className="w-32 h-15 text-black/80"
+      className="w-32 h-15 text-black/80 dark:text-white"
       onChange={handleItemsChange}
     />
   );

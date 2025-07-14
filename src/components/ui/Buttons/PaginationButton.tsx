@@ -28,9 +28,13 @@ export const PaginationButton: React.FC<PaginationButtonProps> = ({
     <Button
       variant="default"
       size="s32"
-      className={cn({
-        'bg-[#313237] text-white border-[#313237]': isCurrentPageTarget,
-      })}
+      className={cn(
+        ' dark:bg-[#93785c] dark:border-[#93785c]  dark:text-white dark:hover:border-white/60',
+        {
+          'bg-[#313237] dark:bg-white text-white dark:text-[#493929] border-[#313237] dark:border-white':
+            isCurrentPageTarget,
+        },
+      )}
       onClick={() => handleClick(num)}
     >
       {num}
