@@ -1,42 +1,42 @@
+import { useTranslation } from 'react-i18next';
+
 export const RightsPage = () => {
+  const { t } = useTranslation();
+
   const sections = [
     {
-      title: '1. Content Ownership',
-      text: 'All materials on the site — including texts, cover images, book descriptions, illustrations, visual styles, and other content — are the intellectual property of the Nice Books store or our publishing partners. Use of this content outside the site is only permitted with our written consent.',
+      title: t('contentOwnership'),
+      text: t('contentOwnershipText'),
     },
     {
-      title: '2. Website Use',
-      text: 'You’re welcome to browse, read, and share links to our pages — we encourage it! However, downloading, copying, or modifying materials for commercial purposes is not allowed without permission from our administration.',
+      title: t('websiteUse'),
+      text: t('websiteUseText'),
     },
     {
-      title: '3. Protection Against Automated Collection',
-      text: 'We value transparent interaction. Any unauthorized use of scripts, bots, or other automated tools to collect data from our site is a violation of these terms.',
+      title: t('protection'),
+      text: t('protectionText'),
     },
     {
-      title: '4. Data Handling',
-      text: 'We respect your privacy. No personal information is collected without your consent. We may store only basic data related to your orders and saved items to improve your user experience.',
+      title: t('dataRights'),
+      text: t('dataRightsText'),
     },
     {
-      title: '5. Terms Updates',
-      text: 'This website is constantly evolving, and we may occasionally update these terms. Any changes will be published on this page. By continuing to use the site, you automatically agree to the updated terms.',
+      title: t('termsUpdates'),
+      text: t('termsUpdatesText'),
     },
     {
-      title: '6. Contact Us',
-      text: 'Have questions or suggestions? Feel free to reach out via our Contacts page — we’re always happy to hear from you.',
+      title: t('contactUs'),
+      text: t('contactUsText'),
     },
   ];
 
   return (
-    <div className="max-w-[1136px] mx-auto mt-[64px]">
+    <div className="max-w-[1136px] mx-auto mt-[64px] pt-14 pb-6">
       <h2 className="font-extrabold text-[2rem] text-[#313237] mb-[23px]">
-        Terms of Use — Nice Books👌
+        {t('termsOfUse')}
       </h2>
 
-      <p className="text-base text-[#313237]">
-        Welcome to Nice Books — a place where books live online! To ensure our
-        service is convenient, safe, and understandable for all users, we’ve
-        created these simple yet important rules.
-      </p>
+      <p className="text-base text-[#313237]">{t('termsOfUseText')}</p>
 
       {sections.map(({ title, text }, index) => (
         <div key={index}>
