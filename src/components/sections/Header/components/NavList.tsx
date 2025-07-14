@@ -15,9 +15,9 @@ export const NavList = ({
 
   const navLinks = [
     { to: '/', label: t('home') },
-    { to: '/paperback', label: 'Paper' },
-    { to: '/kindle', label: 'Kindle' },
-    { to: '/audiobook', label: 'Audiobook' },
+    { to: '/paperback', label: t('paper') },
+    { to: '/kindle', label: t('kindle') },
+    { to: '/audiobook', label: t('audiobook') },
   ];
 
   return (
