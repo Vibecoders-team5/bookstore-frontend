@@ -1,14 +1,16 @@
+import { useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { useFetchBooksStore } from '@/store/useFetchBooksStore';
+import { getNewestBooks } from '@/utils/getNewestBooks';
+import { getRandomBooks } from '@/utils/getRandomBooks';
+
 import BannerSlider from '@/Pages/HomePage/components/BannerSlider';
 import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 import { CategoriesGrid } from '@/Pages/HomePage/components/CategoriesGrid';
 import { ScrollSection } from './components/ScrollSection';
-import { useEffect } from 'react';
-import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
-import { getNewestBooks } from '@/utils/getNewestBooks';
-import { getRandomBooks } from '@/utils/getRandomBooks';
 import { MovingRows } from './components/MovingRows';
-import { useFetchBooksStore } from '@/store/useFetchBooksStore';
-import { useTranslation } from 'react-i18next';
+import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 
 export const HomePage = () => {
   const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
@@ -18,24 +20,22 @@ export const HomePage = () => {
     fetchAllBooks();
   }, [fetchAllBooks]);
 
+  const newestBooks = useMemo(() => getNewestBooks(allBooks), [allBooks]);
+  const randomBooks = useMemo(() => getRandomBooks(allBooks), [allBooks]);
+
   if (isLoading) {
     return <BookLoader />;
   }
+
   return (
     <>
       <ScrollSection />
       <section className="relative z-[2]">
         <BannerSlider />
-        <PaperBookSlider
-          books={getNewestBooks(allBooks)}
-          title={t('newBooks')}
-        />
+        <PaperBookSlider books={newestBooks} title={t('newBooks')} />
         <MovingRows />
         <CategoriesGrid />
-        <PaperBookSlider
-          books={getRandomBooks(allBooks)}
-          title={t('UMayLike')}
-        />
+        <PaperBookSlider books={randomBooks} title={t('UMayLike')} />
       </section>
     </>
   );
