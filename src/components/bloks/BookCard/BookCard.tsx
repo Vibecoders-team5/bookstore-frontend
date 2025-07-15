@@ -109,7 +109,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   };
 
   return (
-    <div className="dark:bg-[#35291d] w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-[#35291d] hover:shadow-lg bg-white">
+    <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-lg bg-white">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
         <div ref={cardRef} className="relative w-52 h-66">
           <HeadphonesRound />

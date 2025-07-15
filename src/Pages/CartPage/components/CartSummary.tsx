@@ -11,8 +11,8 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
 
   return (
     <div
-      className="w-full lg:max-w-92 lg:h-47 dark:text-white dark:bg-[#35291d] bg-white
-                    border dark:border-[#35291d] border-[#E2E6E9] rounded-2xl p-6 flex flex-col
+      className="w-full lg:max-w-92 lg:h-47 dark:text-white dark:bg-brown-dark bg-white
+                    border dark:border-brown-dark border-custom-elements rounded-2xl p-6 flex flex-col
                     lg:flex-shrink-0 gap-4 justify-between items-center text-center"
     >
       <span className="text-[22px] sm:text-[32px] font-bold">

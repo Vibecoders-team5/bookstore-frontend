@@ -9,7 +9,7 @@ export const EmptyFavorites = () => {
         className="w-48 h-auto"
       />
 
-      <p className="text-[#89939A] text-base sm:text-lg">
+      <p className="text-custom-secondary text-base sm:text-lg">
         <Trans i18nKey="emptyFav">
           Your favorites is still sad...
           <br />

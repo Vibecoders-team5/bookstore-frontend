@@ -18,10 +18,11 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({
   title,
 }) => {
   return (
-    // back-up
-    // <Carousel className="max-w-284 mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-20 pb-8">
+    // back - up
+    // <div>
+    //       <Carousel className="max-w-284 mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-20 pb-8">
     //   <div className="flex items-center justify-between mb-[23px]">
-    //     <h1 className="font-bold text-[2rem] text-[#313237]">{title}</h1>
+    //     <h1 className="font-bold text-[2rem] text-custom-primary">{title}</h1>
     //     <div className="flex space-x-2">
     //       <CarouselPrevious />
     //       <CarouselNext />
@@ -39,10 +40,11 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({
     //     ))}
     //   </CarouselContent>
     // </Carousel>
+    // </div>
 
     <Carousel className="max-w-284 mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-20 pb-8">
       <div className="flex items-center justify-between mb-[23px]">
-        <h1 className="font-bold text-[2rem] text-[#313237] dark:text-white">
+        <h1 className="font-bold text-[2rem] text-custom-primary dark:text-white">
           {title}
         </h1>
         <div className="flex space-x-2">

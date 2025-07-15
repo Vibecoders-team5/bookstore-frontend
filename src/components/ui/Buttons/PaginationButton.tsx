@@ -31,7 +31,7 @@ export const PaginationButton: React.FC<PaginationButtonProps> = ({
       className={cn(
         ' dark:bg-[#93785c] dark:border-[#93785c]  dark:text-white dark:hover:border-white/60',
         {
-          'bg-[#313237] dark:bg-white text-white dark:text-[#493929] border-[#313237] dark:border-white':
+          'bg-custom-primary dark:bg-white text-white dark:text-header-footer-light border-custom-primary dark:border-white':
             isCurrentPageTarget,
         },
       )}

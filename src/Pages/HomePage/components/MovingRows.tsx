@@ -1,6 +1,6 @@
 export const MovingRows = () => {
   const commonClasses =
-    'whitespace-nowrap flex h-full text-[100px] leading-[1] font-outline text-[#493929]';
+    'whitespace-nowrap flex h-full text-[100px] leading-[1] font-outline text-header-footer-light';
 
   return (
     <div className="overflow-hidden w-full">
