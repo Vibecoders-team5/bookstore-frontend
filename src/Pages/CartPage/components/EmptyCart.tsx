@@ -9,7 +9,7 @@ export const EmptyCart = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center gap-4">
       <img
-        src="/books/img/cart-is-empty.png"
+        src="/books/img/cart-is-empty.webp"
         alt="Empty cart illustration"
         className="w-48 h-auto opacity-80"
       />

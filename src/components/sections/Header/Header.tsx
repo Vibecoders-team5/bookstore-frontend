@@ -1,27 +1,29 @@
 import { cn } from '@/lib/utils';
 import { Link, useLocation } from 'react-router-dom';
-
 import { Heart, Menu, Search, ShoppingBag, SquareX, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
 import { useBookStore } from '@/store/useBookStore';
 import { getSearchResults } from '@/utils/getSearchResults';
-import { SearchDropdown } from './components/SearchDropdown';
-import { CategoryDropdown } from './components/CategoryDropdown';
-import { SearchBar } from './components/SearchBar';
-import { MobileMenu } from './components/MobileMenu';
-import { DesktopNav } from './components/DescktopNav';
-import { RadioPlayer } from '../RadioPlayer/RadioPlayer';
-import { BookmarkToggle } from './components/BookmarkToggle';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useRefStore } from '@/store/useRefStore';
+
+import {
+  SearchDropdown,
+  CategoryDropdown,
+  SearchBar,
+  MobileMenu,
+  DesktopNav,
+  RadioPlayer,
+  BookmarkToggle,
+} from './components/index';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { query, cart, favorites, setQuery } = useBookStore();
 
+  const { query, cart, favorites, setQuery } = useBookStore();
   const { setCartIconRef, setBurgIconRef, setFavIconRef } = useRefStore();
   const { fetchAllBooks, allBooks } = useFetchBooksStore();
 
@@ -31,30 +33,23 @@ export const Header = () => {
   const burgIconRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
+  const totalCount = cart.reduce((sum, book) => sum + book.quantity, 0);
+  const totalFavorites = favorites.length;
+  const searchResults = getSearchResults(allBooks, query);
+
   useEffect(() => {
     fetchAllBooks();
   }, [fetchAllBooks]);
 
   useEffect(() => {
     setCartIconRef(cartIconRef as React.RefObject<HTMLDivElement>);
-  }, [setCartIconRef]);
-
-  useEffect(() => {
     setFavIconRef(favIconRef as React.RefObject<HTMLDivElement>);
-  }, [setFavIconRef]);
-
-  useEffect(() => {
     setBurgIconRef(burgIconRef as React.RefObject<HTMLDivElement>);
-  }, [setBurgIconRef]);
+  }, [setCartIconRef, setFavIconRef, setBurgIconRef]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
-
-  const totalCount = cart.reduce((sum, book) => sum + book.quantity, 0);
-  const totalFavorites = favorites.length;
-
-  const searchResults = getSearchResults(allBooks, query);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -70,14 +65,14 @@ export const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [setQuery]);
 
-  const handleSearchToggle = () => {
-    setIsSearchVisible((prev) => !prev);
-  };
-
   const baseIconClass =
     'flex items-center justify-center w-12 h-full lg:w-[64px] border-l border-custom-elements text-custom-secondary text-white/80 hover:text-white transition duration-200 group';
   const iconScaleClass =
     'transition duration-200 transform group-hover:scale-110';
+
+  const handleSearchToggle = () => {
+    setIsSearchVisible((prev) => !prev);
+  };
 
   return (
     <div className="relative">
@@ -89,12 +84,11 @@ export const Header = () => {
             className="flex items-center justify-center w-24 xl:w-32 h-full transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
           >
             <img
-              src="/books/img/nice-books-logo.png"
-              alt="nice-books logo"
+              src="/books/img/together-logo.webp"
+              alt="together logo"
               className="h-[22px] xl:h-[37px] w-auto"
             />
           </Link>
-
           <DesktopNav />
         </div>
 

@@ -24,7 +24,7 @@ export const members = [
   {
     name: 'Anastasiia Zuieva',
     position: 'Product Manager',
-    image: '/books/img/team/nastya.png',
+    image: '/books/img/team/nastya.webp',
     description:
       'Praesent commodo cursus magna, vel scelerisque nisl consectetur. Sed posuere consectetur est at lobortis. Integer posuere erat a ante.',
     telegram: 'https://t.me/anastasiia_zuieva',

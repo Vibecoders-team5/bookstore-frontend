@@ -2,18 +2,20 @@ import { useEffect } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
 import { getBookAndVariants } from '@/utils/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
-
-import { BookAbout } from '../BookPage/components/BookAbout/BookAbout';
-import { BookCharacteristics } from '../BookPage/components/BookCharacteristics/BookCharacteristics';
-import { BookDetails } from '../BookPage/components/BookDetails/BookDetails';
-import { BookGallery } from '../BookPage/components/BookGallery/BookGallery';
-import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
-import { BreadcrumbSection } from './components/BreadcrumbSection/BreadcrumbSection';
-import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
-
 import { getRandomBooks } from '@/utils/getRandomBooks';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useTranslation } from 'react-i18next';
+
+import {
+  BookAbout,
+  BookCharacteristics,
+  BookDetails,
+  BookGallery,
+  BreadcrumbSection,
+} from './components/index';
+
+import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
+import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 
 export const BookPage: React.FC = () => {
   const { setCurrentBook, setBookVariants, currentBook: book } = useBookStore();
