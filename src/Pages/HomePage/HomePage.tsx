@@ -7,7 +7,7 @@ import { getRandomBooks } from '@/utils/getRandomBooks';
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 
-import BannerSlider from '@/Pages/HomePage/components/BannerSlider';
+import BannerSlider from '@/Pages/HomePage/components/BannerSlider/BannerSlider';
 import { CategoriesGrid, ScrollSection, MovingRows } from './components/index';
 
 export const HomePage = () => {
