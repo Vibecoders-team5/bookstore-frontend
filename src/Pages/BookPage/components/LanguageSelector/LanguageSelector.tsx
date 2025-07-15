@@ -40,7 +40,7 @@ export const LanguageSelector = () => {
             className={cn(
               'w-[45px] h-[35px] px-0 py-0 text-[14px] leading-6 cursor-pointer',
               !isSelected && 'text-custom-textPrimary',
-              { 'dark:bg-[#35291d] ': isSelected },
+              { 'dark:bg-brown-dark ': isSelected },
               {
                 'dark:bg-white/10 dark:hover:bg-white/20 dark:border-0':
                   !isSelected,

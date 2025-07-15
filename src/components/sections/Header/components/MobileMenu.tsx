@@ -55,10 +55,10 @@ export const MobileMenu = ({
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     cn(
-      'relative h-full flex items-center justify-center text-[24px] font-[500] transition-colors duration-200 after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-full after:origin-center after:transition-transform after:duration-300 after:bg-[#313237]',
+      'relative h-full flex items-center justify-center text-[24px] font-[500] transition-colors duration-200 after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-full after:origin-center after:transition-transform after:duration-300 after:bg-custom-primary',
       {
-        'text-[#313237] after:scale-x-100': isActive,
-        'text-[#89939A] hover:text-[#313237] after:scale-x-0 hover:after:scale-x-100':
+        'text-custom-primary after:scale-x-100': isActive,
+        'text-custom-secondary hover:text-custom-primary after:scale-x-0 hover:after:scale-x-100':
           !isActive,
       },
     );
@@ -86,15 +86,15 @@ export const MobileMenu = ({
           <NavList navLinkClass={navLinkClass} layout="vertical" />
         </nav>
 
-        <div className="flex w-full mt-auto border-t border-[#E2E6E9]">
+        <div className="flex w-full mt-auto border-t border-custom-elements">
           <Link
             to="/favorites"
             aria-label="Go to Favorites page"
-            className="flex-1 border-r border-[#E2E6E9]"
+            className="flex-1 border-r border-custom-elements"
           >
             <div className="flex flex-col items-center justify-center py-6 relative">
               <div className="relative">
-                <Heart size={20} className="text-[#313237]" />
+                <Heart size={20} className="text-custom-primary" />
                 {totalFavorites > 0 && (
                   <NotificationHeaderBtn counter={totalFavorites} />
                 )}
@@ -105,7 +105,7 @@ export const MobileMenu = ({
           <Link to="/cart" aria-label="Go to Cart page" className="flex-1">
             <div className="flex flex-col items-center justify-center py-6 relative">
               <div className="relative">
-                <ShoppingBag size={20} className="text-[#313237]" />
+                <ShoppingBag size={20} className="text-custom-primary" />
                 {totalCount > 0 && (
                   <NotificationHeaderBtn counter={totalCount} />
                 )}

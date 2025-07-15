@@ -18,18 +18,19 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
-        addToCartNormal: 'rounded-sm bg-[#313237] text-white hover:shadow-lg',
+        addToCartNormal:
+          'rounded-sm bg-custom-primary text-white hover:shadow-lg',
         addToCartAdded:
-          'rounded-sm bg-white text-[#27AE60] dark:text-[#35291d] dark:font-[700] border border-[#E2E6E9]',
+          'rounded-sm bg-white text-[#27AE60] dark:text-brown-dark dark:font-[700] border border-custom-elements',
         default:
-          'rounded-lg border-gray-200 border hover:border-[#313237] box-border',
+          'rounded-lg border-gray-200 border hover:border-custom-primary box-border',
         defaultHeart:
-          'rounded-lg border-gray-200 border hover:border-[#313237]',
+          'rounded-lg border-gray-200 border hover:border-custom-primary',
         paginationArrow: 'w-8 h-8 rounded-lg',
         selected:
-          'rounded-[8px] bg-[#313237] text-white hover:shadow-[0_0_13px_0_#17203166]',
+          'rounded-[8px] bg-custom-primary text-white hover:shadow-[0_0_13px_0_#17203166]',
         backToTop:
-          'uppercase text-[#89939A] hover:text-[#313237] transition-colors',
+          'uppercase text-custom-secondary hover:text-custom-primary transition-colors',
       },
       size: {
         s32: 'size-8',

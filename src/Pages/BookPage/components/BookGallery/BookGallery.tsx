@@ -20,7 +20,7 @@ export function BookGallery({ images }: BookGalleryProps) {
     <div className="flex flex-col-reverse sm:flex-row items-start w-full gap-4">
       <div className="w-full sm:w-20">
         <Swiper
-          className="mx-auto h-20 sm:h-[520px]"
+          className="mx-auto h-20 sm:h-130"
           onSwiper={setThumbsSwiper}
           modules={[Thumbs, FreeMode]}
           freeMode
@@ -43,11 +43,11 @@ export function BookGallery({ images }: BookGalleryProps) {
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
-              <div className="w-[80px] h-[80px] flex items-center justify-center rounded-lg border border-[#E2E6E9] hover:border-[#313237] dark:bg-white/20 dark:border-white/20 dark:hover:bg-white/40 transition-all">
+              <div className="w-20 h-20 flex items-center justify-center rounded-lg border border-custom-elements hover:border-custom-primary dark:bg-white/20 dark:border-white/20 dark:hover:bg-white/40 transition-all">
                 <img
                   src={src}
                   alt={`thumb ${index}`}
-                  className="w-[64px] h-[64px] object-contain rounded-md cursor-pointer"
+                  className="w-16 h-16 object-contain rounded-md cursor-pointer"
                 />
               </div>
             </SwiperSlide>
@@ -59,7 +59,7 @@ export function BookGallery({ images }: BookGalleryProps) {
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Thumbs, Zoom]}
         zoom={true}
-        className="w-full aspect-[4/5] sm:h-[520px] flex-1 min-w-0"
+        className="w-full aspect-[4/5] sm:h-130 flex-1 min-w-0"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>

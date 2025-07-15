@@ -32,7 +32,7 @@ export const CategoriesGrid = () => {
 
   return (
     <div className="max-w-[1136px] flex flex-wrap mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-12">
-      <h1 className="font-bold text-[2rem] text-[#313237] dark:text-white mb-[23px]">
+      <h1 className="font-bold text-[2rem] text-custom-primary dark:text-white mb-[23px]">
         {t('shopByCat')}
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full">
@@ -50,10 +50,10 @@ export const CategoriesGrid = () => {
               />
             </div>
 
-            <h2 className="mt-4 text-5 text-[#313237] dark:text-white font-semibold">
+            <h2 className="mt-4 text-5 text-custom-primary dark:text-white font-semibold">
               {title}
             </h2>
-            <h3 className="mt-1 text-sm text-[#89939A] dark:text-white/50 font-medium">
+            <h3 className="mt-1 text-sm text-custom-secondary dark:text-white/50 font-medium">
               {subtitle}
             </h3>
           </a>

@@ -36,24 +36,24 @@ export const BookCharacteristics = ({ book }: Props) => {
   const filteredItems = items.filter(([, value]) => value !== null);
 
   return (
-    <section className="w-full max-w-[640px] mx-auto lg:mx-0">
+    <section className="w-full max-w-160 mx-auto lg:mx-0">
       <h2 className="text-[24px] font-bold leading-[31px] text-custom-textPrimary dark:text-white mb-4">
         {t('characteristics')}
       </h2>
 
-      <div className="border-t border-[#E2E6E9]">
+      <div className="border-t border-custom-elements">
         {filteredItems.map(([label, value], idx) => (
           <div
             key={label}
             className={`
-              flex justify-between py-[10px]
-              ${idx > 0 ? 'border-t border-[#E2E6E9]' : ''}
+              flex justify-between py-2.5
+              ${idx > 0 ? 'border-t border-custom-elements' : ''}
             `}
           >
-            <span className="text-[#89939A] dark:text-[#ad9c89] text-[14px] font-medium leading-[21px]">
+            <span className="text-custom-secondary dark:text-[#ad9c89] text-[14px] font-medium leading-[21px]">
               {label}
             </span>
-            <span className="text-[#313237] dark:text-white/90 text-[14px] font-medium leading-[21px]">
+            <span className="text-custom-text-primary dark:text-white/90 text-[14px] font-medium leading-[21px]">
               {value}
             </span>
           </div>
