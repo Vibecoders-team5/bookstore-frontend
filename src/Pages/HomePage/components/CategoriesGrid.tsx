@@ -1,9 +1,9 @@
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useTranslation } from 'react-i18next';
 
-const Banner1 = '/books/img/categories/paperbookcategory.jpg';
-const Banner2 = '/books/img/categories/audiobookcategory.jpg';
-const Banner3 = '/books/img/categories/kindlebookcategory.jpg';
+const Banner1 = '/books/img/categories/paperbookcategory.webp';
+const Banner2 = '/books/img/categories/audiobookcategory.webp';
+const Banner3 = '/books/img/categories/kindlebookcategory.webp';
 
 export const CategoriesGrid = () => {
   const { paperBooks, kindleBooks, audioBooks } = useFetchBooksStore();

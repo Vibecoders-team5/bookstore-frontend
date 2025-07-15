@@ -2,9 +2,9 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import Frame from '/books/img/hero/letsexplore.png';
-import TabletFrame from '/books/img/hero/letsexploreTablet.png';
-import MobileFrame from '/books/img/hero/letsexploreMobile.png';
+import Frame from '/books/img/hero/letsexplore.webp';
+import TabletFrame from '/books/img/hero/letsexploreTablet.webp';
+import MobileFrame from '/books/img/hero/letsexploreMobile.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +58,7 @@ export const ScrollSection = () => {
   return (
     <div ref={wrapperRef} className="wrapper relative max-w-screen z-[1]">
       <div className="content relative w-full overflow-x-hidden z-[1]">
-        <section className="section hero w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('/books/img/hero/backgroundwithwhite.png')] dark:bg-[url('/books/img/hero/backgroundwithbrown.jpg')]" />
+        <section className="section hero w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('/books/img/hero/backgroundwithwhite.webp')] dark:bg-[url('/books/img/hero/backgroundwithbrown.webp')]" />
       </div>
 
       <div className="image-container absolute top-0 left-0 right-0 w-full h-screen overflow-hidden z-[2] [perspective:500px]">
