@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
 import { getBookAndVariants } from '@/utils/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
@@ -37,6 +37,10 @@ export const BookPage: React.FC = () => {
       .catch(console.error);
   }, [type, bookSlug, setCurrentBook, setBookVariants, fetchAllBooks]);
 
+  const randomBooks = useMemo(() => {
+    return getRandomBooks(allBooks);
+  }, [allBooks]);
+
   if (isLoading || !book) return <BookLoader />;
 
   const imageUrls = book.images.map((p) => `/books/${p}`);
@@ -73,10 +77,7 @@ export const BookPage: React.FC = () => {
           <BookCharacteristics book={book} />
         </section>
 
-        <PaperBookSlider
-          books={getRandomBooks(allBooks)}
-          title={t('UMayLike')}
-        />
+        <PaperBookSlider books={randomBooks} title={t('UMayLike')} />
       </article>
     </div>
   );

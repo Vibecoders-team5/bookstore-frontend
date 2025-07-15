@@ -32,11 +32,9 @@ const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 
 function useCarousel() {
   const context = React.useContext(CarouselContext);
-
   if (!context) {
     throw new Error('useCarousel must be used within a <Carousel />');
   }
-
   return context;
 }
 
@@ -53,10 +51,11 @@ function Carousel({
     {
       ...opts,
       axis: orientation === 'horizontal' ? 'x' : 'y',
-      align: 'center',
+      align: 'start',
     },
     plugins,
   );
+
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
 
@@ -68,14 +67,12 @@ function Carousel({
 
   const scrollPrev = React.useCallback(() => {
     if (!api) return;
-    const prevIndex = api.selectedScrollSnap() - 1;
-    api.scrollTo(prevIndex);
+    api.scrollPrev();
   }, [api]);
 
   const scrollNext = React.useCallback(() => {
     if (!api) return;
-    const nextIndex = api.selectedScrollSnap() + 1;
-    api.scrollTo(nextIndex);
+    api.scrollNext();
   }, [api]);
 
   const handleKeyDown = React.useCallback(
@@ -111,10 +108,9 @@ function Carousel({
     <CarouselContext.Provider
       value={{
         carouselRef,
-        api: api,
+        api,
         opts,
-        orientation:
-          orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
+        orientation,
         scrollPrev,
         scrollNext,
         canScrollPrev,
@@ -137,7 +133,6 @@ function Carousel({
 
 function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
   const { carouselRef, orientation } = useCarousel();
-
   return (
     <div
       ref={carouselRef}
@@ -146,7 +141,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
     >
       <div
         className={cn(
-          'flex',
+          'flex transition-transform duration-150 ease-linear will-change-transform',
           orientation === 'horizontal' ? '-ml-4' : '-mt-4 flex-col',
           className,
         )}
@@ -158,7 +153,6 @@ function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
 
 function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
   const { orientation } = useCarousel();
-
   return (
     <div
       role="group"
@@ -181,7 +175,6 @@ function CarouselPrevious({
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollPrev, canScrollPrev } = useCarousel();
-
   return (
     <Button
       data-slot="carousel-previous"
@@ -209,7 +202,6 @@ function CarouselNext({
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollNext, canScrollNext } = useCarousel();
-
   return (
     <Button
       data-slot="carousel-next"
