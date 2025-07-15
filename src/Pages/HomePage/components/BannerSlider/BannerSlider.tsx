@@ -66,7 +66,7 @@ export default function BannerSlider() {
       }`}
     >
       <div className="relative flex w-full items-center justify-between gap-2 h-[100vw] sm:h-108">
-        <SliderControls goToPrev={goToPrev} goToNext={goToNext} />
+        <SliderControls goToPrev={goToPrev} showNextButton={false} />
 
         <a
           href="#/paperback"
@@ -94,6 +94,8 @@ export default function BannerSlider() {
             keyProp={`current-${currentSlide}`}
           />
         </a>
+
+        <SliderControls goToNext={goToNext} showPrevButton={false} />
       </div>
 
       <div className="flex justify-center gap-2 mt-4">
