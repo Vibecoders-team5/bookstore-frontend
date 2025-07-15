@@ -35,7 +35,7 @@ export const CartPage = () => {
   );
 
   return (
-    <div className="w-full flex justify-center px-4 sm:px-6 xl:px-8 pt-25 pb-8 sm:pb-16">
+    <div className="w-full flex justify-center px-4 sm:px-6 xl:px-8 pt-25">
       <div className="w-full max-w-284 min-w-0">
         <BackButton onClick={() => navigate(-1)} />
 
