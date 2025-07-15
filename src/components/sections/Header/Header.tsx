@@ -7,8 +7,6 @@ import { Button } from '@/components/ui/button';
 import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
 import { useBookStore } from '@/store/useBookStore';
 import { getSearchResults } from '@/utils/getSearchResults';
-import { getPaperBooks } from '@/services/booksAPI';
-import { Book } from '@/types/Book';
 import { SearchDropdown } from './components/SearchDropdown';
 import { CategoryDropdown } from './components/CategoryDropdown';
 import { SearchBar } from './components/SearchBar';
@@ -16,33 +14,47 @@ import { MobileMenu } from './components/MobileMenu';
 import { DesktopNav } from './components/DescktopNav';
 import { RadioPlayer } from '../RadioPlayer/RadioPlayer';
 import { BookmarkToggle } from './components/BookmarkToggle';
+import { useFetchBooksStore } from '@/store/useFetchBooksStore';
+import { useRefStore } from '@/store/useRefStore';
 
 export const Header = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [books, setBooks] = useState<Book[]>([]);
+  const { query, cart, favorites, setQuery } = useBookStore();
+
+  const { setCartIconRef, setBurgIconRef, setFavIconRef } = useRefStore();
+  const { fetchAllBooks, allBooks } = useFetchBooksStore();
 
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const cartIconRef = useRef<HTMLDivElement>(null);
+  const favIconRef = useRef<HTMLDivElement>(null);
+  const burgIconRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   useEffect(() => {
-    getPaperBooks().then((booksFromServer) => setBooks(booksFromServer));
-  }, []);
+    fetchAllBooks();
+  }, [fetchAllBooks]);
 
-  const location = useLocation();
+  useEffect(() => {
+    setCartIconRef(cartIconRef as React.RefObject<HTMLDivElement>);
+  }, [setCartIconRef]);
+
+  useEffect(() => {
+    setFavIconRef(favIconRef as React.RefObject<HTMLDivElement>);
+  }, [setFavIconRef]);
+
+  useEffect(() => {
+    setBurgIconRef(burgIconRef as React.RefObject<HTMLDivElement>);
+  }, [setBurgIconRef]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  const query = useBookStore((state) => state.query);
-  const cart = useBookStore((state) => state.cart);
-  const favorites = useBookStore((state) => state.favorites);
-  const { setQuery } = useBookStore();
-
   const totalCount = cart.reduce((sum, book) => sum + book.quantity, 0);
   const totalFavorites = favorites.length;
 
-  const searchResults = getSearchResults(books, query);
+  const searchResults = getSearchResults(allBooks, query);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -113,7 +125,7 @@ export const Header = () => {
             className={cn(baseIconClass, 'hidden sm:flex')}
             aria-label="Go to Favorites page"
           >
-            <div className={cn('relative', iconScaleClass)}>
+            <div ref={favIconRef} className={cn('relative', iconScaleClass)}>
               <Heart size={16} />
               {totalFavorites > 0 && (
                 <NotificationHeaderBtn counter={totalFavorites} />
@@ -126,7 +138,7 @@ export const Header = () => {
             className={cn(baseIconClass, 'hidden sm:flex')}
             aria-label="Go to Cart page"
           >
-            <div className={cn('relative', iconScaleClass)}>
+            <div ref={cartIconRef} className={cn('relative', iconScaleClass)}>
               <ShoppingBag size={16} />
               {totalCount > 0 && <NotificationHeaderBtn counter={totalCount} />}
             </div>
@@ -140,7 +152,10 @@ export const Header = () => {
           >
             {isMobileMenuOpen ?
               <X size={16} className={iconScaleClass} />
-            : <Menu size={16} className={iconScaleClass} />}
+            : <div ref={burgIconRef}>
+                <Menu size={16} className={iconScaleClass} />
+              </div>
+            }
           </Button>
         </div>
         <div>

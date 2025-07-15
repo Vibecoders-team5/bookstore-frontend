@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+
 import { Truck } from 'lucide-react';
 import { AddButton } from '@/components/ui/Buttons/AddButton';
 import { HeartButton } from '@/components/ui/Buttons/HeartButton';
@@ -11,18 +13,69 @@ import {
 } from '@/components/ui/tooltip';
 import { useBookStore } from '@/store/useBookStore';
 import { useTranslation } from 'react-i18next';
+import { useRef } from 'react';
+import { useRefStore } from '@/store/useRefStore';
 
 type BookCardProps = {
   book: Book;
 };
 
 export const BookCard: React.FC<BookCardProps> = ({ book }) => {
-  const { addToCart, removeFromCart, addToFavorites, removeFromFavorites } =
-    useBookStore();
+  const {
+    cart,
+    favorites,
+    addToCart,
+    removeFromCart,
+    addToFavorites,
+    removeFromFavorites,
+  } = useBookStore();
+
+  const { cartIconRef, favIconRef, burgIconRef } = useRefStore();
+
   const { t } = useTranslation();
 
-  const cart = useBookStore((state) => state.cart);
-  const favorites = useBookStore((state) => state.favorites);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const phoneOffset = window.innerWidth < 640;
+
+  const animateToTarget = (targetRef: React.RefObject<HTMLDivElement>) => {
+    const card = cardRef.current;
+    const target = targetRef?.current;
+
+    if (!card || !target) return;
+
+    const cardRect = card.getBoundingClientRect();
+    const targetRect = target.getBoundingClientRect();
+
+    const clone = card.cloneNode(true) as HTMLDivElement;
+
+    Object.assign(clone.style, {
+      position: 'fixed',
+      top: `${cardRect.top}px`,
+      left: `${cardRect.left}px`,
+      width: `${cardRect.width}px`,
+      height: `${cardRect.height}px`,
+      zIndex: '1000',
+      pointerEvents: 'none',
+      transition: 'none',
+    });
+
+    document.body.appendChild(clone);
+
+    gsap.to(clone, {
+      top: targetRect.top,
+      left: targetRect.left,
+      width: targetRect.width,
+      height: targetRect.height,
+      scale: 0.3,
+      opacity: 0.3,
+      duration: 1,
+      ease: 'power2.inOut',
+      onComplete: () => {
+        clone.remove();
+      },
+    });
+  };
 
   const someCallback = (item: Book) => item.id === book.id;
 
@@ -30,17 +83,35 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   const isBookInFavorites = favorites.some(someCallback);
 
   const toggleAddToCart = () => {
-    return isBookInCart ? removeFromCart(book.id) : addToCart(book);
+    if (isBookInCart) {
+      removeFromCart(book.id);
+    } else {
+      addToCart(book);
+      animateToTarget(
+        phoneOffset ?
+          (burgIconRef as React.RefObject<HTMLDivElement>)
+        : (cartIconRef as React.RefObject<HTMLDivElement>),
+      );
+    }
   };
 
   const toggleAddToFavorites = () => {
-    return isBookInFavorites ? removeFromFavorites(book) : addToFavorites(book);
+    if (isBookInFavorites) {
+      removeFromFavorites(book);
+    } else {
+      addToFavorites(book);
+      animateToTarget(
+        phoneOffset ?
+          (burgIconRef as React.RefObject<HTMLDivElement>)
+        : (favIconRef as React.RefObject<HTMLDivElement>),
+      );
+    }
   };
 
   return (
     <div className="dark:bg-[#35291d] w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-[#35291d] hover:shadow-lg bg-white">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
-        <div className="relative w-52 h-66">
+        <div ref={cardRef} className="relative w-52 h-66">
           <HeadphonesRound />
           <img
             className="w-full h-full object-contain rounded-md"
