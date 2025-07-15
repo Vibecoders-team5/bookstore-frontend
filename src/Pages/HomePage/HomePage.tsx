@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { getNewestBooks } from '@/utils/getNewestBooks';
-import { getRandomBooks } from '@/utils/getRandomBooks';
+import { getRecommendedBooks } from '@/utils/getRecommendedBooks';
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 
-import BannerSlider from '@/Pages/HomePage/components/BannerSlider';
+import BannerSlider from '@/Pages/HomePage/components/BannerSlider/BannerSlider';
 import { CategoriesGrid, ScrollSection, MovingRows } from './components/index';
 
 export const HomePage = () => {
@@ -19,7 +19,10 @@ export const HomePage = () => {
   }, [fetchAllBooks]);
 
   const newestBooks = useMemo(() => getNewestBooks(allBooks), [allBooks]);
-  const randomBooks = useMemo(() => getRandomBooks(allBooks), [allBooks]);
+  const recommendedBooks = useMemo(
+    () => getRecommendedBooks(allBooks),
+    [allBooks],
+  );
 
   if (isLoading) {
     return <BookLoader />;
@@ -33,7 +36,7 @@ export const HomePage = () => {
         <PaperBookSlider books={newestBooks} title={t('newBooks')} />
         <MovingRows />
         <CategoriesGrid />
-        <PaperBookSlider books={randomBooks} title={t('UMayLike')} />
+        <PaperBookSlider books={recommendedBooks} title={t('UMayLike')} />
       </section>
     </>
   );

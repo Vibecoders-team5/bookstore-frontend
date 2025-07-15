@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
 import { getBookAndVariants } from '@/utils/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
-import { getRandomBooks } from '@/utils/getRandomBooks';
+import { getRecommendedBooks } from '@/utils/getRecommendedBooks';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useTranslation } from 'react-i18next';
 
@@ -39,12 +39,16 @@ export const BookPage: React.FC = () => {
       .catch(console.error);
   }, [type, bookSlug, setCurrentBook, setBookVariants, fetchAllBooks]);
 
+  const randomBooks = useMemo(() => {
+    return getRecommendedBooks(allBooks);
+  }, [allBooks]);
+
   if (isLoading || !book) return <BookLoader />;
 
   const imageUrls = book.images.map((p) => `/books/${p}`);
 
   return (
-    <div className="w-full px-4 pt-14 sm:pt-24 pb-6">
+    <div className="w-full px-4 pt-14 sm:pt-24">
       <article className="mx-auto w-full max-w-[1150px] flex flex-col">
         <nav aria-label="Breadcrumb" className="mb-6">
           <BreadcrumbSection
@@ -75,10 +79,7 @@ export const BookPage: React.FC = () => {
           <BookCharacteristics book={book} />
         </section>
 
-        <PaperBookSlider
-          books={getRandomBooks(allBooks)}
-          title={t('UMayLike')}
-        />
+        <PaperBookSlider books={randomBooks} title={t('UMayLike')} />
       </article>
     </div>
   );

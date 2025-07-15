@@ -11,12 +11,15 @@ export const App = () => {
   }, [setTheme, theme]);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="section flex-grow">
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <link rel="icon" href="books/img/favicon.png" type="image/png" />
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="section flex-grow">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };

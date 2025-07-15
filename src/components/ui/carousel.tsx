@@ -32,11 +32,9 @@ const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 
 function useCarousel() {
   const context = React.useContext(CarouselContext);
-
   if (!context) {
     throw new Error('useCarousel must be used within a <Carousel />');
   }
-
   return context;
 }
 
@@ -53,29 +51,35 @@ function Carousel({
     {
       ...opts,
       axis: orientation === 'horizontal' ? 'x' : 'y',
-      align: 'center',
+      align: 'start',
     },
     plugins,
   );
+
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
 
   const onSelect = React.useCallback((api: CarouselApi) => {
     if (!api) return;
+
+    const selectedIndex = api.selectedScrollSnap();
+    const slides = api.scrollSnapList().length;
+    const slidesPerView = Math.round(
+      api.containerNode().offsetWidth / api.slideNodes()[0].offsetWidth,
+    );
+
     setCanScrollPrev(api.canScrollPrev());
-    setCanScrollNext(api.canScrollNext());
+    setCanScrollNext(selectedIndex < slides - slidesPerView);
   }, []);
 
   const scrollPrev = React.useCallback(() => {
     if (!api) return;
-    const prevIndex = api.selectedScrollSnap() - 1;
-    api.scrollTo(prevIndex);
+    api.scrollPrev();
   }, [api]);
 
   const scrollNext = React.useCallback(() => {
     if (!api) return;
-    const nextIndex = api.selectedScrollSnap() + 1;
-    api.scrollTo(nextIndex);
+    api.scrollNext();
   }, [api]);
 
   const handleKeyDown = React.useCallback(
@@ -111,10 +115,9 @@ function Carousel({
     <CarouselContext.Provider
       value={{
         carouselRef,
-        api: api,
+        api,
         opts,
-        orientation:
-          orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
+        orientation,
         scrollPrev,
         scrollNext,
         canScrollPrev,
@@ -137,7 +140,6 @@ function Carousel({
 
 function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
   const { carouselRef, orientation } = useCarousel();
-
   return (
     <div
       ref={carouselRef}
@@ -146,7 +148,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
     >
       <div
         className={cn(
-          'flex',
+          'flex transition-transform duration-150 ease-linear will-change-transform',
           orientation === 'horizontal' ? '-ml-4' : '-mt-4 flex-col',
           className,
         )}
@@ -158,7 +160,6 @@ function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
 
 function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
   const { orientation } = useCarousel();
-
   return (
     <div
       role="group"
@@ -174,22 +175,34 @@ function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
   );
 }
 
+function useButtonPress() {
+  const [pressed, setPressed] = React.useState(false);
+  const handleMouseDown = () => setPressed(true);
+  const handleMouseUp = () => setTimeout(() => setPressed(false), 100);
+  const handleMouseLeave = () => setPressed(false);
+
+  return { pressed, handleMouseDown, handleMouseUp, handleMouseLeave };
+}
+
 function CarouselPrevious({
   className,
-  variant = 'ghost',
   size = 'icon',
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollPrev, canScrollPrev } = useCarousel();
-
+  const { pressed, handleMouseDown, handleMouseUp, handleMouseLeave } =
+    useButtonPress();
   return (
     <Button
       data-slot="carousel-previous"
-      variant={variant}
       size={size}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
       className={cn(
-        'rounded-full dark:text-white text-black transition-opacity',
-        !canScrollPrev && 'opacity-50 cursor-not-allowed',
+        'rounded-full dark:text-white text-black bg-black/4 dark:bg-brown-dark/60 border-0 transition-colors duration-150 ease-in-out',
+        pressed && 'bg-black/10 dark:bg-brown-dark',
+        'disabled:opacity-40 disabled:cursor-not-allowed',
         className,
       )}
       disabled={!canScrollPrev}
@@ -204,20 +217,24 @@ function CarouselPrevious({
 
 function CarouselNext({
   className,
-  variant = 'ghost',
   size = 'icon',
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollNext, canScrollNext } = useCarousel();
+  const { pressed, handleMouseDown, handleMouseUp, handleMouseLeave } =
+    useButtonPress();
 
   return (
     <Button
       data-slot="carousel-next"
-      variant={variant}
       size={size}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
       className={cn(
-        'rounded-full dark:text-white text-black transition-opacity',
-        !canScrollNext && 'opacity-50 cursor-not-allowed',
+        'rounded-full dark:text-white text-black bg-black/4 dark:bg-brown-dark/60 border-0 transition-colors duration-150 ease-in-out',
+        pressed && 'bg-black/10 dark:bg-brown-dark',
+        'disabled:opacity-40 disabled:cursor-not-allowed',
         className,
       )}
       disabled={!canScrollNext}

@@ -106,7 +106,7 @@ export const Header = () => {
             onClick={handleSearchToggle}
             className={cn(
               baseIconClass,
-              'sm:flex lg:hidden hidden rounded-none',
+              'hover:bg-transparent sm:flex lg:hidden hidden rounded-none',
             )}
             size="icon"
             variant="ghost"
@@ -140,12 +140,15 @@ export const Header = () => {
 
           <Button
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            className={cn(baseIconClass, 'sm:hidden border-l-0')}
+            className={cn(
+              baseIconClass,
+              'hover:bg-transparent sm:hidden border-l-0',
+            )}
             size="icon"
             variant="ghost"
           >
             {isMobileMenuOpen ?
-              <X size={16} className={iconScaleClass} />
+              <X size={16} className={cn(iconScaleClass)} />
             : <div ref={burgIconRef}>
                 <Menu size={16} className={iconScaleClass} />
               </div>
