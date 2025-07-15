@@ -9,12 +9,12 @@ export const EmptyCart = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center gap-4">
       <img
-        src="/books/img/cart-is-empty.png"
+        src="/books/img/cart-is-empty.webp"
         alt="Empty cart illustration"
         className="w-48 h-auto opacity-80"
       />
 
-      <p className="text-[#89939A] dark:text-white/50 text-base sm:text-lg pb-8">
+      <p className="text-custom-secondary dark:text-white/50 text-base sm:text-lg pb-8">
         <Trans i18nKey="emptyCart">
           Your cart is still sleeping...
           <br />
@@ -24,7 +24,7 @@ export const EmptyCart = () => {
 
       <Button
         variant={'addToCartNormal'}
-        className="w-full btn-text h-12 rounded-[8px] md:w-80 hover:cursor-pointer dark:bg-white dark:text-[#493929]"
+        className="w-full btn-text h-12 rounded-[8px] md:w-80 hover:cursor-pointer dark:bg-white dark:text-header-footer-light"
         size="customAddButton"
         onClick={() => {
           navigate('/');

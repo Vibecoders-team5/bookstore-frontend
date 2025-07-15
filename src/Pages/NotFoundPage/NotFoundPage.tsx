@@ -6,7 +6,7 @@ export const NotFoundPage = () => {
         alt="Page not found"
         className="w-100"
       />
-      <p className="text-[#89939A] text-base sm:text-lg">
+      <p className="text-custom-secondary text-base sm:text-lg">
         Oops something went wrong...
         <br />
         Try another page

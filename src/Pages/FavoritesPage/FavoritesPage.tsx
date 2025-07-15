@@ -10,6 +10,9 @@ export const FavoritesPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
+  const favoritesCount = favorites.length;
+  const hasFavorites = favoritesCount > 0;
+
   return (
     <div className="w-full flex justify-center px-4 sm:px-6 xl:px-8 py-25">
       <div className="w-full max-w-284 min-w-0">
@@ -19,9 +22,11 @@ export const FavoritesPage = () => {
           <h1 className="text-[36px] sm:text-5xl font-bold dark:text-white">
             {t('fav')}
           </h1>
-          <p className="dark:text-white">{`${favorites.length} ${t('items')}`}</p>
+          <p className="dark:text-white">
+            {favoritesCount} {t('items')}
+          </p>
         </div>
-        {favorites.length ?
+        {hasFavorites ?
           <BookList books={favorites} />
         : <EmptyFavorites />}
       </div>

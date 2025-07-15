@@ -79,7 +79,7 @@ export const RadioPlayer = () => {
 
       <button
         onClick={togglePlayback}
-        className="bg-[#493929] hover:bg-[#3d2f22] text-white font-semibold py-2 px-2 rounded-lg shadow-md transition flex items-center justify-center"
+        className="bg-header-footer-light hover:bg-[#3d2f22] text-white font-semibold py-2 px-2 rounded-lg shadow-md transition flex items-center justify-center"
         aria-label={isPlaying ? 'Pause music' : 'Play music'}
       >
         {isPlaying ?

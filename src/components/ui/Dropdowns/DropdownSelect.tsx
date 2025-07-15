@@ -32,7 +32,7 @@ export function DropdownSelect({
   return (
     <div className={cn('flex flex-col gap-1', className)}>
       {label && (
-        <label className="small-text text-[#89939A] dark:text-white">
+        <label className="small-text text-custom-secondary dark:text-white">
           {label}
         </label>
       )}

@@ -2,18 +2,20 @@ import { useEffect } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
 import { getBookAndVariants } from '@/utils/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
-
-import { BookAbout } from '../BookPage/components/BookAbout/BookAbout';
-import { BookCharacteristics } from '../BookPage/components/BookCharacteristics/BookCharacteristics';
-import { BookDetails } from '../BookPage/components/BookDetails/BookDetails';
-import { BookGallery } from '../BookPage/components/BookGallery/BookGallery';
-import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
-import { BreadcrumbSection } from './components/BreadcrumbSection/BreadcrumbSection';
-import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
-
 import { getRandomBooks } from '@/utils/getRandomBooks';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useTranslation } from 'react-i18next';
+
+import {
+  BookAbout,
+  BookCharacteristics,
+  BookDetails,
+  BookGallery,
+  BreadcrumbSection,
+} from './components/index';
+
+import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
+import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 
 export const BookPage: React.FC = () => {
   const { setCurrentBook, setBookVariants, currentBook: book } = useBookStore();
@@ -43,8 +45,8 @@ export const BookPage: React.FC = () => {
 
   return (
     <div className="w-full px-4 pt-14 sm:pt-24 pb-6">
-      <div className="mx-auto w-full max-w-[1150px] flex flex-col">
-        <div className="mb-6">
+      <article className="mx-auto w-full max-w-[1150px] flex flex-col">
+        <nav aria-label="Breadcrumb" className="mb-6">
           <BreadcrumbSection
             type={type}
             category={
@@ -52,32 +54,32 @@ export const BookPage: React.FC = () => {
             }
             bookName={book.name}
           />
-        </div>
+        </nav>
 
-        <div className="mb-10">
-          <h1 className="text-[32px] font-bold leading-[41px] text-[#313237] dark:text-white">
+        <header className="mb-10">
+          <h1 className="text-[32px] font-bold leading-[41px] text-custom-primary dark:text-white">
             {book.name}
           </h1>
-          <p className="text-[#89939A] dark:text-white text-[14px] leading-[21px] font-medium">
+          <p className="text-custom-secondary dark:text-white text-[14px] leading-[21px] font-medium">
             {book.author}
           </p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
+        <section className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
           <BookGallery images={imageUrls} />
           <BookDetails book={book} />
-        </div>
+        </section>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
+        <section className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-12 gap-y-16 mb-16 justify-items-center lg:justify-items-start">
           <BookAbout book={book} />
           <BookCharacteristics book={book} />
-        </div>
+        </section>
 
         <PaperBookSlider
           books={getRandomBooks(allBooks)}
           title={t('UMayLike')}
         />
-      </div>
+      </article>
     </div>
   );
 };

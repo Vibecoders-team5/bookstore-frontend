@@ -53,10 +53,10 @@ export const CategoriesGrid = () => {
               />
             </div>
 
-            <h2 className="mt-4 text-5 text-[#313237] dark:text-white font-semibold">
+            <h2 className="mt-4 text-5 text-custom-primary dark:text-white font-semibold">
               {title}
             </h2>
-            <h3 className="mt-1 text-sm text-[#89939A] dark:text-white/50 font-medium">
+            <h3 className="mt-1 text-sm text-custom-secondary dark:text-white/50 font-medium">
               {subtitle}
             </h3>
           </a>
