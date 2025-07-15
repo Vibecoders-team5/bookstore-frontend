@@ -22,9 +22,10 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({
       className="max-w-284 mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-20 pb-8"
       opts={{
         align: 'start',
-        loop: true,
+        loop: false,
         containScroll: 'keepSnaps',
         dragFree: false,
+        slidesToScroll: 1,
       }}
     >
       <div className="flex items-center justify-between mb-6">
@@ -37,11 +38,11 @@ export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({
         </div>
       </div>
 
-      <CarouselContent className="flex sm:justify-start">
+      <CarouselContent className="flex">
         {books.map((book) => (
           <CarouselItem
             key={book.slug}
-            className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4  md:min-w-[288px] lg:min-w-[288px]"
+            className="pl-8 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4  md:min-w-[288px] lg:min-w-[288px]"
           >
             <BookCard book={book} />
           </CarouselItem>

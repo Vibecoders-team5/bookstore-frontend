@@ -48,7 +48,7 @@ export const BookPage: React.FC = () => {
   const imageUrls = book.images.map((p) => `/books/${p}`);
 
   return (
-    <div className="w-full px-4 pt-14 sm:pt-24 pb-6">
+    <div className="w-full px-4 pt-14 sm:pt-24">
       <article className="mx-auto w-full max-w-[1150px] flex flex-col">
         <nav aria-label="Breadcrumb" className="mb-6">
           <BreadcrumbSection
