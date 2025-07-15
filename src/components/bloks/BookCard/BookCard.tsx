@@ -112,12 +112,29 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
     <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-lg bg-white">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
         <div ref={cardRef} className="relative w-52 h-66">
-          <HeadphonesRound />
-          <img
-            className="w-full h-full object-contain rounded-md"
-            src={`/books/${book.images[0]}`}
-            alt={book.name}
-          />
+          {book.type === 'audiobook' && <HeadphonesRound />}
+          {book.type === 'kindle' && (
+            <>
+              <img
+                className="w-full h-full object-contain"
+                src="/books/img/audiobook/2.webp"
+                alt="iPad container"
+              />
+              <img
+                className="absolute top-[8.7%] left-[10.5%] w-[79.5%] h-[82%] object-cover"
+                src={`/books/${book.images[0]}`}
+                alt={book.name}
+              />
+            </>
+          )}
+
+          {book.type !== 'kindle' && (
+            <img
+              src={`/books/${book.images[0]}`}
+              alt={book.name}
+              className="w-full h-full object-contain rounded-md"
+            />
+          )}
         </div>
       </Link>
 
