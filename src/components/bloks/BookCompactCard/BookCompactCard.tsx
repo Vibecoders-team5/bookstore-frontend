@@ -37,7 +37,7 @@ export const BookCompactCard = ({
     <article
       onClick={handleCardClick}
       className={cn(
-        'flex justify-between gap-4 cursor-pointer sm:gap-8 border border-[#E2E6E9] dark:border-[#35291d] bg-white dark:bg-[#35291d] hover:shadow-md mb-1',
+        'flex justify-between gap-4 cursor-pointer sm:gap-8 border border-custom-elements dark:border-brown-dark bg-white dark:bg-brown-dark hover:shadow-md mb-1',
         showActions ?
           'flex-col sm:flex-row p-4 sm:px-6 rounded-[16px]'
         : 'flex-row p-1 sm:px-2 rounded-[10px]',
@@ -47,7 +47,7 @@ export const BookCompactCard = ({
         <div className="flex items-center gap-4 sm:gap-6">
           {showActions && (
             <Button
-              className="text-[#B4BDC3] dark:text-white/50 cursor-pointer hover:text-[#313237]"
+              className="text-custom-icons dark:text-white/50 cursor-pointer hover:text-custom-primary"
               size="icon"
               variant="ghost"
               onClick={(event) => {
@@ -74,10 +74,10 @@ export const BookCompactCard = ({
         </div>
 
         <div className="flex-grow min-w-0">
-          <h5 className="h5 text-[#313237] dark:text-white truncate">
+          <h5 className="h5 text-custom-primary dark:text-white truncate">
             {highlightMatches(book.name, query || '')}
           </h5>
-          <p className="body-text text-[#89939A] dark:text-white/50 truncate">
+          <p className="body-text text-custom-secondary dark:text-white/50 truncate">
             {highlightMatches(book.author, query || '')}
           </p>
         </div>
@@ -88,7 +88,7 @@ export const BookCompactCard = ({
 
         <h3
           className={cn(
-            'font-[600] text-[#313237] dark:text-white w-20 text-right',
+            'font-[600] text-custom-primary dark:text-white w-20 text-right',
             {
               'text-[20px] sm:text-[22px]': showActions,
               'text-[16px]': !showActions,

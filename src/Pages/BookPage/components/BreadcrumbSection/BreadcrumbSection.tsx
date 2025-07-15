@@ -26,7 +26,7 @@ export const BreadcrumbSection = ({
         <BreadcrumbItem>
           <BreadcrumbLink
             asChild
-            className="flex items-center text-[#313237] dark:text-white/80 transition-transform hover:-translate-y-1"
+            className="flex items-center text-custom-primary dark:text-white/80 transition-transform hover:-translate-y-1"
           >
             <Link to="/">
               <House className="w-5 h-5" />
@@ -70,7 +70,7 @@ export const BreadcrumbSection = ({
         <BreadcrumbSeparator className="w-4 h-4 text-[#C5C9CC] flex sm:hidden" />
 
         <BreadcrumbItem>
-          <BreadcrumbPage className="text-[#89939A] dark:text-white/80 text-[12px] sm:text-[14px] font-medium">
+          <BreadcrumbPage className="text-custom-secondary dark:text-white/80 text-[12px] sm:text-[14px] font-medium">
             {bookName}
           </BreadcrumbPage>
         </BreadcrumbItem>

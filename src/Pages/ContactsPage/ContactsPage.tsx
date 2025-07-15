@@ -21,7 +21,7 @@ export const ContactsPage = () => {
 
   return (
     <div className="max-w-[1136px] mx-auto px-4 mt-25">
-      <h2 className="text-[2rem] font-bold text-[#313237] mb-8 text-center dark:text-white">
+      <h2 className="text-[2rem] font-bold text-custom-primary mb-8 text-center dark:text-white">
         {t('meetOurTeam')}
       </h2>
 
@@ -33,7 +33,7 @@ export const ContactsPage = () => {
             <div
               key={index}
               className={classNames(
-                'relative h-[400px] cursor-pointer overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white dark:bg-[#35291d] dark:border-none transition-all duration-500 group',
+                'relative h-[400px] cursor-pointer overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white dark:bg-brown-dark dark:border-none transition-all duration-500 group',
                 { 'bg-white': isActive },
               )}
               onClick={() => toggleCard(index)}
@@ -74,7 +74,7 @@ export const ContactsPage = () => {
 
               <div
                 className={classNames(
-                  'absolute inset-0 flex flex-col justify-between p-4 bg-white dark:bg-[#35291d] text-[#313237] dark:text-white transition-transform duration-500 transform z-20',
+                  'absolute inset-0 flex flex-col justify-between p-4 bg-white dark:bg-brown-dark text-custom-primary dark:text-white transition-transform duration-500 transform z-20',
                   {
                     'translate-y-0 opacity-100': isActive,
                     'translate-y-full opacity-0 pointer-events-none': !isActive,
@@ -85,7 +85,7 @@ export const ContactsPage = () => {
                   <div className="flex justify-between items-center mb-2">
                     <div>
                       <h3 className="text-lg font-semibold">{member.name}</h3>
-                      <p className="text-sm text-[#89939A] dark:text-[#ead7d1]">
+                      <p className="text-sm text-custom-secondary dark:text-[#ead7d1]">
                         {member.position}
                       </p>
                     </div>

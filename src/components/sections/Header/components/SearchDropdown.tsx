@@ -36,7 +36,7 @@ export const SearchDropdown: React.FC<SearchDropdownProps> = ({ results }) => {
             alt="Results not found"
             className="w-40"
           />
-          <p className="text-[#89939A] text-base sm:text-lg">
+          <p className="text-custom-secondary text-base sm:text-lg">
             Unfortunately no results...
           </p>
         </div>

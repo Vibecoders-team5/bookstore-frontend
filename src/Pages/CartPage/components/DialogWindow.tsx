@@ -21,7 +21,7 @@ export const DialogWindow = () => {
       <DialogTrigger asChild>
         <Button
           variant="addToCartNormal"
-          className="w-full btn-text h-12 dark:bg-white dark:text-[#493929] rounded-lg cursor-pointer"
+          className="w-full btn-text h-12 dark:bg-white dark:text-header-footer-light rounded-lg cursor-pointer"
           size="customAddButton"
         >
           {t('checkout')}
