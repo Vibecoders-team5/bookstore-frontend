@@ -16,7 +16,7 @@ export const QuantityControls: React.FC<QuantityControlsProps> = ({ book }) => {
       onClick={(event) => event.stopPropagation()}
     >
       <Button
-        className="w-8 h-8 cursor-pointer text-[#B4BDC3] dark:text-white/50 dark:hover:text-white hover:text-[#313237]"
+        className="w-8 h-8 cursor-pointer text-custom-icons dark:text-white/50 dark:hover:text-white hover:text-custom-primary"
         size="icon"
         variant="ghost"
         onClick={() => decreaseQuantity(book.id)}
@@ -24,12 +24,12 @@ export const QuantityControls: React.FC<QuantityControlsProps> = ({ book }) => {
         <Minus size={16} />
       </Button>
 
-      <span className="body-text text-[#313237] dark:text-white px-3">
+      <span className="body-text text-custom-primary dark:text-white px-3">
         {book.quantity}
       </span>
 
       <Button
-        className="w-8 h-8 cursor-pointer text-[#B4BDC3] hover:text-[#313237] dark:text-white/50 dark:hover:text-white"
+        className="w-8 h-8 cursor-pointer text-custom-icons hover:text-custom-primary dark:text-white/50 dark:hover:text-white"
         size="icon"
         variant="ghost"
         onClick={() => increaseQuantity(book.id)}

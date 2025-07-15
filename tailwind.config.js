@@ -24,40 +24,46 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: 'rgb(var(--border))',
-        input: 'rgb(var(--input))',
-        ring: 'rgb(var(--ring))',
-        background: 'rgb(var(--background))',
-        foreground: 'rgb(var(--foreground))',
-        primary: {
-          DEFAULT: 'rgb(var(--primary))',
-          foreground: 'rgb(var(--primary-foreground))',
-        },
-        secondary: {
+        'custom-primary': '#313237',
+        'custom-secondary': '#89939A',
+        'custom-elements': '#E2E6E9',
+        'custom-icons': '#B4BDC3',
+        'header-footer-light': '#493929',
+        'brown-dark': '#35291d',
+        'border': 'rgb(var(--border))',
+        'input': 'rgb(var(--input))',
+        'ring': 'rgb(var(--ring))',
+        'background': 'rgb(var(--background))',
+        'foreground': 'rgb(var(--foreground))',
+        // 'primary': {
+        //   DEFAULT: 'rgb(var(--primary))',
+        //   foreground: 'rgb(var(--primary-foreground))',
+        // },
+        'secondary': {
           DEFAULT: 'rgb(var(--secondary))',
           foreground: 'rgb(var(--secondary-foreground))',
         },
-        destructive: {
+        'destructive': {
           DEFAULT: 'rgb(var(--destructive) / <alpha-value>)',
           foreground: 'rgb(var(--destructive-foreground) / <alpha-value>)',
         },
-        muted: {
+        'muted': {
           DEFAULT: 'rgb(var(--muted))',
           foreground: 'rgb(var(--muted-foreground))',
         },
-        accent: {
+        'accent': {
           DEFAULT: 'rgb(var(--accent))',
           foreground: 'rgb(var(--accent-foreground))',
         },
-        popover: {
+        'popover': {
           DEFAULT: 'rgb(var(--popover))',
           foreground: 'rgb(var(--popover-foreground))',
         },
-        card: {
+        'card': {
           DEFAULT: 'rgb(var(--card))',
           foreground: 'rgb(var(--card-foreground))',
         },
-        sidebar: {
+        'sidebar': {
           'DEFAULT': 'rgb(var(--sidebar-background))',
           'foreground': 'rgb(var(--sidebar-foreground))',
           'primary': 'rgb(var(--sidebar-primary))',

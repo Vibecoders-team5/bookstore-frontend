@@ -63,13 +63,13 @@ export const Header = () => {
   };
 
   const baseIconClass =
-    'flex items-center justify-center w-12 h-full lg:w-[64px] border-l border-[#E2E6E9] text-[#89939A] dark:text-white/80 dark:hover:text-white transition duration-200 hover:text-[#313237] group';
+    'flex items-center justify-center w-12 h-full lg:w-[64px] border-l border-custom-elements text-custom-secondary text-white/80 hover:text-white transition duration-200 group';
   const iconScaleClass =
     'transition duration-200 transform group-hover:scale-110';
 
   return (
     <div className="relative">
-      <header className="flex items-center justify-between gap-6 w-full h-12 lg:h-16 bg-[#493929] dark:bg-[#35291d] fixed top-0 left-0 right-0 z-50 shadow-sm">
+      <header className="flex items-center justify-between gap-6 w-full h-12 lg:h-16 bg-header-footer-light dark:bg-brown-dark fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="flex items-center w-full h-full gap-6">
           <Link
             aria-label="Go to Home page"

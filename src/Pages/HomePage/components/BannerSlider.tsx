@@ -156,8 +156,8 @@ export default function BannerSlider() {
             <span
               className={`w-[14px] h-[4px] ${
                 index === currentSlide ?
-                  'bg-[#313237] dark:bg-[#E2E6E9]'
-                : 'bg-[#E2E6E9] dark:bg-[#35291d]'
+                  'bg-custom-primary dark:bg-custom-elements'
+                : 'bg-custom-elements dark:bg-brown-dark'
               }`}
             />
           </button>
