@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
 import { getBookAndVariants } from '@/utils/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
-import { getRandomBooks } from '@/utils/getRandomBooks';
+import { getRecommendedBooks } from '@/utils/getRecommendedBooks';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useTranslation } from 'react-i18next';
 
@@ -40,7 +40,7 @@ export const BookPage: React.FC = () => {
   }, [type, bookSlug, setCurrentBook, setBookVariants, fetchAllBooks]);
 
   const randomBooks = useMemo(() => {
-    return getRandomBooks(allBooks);
+    return getRecommendedBooks(allBooks);
   }, [allBooks]);
 
   if (isLoading || !book) return <BookLoader />;
