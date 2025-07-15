@@ -4,7 +4,7 @@ export const EmptyFavorites = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-4 py-20 text-center">
       <img
-        src="/books/img/favorites-is-empty.png"
+        src="/books/img/favorites-is-empty.webp"
         alt="Favorites empty"
         className="w-48 h-auto"
       />

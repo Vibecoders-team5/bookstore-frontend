@@ -2,9 +2,9 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import Frame from 'public/books/img/hero/letsexplore.png';
-import TabletFrame from 'public/books/img/hero/letsexploreTablet.png';
-import MobileFrame from 'public/books/img/hero/letsexploreMobile.png';
+import Frame from '/books/img/hero/letsexplore.png';
+import TabletFrame from '/books/img/hero/letsexploreTablet.png';
+import MobileFrame from '/books/img/hero/letsexploreMobile.png';
 
 gsap.registerPlugin(ScrollTrigger);
 

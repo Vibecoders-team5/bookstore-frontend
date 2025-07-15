@@ -18,6 +18,16 @@ type MobileMenuProps = {
   totalFavorites: number;
 };
 
+const navLinkClass = ({ isActive }: { isActive: boolean }) =>
+  cn(
+    'relative h-full flex items-center justify-center text-[24px] font-[500] transition-colors duration-200 after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-full after:origin-center after:transition-transform after:duration-300 after:bg-custom-primary',
+    {
+      'text-custom-primary after:scale-x-100': isActive,
+      'text-custom-secondary hover:text-custom-primary after:scale-x-0 hover:after:scale-x-100':
+        !isActive,
+    },
+  );
+
 export const MobileMenu = ({
   isOpen,
   onClose,
@@ -53,15 +63,23 @@ export const MobileMenu = ({
 
   if (!isOpen) return null;
 
-  const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    cn(
-      'relative h-full flex items-center justify-center text-[24px] font-[500] transition-colors duration-200 after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-full after:origin-center after:transition-transform after:duration-300 after:bg-custom-primary',
-      {
-        'text-custom-primary after:scale-x-100': isActive,
-        'text-custom-secondary hover:text-custom-primary after:scale-x-0 hover:after:scale-x-100':
-          !isActive,
-      },
-    );
+  const renderLinkIcon = (
+    to: string,
+    Icon: React.ElementType,
+    count: number,
+    label: string,
+  ) => (
+    <Link
+      to={to}
+      aria-label={label}
+      className="flex-1 border-r border-custom-elements last:border-r-0"
+    >
+      <div className="flex flex-col items-center justify-center py-6 relative">
+        <Icon size={20} className="text-custom-primary" />
+        {count > 0 && <NotificationHeaderBtn counter={count} />}
+      </div>
+    </Link>
+  );
 
   return (
     <FocusTrap
@@ -87,31 +105,13 @@ export const MobileMenu = ({
         </nav>
 
         <div className="flex w-full mt-auto border-t border-custom-elements">
-          <Link
-            to="/favorites"
-            aria-label="Go to Favorites page"
-            className="flex-1 border-r border-custom-elements"
-          >
-            <div className="flex flex-col items-center justify-center py-6 relative">
-              <div className="relative">
-                <Heart size={20} className="text-custom-primary" />
-                {totalFavorites > 0 && (
-                  <NotificationHeaderBtn counter={totalFavorites} />
-                )}
-              </div>
-            </div>
-          </Link>
-
-          <Link to="/cart" aria-label="Go to Cart page" className="flex-1">
-            <div className="flex flex-col items-center justify-center py-6 relative">
-              <div className="relative">
-                <ShoppingBag size={20} className="text-custom-primary" />
-                {totalCount > 0 && (
-                  <NotificationHeaderBtn counter={totalCount} />
-                )}
-              </div>
-            </div>
-          </Link>
+          {renderLinkIcon(
+            '/favorites',
+            Heart,
+            totalFavorites,
+            'Go to Favorites page',
+          )}
+          {renderLinkIcon('/cart', ShoppingBag, totalCount, 'Go to Cart page')}
         </div>
       </div>
     </FocusTrap>

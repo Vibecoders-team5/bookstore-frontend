@@ -12,8 +12,8 @@ export const Footer = () => {
         className="flex items-center justify-center shrink-0 transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
       >
         <img
-          src="/books/img/nice-books-logo.png"
-          alt="nice-books logo"
+          src="/books/img/together-logo.webp"
+          alt="together logo"
           className="h-8"
         />
       </Link>

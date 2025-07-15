@@ -4,13 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { getNewestBooks } from '@/utils/getNewestBooks';
 import { getRandomBooks } from '@/utils/getRandomBooks';
+import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
+import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
 
 import BannerSlider from '@/Pages/HomePage/components/BannerSlider';
-import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
-import { CategoriesGrid } from '@/Pages/HomePage/components/CategoriesGrid';
-import { ScrollSection } from './components/ScrollSection';
-import { MovingRows } from './components/MovingRows';
-import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
+import { CategoriesGrid, ScrollSection, MovingRows } from './components/index';
 
 export const HomePage = () => {
   const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
