@@ -120,6 +120,7 @@ body {
   overscroll-behavior: none;
   /* background-color: #FAFBFC */
   background-color: var(--background);
+  scroll-behavior: smooth;
 }
 
 .h1 {
