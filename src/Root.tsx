@@ -17,6 +17,7 @@ import {
   RightsPage,
   NotFoundPage,
 } from './Pages';
+import { CategoryPage } from './Pages/CategoryPage/CategoryPage';
 
 export const Root = () => (
   <Router>
@@ -46,6 +47,10 @@ export const Root = () => (
 
         <Route path="cart">
           <Route index element={<CartPage />} />
+        </Route>
+
+        <Route path="category/:categorySlug">
+          <Route index element={<CategoryPage />} />
         </Route>
 
         <Route path="contacts" element={<ContactsPage />} />
