@@ -31,7 +31,7 @@ export const RightsPage = () => {
   ];
 
   return (
-    <div className="max-w-[1136px] mx-auto mt-[64px]">
+    <div className="max-w-[1136px] mx-auto mt-25">
       <h2 className="font-extrabold text-[2rem] text-custom-primary dark:text-white/80  mb-[23px]">
         {t('termsOfUse')}
       </h2>

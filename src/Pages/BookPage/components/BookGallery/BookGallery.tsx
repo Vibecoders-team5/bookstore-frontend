@@ -63,7 +63,7 @@ export function BookGallery({ images }: BookGalleryProps) {
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="swiper-zoom-container w-full h-full flex items-center justify-center rounded-md">
+            <div className="swiper-zoom-container w-full h-full flex items-center justify-center rounded-md cursor-zoom-in">
               <img
                 src={src}
                 alt={`image ${index}`}
