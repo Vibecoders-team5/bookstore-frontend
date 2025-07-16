@@ -2,7 +2,7 @@
 
 Group Project for Vibecoders. Creating functional bookstore.
 
-![Logo](./readme-assets/vibecoders.webp)
+![Logo](./readme-assets/vibecoders.jpg)
 
 ---
 
