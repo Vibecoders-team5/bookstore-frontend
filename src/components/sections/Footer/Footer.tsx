@@ -41,7 +41,7 @@ export const Footer = () => {
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         variant="backToTop"
-        className="self-center text-white/80  hover:text-white"
+        className="self-center text-white/80  hover:text-white mr-8"
       >
         <span>{t('backToTop')}</span>
         <ChevronUpIcon size={16} />

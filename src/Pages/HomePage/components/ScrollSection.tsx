@@ -21,7 +21,6 @@ export const ScrollSection = () => {
             end: '+=150%',
             pin: true,
             scrub: true,
-            // markers: true,
           },
         })
         .to('.image-container img', {

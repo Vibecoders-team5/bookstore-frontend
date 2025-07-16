@@ -151,10 +151,9 @@ export const Header = () => {
             }
           </Button>
         </div>
-        <div>
-          <RadioPlayer />
-        </div>
       </header>
+
+      <RadioPlayer />
       <BookmarkToggle />
 
       {isSearchVisible && (
