@@ -1390,6 +1390,7 @@
     "illustrations": true,
     "category": [
       "Romance",
+      "Drama",
       "Our product manager's favorite",
       "Dramione",
       "Fantasy",
@@ -1425,6 +1426,7 @@
     "illustrations": true,
     "category": [
       "Teen dystopian books",
+      "Drama",
       "Our product manager's favorite",
       "Dramione",
       "Fantasy",
@@ -1709,6 +1711,7 @@
     "category": [
       "Fantasy",
       "Dark fantasy",
+      "Drama",
       "Epic fantasy",
       "Sword and sorcery",
       "Our tech team leader's family favorite"
@@ -1745,6 +1748,7 @@
     "category": [
       "Emotional struggle",
       "Fantasy",
+      "Drama",
       "Young adult fiction",
       "Epic fantasy",
       "Our tech team leader's family favorite"
@@ -1785,6 +1789,7 @@
       "Fantasy",
       "Dark fantasy",
       "Romantic fantasy",
+      "Drama",
       "Our tech team leader's family favorite"
     ],
     "description": [
@@ -2893,7 +2898,6 @@
     "format": "A5",
     "illustrations": false,
     "category": [
-      "Drama",
       "Romance",
       "Our product manager's favorite",
       "Fantasy",
