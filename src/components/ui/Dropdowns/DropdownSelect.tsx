@@ -15,7 +15,7 @@ export type Option = {
 type DropdownSelectProps = {
   options: Option[];
   placeholder?: string;
-  defaultValue?: string;
+  value?: string;
   label?: string;
   className?: string;
   onChange?: (value: string) => void;
@@ -24,7 +24,7 @@ type DropdownSelectProps = {
 export function DropdownSelect({
   options,
   placeholder,
-  defaultValue,
+  value,
   label,
   className,
   onChange,
@@ -37,7 +37,7 @@ export function DropdownSelect({
         </label>
       )}
 
-      <Select defaultValue={defaultValue} onValueChange={onChange}>
+      <Select value={value} onValueChange={onChange}>
         <SelectTrigger>
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>

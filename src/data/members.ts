@@ -13,7 +13,7 @@ export const members = [
   {
     name: 'Yura Styslo',
     position: 'Tech Lead',
-    image: '/books/img/team/youra.jpg',
+    image: '/books/img/team/youra.webp',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.',
     telegram: 'https://t.me/yurii_st1',
@@ -35,7 +35,7 @@ export const members = [
   {
     name: 'Nika Okhten',
     position: 'Frontend Developer',
-    image: '/books/img/team/nika.jpg',
+    image: '/books/img/team/nika.webp',
     description:
       'Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo. Cras justo odio, dapibus ac facilisis in.',
     telegram: 'https://t.me/nicaaok',
@@ -46,7 +46,7 @@ export const members = [
   {
     name: 'Lidiia Tsymborovych',
     position: 'Frontend Developer',
-    image: '/books/img/team/lida.jpg',
+    image: '/books/img/team/lida.webp',
     description:
       'Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet. Donec ullamcorper nulla non metus auctor fringilla.',
     telegram: 'https://t.me/liduska_05',

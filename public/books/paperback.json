@@ -23,7 +23,7 @@
     "category": [
       "Graphic Design",
       "Data and Information Visualization",
-      "Internet Search",
+      "Programming",
       "Web Browsers",
       "Mobile App Development and Programming"
     ],
@@ -61,7 +61,7 @@
     "category": [
       "Graphic Design",
       "Data and Information Visualization",
-      "Internet Search",
+      "Programming",
       "Web Browsers",
       "Mobile App Development and Programming"
     ],
@@ -88,7 +88,7 @@
     "publication": "Manning",
     "format": "210x140 mm",
     "illustrations": false,
-    "category": ["Algorithms", "Bestsellers of Ukrainian publishers 2023"],
+    "category": ["Algorithms", "Programming"],
     "description": [
       "Grokking Algorithms is a fully illustrated, friendly guide that teaches you how to apply common algorithms to the practical problems you face every day as a programmer. You'll start with sorting and searching and, as you build up your skills in thinking algorithmically, you'll tackle more complex concerns such as data compression and artificial intelligence. Each carefully presented example includes helpful diagrams and fully annotated code samples in Python.",
       "Learning about algorithms doesn't have to be boring! Get a sneak peek at the fun, illustrated, and friendly examples you'll find in Grokking Algorithms on Manning Publications' YouTube channel.",
@@ -120,7 +120,7 @@
     "publication": "ArtHuss",
     "format": "200x120 mm",
     "illustrations": true,
-    "category": ["Algorithms", "Bestsellers of Ukrainian publishers 2023"],
+    "category": ["Algorithms", "Programming"],
     "description": [
       "Цю книжку написано так, щоб її було легко сприймати. Як тільки згадується новий концепт — я відразу пояснюю його або попереджаю, коли дам пояснення. Основні поняття підкріплено вправами, щоб читач завжди міг перевірити себе й упевнитися, що не втратив нитку оповіді.",
       "Я наводжу багато прикладів. Моя ціль — спростити візуалізацію концептів, а не заплутати нагромадженням незрозумілих символів. Так, я візуал, і ця книжка просто переповнена малюнками. Зміст ретельно продумано. Усі алгоритми цієї книжки — практичні. Я вважаю їх корисними в моїй професії програмного інженера, і вони забезпечують хорошу основу для інших, складніших тем."
@@ -152,7 +152,7 @@
       "Design & Decor",
       "Graphic Design",
       "Data & Information Visualization",
-      "Readers' Choice"
+      "Programming"
     ],
     "description": [
       "Ellen Lupton and Jennifer Cole Phillips's celebrated introduction to graphic design, available in a revised and updated edition.Graphic Design: The New Basics explains the key concepts of visual language that inform any work of design. A foundational graphic design book for students, Lupton and Phillips explore the formal elements of design through visual demonstrations and concise commentary. From logos to letterhead to complex website design, this is a graphic design book for everyone, no matter your design project or focus.",
@@ -189,7 +189,7 @@
       "Design & Decor",
       "Graphic Design",
       "Data & Information Visualization",
-      "Readers' Choice"
+      "Programming"
     ],
     "description": [
       "У книзі «Графічний дизайн: Нові основи» авторка бестселлерів Еллен Лаптон і викладачка дизайну Дженніфер Коул Філліпс пояснюють ключові концепції візуальної мови, необхідні для будь-якої дизайнерської роботи, від розробки лого чи фірмового бланку — і до складного вебсайту. За допомогою візуальних прикладів із паралельними коментарями вони представляють формальні базові елементи двовимірного дизайну, такі як точка, лінія, площина, масштаб, ієрархія, шари й прозорість. У новому, переглянутому виданні додано новий розділ — про формстормінг і принципи гештальту, а також численні нові приклади робіт від студентів і професіоналів, що ілюструють такі теми, як робота із сіткою та кольорами.",
@@ -218,7 +218,7 @@
     "illustrations": false,
     "category": [
       "Design. Architecture",
-      "Readers' Choice",
+      "Programming",
       "Cryptocurrencies, AI and Technology in Business"
     ],
     "description": [
@@ -253,7 +253,7 @@
     "illustrations": false,
     "category": [
       "Design. Architecture",
-      "Readers' Choice",
+      "Programming",
       "Cryptocurrencies, AI and Technology in Business"
     ],
     "description": [
@@ -278,7 +278,7 @@
     "publication": "Longman (Pearson Education)",
     "format": "220x200 mm",
     "illustrations": false,
-    "category": ["Software Development", "Programming Practice"],
+    "category": ["Software Development", "Programming Practice", "Programming"],
     "description": [
       "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way. Noted software expert Robert C. Martin, presents a revolutionary paradigm with Clean Code: A Handbook of Agile Software Craftsmanship. Martin, who has helped bring agile principles from a practitioner's point of view to tens of thousands of programmers, has teamed up with his colleagues from Object Mentor to distill their best agile practice of cleaning code 'on the fly' into a book that will instill within you the values of software craftsman, and make you a better programmer--but only if you work at it. What kind of work will you be doing? You'll be reading code--lots of code. And you will be challenged to think about what's right about that code, and what's wrong with it. More importantly you will be challenged to reassess your professional values and your commitment to your craft. Clean Code is divided into three parts. The first describes the principles, patterns, and practices of writing clean code. The second part consists of several case studies of increasing complexity. Each case study is an exercise in cleaning up code--of transforming a code base that has some problems into one that is sound and efficient. The third part is the payoff: a single chapter containing a list of heuristics and 'smells' gathered while creating the case studies. The result is a knowledge base that describes the way we think when we write, read, and clean code. Readers will come away from this book understanding *How to tell the difference between good and bad code *How to write good code and how to transform bad code into good code *How to create good names, good functions, good objects, and good classes *How to format code for maximum readability *How to implement complete error handling without obscuring code logic *How to unit test and practice test-driven development *What 'smells' and heuristics can help you identify bad codeThis book is a must for any developer, software engineer, project manager, team lead, or systems analyst with an interest in producing better code.",
       "Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way.",
@@ -313,7 +313,7 @@
     "publication": "Фабула",
     "format": "220x200 mm",
     "illustrations": false,
-    "category": ["Software Development", "Programming Practice"],
+    "category": ["Software Development", "Programming Practice", "Programming"],
     "description": [
       "Навіть поганий програмний код може працювати. Однак якщо код не є «чистим», це завжди буде заважати розвитку проекту і компанії-розробника, віднімаючи значні ресурси на його підтримку і «приборкання». Ця книга присвячена хорошому програмуванню. У ній повно реальних прикладів коду. Прочитавши книгу, ви дізнаєтеся багато нового про коди. Більш того, ви навчитеся відрізняти хороший код від поганого. Ви дізнаєтеся, як писати хороший код і як перетворити поганий код у хороший."
     ]
@@ -339,7 +339,8 @@
     "category": [
       "Project Management",
       "Project Execution and Control",
-      "Business Literature: Leaders' Recommendations"
+      "Business Literature: Leaders' Recommendations",
+      "Programming"
     ],
     "description": [
       "Lean UX is synonymous with modern product design and development. By combining human-centric design, agile ways of working, and a strong business sense, designers, product managers, developers, and scrum masters around the world are making Lean UX the leading approach for digital product teams today.",
@@ -374,7 +375,8 @@
     "category": [
       "Project Management",
       "Project Execution and Control",
-      "Business Literature: Leaders' Recommendations"
+      "Business Literature: Leaders' Recommendations",
+      "Programming"
     ],
     "description": [
       "«Минуло роки чотири з моменту, коли я вперше почав говорити й писати про нову концепцію, що називається Lean Startup, і менше ніж рік відтоді як я опублікував свою книжку Lean Startup: How Today’s Entrepreneurs Use Continuous Innovation to Achieve Radically Successful Businesses («Lean Startup: як нинішні підприємці використовують постійні інновації, щоби досягти радикально успішного бізнесу») (Crown Business). За цей час я бачив, як ці ідеї зростали й розповсюджувалися — від індустрії до індустрії, від сектора до сектора, від функції до функції. Щоразу коли ми відкривали незвідану землю, ми покладалися на далекоглядних лідерів, що допоможуть перекласти ключові принципи й розробити нові процеси для їх упровадження.",
@@ -402,7 +404,8 @@
     "illustrations": false,
     "category": [
       "Programming Practice (techniques, methods, programmer's work)",
-      "Cryptocurrencies, AI and technologies in business"
+      "Cryptocurrencies, AI and technologies in business",
+      "Programming"
     ],
     "description": [
       "Herding Cats: A Primer for Programmers Who Lead Programmers is a comprehensive guide―think of it as a field manual―to the management challenges of supervising and leading programmers. J. Hank Rainwater introduces new and not-so-new managers to concepts that will encourage them and help them become a strong leaders for their teams. You'll learn about the varieties of programmer personality traits and be able match personnel to projects for maximum productivity. You'll also learn how to manage your strengths and weaknesses as you improve your leadership skills, which will result in dramatic improvements to your teams success.",
@@ -437,7 +440,8 @@
     "illustrations": true,
     "category": [
       "Programming Practice (techniques, methods, programmer's work)",
-      "Cryptocurrencies, AI and technologies in business"
+      "Cryptocurrencies, AI and technologies in business",
+      "Programming"
     ],
     "description": [
       "Захисники тварин, не переймайтеся! Ця книжка не про жорстоке поводження з тваринами — жоден пухнастик не постраждає. Вона про тих, хто, як і коти, позбавлені стадного інстинкту, — програмістів, і те, як навчитися ними керувати задля досягнення найамбітніших цілей в IT-індрустрії.",
@@ -462,7 +466,7 @@
     "publication": "Pearson",
     "format": "174x22 6mm",
     "illustrations": true,
-    "category": ["Computer games"],
+    "category": ["Computer games", "Programming"],
     "description": [
       "As games grow more complex and gamers' expectations soar, the discipline of game systems design becomes ever more important. Game systems designers plan a game's rules and balance, its characters' attributes, most of its data, and how its AI, weapons, and objects work and interact.",
       "Introduction to Game Systems Design is the first complete beginner's guide to this crucial discipline. Writing for all aspiring game professionals, even those with absolutely no experience, leading game designer and instructor Dax Gazaway presents a step-by-step, hands-on approach to designing game systems with industry-standard tools.",
@@ -493,7 +497,7 @@
     "publication": "Фабула",
     "format": "170х240х25 mm",
     "illustrations": true,
-    "category": ["Computer games"],
+    "category": ["Computer games", "Programming"],
     "description": [
       "Комп’ютерні ігри стають дедалі складнішими, очікування геймерів зростають, тому дизайн ігрових систем стає дедалі важливішим. Розробники ігрових систем створюють правила та баланс гри, атрибути її персонажів, більшу частину даних, а також принципи функціонування та роботи ШІ, зброї та об’єктів",
       "«Вступ до дизайну ігрових систем» — перше повне керівництво для початківців вивчення цієї важливої дисципліни, створене провідним геймдизайнером і коучем Даксом Ґазавеєм. Ця книжка адресована всім, хто робить перші кроки у цій професії, у тому числі й тим, хто не має жодного досвіду. Незалежно від того, чи ви є студентом-першокурсником, інді-розробником, який використовує Unreal чи Unity, або просто геймером, який намагається по-справжньому розібратися в сучасних іграх, Дакс допоможе вам дізнатися саме те, що вам необхідно."
@@ -585,6 +589,7 @@
       "Company Stories",
       "Motivation. Self-Improvement",
       "E-Commerce",
+      "Psychology",
       "Human Resources. Personnel",
       "New Business. Startups",
       "Innovative Management. Creative",
@@ -630,6 +635,7 @@
       "Company Stories",
       "Motivation. Self-Improvement",
       "E-Commerce",
+      "Psychology",
       "Human Resources. Personnel",
       "New Business. Startups",
       "Innovative Management. Creative",
@@ -664,6 +670,7 @@
     "category": [
       "Success Stories",
       "Company Stories",
+      "Psychology",
       "Books about Innovation",
       "People Module",
       "Readers' Choice",
@@ -703,6 +710,7 @@
     "category": [
       "Success Stories",
       "Company Stories",
+      "Psychology",
       "Books about Innovation",
       "People Module",
       "Readers' Choice",
@@ -735,7 +743,8 @@
     "category": [
       "Securities. Investments. Appraisal",
       "BookChef: bestsellers",
-      "All about business and money"
+      "All about business and money",
+      "Psychology"
     ],
     "description": [
       "At the age of 26, Warren Buffett founded Buffett Partnership Limited, which lasted from 1956 to 1970. During this time he wrote 33 letters to his small but growing group of partners. These letters chronicle his thoughts, approaches and reflections in the period immediately prior to his Berkshire Hathaway tenure - one that saw an unprecedented record of investing success.",
@@ -769,7 +778,8 @@
     "category": [
       "Securities. Investments. Appraisal",
       "BookChef: bestsellers",
-      "All about business and money"
+      "All about business and money",
+      "Psychology"
     ],
     "description": [
       "Воррен Баффет — відомий та успішний інвестор, один із найбагатших людей у світі, відрізняється індивідуальним стилем у веденні справ, уже давно його вважають гуру інвестування, позаочі називають «оракулом» і «мудрецем». В одній зі своїх перших компаній Buffett Partnership Limited, заснованій 1956 року, Баффет увів правило писати листи акціонерам, інформуючи їх про стан бізнесу й викладаючи принципи, якими керувався, ухвалюючи операційні рішення. Ці роки були найуспішнішими для компанії, показники прибутковості сягали найвищих індексів.",
@@ -800,7 +810,8 @@
       "Psychology. General Works",
       "Mental Processes",
       "Personal Transformations",
-      "Books for the Intellect"
+      "Books for the Intellect",
+      "Psychology"
     ],
     "description": [
       "The groundbreaking bestseller that redefines intelligence and success",
@@ -840,7 +851,8 @@
       "Psychology. General Works",
       "Mental Processes",
       "Personal Transformations",
-      "Books for the Intellect"
+      "Books for the Intellect",
+      "Psychology"
     ],
     "description": [
       "Бестселер Деніела Ґоулмана «Емоційний інтелект» здійснив революцію в психології. У другій книжці про емоційний інтелект автор аналізує причини й запоруки успіху в бізнесі як окремого працівника, так і всієї організації, виокремлюючи навички, що вирізняють лідерів у будь-якій галузі.",
@@ -866,7 +878,12 @@
     "publication": "Faber and Faber",
     "format": "153х234 mm",
     "illustrations": false,
-    "category": ["Women in Business", "English", "Gender Studies. Feminism"],
+    "category": [
+      "Women in Business",
+      "English",
+      "Gender Studies. Feminism",
+      "Psychology"
+    ],
     "description": [
       "An urgent analysis of global gender inequality and a passionately argued case for change by a pioneer in the movement for women's economic empowerment.",
       "Women's economic development expert Linda Scott coined the paradigm-shifting concept of the 'double X economy' to describe both the shocking gender inequalities that are built into our global economy, and the collective power of women that could be harnessed to combat those inequalities.",
@@ -899,7 +916,12 @@
     "publication": "Yakaboo Publishing",
     "format": "140х215 mm",
     "illustrations": false,
-    "category": ["Women in Business", "English", "Gender Studies. Feminism"],
+    "category": [
+      "Women in Business",
+      "English",
+      "Gender Studies. Feminism",
+      "Psychology"
+    ],
     "description": [
       "Яскраво виражена економічна нерівність притаманна жіночому населенню будь-якої країни, і в кожній працює той самий механізм, що утримує цю нерівність в силі. Повсюди перешкоди економічній залученості жінок простягаються далеко за межі роботи і заробітної плати та охоплюють питання власності, капіталу, кредитів і ринків. Ці економічні перепони у поєднанні з культурними обмеженнями, які накладаються здебільшого на жіноче населення, формують унікальну тіньову економіку. Лінда Скотт на основі достовірних даних та практичного досвіду стверджує, що подолання цих перешкод на шляху до успіху жінок — перемога для всіх, незалежно від гендеру.",
       "Авторка відкриває нам очі на безліч економічних несправедливостей, що обмежують жінок у всьому світі: батьки продають своїх доньок проти їхньої волі; чоловіки спалюють наречених, чиє придане витрачене; чоловіки привласнюють заробітки жінок і землю вдів; банки дискримінують жінок, що звертаються за кредитами; корпорації платять жінкам менше, аніж чоловікам — і ще чимало іншого. «Економіка з двома іксами» — це оцінка історичного вилучення жінок з економічного життя та наслідки цього, а також заклик раз і назавжди поставити жінок і чоловіків у рівні економічні умови."
@@ -923,7 +945,7 @@
     "publication": "Free Press",
     "format": "1.7 MB",
     "illustrations": false,
-    "category": ["Leadership", "All about business and money"],
+    "category": ["Leadership", "All about business and money", "Psychology"],
     "description": [
       "For more than fifteen years, Robin Sharma has been quietly sharing with Fortune 500 companies and many of the super-rich a success formula that has made him one of the most sought-after leadership advisers in the world. Now, for the first time, Sharma makes his proprietary process available to you, so that you can get to your absolute best while helping your organization break through to a dramatically new level of winning in these wildly uncertain times.",
       "Regardless of what you do within your organization and the current circumstances of your life, the single most important fact is that you have the power to show leadership. Wherever you are in your career or life, you should always play to your peak abilities. This book shows you how to claim that staggering power, as well as transform your life—and the world around you—in the process."
@@ -953,7 +975,7 @@
     "publication": "КМ-БУКС",
     "format": "1.7 MB",
     "illustrations": false,
-    "category": ["Leadership", "All about business and money"],
+    "category": ["Leadership", "All about business and money", "Psychology"],
     "description": [
       "«Для того щоб бути лідером, титул не потрібен», — стверджує Робін Шарма, знаний і шанований у бізнесових колах консультант з питань особистісного розвитку. Він руйнує міфи про застарілі методи лідерства, а натомість вчить, як найповніше реалізувати свій лідерський потенціал та амбіційні плани і як, скориставшись поданими у книзі порадами, методиками і техніками, змінити на краще своє життя та навколишній світ.",
       "Більшість людей вважає, що їхня доля — прожити посереднє життя і що вони ніколи нічого не досягнуть. Але доля — це всього лише результат вибору. І ця книга допоможе своєму читачу зробити цей вибір, та змінити своє життя на краще, варто лише виконувати рекомендації Робіна Шарми! Ризикніть і ви станете зовсім іншою людиною!"
@@ -982,7 +1004,8 @@
     "category": [
       "General Management",
       "Project Management",
-      "Business Ownership and Organization"
+      "Business Ownership and Organization",
+      "Psychology"
     ],
     "description": [
       "The definitive account of the Scrum methodology from its co-creator and the CEO of Scrum, Inc., Jeff Sutherland.",
@@ -1018,7 +1041,8 @@
     "category": [
       "General Management",
       "Project Management",
-      "Business Ownership and Organization"
+      "Business Ownership and Organization",
+      "Psychology"
     ],
     "description": [
       "Книга містить багато довідкової інформації та допоможе краще зрозуміти філософію Scrum, у якій переплітаються знання з бойових мистецтв, прийняття судових рішень, передового повітряного бою, робототехніки та багатьох інших дисциплін. Автор аналізує кожен аспект цієї методології, пропонуючи не лише просте пояснення, а й обґрунтування кожного процесу. Він висвітлює всі помилки та хибні уявлення, які люди мають під час роботи, наприклад, неправильний розмір команди, спроби виконувати кілька завдань одночасно, планування або очікування без зосередження на реальності. Після цього Джефф дає стратегію ступеневого процесу розробки проєкту, що згуртовує команду навколо scrum-майстра та дозволяє позбутися помилок і підвищити ефективність праці у кілька разів.",
@@ -1048,7 +1072,8 @@
     "category": [
       "Stock Market",
       "Our Format: New Releases and Hits",
-      "All About Business and Money"
+      "All About Business and Money",
+      "Psychology"
     ],
     "description": [
       "The classic work on investing, filled with sound and safe principles that are as reliable as ever, now revised with an introduction and appendix by financial legend Warren Buffett—one of the author’s most famous students—and newly updated commentaries on each chapter from distinguished Wall Street Journal writer Jason Zweig.",
@@ -1085,7 +1110,8 @@
     "category": [
       "Stock Market",
       "Our Format: New Releases and Hits",
-      "All About Business and Money"
+      "All About Business and Money",
+      "Psychology"
     ],
     "description": [
       "Фондовий ринок схожий на маятник: постійно розгойдується від необґрунтованого оптимізму до безпідставного песимізму. Розумний інвестор натомість має бути реалістом, який купує в песимістів і продає оптимістам, стверджує Бенджамін Ґрем. Його книжка стала настільною для всіх, хто хоче зрозуміти практичні аспекти цієї діяльності та досягти в ній успіху.",
@@ -1116,7 +1142,8 @@
       "Foreign Economic Activity and International Relations",
       "World History",
       "International Business",
-      "General and World History"
+      "General and World History",
+      "Programming"
     ],
     "description": [
       "Power in the modern world - military, economic, geopolitical - is built on a foundation of computer chips. America has maintained its lead as a superpower because it has dominated advances in computer chips and all the technology that chips have enabled. (Virtually everything runs on chips: cars, phones, the stock market, even the electric grid.) Now that edge is in danger of slipping, undermined by the naïve assumption that globalising the chip industry and letting players in Taiwan, Korea and Europe take over manufacturing serves America's interests. Currently, as Chip War reveals, China, which spends more on chips than any other product, is pouring billions into a chip-building Manhattan Project to catch up to the US. ",
@@ -1152,7 +1179,8 @@
       "Foreign Economic Activity and International Relations",
       "World History",
       "International Business",
-      "General and World History"
+      "General and World History",
+      "Programming"
     ],
     "description": [
       "Мікрочипи — це як нова нафта. Саме від цього дефіцитного ресурсу залежить весь світ. І це не перебільшення: на мікросхемах працює майже все — від мікрохвильовок і смартфонів до ракет і фондового ринку. Та як розвивається індустрія мікрочипів і як вона змінюватиме наше майбутнє?",
@@ -1252,7 +1280,8 @@
       "Motivation. Self-improvement",
       "Business planning",
       "Leadership",
-      "Managerial management. Decision management"
+      "Managerial management. Decision management",
+      "Psychology"
     ],
     "description": [
       "This revised edition of the bestselling classic is based on fifteen years of experience in putting Peter Senge’s ideas into practice. As Senge makes clear, in the long run the only sustainable competitive advantage is your organization’s ability to learn faster than the competition. The leadership stories demonstrate the many ways that the core ideas of the Fifth Discipline, many of which seemed radical when first published, have become deeply integrated into people’s ways of seeing the world and their managerial practices.",
@@ -1288,7 +1317,8 @@
       "Motivation. Self-improvement",
       "Business planning",
       "Leadership",
-      "Managerial management. Decision management"
+      "Managerial management. Decision management",
+      "Psychology"
     ],
     "description": [
       "Доповнене видання класичного бестселера, що ґрунтується на п'ятнадцятирічному досвіді реалізації концепцій Пітера Сенджі.",
@@ -1362,6 +1392,7 @@
       "Romance",
       "Our product manager's favorite",
       "Dramione",
+      "Fantasy",
       "Teen dystopian books",
       "Fiction"
     ],
@@ -1396,6 +1427,7 @@
       "Teen dystopian books",
       "Our product manager's favorite",
       "Dramione",
+      "Fantasy",
       "Romance",
       "Fiction"
     ],
@@ -1470,6 +1502,7 @@
     "category": [
       "Psychological thriller",
       "Classic prose",
+      "Detective",
       "Our Tech&Team lead's favorite"
     ],
     "description": [
@@ -1503,6 +1536,7 @@
     "illustrations": false,
     "category": [
       "Psychological thriller",
+      "Detective",
       "Movie tie-in & adaptations",
       "Classic prose",
       "Our Tech&Team lead's favorite"
@@ -1537,7 +1571,7 @@
     "illustrations": false,
     "category": [
       "Police procedural",
-      "Female detective",
+      "Detective",
       "Psychological thriller",
       "Our tech team leader's family favorite"
     ],
@@ -1573,7 +1607,7 @@
     "illustrations": false,
     "category": [
       "Police procedural",
-      "Female detective",
+      "Detective",
       "Crime thriller",
       "Psychological thriller",
       "Our tech team leader's family favorite",
@@ -1608,7 +1642,7 @@
     "illustrations": false,
     "category": [
       "Police procedural",
-      "Female detective",
+      "Detective",
       "Crime thriller",
       "Our tech team leader's family favorite"
     ],
@@ -1892,7 +1926,7 @@
     "illustrations": false,
     "category": [
       "Psychological thriller",
-      "Movie tie-in & adaptations",
+      "Detective",
       "Classic prose",
       "Our Tech&Team lead's favorite"
     ],
@@ -1925,7 +1959,7 @@
     "format": "129x198 mm",
     "illustrations": false,
     "category": [
-      "Female detective",
+      "Detective",
       "Psychological thriller",
       "Women criminals",
       "Our Tech&Team lead's favorite"
@@ -1962,6 +1996,7 @@
     "illustrations": false,
     "category": [
       "Crime thriller",
+      "Detective",
       "Psychological thriller",
       "Our Tech&Team lead's favorite",
       "Contemporary prose"
@@ -1996,7 +2031,7 @@
     "format": "129x198 mm",
     "illustrations": false,
     "category": [
-      "Detective novels",
+      "Detective",
       "Our Tech&Team lead's favorite",
       "Modern fiction",
       "Crime fiction"
@@ -2039,8 +2074,7 @@
       "Nika's favorite",
       "Books by age",
       "Coming-of-age novels",
-      "Notable literary debuts",
-      "Feel-good spring reads"
+      "Notable literary debuts"
     ],
     "description": [
       "Події цієї чудової книжки відбуваються в далекій Канаді, на острові Принца Едварда.",
@@ -2076,7 +2110,7 @@
     "illustrations": false,
     "category": [
       "Children's classics",
-      "Popular psychology",
+      "Psychology",
       "Classic prose",
       "Stories about friendship, relationships and love",
       "Nika's favorite",
@@ -2120,8 +2154,7 @@
       "War fiction",
       "Cozy winter reading",
       "Nika's favorite",
-      "Notable literary debuts",
-      "Books about books"
+      "Notable literary debuts"
     ],
     "description": [
       "Вражаюча історія, яку розповідає... Смерть!",
@@ -2324,7 +2357,7 @@
     "publication": "A‑ba‑ba‑ha‑la‑ma‑ha",
     "format": "130x200 mm",
     "illustrations": false,
-    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "category": ["Fantasy", "Children's literature", "Young adult"],
     "description": [
       "Гаррі повертається до Гоґвортсу, незважаючи на таємничу погрозу: хтось або щось відкрито Таємну кімнату та паралізує школярів.",
       "Разом із Роном та Герміоною він розслідує жахливі напади, знаходить підказки від ельфа-домовика Добі та усвідомлює силу спадку Слизерина.",
@@ -2393,10 +2426,9 @@
     "format": "226x267 mm",
     "illustrations": true,
     "category": [
-      "Фентезі",
-      "Дитяча література",
-      "Молодіжна література",
-      "Ілюстроване видання",
+      "Fantasy",
+      "Children's literature",
+      "Young adult",
       "Our product manager's favorite"
     ],
     "description": [
@@ -2458,7 +2490,7 @@
     "publication": "A‑ba‑ba‑ha‑la‑ma‑ha",
     "format": "135x205 mm",
     "illustrations": false,
-    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "category": ["Fantasy", "Children's literature", "Young adult"],
     "description": [
       "Гаррі входить у четвертий рік навчання без усвідомлення, що потрапить до Тричаклунського турніру — надзвичайно небезпечного змагання між трьома школами магії.",
       "Після жахливих видінь Чорної Мітки, Гаррі опиняється серед учасників турніру, проходить через поєдинок з огнедишним драконом, рятує Рона від водяників і долає лабіринт у компанії Седріка Діґорі.",
@@ -2519,7 +2551,7 @@
     "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
     "format": "130x200 mm",
     "illustrations": false,
-    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "category": ["Fantasy", "Children's literature", "Young adult"],
     "description": [
       "Гаррі повертається до Гоґвортсу у п’ятий рік навчання, стикаючись із найтемнішими випробуваннями — після атаки дементорів на Дадлі він викликає Патронус і опиняється під загрозою суду в Міністерстві магії.",
       "У цей час таємна організація Орден Фенікса веде опір Волдеморту, а в школі царює сувора Інквізиторка Амбрідж, яка суворо обмежує свободу учнів і змушує Гаррі створити “Армію Дамблдора” для підготовки до протистояння з темною магією.",
@@ -2611,7 +2643,7 @@
     "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
     "format": "130x200 mm",
     "illustrations": false,
-    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "category": ["Fantasy", "Children's literature", "Young adult"],
     "description": [
       "Гаррі розпочинає шостий рік у Гоґвортсі під керівництвом Альбуса Дамблдора, досліджуючи темне минуле Волдеморта та користуючись незвичним підручником із закляттями, підписаним «Напівкровним Принцом».",
       "Водночас Дамблдор і Гаррі збирають спогади про Волдеморта, відкривають доленосні Горкрукси та готуються до неминучого протистояння зі смертежерами.",
@@ -2643,7 +2675,7 @@
     "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
     "format": "130x200 mm",
     "illustrations": false,
-    "category": ["Фентезі", "Дитяча література", "Молодіжна література"],
+    "category": ["Fantasy", "Children's literature", "Young adult"],
     "description": [
       "Гаррі, Рон і Герміона залишають Дурслів назавжди, щоб завершити пошуки та знищення Горкруксів — об'єктів, що утримують частини душі Волдеморта.",
       "Перебуваючи втікачами, вони занурюються у темну історію магічної війни, розкривають таємниці Родини Поттерів і Смертельні реліквії — потужні й небезпечні артефакти.",
@@ -2734,7 +2766,7 @@
     "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
     "format": "130x200 mm",
     "illustrations": false,
-    "category": ["Фентезі", "Драма", "Молодіжна література"],
+    "category": ["Fantasy", "Drama", "Young adult"],
     "description": [
       "Минає дев’ятнадцять років після поразки Волдеморта. Гаррі Поттер працює в Міністерстві магії та виховує трьох дітей.",
       "Його молодший син Альбус потрапляє до Слизерина і відчуває тиск родинної спадщини. Його дружба зі Скорпіусом Мелфоєм стає початком подорожі, що веде до небезпечної магії часу.",
@@ -2793,7 +2825,7 @@
     "format": "130x210 mm",
     "illustrations": true,
     "category": [
-      "Adventure books for children",
+      "Fantasy",
       "Children’s horror",
       "Mystical thriller",
       "Horror",
@@ -2830,10 +2862,7 @@
     "publication": "Quirk Books",
     "format": "132x206 mm",
     "illustrations": true,
-    "category": [
-      "Children’s horror",
-      "Children’s / teen fiction: ghosts & horror"
-    ],
+    "category": ["Children’s horror", "Fantasy"],
     "description": [
       "This second novel begins in 1940, immediately after the first book ended.",
       "Having escaped Miss Peregrine's island, Jacob and his new friends must journey to London — the peculiar capital of the world.",
@@ -2867,7 +2896,7 @@
       "Drama",
       "Romance",
       "Our product manager's favorite",
-      "Hurt/Comfort",
+      "Fantasy",
       "Friends to Lovers"
     ],
     "description": [
@@ -2904,7 +2933,8 @@
       "Drama",
       "Romance",
       "Our product manager's favorite",
-      "Friends to Lovers"
+      "Friends to Lovers",
+      "Fantasy"
     ],
     "description": [
       "Монотонність щоденної рутини Драко Мелфоя стала водночас і рятівним колом, і зашморгом.",
@@ -3154,7 +3184,7 @@
     "format": "135x190 mm",
     "illustrations": false,
     "category": [
-      "Movie Tie-ins",
+      "Fantasy",
       "Teen Fiction",
       "Vampire Romance",
       "English Books",
@@ -3192,7 +3222,7 @@
     "format": "135x205x27 mm",
     "illustrations": false,
     "category": [
-      "Movie Tie-ins",
+      "Fantasy",
       "Teen Fiction",
       "Vampire Romance",
       "Fiction",

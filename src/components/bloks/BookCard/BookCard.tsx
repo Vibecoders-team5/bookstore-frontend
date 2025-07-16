@@ -111,7 +111,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   };
 
   return (
-    <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-xl bg-gray-100">
+    <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-lg hover:scale-[1.02] bg-white transition-transform duration-300 ease-in-out">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
         <div ref={cardRef} className="relative w-52 h-66">
           {book.type === 'audiobook' && <HeadphonesRound />}
@@ -167,8 +167,8 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
           : <h3 className="h3 dark:text-white h-15 sm:h-auto">{`$${book.priceRegular}`}</h3>
           }
           <div className="inline-flex gap-1.5">
-            <Truck className="text-green-600 dark:text-[#93785c] w-[22px] h-[22px]" />
-            <p className="btn-text text-green-600 dark:text-[#93785c] ">
+            <Truck className="text-custom-accent dark:text-[#93785c] w-[22px] h-[22px]" />
+            <p className="btn-text text-custom-accent dark:text-[#93785c] ">
               {t('inStock')}
             </p>
           </div>

@@ -2,7 +2,7 @@ export const NotFoundPage = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center gap-4 py-20">
       <img
-        src="/books/img/page-not-found.png"
+        src="/books/img/page-not-found.webp"
         alt="Page not found"
         className="w-100"
       />

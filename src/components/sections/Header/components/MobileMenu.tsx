@@ -20,10 +20,10 @@ type MobileMenuProps = {
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   cn(
-    'relative h-full flex items-center justify-center text-[24px] font-[500] transition-colors duration-200 after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-full after:origin-center after:transition-transform after:duration-300 after:bg-custom-primary',
+    'relative h-full flex items-center justify-center text-[24px] font-[500] transition-colors duration-200 after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-full after:origin-center after:transition-transform after:duration-300 after:bg-custom-primary dark:after:bg-white/80',
     {
-      'text-custom-primary after:scale-x-100': isActive,
-      'text-custom-secondary hover:text-custom-primary after:scale-x-0 hover:after:scale-x-100':
+      'text-custom-primary dark:text-white/80 after:scale-x-100': isActive,
+      'text-custom-secondary dark:text-white/40 hover:text-custom-primary dark:hover:text-white/80 after:scale-x-0 hover:after:scale-x-100':
         !isActive,
     },
   );
@@ -72,11 +72,13 @@ export const MobileMenu = ({
     <Link
       to={to}
       aria-label={label}
-      className="flex-1 border-r border-custom-elements last:border-r-0"
+      className="flex-1 border-r border-custom-elements dark:bg-white/40 last:border-r-0"
     >
-      <div className="flex flex-col items-center justify-center py-6 relative">
-        <Icon size={20} className="text-custom-primary" />
-        {count > 0 && <NotificationHeaderBtn counter={count} />}
+      <div className="flex flex-col items-center justify-center py-6">
+        <div className="relative">
+          <Icon size={20} className="text-custom-primary dark:text-white" />
+          {count > 0 && <NotificationHeaderBtn counter={count} />}
+        </div>
       </div>
     </Link>
   );
@@ -91,7 +93,7 @@ export const MobileMenu = ({
     >
       <div
         id="mobile-menu-root"
-        className="fixed top-12 left-0 w-full h-[calc(100vh-48px)] bg-white z-40 sm:hidden pt-6 flex flex-col gap-24"
+        className="fixed top-12 left-0 w-full h-[calc(100vh-48px)] bg-white dark:bg-[#443e32] z-40 sm:hidden pt-6 flex flex-col gap-24"
         role="dialog"
         aria-modal="true"
       >

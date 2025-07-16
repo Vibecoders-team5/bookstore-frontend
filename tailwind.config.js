@@ -30,6 +30,7 @@ module.exports = {
         'custom-icons': '#B4BDC3',
         'header-footer-light': '#493929',
         'brown-dark': '#35291d',
+        'custom-accent': '#6b524a',
         'border': 'rgb(var(--border))',
         'input': 'rgb(var(--input))',
         'ring': 'rgb(var(--ring))',

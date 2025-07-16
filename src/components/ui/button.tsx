@@ -21,7 +21,7 @@ const buttonVariants = cva(
         addToCartNormal:
           'rounded-sm bg-custom-primary text-white hover:shadow-lg',
         addToCartAdded:
-          'rounded-sm bg-white text-[#27AE60] dark:text-brown-dark dark:font-[700] border border-custom-elements',
+          'rounded-sm bg-white text-custom-accent dark:text-brown-dark dark:font-[700] border border-custom-elements',
         default:
           'rounded-lg border-gray-200 border hover:border-custom-primary box-border',
         defaultHeart:

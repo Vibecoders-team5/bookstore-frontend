@@ -46,7 +46,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: 255 255 255;
+  --background: #fafbfc;
   --foreground: 39 39 42;
   --card: 255 255 255;
   --card-foreground: 39 39 42;
