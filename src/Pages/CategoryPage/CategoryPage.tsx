@@ -7,7 +7,8 @@ import { useTranslation } from 'react-i18next';
 
 export const CategoryPage = () => {
   const { categorySlug } = useParams<{ categorySlug: string }>();
-  const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
+  const { allBooks, isLoading, fetchAllBooks, clearBooks } =
+    useFetchBooksStore();
   const { t } = useTranslation();
 
   const slugToDisplayName = (slug: string): string => {
@@ -33,8 +34,9 @@ export const CategoryPage = () => {
     : allBooks;
 
   useEffect(() => {
+    clearBooks();
     fetchAllBooks();
-  }, [fetchAllBooks]);
+  }, [categorySlug, clearBooks, fetchAllBooks]);
 
   return (
     <CatalogTemplate

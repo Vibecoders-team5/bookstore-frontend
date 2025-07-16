@@ -1390,6 +1390,7 @@
     "illustrations": true,
     "category": [
       "Romance",
+      "Drama",
       "Our product manager's favorite",
       "Dramione",
       "Fantasy",
@@ -1425,6 +1426,7 @@
     "illustrations": true,
     "category": [
       "Teen dystopian books",
+      "Drama",
       "Our product manager's favorite",
       "Dramione",
       "Fantasy",
@@ -1709,6 +1711,7 @@
     "category": [
       "Fantasy",
       "Dark fantasy",
+      "Drama",
       "Epic fantasy",
       "Sword and sorcery",
       "Our tech team leader's family favorite"
@@ -1745,6 +1748,7 @@
     "category": [
       "Emotional struggle",
       "Fantasy",
+      "Drama",
       "Young adult fiction",
       "Epic fantasy",
       "Our tech team leader's family favorite"
@@ -1785,6 +1789,7 @@
       "Fantasy",
       "Dark fantasy",
       "Romantic fantasy",
+      "Drama",
       "Our tech team leader's family favorite"
     ],
     "description": [
@@ -2893,7 +2898,6 @@
     "format": "A5",
     "illustrations": false,
     "category": [
-      "Drama",
       "Romance",
       "Our product manager's favorite",
       "Fantasy",
@@ -3449,6 +3453,142 @@
       "Культовий твір, який увійшов до переліку золотої класики української літератури. Книга відзначена у «Почесному списку Андерсена» і перекладена двадцятьма мовами.",
       "Історії розповідають про пригоди Яви і Павлуші — двох друзів, які мріють прославитися. Вони будують метро під свинарником, влаштовують кориду з коровою, конструюють підводний човен і шукають шпигунів.",
       "Незважаючи на веселу форму, книга має глибоку ідею — щиру дружбу, готовність прийти на допомогу і силу дитячої фантазії. Підійде і дітям, і дорослим, хто хоче підняти собі настрій."
+    ]
+  },
+  {
+    "id": "book-sherlock-holmes-vol1-uk",
+    "type": "paperback",
+    "namespaceId": "sherlock-holmes-vol1",
+    "name": "Пригоди Шерлока Холмса. Том 1",
+    "slug": "sherlock-holmes-vol1-uk",
+    "priceRegular": 22,
+    "priceDiscount": 19.99,
+    "images": [
+      "img/paperback/sherlock-holmes-vol1/uk/00.webp",
+      "img/paperback/sherlock-holmes-vol1/uk/01.webp",
+      "img/paperback/sherlock-holmes-vol1/uk/02.webp",
+      "img/paperback/sherlock-holmes-vol1/uk/03.webp",
+      "img/paperback/sherlock-holmes-vol1/uk/04.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Артур Конан Дойл",
+    "coverType": "hardcover",
+    "numberOfPages": 411,
+    "publicationYear": 2010,
+    "publication": "Arthur Conan Doyle",
+    "format": "145x215 мм",
+    "illustrations": true,
+    "category": [
+      "Detective",
+      "British Detective",
+      "Literature",
+      "Foreign Literature",
+      "Classic"
+    ],
+    "description": [
+      "Понад століття тому ім'я «Шерлок Холмс» уперше з'явилося з-під пера автора — англійського письменника Артура Конан Дойля. Не одне покоління читачів усього світу зацікавлено стежить за дивовижними пригодами «самітника із Бейкер-стрит», спостережливого, кмітливого, здатного розплутати якнайхимернішу детективну загадку.",
+      "Численні шанувальники Дойлевого таланту охоче відвідують Музей-квартиру Шерлока Холмса в Лондоні, надсилають на його адресу тисячі листів. Чим же так приваблює нас цей герой, створений фантазією письменника?",
+      "Відповідь на це запитання дістане кожен, хто прочитає невмирущі детективні твори Артура Конан Дойля. Цей том — перший із чотиритомного видання, до якого увійшли в українському перекладі усі твори англійського класика про пригоди Шерлока Холмса."
+    ]
+  },
+  {
+    "id": "book-sherlock-holmes-vol1-en",
+    "type": "paperback",
+    "namespaceId": "sherlock-holmes-vol1",
+    "name": "The Adventures of Sherlock Holmes. Vol. 1",
+    "slug": "sherlock-holmes-vol1-en",
+    "priceRegular": 22,
+    "priceDiscount": 19.99,
+    "images": ["img/paperback/sherlock-holmes-vol1/en/00.webp"],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Arthur Conan Doyle",
+    "coverType": "hardcover",
+    "numberOfPages": 411,
+    "publicationYear": 2010,
+    "publication": "Navchalna Knyha - Bohdan",
+    "format": "145x215 mm",
+    "illustrations": true,
+    "category": [
+      "Detective",
+      "British Detective",
+      "Literature",
+      "Foreign Literature",
+      "Classic"
+    ],
+    "description": [
+      "More than a century ago, the name 'Sherlock Holmes' first appeared from the pen of British author Arthur Conan Doyle. Generations of readers around the world have been captivated by the brilliant and eccentric detective from Baker Street, known for his keen observation and unmatched deductive reasoning.",
+      "Fans of Doyle’s work flock to the Sherlock Holmes Museum in London and still send thousands of letters to its fictional address. What makes this character so fascinating to readers even today?",
+      "This volume is the first in a four-part collection featuring all of Doyle’s timeless detective stories in Ukrainian translation. It offers a perfect starting point for those who want to dive into the mysteries of Sherlock Holmes."
+    ]
+  },
+  {
+    "id": "book-sherlock-holmes-vol2-uk",
+    "type": "paperback",
+    "namespaceId": "sherlock-holmes-vol2",
+    "name": "Пригоди Шерлока Холмса. Том 2",
+    "slug": "sherlock-holmes-vol2-uk",
+    "priceRegular": 22,
+    "priceDiscount": 19.99,
+    "images": [
+      "img/paperback/sherlock-holmes-vol2/uk/00.webp",
+      "img/paperback/sherlock-holmes-vol2/uk/01.webp",
+      "img/paperback/sherlock-holmes-vol2/uk/02.webp",
+      "img/paperback/sherlock-holmes-vol2/uk/03.webp",
+      "img/paperback/sherlock-holmes-vol2/uk/04.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "uk",
+    "author": "Артур Конан Дойл",
+    "coverType": "hardcover",
+    "numberOfPages": 334,
+    "publicationYear": 2010,
+    "publication": "Навчальна книга - Богдан",
+    "format": "145x215 мм",
+    "illustrations": true,
+    "category": [
+      "Detective",
+      "British Detective",
+      "Literature",
+      "Foreign Literature",
+      "Classic"
+    ],
+    "description": [
+      "Після появи наприкінці 1880-х – на початку 1890-х років творів Артура Конан Дойля про знаменитого приватного детектива Шерлока Холмса (повісті «Етюд у багряних тонах», «Знак чотирьох» та цикл оповідань «Пригоди Шерлока Холмса») ім’я їхнього автора набуло світової слави.",
+      "Читачі багатьох країн з нетерпінням чекали нових творів, де б знову діяв «самітник із Бейкер-стрит». Секрет такого успіху – не тільки в спостережливості Холмса, а й у життєвості цього образу.",
+      "Цей том – другий із чотиритомного видання, до якого увійшли в українському перекладі усі твори англійського класика про пригоди Шерлока Холмса."
+    ]
+  },
+  {
+    "id": "book-sherlock-holmes-vol2-en",
+    "type": "paperback",
+    "namespaceId": "sherlock-holmes-vol2",
+    "name": "The Adventures of Sherlock Holmes. Vol. 2",
+    "slug": "sherlock-holmes-vol2-en",
+    "priceRegular": 22,
+    "priceDiscount": 19.99,
+    "images": ["img/paperback/sherlock-holmes-vol2/en/00.webp"],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Arthur Conan Doyle",
+    "coverType": "hardcover",
+    "numberOfPages": 334,
+    "publicationYear": 2010,
+    "publication": "Navchalna Knyha - Bohdan",
+    "format": "145x215 mm",
+    "illustrations": true,
+    "category": [
+      "Detective",
+      "British Detective",
+      "Literature",
+      "Foreign Literature",
+      "Classic"
+    ],
+    "description": [
+      "Following the release of Arthur Conan Doyle’s detective stories in the late 1880s and early 1890s—including 'A Study in Scarlet', 'The Sign of Four', and the collection 'The Adventures of Sherlock Holmes'—the author gained worldwide fame.",
+      "Readers from around the globe eagerly awaited new stories featuring the iconic detective from Baker Street. Holmes' success lies not only in his brilliant deduction, but also in the realism and vitality of his character.",
+      "This volume is the second in a four-part collection presenting all of Conan Doyle’s classic Sherlock Holmes stories in Ukrainian translation."
     ]
   }
 ]
