@@ -4,7 +4,6 @@ import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-// import { slugToDisplayName } from '@/utils/slugToDisplayName';
 
 export const CategoryPage = () => {
   const { categorySlug } = useParams<{ categorySlug: string }>();
