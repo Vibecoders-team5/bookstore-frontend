@@ -1,5 +1,5 @@
 import { useBookStore } from '@/store/useBookStore';
-import { Search } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import debounce from 'lodash/debounce';
 import { useEffect, useMemo, useState } from 'react';
 import { OurInput } from '@/components/ui/OurInput/OurInput';
@@ -29,6 +29,11 @@ export function SearchBar() {
     e.preventDefault();
   };
 
+  const handleClear = () => {
+    setInputValue('');
+    setQuery('');
+  };
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -45,6 +50,13 @@ export function SearchBar() {
         onChange={handleChange}
         className="w-full placeholder:font-[600] text-black/70 dark:text-white lg:text-white placeholder:text-white/60 hover:border-custom-secondary  dark:placeholder:text-white/80"
       />
+      {inputValue && (
+        <X
+          className="absolute right-4 top-1/2 -translate-y-1/2 text-black/30 lg:text-white/60 dark:text-white/80"
+          size={18}
+          onClick={handleClear}
+        />
+      )}
     </form>
   );
 }
