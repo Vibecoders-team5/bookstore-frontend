@@ -3277,8 +3277,8 @@
     "namespaceId": "dotnet",
     "name": "Web API Development для початківців",
     "slug": "web-api-development-dotnet7-uk",
-    "priceRegular": 5,
-    "priceDiscount": 0.99,
+    "priceRegular": 24,
+    "priceDiscount": 12.99,
     "images": [
       "img/paperback/webapi/uk/00.webp",
       "img/paperback/webapi/uk/01.webp"
