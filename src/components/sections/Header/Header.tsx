@@ -159,7 +159,7 @@ export const Header = () => {
 
       {isSearchVisible && (
         <div>
-          <div className="fixed top-[54px] right-[148px] z-50 bg-white/90 rounded-md shadow-md px-2 py-2 w-[478px] flex items-center gap-2">
+          <div className="fixed top-[54px] right-[148px] z-50 bg-white/90 dark:bg-[#665d4b] rounded-md shadow-md px-2 py-2 w-[478px] flex items-center gap-2">
             <button onClick={() => setIsSearchVisible(false)}>
               <SquareX className="opacity-40 hover:opacity-80 size-7" />
             </button>
