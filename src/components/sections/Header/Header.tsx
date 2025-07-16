@@ -27,10 +27,10 @@ export const Header = () => {
   const { setCartIconRef, setBurgIconRef, setFavIconRef } = useRefStore();
   const { fetchAllBooks, allBooks } = useFetchBooksStore();
 
-  const dropdownRef = useRef<HTMLDivElement>(null);
   const cartIconRef = useRef<HTMLDivElement>(null);
   const favIconRef = useRef<HTMLDivElement>(null);
   const burgIconRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   const totalCount = cart.reduce((sum, book) => sum + book.quantity, 0);
@@ -151,10 +151,8 @@ export const Header = () => {
             }
           </Button>
         </div>
-        <div>
-          <RadioPlayer />
-        </div>
       </header>
+      <RadioPlayer />
       <BookmarkToggle />
 
       {isSearchVisible && (
