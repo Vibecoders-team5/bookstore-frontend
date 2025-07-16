@@ -9,9 +9,6 @@ export const CategoryDropdown = () => {
   return (
     <DropdownSelect
       options={[
-        //   { label: t('paper'), value: '/paperback' },
-        //   { label: t('audiobook'), value: '/audiobook' },
-        //   { label: t('kindle'), value: '/kindle' },
         { label: t('programming'), value: '/category/programming' },
         { label: t('psyhology'), value: '/category/psychology' },
         { label: t('fantasy'), value: '/category/fantasy' },

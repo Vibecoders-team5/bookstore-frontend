@@ -16,7 +16,3 @@ export const BookList: React.FC<BookListProps> = ({ books }) => {
     </div>
   );
 };
-
-// back-up
-// className =
-//   'flex flex-wrap justify-between gap-x-4 gap-y-10 min-[1136px]:justify-start';
