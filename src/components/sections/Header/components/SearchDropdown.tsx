@@ -2,6 +2,7 @@ import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactC
 import { useBookStore } from '@/store/useBookStore';
 import { Book } from '@/types/Book';
 import cn from 'classnames';
+import { useTranslation } from 'react-i18next';
 
 type SearchDropdownProps = {
   results: Book[];
@@ -9,13 +10,14 @@ type SearchDropdownProps = {
 
 export const SearchDropdown: React.FC<SearchDropdownProps> = ({ results }) => {
   const query = useBookStore((state) => state.query);
+  const { t } = useTranslation();
   const hasResults = results.length > 0;
   const isOpen = query.length > 0;
 
   return (
     <div
       className={cn(
-        'absolute z-50 top-11 xl:top-13 sm:top-26 right-1 xl:right-46 sm:right-36 w-full sm:w-[482px] flex flex-col px-2 bg-white/90 rounded-md shadow-md overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out',
+        'absolute z-50 top-11 xl:top-13 sm:top-26 right-1 xl:right-46 sm:right-36 w-full sm:w-[482px] flex flex-col px-2 bg-white/60 rounded-md shadow-md overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out',
         isOpen ?
           'max-h-[350px] opacity-100 pointer-events-auto overflow-y-auto'
         : 'max-h-0 opacity-0 pointer-events-none overflow-hidden',
@@ -37,7 +39,7 @@ export const SearchDropdown: React.FC<SearchDropdownProps> = ({ results }) => {
             className="w-40"
           />
           <p className="text-custom-secondary text-base sm:text-lg">
-            Unfortunately no results...
+            {t('noResults')}
           </p>
         </div>
       }
