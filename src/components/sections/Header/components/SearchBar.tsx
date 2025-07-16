@@ -43,7 +43,7 @@ export function SearchBar() {
         placeholder={t('searchPHolder')}
         value={inputValue}
         onChange={handleChange}
-        className="w-full placeholder:font-[600] text-black/70 lg:text-white placeholder:text-white/60 hover:border-custom-secondary  dark:placeholder:text-white/80"
+        className="w-full placeholder:font-[600] text-black/70 dark:text-white lg:text-white placeholder:text-white/60 hover:border-custom-secondary  dark:placeholder:text-white/80"
       />
     </form>
   );
