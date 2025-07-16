@@ -42,7 +42,9 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
     const card = cardRef.current;
     const target = targetRef?.current;
 
-    if (!card || !target) return;
+    if (!card || !target) {
+      return;
+    }
 
     const cardRect = card.getBoundingClientRect();
     const targetRect = target.getBoundingClientRect();
@@ -109,7 +111,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   };
 
   return (
-    <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-lg bg-white">
+    <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-xl bg-gray-100">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
         <div ref={cardRef} className="relative w-52 h-66">
           {book.type === 'audiobook' && <HeadphonesRound />}

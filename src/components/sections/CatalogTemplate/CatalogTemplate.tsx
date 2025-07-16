@@ -40,7 +40,7 @@ export const CatalogTemplate: React.FC<CatalogTemplateProps> = ({
     <div className="w-full flex justify-center pt-8 sm:pt-16 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-284 min-w-0">
         <div className="flex flex-col gap-2 my-10 sm:mb-10">
-          <h1 className="text-8 sm:text-12 font-bold dark:text-white">
+          <h1 className="text-4xl sm:text-5xl font-bold dark:text-white">
             {title}
           </h1>
           <p className="body-text dark:text-white">{`${booksLength} ${t('items')}`}</p>
