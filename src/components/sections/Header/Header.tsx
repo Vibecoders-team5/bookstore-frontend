@@ -66,7 +66,8 @@ export const Header = () => {
   }, [setQuery]);
 
   const baseIconClass =
-    'flex items-center justify-center w-12 h-full lg:w-[64px] border-l border-custom-elements text-custom-secondary text-white/80 hover:text-white transition duration-200 group';
+    'flex items-center justify-center w-12 h-full lg:w-[64px] border-l border-custom-elements text-custom-secondary text-white/80 hover:text-white transition duration-200 group rounded-none focus:outline-none focus-visible:ring-0';
+
   const iconScaleClass =
     'transition duration-200 transform group-hover:scale-110';
 
@@ -106,10 +107,9 @@ export const Header = () => {
             onClick={handleSearchToggle}
             className={cn(
               baseIconClass,
-              'hover:bg-transparent sm:flex lg:hidden hidden rounded-none',
+              'sm:flex lg:hidden hidden hover:border-white border-0 border-l',
             )}
             size="icon"
-            variant="ghost"
           >
             <Search size={16} className={iconScaleClass} />
           </Button>
@@ -140,15 +140,11 @@ export const Header = () => {
 
           <Button
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            className={cn(
-              baseIconClass,
-              'hover:bg-transparent sm:hidden border-l-0',
-            )}
+            className={cn(baseIconClass, 'sm:hidden border-0')}
             size="icon"
-            variant="ghost"
           >
             {isMobileMenuOpen ?
-              <X size={16} className={cn(iconScaleClass)} />
+              <X size={16} className={iconScaleClass} />
             : <div ref={burgIconRef}>
                 <Menu size={16} className={iconScaleClass} />
               </div>
