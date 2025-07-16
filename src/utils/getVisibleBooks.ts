@@ -3,6 +3,7 @@ import { Book } from '@/types/Book';
 export function getVisibleBooks(
   books: Book[],
   sort: string | null,
+  order: string | null,
   perPage: string | null,
   currentPage: string | null,
 ): Book[] {
@@ -12,19 +13,24 @@ export function getVisibleBooks(
     visibleBooks = [...visibleBooks].sort((book1, book2) => {
       const price1 = book1.priceDiscount ?? book1.priceRegular;
       const price2 = book2.priceDiscount ?? book2.priceRegular;
+      let compare = 0;
+
       switch (sort) {
         case 'alphabetically':
-          return book1.name.localeCompare(book2.name);
-
+          compare = book1.name.localeCompare(book2.name);
+          break;
         case 'newest':
-          return book2.publicationYear - book1.publicationYear;
-
+          compare = book2.publicationYear - book1.publicationYear;
+          break;
         case 'cheapest':
-          return price1 - price2;
-
+          compare = price1 - price2;
+          break;
         default:
-          return 0;
+          compare = 0;
       }
+
+      const isAsc = order === 'asc' || !order;
+      return isAsc ? compare : -compare;
     });
   }
 
