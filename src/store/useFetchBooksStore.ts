@@ -16,6 +16,7 @@ type State = {
   fetchPaperBooks: () => Promise<void>;
   fetchKindleBooks: () => Promise<void>;
   fetchAudioBooks: () => Promise<void>;
+  clearBooks: () => void;
 };
 
 export const useFetchBooksStore = create<State>((set) => ({
@@ -73,4 +74,12 @@ export const useFetchBooksStore = create<State>((set) => ({
       set({ isLoading: false });
     }
   },
+
+  clearBooks: () =>
+    set({
+      allBooks: [],
+      paperBooks: [],
+      kindleBooks: [],
+      audioBooks: [],
+    }),
 }));
