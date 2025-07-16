@@ -25,7 +25,7 @@ export const DropdownItemsOnPage = () => {
     <DropdownSelect
       options={itemsOnPageOptions}
       placeholder="16"
-      defaultValue={currentPerPage ?? '16'}
+      value={currentPerPage ?? '16'}
       label={t('itemsOnPage')}
       className="w-32 h-15 text-black/80 dark:text-white"
       onChange={handleItemsChange}
