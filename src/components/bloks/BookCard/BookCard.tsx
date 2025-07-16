@@ -111,7 +111,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   };
 
   return (
-    <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-lg hover:scale-[1.02] bg-white transition-transform duration-300 ease-in-out">
+    <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-xl bg-white">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
         <div ref={cardRef} className="relative w-52 h-66">
           {book.type === 'audiobook' && <HeadphonesRound />}
