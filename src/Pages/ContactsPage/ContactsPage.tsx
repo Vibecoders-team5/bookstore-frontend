@@ -100,7 +100,7 @@ export const ContactsPage = () => {
                   </div>
 
                   <p className="text-sm text-[#6c6c76] dark:text-[#ead7d1] text-left">
-                    {member.description}
+                    {t(member.description)}
                   </p>
                 </div>
 

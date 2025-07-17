@@ -16,8 +16,9 @@ import {
   ContactsPage,
   RightsPage,
   NotFoundPage,
+  NotFoundItemPage,
+  CategoryPage,
 } from './Pages';
-import { CategoryPage } from './Pages/CategoryPage/CategoryPage';
 
 export const Root = () => (
   <Router>
@@ -28,26 +29,22 @@ export const Root = () => (
 
         <Route path="paperback">
           <Route index element={<PaperPage />} />
-          <Route path=":bookSlug?" element={<BookPage />} />
+          <Route path=":bookSlug" element={<BookPage />} />
         </Route>
 
         <Route path="kindle">
           <Route index element={<KindlePage />} />
-          <Route path=":bookSlug?" element={<BookPage />} />
+          <Route path=":bookSlug" element={<BookPage />} />
         </Route>
 
         <Route path="audiobook">
           <Route index element={<AudiobookPage />} />
-          <Route path=":bookSlug?" element={<BookPage />} />
+          <Route path=":bookSlug" element={<BookPage />} />
         </Route>
 
-        <Route path="favorites">
-          <Route index element={<FavoritesPage />} />
-        </Route>
-
-        <Route path="cart">
-          <Route index element={<CartPage />} />
-        </Route>
+        <Route path="favorites" element={<FavoritesPage />} />
+        <Route path="cart" element={<CartPage />} />
+        <Route path="404" element={<NotFoundItemPage />} />
 
         <Route path="category/:categorySlug">
           <Route index element={<CategoryPage />} />

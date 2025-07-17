@@ -73,5 +73,11 @@
   "psyhology": "Psyhology",
   "fantasy": "Fantasy",
   "drama": "Drama",
-  "detective": "Detective"
+  "detective": "Detective",
+  "pageNotFound": "Oops something went wrong...<br />Try another page",
+  "itemNotFound": "Oops something went wrong...<br />Try another item",
+  "yuraDescr": "Was the team lead and responsible for project architecture and initial setup. He built the folder structure, configured routing and global state. He handled advanced logic such as search, filtering, and pagination, and used localStorage to persist favorites and cart data. Also implemented GSAP-based animations to enhance the overall UX. Throughout the project, supported the team with problem-solving and general coordination.",
+  "nastyaDescr": "Our project manager and multitasker. She organized the team and kept the communication flowing. Beyond managing the workflow, she developed the Book Page with dynamic content loading and multilingual support. She also worked closely on backlog planning and sprint management. Her leadership and proactive spirit were key to keeping the project on track and productive.",
+  "nikaDescr": "Frontend developer with a great eye for design and detail. She built the dynamic banner slider on the homepage, complete with auto-play and smooth transitions. She also developed the animated Categories section with scroll-based effects and videos. Nika created the Contacts and Rights pages. Her components added visual energy and coherence to the entire project, making it not just functional, but delightful",
+  "lidiaDescr": "Frontend developer who took ownership of the Cart and Favorites functionality. She implemented adding, removing, and quantity-changing logic. She also developed the responsive footer and header with navigation and multilingual support. Lidiia consistently delivered clean, user-friendly components that combined usability with elegant design. Her work brought structure and polish to the app’s core interactivity."
 }
