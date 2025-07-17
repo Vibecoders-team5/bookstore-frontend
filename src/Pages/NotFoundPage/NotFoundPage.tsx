@@ -1,3 +1,5 @@
+import { Trans } from 'react-i18next';
+
 export const NotFoundPage = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center gap-4 py-20">
@@ -7,9 +9,11 @@ export const NotFoundPage = () => {
         className="w-100"
       />
       <p className="text-custom-secondary text-base sm:text-lg">
-        Oops something went wrong...
-        <br />
-        Try another page
+        <Trans i18nKey="pageNotFound">
+          Oops something went wrong...
+          <br />
+          Try another page
+        </Trans>
       </p>
     </div>
   );

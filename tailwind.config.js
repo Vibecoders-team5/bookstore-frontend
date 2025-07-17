@@ -65,6 +65,11 @@ module.exports = {
           '70%': { transform: 'translateY(4px)' },
           '100%': { transform: 'translateY(0)' },
         },
+        'paging': {
+          '0%': { transform: 'rotateY(0deg) skewY(0deg)' },
+          '50%': { transform: 'rotateY(90deg) skewY(-20deg)' },
+          '100%': { transform: 'rotateY(180deg) skewY(0deg)' },
+        },
         'moving-left': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },

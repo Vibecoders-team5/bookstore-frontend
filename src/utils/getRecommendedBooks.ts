@@ -13,8 +13,8 @@ export function getRecommendedBooks(
     recommended = books.filter(
       (book) =>
         book.id !== currentBook.id &&
-        (book.author === currentBook.author ||
-          book.category?.some((cat) => currentBook.category?.includes(cat))),
+        book.author === currentBook.author &&
+        book.category?.some((cat) => currentBook.category?.includes(cat)),
     );
   }
 

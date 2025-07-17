@@ -8,3 +8,5 @@ export * from './ContactsPage/ContactsPage';
 export * from './RightsPage/RightsPage';
 export * from './BookPage/BookPage';
 export * from './NotFoundPage/NotFoundPage';
+export * from './NotFoundItemPage/NotFoundItemPage';
+export * from './CategoryPage/CategoryPage';

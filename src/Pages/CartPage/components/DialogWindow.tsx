@@ -32,9 +32,9 @@ export const DialogWindow = () => {
 
       <DialogContent
         className="fixed top-1/2 left-1/2 w-160 max-w-[90vw] -translate-x-1/2 -translate-y-1/2
-                      rounded-3xl bg-white p-8 shadow-2xl flex flex-col items-center"
+                      rounded-3xl bg-white dark:bg-brown-dark p-8 shadow-2xl flex flex-col items-center"
       >
-        <DialogClose className="absolute top-4 right-4 rounded-md hover:bg-gray-200 p-1">
+        <DialogClose className="absolute top-4 right-4 rounded-md hover:bg-gray-200 dark:hover:bg-black/40 p-1">
           <X className="w-5 h-5 cursor-pointer" />
         </DialogClose>
 
