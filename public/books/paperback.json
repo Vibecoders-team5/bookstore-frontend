@@ -2656,38 +2656,6 @@
     ]
   },
   {
-    "id": "generated-uuid-hp7-uk",
-    "type": "paperback",
-    "namespaceId": "harry-potter-7",
-    "name": "Гаррі Поттер і Смертельні реліквії",
-    "slug": "harry-potter-7-uk-paperback",
-    "priceRegular": 12.5,
-    "priceDiscount": null,
-    "images": [
-      "img/paperback/harry-potter-7/uk/00.webp",
-      "img/paperback/harry-potter-7/uk/01.webp",
-      "img/paperback/harry-potter-7/uk/02.webp",
-      "img/paperback/harry-potter-7/uk/03.webp",
-      "img/paperback/harry-potter-7/uk/04.webp",
-      "img/paperback/harry-potter-7/uk/05.webp"
-    ],
-    "langAvailable": ["en", "uk"],
-    "lang": "uk",
-    "author": "Джоан Роулінґ",
-    "coverType": "paperback",
-    "numberOfPages": 637,
-    "publicationYear": 2021,
-    "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
-    "format": "130x200 mm",
-    "illustrations": false,
-    "category": ["Fantasy", "Children's literature", "Young adult"],
-    "description": [
-      "Гаррі, Рон і Герміона залишають Дурслів назавжди, щоб завершити пошуки та знищення Горкруксів — об'єктів, що утримують частини душі Волдеморта.",
-      "Перебуваючи втікачами, вони занурюються у темну історію магічної війни, розкривають таємниці Родини Поттерів і Смертельні реліквії — потужні й небезпечні артефакти.",
-      "Супротив стикається з зрадою, жертвою й неймовірним ризиком, поки вони готуються до остаточної війни з Волдемортом. Це кульмінаційна подорож за дружбу, долю і свободу всього магічного світу."
-    ]
-  },
-  {
     "id": "generated-uuid-hp7-en",
     "type": "paperback",
     "namespaceId": "harry-potter-7",
@@ -2717,6 +2685,38 @@
       "In the final installment of the Harry Potter series, Harry, Ron and Hermione set out on their most dangerous mission yet: to track down and destroy the Horcruxes—the key to Voldemort's immortality.",
       "Without the guidance of their professors or the protection of Hogwarts, the trio must rely on one another more than ever. Dark forces close in, alliances shift, and secrets long buried come to light.",
       "As the wizarding world descends into war, the ultimate battle between good and evil approaches. Harry must face his destiny—and make the ultimate sacrifice to save those he loves."
+    ]
+  },
+  {
+    "id": "generated-uuid-hp7-uk",
+    "type": "paperback",
+    "namespaceId": "harry-potter-7",
+    "name": "Гаррі Поттер і Смертельні реліквії",
+    "slug": "harry-potter-7-uk-paperback",
+    "priceRegular": 12.5,
+    "priceDiscount": null,
+    "images": [
+      "img/paperback/harry-potter-7/uk/00.webp",
+      "img/paperback/harry-potter-7/uk/01.webp",
+      "img/paperback/harry-potter-7/uk/02.webp",
+      "img/paperback/harry-potter-7/uk/03.webp",
+      "img/paperback/harry-potter-7/uk/04.webp",
+      "img/paperback/harry-potter-7/uk/05.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Джоан Роулінґ",
+    "coverType": "paperback",
+    "numberOfPages": 637,
+    "publicationYear": 2021,
+    "publication": "А‑ба‑ба‑га‑ла‑ма‑га",
+    "format": "130x200 mm",
+    "illustrations": false,
+    "category": ["Fantasy", "Children's literature", "Young adult"],
+    "description": [
+      "Гаррі, Рон і Герміона залишають Дурслів назавжди, щоб завершити пошуки та знищення Горкруксів — об'єктів, що утримують частини душі Волдеморта.",
+      "Перебуваючи втікачами, вони занурюються у темну історію магічної війни, розкривають таємниці Родини Поттерів і Смертельні реліквії — потужні й небезпечні артефакти.",
+      "Супротив стикається з зрадою, жертвою й неймовірним ризиком, поки вони готуються до остаточної війни з Волдемортом. Це кульмінаційна подорож за дружбу, долю і свободу всього магічного світу."
     ]
   },
   {
@@ -2983,6 +2983,41 @@
     ]
   },
   {
+    "id": "book-looking-for-alaska-en",
+    "type": "paperback",
+    "namespaceId": "looking-for-alaska",
+    "name": "Looking for Alaska",
+    "slug": "looking-for-alaska-en-paperback",
+    "priceRegular": 16,
+    "priceDiscount": 15,
+    "images": [
+      "img/paperback/looking-for-alaska/en/00.webp",
+      "img/paperback/looking-for-alaska/en/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "en",
+    "author": "John Green",
+    "coverType": "hardcover",
+    "numberOfPages": 288,
+    "publicationYear": 2025,
+    "publication": "HarperCollins Publishers",
+    "format": "141x222x25 mm",
+    "illustrations": false,
+    "category": [
+      "School Fiction",
+      "Coming of Age",
+      "Young Adult Romance",
+      "Teen Friendship"
+    ],
+    "description": [
+      "The unmissable first novel from bestselling and award-winning author of THE FAULT IN OUR STARS and TURTLES ALL THE WAY DOWN.",
+      "BEFORE. Miles Halter’s whole life has been one big non-event until he starts at anything-but-boring Culver Creek Boarding School and meets Alaska Young. Gorgeous, clever, funny and utterly fascinating, she pulls Miles into her world, launches him into a new life, and steals his heart.",
+      "But when tragedy strikes, and Miles comes face-to-face with death, he discovers the value of living and loving unconditionally.",
+      "AFTER: Nothing will ever be the same.",
+      "Poignant, funny, heartbreaking and compelling, this novel will stay with you forever."
+    ]
+  },
+  {
     "id": "f27811c2-a2de-4c12-9c3d-000000000030",
     "type": "paperback",
     "namespaceId": "die-verwandlung",
@@ -3016,41 +3051,6 @@
       "Найнеймовірніше в цих творах відбувається у найбуденнішій обстановці, вони вражають дивним поєднанням трагічного й іронічного, абсурдного та закономірного.",
       "Потрапляючи в незвичайні обставини, герої Кафки відчайдушно прагнуть врятуватися, однак на них усюди чатує фатум.",
       "Письменник змальовує складний світ людських стосунків, нездатність багатьох до справжньої любові та милосердя і в такий спосіб протестує проти безглуздості й одноманітності життя."
-    ]
-  },
-  {
-    "id": "book-looking-for-alaska-en",
-    "type": "paperback",
-    "namespaceId": "looking-for-alaska",
-    "name": "Looking for Alaska",
-    "slug": "looking-for-alaska-en-paperback",
-    "priceRegular": 16,
-    "priceDiscount": 15,
-    "images": [
-      "img/paperback/looking-for-alaska/en/00.webp",
-      "img/paperback/looking-for-alaska/en/01.webp"
-    ],
-    "langAvailable": ["en", "uk"],
-    "lang": "en",
-    "author": "John Green",
-    "coverType": "hardcover",
-    "numberOfPages": 288,
-    "publicationYear": 2025,
-    "publication": "HarperCollins Publishers",
-    "format": "141x222x25 mm",
-    "illustrations": false,
-    "category": [
-      "School Fiction",
-      "Coming of Age",
-      "Young Adult Romance",
-      "Teen Friendship"
-    ],
-    "description": [
-      "The unmissable first novel from bestselling and award-winning author of THE FAULT IN OUR STARS and TURTLES ALL THE WAY DOWN.",
-      "BEFORE. Miles Halter’s whole life has been one big non-event until he starts at anything-but-boring Culver Creek Boarding School and meets Alaska Young. Gorgeous, clever, funny and utterly fascinating, she pulls Miles into her world, launches him into a new life, and steals his heart.",
-      "But when tragedy strikes, and Miles comes face-to-face with death, he discovers the value of living and loving unconditionally.",
-      "AFTER: Nothing will ever be the same.",
-      "Poignant, funny, heartbreaking and compelling, this novel will stay with you forever."
     ]
   },
   {
@@ -3248,7 +3248,7 @@
     "priceRegular": 5,
     "priceDiscount": 0.99,
     "images": ["img/paperback/webapi/en/00.webp"],
-    "langAvailable": ["en"],
+    "langAvailable": ["en", "uk"],
     "lang": "en",
     "author": "Irina Dominte",
     "coverType": "softcover",
@@ -3269,6 +3269,77 @@
       "As you follow along, you will learn simple and intuitive conventions that will free you from some of the more tedious decisions and work, in order to allow you to focus on the business requirements required by your team.",
       "You will learn the building blocks of Web API and how to leverage them to have a well-rounded API. Understanding these small but important tricks will make development faster, easier, and more pleasant. For our coach.",
       "By the end of the book you will have a fully functional API, and you will be better prepared for an interview for a .NET backend developer job."
+    ]
+  },
+  {
+    "id": "book-webapi-dotnet7-uk",
+    "type": "paperback",
+    "namespaceId": "dotnet",
+    "name": "Web API Development для початківців",
+    "slug": "web-api-development-dotnet7-uk",
+    "priceRegular": 24,
+    "priceDiscount": 12.99,
+    "images": [
+      "img/paperback/webapi/uk/00.webp",
+      "img/paperback/webapi/uk/01.webp"
+    ],
+    "langAvailable": ["en", "uk"],
+    "lang": "uk",
+    "author": "Irina Dominte",
+    "coverType": "softcover",
+    "numberOfPages": 414,
+    "publicationYear": 2023,
+    "publication": "APress",
+    "format": "155x235 mm",
+    "illustrations": false,
+    "category": [
+      ".NET Development",
+      "Web API",
+      "Beginner’s Guides",
+      "Backend Development",
+      "Booba's favorite"
+    ],
+    "description": [
+      "If you are a developer who wants to learn the basic skills of web and application programming interfaces (APIs) with .NET, this book is your complete introduction. The book takes a learn-by-experience approach. You will hit the ground running with a sample project that has everything you need to be wired up.",
+      "As you follow along, you will learn simple and intuitive conventions that will free you from some of the more tedious decisions and work, in order to allow you to focus on the business requirements required by your team.",
+      "You will learn the building blocks of Web API and how to leverage them to have a well-rounded API. Understanding these small but important tricks will make development faster, easier, and more pleasant. For our coach.",
+      "By the end of the book you will have a fully functional API, and you will be better prepared for an interview for a .NET backend developer job."
+    ]
+  },
+  {
+    "id": "book-heaven-blessing-en",
+    "type": "paperback",
+    "namespaceId": "heaven-blessing",
+    "name": "Heaven Official's Blessing. Vol. 1",
+    "slug": "heaven-blessing-vol1-en",
+    "priceRegular": 35,
+    "priceDiscount": 32.99,
+    "images": [
+      "img/paperback/heaven-blessing/en/00.webp",
+      "img/paperback/heaven-blessing/en/01.webp",
+      "img/paperback/heaven-blessing/en/02.webp",
+      "img/paperback/heaven-blessing/en/03.webp",
+      "img/paperback/heaven-blessing/en/04.webp"
+    ],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Mo Xiang Tong Xiu",
+    "coverType": "hardcover",
+    "numberOfPages": 352,
+    "publicationYear": 2025,
+    "publication": "BookChef",
+    "format": "130x200 mm",
+    "illustrations": true,
+    "category": [
+      "Fantasy",
+      "Sword and Sorcery",
+      "Top Sellers 2025",
+      "Our product manager's favorite"
+    ],
+    "description": [
+      "Heaven Official’s Blessing follows Xie Lian, crown prince of Xianle, who becomes a god at seventeen. Cast down after disobeying the rules and losing believers, he ascends once more 800 years later as a lowly heavenly official.",
+      "While banished to the mortal realm to exorcise spirits, he encounters Hua Cheng — a powerful, charming youth with a mysterious past and dangerous identity. Despite warnings, Xie Lian finds comfort in his presence and a sense of connection he hasn't felt in centuries.",
+      "This danmei fantasy epic blends Chinese folklore, mythology, and slow-burning romance between men. With lyrical prose and deep emotional arcs, the story explores devotion, pain, resilience, and destiny — making it beloved among readers worldwide."
     ]
   },
   {
@@ -3306,42 +3377,6 @@
       "Боги винагородили Сє Ляня, принца королівства Сяньле, прийнявши його у свій світ. Він став божественною суттю у сімнадцять років, усе життя тренуючись, аби досягти досконалості. Люди любили його за земного життя, проте тепер йому заборонено втручатися у справи смертних. Коли його королівство зазнає невдач, Сє Лянь порушує правило — і втрачає віру людей.",
       "Через 800 років він знову підноситься як небесний урядник, очищаючи світ від злих духів. Там він зустрічає таємничого юнака Саньлана, що приховує похмурі таємниці. Попри попередження інших богів, Сє Лянь не може відвернутися — і вперше за довгий час почувається не самотнім.",
       "Це повільна, чуттєва розповідь про стійкість, біль, прийняття й віру. Восьмитомна сага в жанрі даньмей натхнена китайським фольклором, де розкриваються глибокі теми через поетичну прозу та складні долі героїв."
-    ]
-  },
-  {
-    "id": "book-heaven-blessing-en",
-    "type": "paperback",
-    "namespaceId": "heaven-blessing",
-    "name": "Heaven Official's Blessing. Vol. 1",
-    "slug": "heaven-blessing-vol1-en",
-    "priceRegular": 35,
-    "priceDiscount": 32.99,
-    "images": [
-      "img/paperback/heaven-blessing/en/00.webp",
-      "img/paperback/heaven-blessing/en/01.webp",
-      "img/paperback/heaven-blessing/en/02.webp",
-      "img/paperback/heaven-blessing/en/03.webp",
-      "img/paperback/heaven-blessing/en/04.webp"
-    ],
-    "langAvailable": ["uk", "en"],
-    "lang": "en",
-    "author": "Mo Xiang Tong Xiu",
-    "coverType": "hardcover",
-    "numberOfPages": 352,
-    "publicationYear": 2025,
-    "publication": "BookChef",
-    "format": "130x200 mm",
-    "illustrations": true,
-    "category": [
-      "Fantasy",
-      "Sword and Sorcery",
-      "Top Sellers 2025",
-      "Our product manager's favorite"
-    ],
-    "description": [
-      "Heaven Official’s Blessing follows Xie Lian, crown prince of Xianle, who becomes a god at seventeen. Cast down after disobeying the rules and losing believers, he ascends once more 800 years later as a lowly heavenly official.",
-      "While banished to the mortal realm to exorcise spirits, he encounters Hua Cheng — a powerful, charming youth with a mysterious past and dangerous identity. Despite warnings, Xie Lian finds comfort in his presence and a sense of connection he hasn't felt in centuries.",
-      "This danmei fantasy epic blends Chinese folklore, mythology, and slow-burning romance between men. With lyrical prose and deep emotional arcs, the story explores devotion, pain, resilience, and destiny — making it beloved among readers worldwide."
     ]
   },
   {
@@ -3493,37 +3528,6 @@
     ]
   },
   {
-    "id": "book-sherlock-holmes-vol1-en",
-    "type": "paperback",
-    "namespaceId": "sherlock-holmes-vol1",
-    "name": "The Adventures of Sherlock Holmes. Vol. 1",
-    "slug": "sherlock-holmes-vol1-en",
-    "priceRegular": 22,
-    "priceDiscount": 19.99,
-    "images": ["img/paperback/sherlock-holmes-vol1/en/00.webp"],
-    "langAvailable": ["uk", "en"],
-    "lang": "en",
-    "author": "Arthur Conan Doyle",
-    "coverType": "hardcover",
-    "numberOfPages": 411,
-    "publicationYear": 2010,
-    "publication": "Navchalna Knyha - Bohdan",
-    "format": "145x215 mm",
-    "illustrations": true,
-    "category": [
-      "Detective",
-      "British Detective",
-      "Literature",
-      "Foreign Literature",
-      "Classic"
-    ],
-    "description": [
-      "More than a century ago, the name 'Sherlock Holmes' first appeared from the pen of British author Arthur Conan Doyle. Generations of readers around the world have been captivated by the brilliant and eccentric detective from Baker Street, known for his keen observation and unmatched deductive reasoning.",
-      "Fans of Doyle’s work flock to the Sherlock Holmes Museum in London and still send thousands of letters to its fictional address. What makes this character so fascinating to readers even today?",
-      "This volume is the first in a four-part collection featuring all of Doyle’s timeless detective stories in Ukrainian translation. It offers a perfect starting point for those who want to dive into the mysteries of Sherlock Holmes."
-    ]
-  },
-  {
     "id": "book-sherlock-holmes-vol2-uk",
     "type": "paperback",
     "namespaceId": "sherlock-holmes-vol2",
@@ -3561,6 +3565,37 @@
     ]
   },
   {
+    "id": "book-sherlock-holmes-vol1-en",
+    "type": "paperback",
+    "namespaceId": "sherlock-holmes-vol1",
+    "name": "The Adventures of Sherlock Holmes. Vol. 1",
+    "slug": "sherlock-holmes-vol1-en",
+    "priceRegular": 22,
+    "priceDiscount": 19.99,
+    "images": ["img/paperback/sherlock-holmes-vol1/en/00.webp"],
+    "langAvailable": ["uk", "en"],
+    "lang": "en",
+    "author": "Arthur Conan Doyle",
+    "coverType": "hardcover",
+    "numberOfPages": 411,
+    "publicationYear": 2010,
+    "publication": "Navchalna Knyha - Bohdan",
+    "format": "145x215 mm",
+    "illustrations": true,
+    "category": [
+      "Detective",
+      "British Detective",
+      "Literature",
+      "Foreign Literature",
+      "Classic"
+    ],
+    "description": [
+      "More than a century ago, the name 'Sherlock Holmes' first appeared from the pen of British author Arthur Conan Doyle. Generations of readers around the world have been captivated by the brilliant and eccentric detective from Baker Street, known for his keen observation and unmatched deductive reasoning.",
+      "Fans of Doyle’s work flock to the Sherlock Holmes Museum in London and still send thousands of letters to its fictional address. What makes this character so fascinating to readers even today?",
+      "This volume is the first in a four-part collection featuring all of Doyle’s timeless detective stories in Ukrainian translation. It offers a perfect starting point for those who want to dive into the mysteries of Sherlock Holmes."
+    ]
+  },
+  {
     "id": "book-sherlock-holmes-vol2-en",
     "type": "paperback",
     "namespaceId": "sherlock-holmes-vol2",
@@ -3589,6 +3624,42 @@
       "Following the release of Arthur Conan Doyle’s detective stories in the late 1880s and early 1890s—including 'A Study in Scarlet', 'The Sign of Four', and the collection 'The Adventures of Sherlock Holmes'—the author gained worldwide fame.",
       "Readers from around the globe eagerly awaited new stories featuring the iconic detective from Baker Street. Holmes' success lies not only in his brilliant deduction, but also in the realism and vitality of his character.",
       "This volume is the second in a four-part collection presenting all of Conan Doyle’s classic Sherlock Holmes stories in Ukrainian translation."
+    ]
+  },
+  {
+    "id": "book-tsikave-navchannya-ukr-vol2",
+    "type": "paperback",
+    "namespaceId": "tsikave-navchannya-ukr",
+    "name": "Цікаве навчання. Українська мова. 1 клас",
+    "slug": "tsikave-navchannya-ukr-uk",
+    "priceRegular": 3.49,
+    "priceDiscount": 1.99,
+    "images": [
+      "img/paperback/tsikave-navchannya-ukr/00.webp",
+      "img/paperback/tsikave-navchannya-ukr/01.webp",
+      "img/paperback/tsikave-navchannya-ukr/02.webp",
+      "img/paperback/tsikave-navchannya-ukr/03.webp"
+    ],
+    "langAvailable": ["uk"],
+    "lang": "uk",
+    "author": "Наталія Мусієнко",
+    "coverType": "softcover",
+    "numberOfPages": 48,
+    "publicationYear": 2022,
+    "publication": "АССА",
+    "format": "200x275 mm",
+    "illustrations": true,
+    "category": [
+      "Ukrainian language",
+      "Workbooks",
+      "Booba's favorite",
+      "1st grade"
+    ],
+    "description": [
+      "Непосидючі герої зошита — миша та жирафа — не можуть ні дня без пригод. Вони пізнають світ і разом з тим навчаються.",
+      "Із веселими друзями ваш школяр швидко та залюбки оновить у пам'яті шкільну програму та опанує нові знання.",
+      "Миша та жирафа надаватимуть йому підказки з найважливіших та найскладніших питань і доступно пояснюватимуть нові теми.",
+      "Посібник містить усі необхідні теми з предмета в ігрових завданнях, завдяки чому ваш школяр точно не занудьгує."
     ]
   }
 ]
