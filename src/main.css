@@ -5,7 +5,7 @@
 @import 'tw-animate-css';
 
 :root {
-  --background: #fafbfc;
+  --background: #fff;
   --foreground: 39 39 42;
   --card: 255 255 255;
   --card-foreground: 39 39 42;
