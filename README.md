@@ -6,137 +6,64 @@ Group Project for Vibecoders. Creating functional bookstore.
 
 ---
 
-## ✨ Поділ роботи
+A beautifully crafted, responsive online bookstore built by a team of four developers. The app allows users to browse, filter, and search for books, manage favorites and cart items, and explore content in multiple languages. With smooth animations and a thoughtful UI/UX, this project highlights the synergy of great teamwork and modern frontend development.
 
-- **Main гілка**: лише для фінального коду.
-- Кожен працює в **своїй гілці**, названа `DEV-123`, де `123` - це номер тікета на **Jira**.
+⸻
 
----
+🚀 Technologies Used
+• React + Vite — Component-based architecture and fast development
+• React Router (HashRouter) — Seamless navigation between pages
+• Tailwind CSS — Modern utility-first styling
+• GSAP / Framer Motion — Smooth animations and scroll effects
+• LocalStorage — Persistent state for favorites and cart
+• Figma — Design collaboration and UI prototyping
+• Vercel — Live deployment
 
-## ⚙️ Швидкий старт
+⸻
 
-1. Клонувати репозиторій:
+🎯 Core Features
+• 🔎 Search, filter, and pagination across the book catalog
+• ❤️ Add/remove favorites with persistent storage
+• 🛒 Fully interactive cart (add, remove, change quantity)
+• 🌍 Multilingual support
+• 🌑 Dark mode
+• 📱 Mobile-responsive and adaptive layout
+• 🔁 Page transitions and animated UI components
+• 📂 Modular and scalable folder structure
 
-```bash
-git clone https://github.com/your-team/bookstore-app.git
-cd bookstore-app
-```
+⸻
 
-2. Встановити залежності:
+👥 Team Contributions
 
-```bash
-npm install
-```
+🧠 Yurii Styslo – Team Lead & Architect
+• Set up the project structure, routing system, and state management
+• Implemented core search, filter, and pagination logic
+• Handled localStorage integration for cart and favorites
+• Developed GSAP-based animations for enhanced UX
+• Provided ongoing technical support and coordination
 
----
+📋 Anastasiia Zuieva – Project Manager & Developer
+• Managed team organization, communication, and sprint planning
+• Built the Book Page with dynamic content loading
+• Integrated multilingual support
+• Led backlog planning and ensured the team stayed on track
 
-## 🚀 Робочий процес
+🎨 Veronika Okhten – Frontend Developer & Designer
+• Developed the animated homepage banner slider (auto-play & transitions)
+• Created the scroll-animated Categories section with embedded video
+• Designed and implemented the Contacts and Rights pages
+• Brought visual coherence and energy to the app’s design
 
-### Зранку:
+🧩 Lidiia Tsymborovych – Frontend Developer
+• Built the entire Cart and Favorites functionality (CRUD logic)
+• Created the responsive Header and Footer with language switcher
+• Delivered clean, reusable UI components
+• Ensured core app interactivity was smooth and user-friendly
 
-1. Перейти на гілку `main` та оновити її:
+⸻
 
-```bash
-git checkout main
-git pull origin main
-```
+🌐 [Live Demo](https://bookstore-frontend-sigma.vercel.app/)
 
-2. Перейти на свою гілку або створити нову та підтягуємо свіжу версію коду з `main`:
+👉 Visit BookStore on Vercel
 
-```bash
-git checkout -b DEV-123
-git merge main
-```
-
-3. Працюємо над кодом у своїй гілці.
-
-4. Перевірка коду перед комітом
-
-ESLint + Prettier автоматично перевірять лише змінені файли при коміті.
-Але ти можеш перевірити вручну:
-
-```bash
-npm run lint
-npm run format
-```
-
-5. Коміт змін
-
-```bash
-git add .
-git commit -m "DEV-123: короткий опис змін"
-```
-
-6. Оновлення main перед пушем (важливо!)
-
-```bash
-git checkout main
-git pull origin main
-git checkout DEV-123
-git merge main
-```
-
-7. Виправ конфлікти, якщо вони є, і тільки потім:
-
-```bash
-git push origin DEV-123
-```
-
-8. Створи Pull Request в main
-
----
-
-## Після успішного PR та злиття з main:
-
-1. Видалити локальну гілку:
-
-- Переконайся, що ти знаходишся не на тій гілці, яку видаляєш, наприклад:
-
-```bash
-git checkout DEV-123
-```
-
-- Видалити локальну гілку безпечним способом (якщо вона вже змержена):
-
-```bash
-git branch -d DEV-123
-```
-
----
-
-⚠️ **Увага:** Деплой сайту відбувається автоматично через Vercel при злитті змін у гілку `main`.  
-Зміни на сервері з’являються відразу після мерджу, без додаткових дій.
-
----
-
-## 🔐 Pre-commit перевірки
-
-Після `npm install` Husky активується автоматично.
-
-Перед кожним комітом запускаються:
-
-- `eslint --fix` на змінених файлах
-- `prettier --write` на змінених файлах
-
-Це захищає `main` від неякісного або неформатованого коду.
-
----
-
-## 📄 Конфігурації
-
-Проєкт використовує Husky та lint-staged для запуску ESLint та Prettier при коміті.
-Конфігурації знаходяться у `.husky/` та `.lintstagedrc.json`.
-
----
-
-## 📈 Рекомендації
-
-- Працювати лише у власній гілці (!не з `main`!)
-- Завжди перед пушем оновлюй `main` і мерж у свою гілку.
-- Часті, невеликі коміти із зрозуміллим описом типу `DEV-123: Змінив логіку пошуку книг`.
-- Уникати великих Pull Request'ів
-- Роби Pull Request тільки тоді, коли код повністю готовий до перевірки.
-
----
-
-👊 Успіху у розробці!
+⸻
