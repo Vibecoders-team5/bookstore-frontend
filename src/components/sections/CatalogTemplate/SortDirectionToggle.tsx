@@ -11,6 +11,7 @@ export const SortDirectionToggle = () => {
 
   const currentOrder = searchParams.get('order') ?? DEFAULT_ORDER;
   const isAsc = currentOrder === 'asc';
+  const sortOrderLabel = isAsc ? t('ui.sortDescending') : t('ui.sortAscending');
 
   const toggleOrder = () => {
     const params = new URLSearchParams(searchParams.toString());
@@ -22,14 +23,14 @@ export const SortDirectionToggle = () => {
   return (
     <div className="flex flex-col gap-1 items-start">
       <span className="text-[12px] text-custom-secondary dark:text-white">
-        {t('order')}
+        {t('ui.order')}
       </span>
       <Button
         size="icon"
         className="w-10 h-10 dark:bg-white/40"
         onClick={toggleOrder}
-        aria-label={isAsc ? t('sortDescending') : t('sortAscending')}
-        title={isAsc ? t('sortDescending') : t('sortAscending')}
+        aria-label={sortOrderLabel}
+        title={sortOrderLabel}
       >
         {isAsc ?
           <ChevronUp className="w-5 h-5 text-muted-foreground dark:text-white/60" />

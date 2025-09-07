@@ -18,7 +18,7 @@ export const CartSummary = ({ totalPrice, quantity }: CartSummaryProps) => {
       <span className="text-[22px] sm:text-[32px] font-bold">
         ${totalPrice}
       </span>
-      <span className="body-text">{`${t('totalFor')} ${quantity} ${t('items')}`}</span>
+      <span className="body-text">{`${t('cart.totalFor')} ${quantity} ${t('ui.items')}`}</span>
 
       <DialogWindow />
     </div>

@@ -1,7 +1,7 @@
 import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
 import { useBookStore } from '@/store/useBookStore';
 import { Book } from '@/types/Book';
-import cn from 'classnames';
+import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 type SearchDropdownProps = {
@@ -16,7 +16,7 @@ export const SearchDropdown: React.FC<SearchDropdownProps> = ({ results }) => {
 
   return (
     <div
-      className={cn(
+      className={clsx(
         'absolute z-50 top-11 xl:top-13 sm:top-26 right-1 xl:right-46 sm:right-36 w-full sm:w-[482px] flex flex-col px-2 bg-white/60 rounded-md shadow-md overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out',
         isOpen ?
           'max-h-[350px] opacity-100 pointer-events-auto overflow-y-auto'
@@ -39,7 +39,7 @@ export const SearchDropdown: React.FC<SearchDropdownProps> = ({ results }) => {
             className="w-40"
           />
           <p className="text-custom-secondary text-base sm:text-lg">
-            {t('noResults')}
+            {t('books.noResults')}
           </p>
         </div>
       }

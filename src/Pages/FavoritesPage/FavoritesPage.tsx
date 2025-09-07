@@ -20,10 +20,10 @@ export const FavoritesPage = () => {
 
         <div className="mb-8 sm:mb-10 pt-2">
           <h1 className="text-[36px] sm:text-5xl font-bold dark:text-white">
-            {t('fav')}
+            {t('navigation.favorites')}
           </h1>
           <p className="dark:text-white">
-            {favoritesCount} {t('items')}
+            {favoritesCount} {t('ui.items')}
           </p>
         </div>
         {hasFavorites ?

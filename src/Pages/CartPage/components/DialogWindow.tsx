@@ -24,7 +24,7 @@ export const DialogWindow = () => {
           className="w-full btn-text h-12 dark:bg-white dark:text-header-footer-light rounded-lg cursor-pointer"
           size="customAddButton"
         >
-          {t('checkout')}
+          {t('cart.checkout')}
         </Button>
       </DialogTrigger>
 
@@ -40,10 +40,10 @@ export const DialogWindow = () => {
 
         <DialogHeader className="mb-6 text-center">
           <DialogTitle className="text-2xl font-semibold mb-3 text-center">
-            {t('whoops')}
+            {t('errors.whoops')}
           </DialogTitle>
           <DialogDescription className="mx-auto max-w-105 text-center text-muted-foreground">
-            {t('hustling')}
+            {t('errors.hustling')}
           </DialogDescription>
         </DialogHeader>
 

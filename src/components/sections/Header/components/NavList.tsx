@@ -14,10 +14,10 @@ export const NavList = ({
   const { t } = useTranslation();
 
   const navLinks = [
-    { to: '/', label: t('home') },
-    { to: '/paperback', label: t('paper') },
-    { to: '/kindle', label: t('kindle') },
-    { to: '/audiobook', label: t('audiobook') },
+    { to: '/', label: t('navigation.home') },
+    { to: '/paperback', label: t('books.paper') },
+    { to: '/kindle', label: t('books.kindle') },
+    { to: '/audiobook', label: t('books.audiobook') },
   ];
 
   return (

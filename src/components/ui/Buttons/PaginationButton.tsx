@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import cn from 'classnames';
+import clsx from 'clsx';
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ export const PaginationButton: React.FC<PaginationButtonProps> = ({
     <Button
       variant="default"
       size="s32"
-      className={cn(
+      className={clsx(
         ' dark:bg-[#93785c] dark:border-[#93785c]  dark:text-white dark:hover:border-white/60',
         {
           'bg-custom-primary dark:bg-white text-white dark:text-header-footer-light border-custom-primary dark:border-white':

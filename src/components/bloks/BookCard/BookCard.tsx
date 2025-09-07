@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { Truck } from 'lucide-react';
 import { AddButton } from '@/components/ui/Buttons/AddButton';
 import { HeartButton } from '@/components/ui/Buttons/HeartButton';
-import { HeadphonesRound } from '@/components/ui/Icons/HeadphonesRound';
+import { HeadphonesRoundIcon } from '@/components/ui/Icons/HeadphonesRound';
 import { Book } from '@/types/Book';
 import {
   Tooltip,
@@ -114,7 +114,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
     <div className="dark:bg-brown-dark w-full h-full lg:max-w-[272px] flex flex-col p-8 gap-4 rounded-lg border-1 border-gray-200 dark:border-brown-dark hover:shadow-xl bg-white">
       <Link to={`/${book.type}/${book.slug}`} className="flex justify-center">
         <div ref={cardRef} className="relative w-52 h-66">
-          {book.type === 'audiobook' && <HeadphonesRound />}
+          {book.type === 'audiobook' && <HeadphonesRoundIcon />}
           {book.type === 'kindle' && (
             <>
               <img
@@ -171,7 +171,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book }) => {
           <div className="inline-flex gap-1.5">
             <Truck className="text-custom-accent dark:text-[#93785c] w-[22px] h-[22px]" />
             <p className="btn-text text-custom-accent dark:text-[#93785c] ">
-              {t('inStock')}
+              {t('ui.inStock')}
             </p>
           </div>
         </div>

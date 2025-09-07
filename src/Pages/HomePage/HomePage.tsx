@@ -5,10 +5,10 @@ import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { getNewestBooks } from '@/utils/getNewestBooks';
 import { getRecommendedBooks } from '@/utils/getRecommendedBooks';
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
-import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
+import { BookSlider } from '@/components/sections/BooksSlider/BookSlider';
 
-import BannerSlider from '@/Pages/HomePage/components/BannerSlider/BannerSlider';
 import { CategoriesGrid, ScrollSection, MovingRows } from './components/index';
+import BannerSlider from './components/BannerSlider/BannerSlider';
 
 export const HomePage = () => {
   const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
@@ -33,10 +33,10 @@ export const HomePage = () => {
       <ScrollSection />
       <section className="relative z-[2]">
         <BannerSlider />
-        <PaperBookSlider books={newestBooks} title={t('newBooks')} />
+        <BookSlider books={newestBooks} title={t('books.newBooks')} />
         <MovingRows />
         <CategoriesGrid />
-        <PaperBookSlider books={recommendedBooks} title={t('UMayLike')} />
+        <BookSlider books={recommendedBooks} title={t('books.youMayLike')} />
       </section>
     </>
   );

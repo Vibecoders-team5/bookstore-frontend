@@ -1,5 +1,5 @@
 import { useThemeStore } from '@/store/useThemeStore';
-import cn from 'classnames';
+import clsx from 'clsx';
 import { Moon, Settings, Sun } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -14,17 +14,14 @@ export const BookmarkToggle = () => {
     uk: 'UA',
   };
 
-  const languageToggle = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    lang: 'uk' | 'en',
-  ) => {
-    i18n.changeLanguage(lang);
+  const languageToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en');
     e.stopPropagation();
   };
 
   return (
     <div
-      className={cn(
+      className={clsx(
         'fixed flex right-3 sm:right-7 lg:right-10 z-49 items-center justify-center transition-all duration-500 ease-in-out cursor-pointer',
         { '-top-13 lg:-top-9': !isOpen },
         { 'top-8 sm:top-12 lg:top-16 animate-drop-in': isOpen },
@@ -53,9 +50,7 @@ export const BookmarkToggle = () => {
         </button>
 
         <button
-          onClick={(e) =>
-            languageToggle(e, i18n.language === 'en' ? 'uk' : 'en')
-          }
+          onClick={(e) => languageToggle(e)}
           className="mt-3 text-md font-bold hover:scale-110 transition cursor-pointer"
           title="Languages"
         >

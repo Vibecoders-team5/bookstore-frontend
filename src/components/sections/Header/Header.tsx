@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Heart, Menu, Search, ShoppingBag, SquareX, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
+import { NotificationHeaderIcon } from '@/components/ui/Icons/NotificationHeader';
 import { useBookStore } from '@/store/useBookStore';
 import { getSearchResults } from '@/utils/getSearchResults';
 import { useFetchBooksStore } from '@/store/useFetchBooksStore';
@@ -122,7 +122,7 @@ export const Header = () => {
             <div ref={favIconRef} className={cn('relative', iconScaleClass)}>
               <Heart size={16} />
               {totalFavorites > 0 && (
-                <NotificationHeaderBtn counter={totalFavorites} />
+                <NotificationHeaderIcon counter={totalFavorites} />
               )}
             </div>
           </Link>
@@ -134,7 +134,9 @@ export const Header = () => {
           >
             <div ref={cartIconRef} className={cn('relative', iconScaleClass)}>
               <ShoppingBag size={16} />
-              {totalCount > 0 && <NotificationHeaderBtn counter={totalCount} />}
+              {totalCount > 0 && (
+                <NotificationHeaderIcon counter={totalCount} />
+              )}
             </div>
           </Link>
 

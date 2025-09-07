@@ -4,18 +4,18 @@ import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useTranslation } from 'react-i18next';
 
 export const PaperPage = () => {
-  const { paperBooks, isLoading, fetchPaperBooks } = useFetchBooksStore();
+  const { paperBooks, isLoading, fetchBooksByType } = useFetchBooksStore();
   const { t } = useTranslation();
 
   useEffect(() => {
-    fetchPaperBooks();
-  }, [fetchPaperBooks]);
+    fetchBooksByType('paper');
+  }, [fetchBooksByType]);
 
   return (
     <CatalogTemplate
       books={paperBooks}
       isLoading={isLoading}
-      title={t('paperBooks')}
+      title={t('books.paperBooks')}
     />
   );
 };

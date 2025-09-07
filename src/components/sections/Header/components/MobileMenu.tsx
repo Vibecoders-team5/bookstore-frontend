@@ -5,7 +5,7 @@ import { SearchBar } from './SearchBar';
 import { SearchDropdown } from './SearchDropdown';
 import { Link } from 'react-router-dom';
 import { Heart, ShoppingBag } from 'lucide-react';
-import { NotificationHeaderBtn } from '@/components/ui/Icons/NotificationHeaderBtn';
+import { NotificationHeaderIcon } from '@/components/ui/Icons/NotificationHeader';
 import { useEffect } from 'react';
 import { FocusTrap } from 'focus-trap-react';
 
@@ -77,7 +77,7 @@ export const MobileMenu = ({
       <div className="flex flex-col items-center justify-center py-6">
         <div className="relative">
           <Icon size={20} className="text-custom-primary dark:text-white" />
-          {count > 0 && <NotificationHeaderBtn counter={count} />}
+          {count > 0 && <NotificationHeaderIcon counter={count} />}
         </div>
       </div>
     </Link>

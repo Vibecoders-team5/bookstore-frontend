@@ -9,13 +9,13 @@ export const CategoryDropdown = () => {
   return (
     <DropdownSelect
       options={[
-        { label: t('programming'), value: '/category/programming' },
-        { label: t('psyhology'), value: '/category/psychology' },
-        { label: t('fantasy'), value: '/category/fantasy' },
-        { label: t('drama'), value: '/category/drama' },
-        { label: t('detective'), value: '/category/detective' },
+        { label: t('categories.programming'), value: '/category/programming' },
+        { label: t('categories.psychology'), value: '/category/psychology' },
+        { label: t('categories.fantasy'), value: '/category/fantasy' },
+        { label: t('categories.drama'), value: '/category/drama' },
+        { label: t('categories.detective'), value: '/category/detective' },
       ]}
-      placeholder={t('chooseCat')}
+      placeholder={t('books.chooseCategory')}
       className="w-full sm:w-[176px] text-white/60 dark:text-white/80"
       onChange={(value) => {
         navigate(value);

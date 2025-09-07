@@ -21,3 +21,5 @@ export interface Book {
   category?: string[];
   description: string[];
 }
+
+export type CartItem = Book & { quantity: number };

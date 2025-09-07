@@ -4,18 +4,18 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export const AudiobookPage = () => {
-  const { audioBooks, isLoading, fetchAudioBooks } = useFetchBooksStore();
+  const { audioBooks, isLoading, fetchBooksByType } = useFetchBooksStore();
   const { t } = useTranslation();
 
   useEffect(() => {
-    fetchAudioBooks();
-  }, [fetchAudioBooks]);
+    fetchBooksByType('audio');
+  }, [fetchBooksByType]);
 
   return (
     <CatalogTemplate
       books={audioBooks}
       isLoading={isLoading}
-      title={t('audioBooks')}
+      title={t('books.audioBooks')}
     />
   );
 };

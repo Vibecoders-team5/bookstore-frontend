@@ -10,7 +10,7 @@ export const EmptyFavorites = () => {
       />
 
       <p className="text-custom-secondary text-base sm:text-lg">
-        <Trans i18nKey="emptyFav">
+        <Trans i18nKey="favorites.empty">
           Your favorites is still sad...
           <br />
           Add some books to make it happy

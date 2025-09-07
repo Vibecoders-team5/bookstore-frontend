@@ -10,26 +10,28 @@ export const BookCharacteristics = ({ book }: Props) => {
   const { t } = useTranslation();
 
   const items: [string, string | number | null][] = [
-    [t('author'), book.author],
-    [t('cover'), book.coverType ?? null],
+    [t('bookDetails.author'), book.author],
+    [t('bookDetails.cover'), book.coverType ?? null],
     [
-      t('listening'),
+      t('bookDetails.listening'),
       book.listeningLength !== null && book.listeningLength !== undefined ?
         formatListeningLength(book.listeningLength)
       : null,
     ],
-    [t('narrator'), book.narrator ?? null],
-    [t('numberOfPages'), book.numberOfPages ?? null],
-    [t('yearOfPublication'), book.publicationYear],
-    [t('publication'), book.publication],
-    [t('format'), book.format ?? null],
+    [t('bookDetails.narrator'), book.narrator ?? null],
+    [t('bookDetails.pages'), book.numberOfPages ?? null],
+    [t('bookDetails.year'), book.publicationYear],
+    [t('bookDetails.publication'), book.publication],
+    [t('bookDetails.format'), book.format ?? null],
     [
-      t('language'),
-      book.lang.toUpperCase() === 'UK' ? t('languageSelector') : 'ENG',
+      t('bookDetails.language'),
+      book.lang.toUpperCase() === 'UK' ? t('ui.languageSelector') : 'ENG',
     ],
     [
-      t('illustrations'),
-      book.illustrations ? t('illustrationsTrue') : t('illustrationsFalse'),
+      t('bookDetails.illustrations'),
+      book.illustrations ?
+        t('bookDetails.illustrationsTrue')
+      : t('bookDetails.illustrationsFalse'),
     ],
   ];
 
@@ -38,7 +40,7 @@ export const BookCharacteristics = ({ book }: Props) => {
   return (
     <section className="w-full max-w-160 mx-auto lg:mx-0">
       <h2 className="text-[24px] font-bold leading-[31px] text-custom-textPrimary dark:text-white mb-4">
-        {t('characteristics')}
+        {t('books.characteristics')}
       </h2>
 
       <div className="border-t border-custom-elements">
