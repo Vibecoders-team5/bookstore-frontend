@@ -60,7 +60,6 @@ export const RadioPlayer = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Контейнер регулятора зверху (позиціонований абсолютно) */}
       {showVolume && (
         <div className="absolute bottom-full mb-8">
           <input

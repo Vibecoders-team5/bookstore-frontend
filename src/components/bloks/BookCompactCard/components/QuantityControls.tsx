@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { CartItem } from '@/Pages';
 import { useBookStore } from '@/store/useBookStore';
+import { CartItem } from '@/types/Book';
 import { Minus, Plus } from 'lucide-react';
 
 type QuantityControlsProps = {

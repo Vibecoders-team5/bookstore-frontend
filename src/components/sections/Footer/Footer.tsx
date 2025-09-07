@@ -31,19 +31,19 @@ export const Footer = () => {
           to="/contacts"
           className="uppercase text-white/80 hover:text-white"
         >
-          {t('contacts')}
+          {t('navigation.contacts')}
         </Link>
         <Link to="/rights" className="uppercase text-white/80 hover:text-white">
-          {t('rights')}
+          {t('navigation.rights')}
         </Link>
       </nav>
 
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         variant="backToTop"
-        className="self-center text-white/80  hover:text-white mr-8"
+        className="self-center text-white/80 hover:text-white mr-8"
       >
-        <span>{t('backToTop')}</span>
+        <span>{t('ui.backToTop')}</span>
         <ChevronUpIcon size={16} />
       </Button>
     </footer>

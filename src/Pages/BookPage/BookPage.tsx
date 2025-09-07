@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react';
-import { useMatch, useParams } from 'react-router-dom';
+import { useMatch, useNavigate, useParams } from 'react-router-dom';
 import { getBookAndVariants } from '@/utils/getBookAndVariants';
 import { useBookStore } from '@/store/useBookStore';
 import { getRecommendedBooks } from '@/utils/getRecommendedBooks';
@@ -15,12 +15,13 @@ import {
 } from './components/index';
 
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
-import { PaperBookSlider } from '@/components/sections/BooksSliders/PaperBookSlider';
+import { BookSlider } from '@/components/sections/BooksSlider/BookSlider';
 
 export const BookPage: React.FC = () => {
   const { setCurrentBook, setBookVariants, currentBook: book } = useBookStore();
   const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { bookSlug } = useParams<{ bookSlug: string }>();
   const type = useMatch('/:type/:bookSlug')?.params.type as
     | 'paperback'
@@ -28,7 +29,10 @@ export const BookPage: React.FC = () => {
     | 'audiobook';
 
   useEffect(() => {
-    if (!bookSlug || !type) return;
+    if (!bookSlug || !type) {
+      return;
+    }
+
     fetchAllBooks();
 
     getBookAndVariants(type, bookSlug)
@@ -36,14 +40,23 @@ export const BookPage: React.FC = () => {
         setCurrentBook(current);
         setBookVariants(variants);
       })
-      .catch(console.error);
-  }, [type, bookSlug, setCurrentBook, setBookVariants, fetchAllBooks]);
+      .catch(() => navigate('/404'));
+  }, [
+    type,
+    bookSlug,
+    setCurrentBook,
+    setBookVariants,
+    fetchAllBooks,
+    navigate,
+  ]);
 
-  const randomBooks = useMemo(() => {
+  const recommendedBooks = useMemo(() => {
     return getRecommendedBooks(allBooks);
   }, [allBooks]);
 
-  if (isLoading || !book) return <BookLoader />;
+  if (isLoading || !book) {
+    return <BookLoader />;
+  }
 
   const imageUrls = book.images.map((p) => `/books/${p}`);
 
@@ -79,7 +92,7 @@ export const BookPage: React.FC = () => {
           <BookCharacteristics book={book} />
         </section>
 
-        <PaperBookSlider books={randomBooks} title={t('UMayLike')} />
+        <BookSlider books={recommendedBooks} title={t('books.youMayLike')} />
       </article>
     </div>
   );

@@ -12,9 +12,9 @@ export const DropdownSortBy = () => {
   const currentSort = searchParams.get('sort') ?? DEFAULT_SORT;
 
   const sortOptions: Option[] = [
-    { label: t('date'), value: 'newest' },
-    { label: t('name'), value: 'alphabetically' },
-    { label: t('price'), value: 'cheapest' },
+    { label: t('ui.date'), value: 'newest' },
+    { label: t('ui.name'), value: 'alphabetically' },
+    { label: t('ui.price'), value: 'cheapest' },
   ];
 
   const handleSortChange = (value: string) => {
@@ -29,7 +29,7 @@ export const DropdownSortBy = () => {
       options={sortOptions}
       placeholder={t('date')}
       value={currentSort}
-      label={t('sortBy')}
+      label={t('ui.sortBy')}
       className="w-[176px] h-15 text-black/80 dark:text-white"
       onChange={handleSortChange}
     />

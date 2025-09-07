@@ -2,7 +2,7 @@ import { useBookStore } from '@/store/useBookStore';
 import { Search, X } from 'lucide-react';
 import debounce from 'lodash/debounce';
 import { useEffect, useMemo, useState } from 'react';
-import { OurInput } from '@/components/ui/OurInput/OurInput';
+import { CustomInput } from '@/components/ui/CustomInput/CustomInput';
 import { useTranslation } from 'react-i18next';
 
 export function SearchBar() {
@@ -43,9 +43,9 @@ export function SearchBar() {
         className="absolute left-4 top-1/2 -translate-y-1/2 text-black/30 lg:text-white/60 dark:text-white/80"
         size={18}
       />
-      <OurInput
+      <CustomInput
         type="text"
-        placeholder={t('searchPHolder')}
+        placeholder={t('books.searchPlaceholder')}
         value={inputValue}
         onChange={handleChange}
         className="w-full placeholder:font-[600] text-black/70 dark:text-white lg:text-white placeholder:text-white/60 hover:border-custom-secondary  dark:placeholder:text-white/80"

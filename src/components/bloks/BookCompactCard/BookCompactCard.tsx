@@ -4,9 +4,8 @@ import { useBookStore } from '@/store/useBookStore';
 
 import { cn } from '@/lib/utils';
 import { highlightMatches } from '@/utils/highlightMatches';
-import { Book } from '@/types/Book';
+import { Book, CartItem } from '@/types/Book';
 
-import { CartItem } from '@/Pages';
 import { Button } from '@/components/ui/button';
 import { QuantityControls } from './components/QuantityControls';
 

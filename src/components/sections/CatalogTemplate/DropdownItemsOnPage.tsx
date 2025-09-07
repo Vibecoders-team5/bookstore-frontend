@@ -12,7 +12,7 @@ export const DropdownItemsOnPage = () => {
     { label: '4', value: '4' },
     { label: '8', value: '8' },
     { label: '16', value: '16' },
-    { label: t('all'), value: 'all' },
+    { label: t('ui.all'), value: 'all' },
   ];
 
   const handleItemsChange = (value: string) => {
@@ -26,7 +26,7 @@ export const DropdownItemsOnPage = () => {
       options={itemsOnPageOptions}
       placeholder="16"
       value={currentPerPage ?? '16'}
-      label={t('itemsOnPage')}
+      label={t('ui.itemsOnPage')}
       className="w-32 h-15 text-black/80 dark:text-white"
       onChange={handleItemsChange}
     />

@@ -3,14 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useBookStore } from '@/store/useBookStore';
 
-import { Book } from '@/types/Book';
 import { BookCompactCard } from '@/components/bloks/BookCompactCard/BookCompactCard';
 import { BackButton } from '@/components/ui/Buttons/BackButton';
 
 import { CartSummary } from './components/CartSummary';
 import { EmptyCart } from './components/EmptyCart';
-
-export type CartItem = Book & { quantity: number };
 
 export const CartPage = () => {
   const navigate = useNavigate();
@@ -41,9 +38,9 @@ export const CartPage = () => {
 
         <div className="mb-8 sm:mb-10 pt-2">
           <h1 className="text-[36px] sm:text-5xl font-bold dark:text-white">
-            {t('cart')}
+            {t('navigation.cart')}
           </h1>
-          <p className="dark:text-white">{`${totalQuantity} ${t('items')}`}</p>
+          <p className="dark:text-white">{`${totalQuantity} ${t('ui.items')}`}</p>
         </div>
 
         {cart.length ?

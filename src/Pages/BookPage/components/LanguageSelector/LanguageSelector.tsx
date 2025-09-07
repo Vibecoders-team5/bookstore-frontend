@@ -13,7 +13,10 @@ export const LanguageSelector = () => {
   if (!book) return null;
 
   const handleChange = (langCode: string) => {
-    if (langCode === selected) return;
+    if (langCode === selected) {
+      return;
+    }
+
     setSelected(langCode);
 
     const match = bookVariants.find((b) => b.lang === langCode);
@@ -28,7 +31,7 @@ export const LanguageSelector = () => {
     <div className="flex gap-2">
       {book.langAvailable.map((lang: string) => {
         const label =
-          lang.toUpperCase() === 'UK' ? t('languageSelector') : 'ENG';
+          lang.toUpperCase() === 'UK' ? t('ui.languageSelector') : 'ENG';
         const isSelected = selected === lang;
 
         return (

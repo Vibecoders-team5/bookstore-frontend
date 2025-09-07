@@ -9,7 +9,7 @@ export const NotFoundItemPage = () => {
         className="w-100"
       />
       <p className="text-custom-secondary text-base sm:text-lg">
-        <Trans i18nKey="itemNotFound">
+        <Trans i18nKey="errors.itemNotFound">
           Oops something went wrong...
           <br />
           Try another item

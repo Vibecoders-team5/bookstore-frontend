@@ -8,7 +8,9 @@ export const getBookAndVariants = async (
   const books = await client.get<Book[]>(type);
 
   const current = books.find((b) => b.slug === slug);
-  if (!current) throw new Error('Book not found');
+  if (!current) {
+    throw new Error('Book not found');
+  }
 
   const variants = books.filter((b) => b.namespaceId === current.namespaceId);
 

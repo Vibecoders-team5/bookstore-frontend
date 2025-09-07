@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import { Book } from '@/types/Book';
-export type CartItem = Book & { quantity: number };
+import { persist } from 'zustand/middleware';
+import { Book, CartItem } from '@/types/Book';
 
 interface BookStore {
   cart: CartItem[];
@@ -23,84 +23,76 @@ interface BookStore {
   setBookVariants: (books: Book[]) => void;
 }
 
-export const useBookStore = create<BookStore>((set) => ({
-  cart: JSON.parse(localStorage.getItem('cart') || '[]'),
-  favorites: JSON.parse(localStorage.getItem('favorites') || '[]'),
-  query: '',
-  currentBook: null,
-  bookVariants: [],
+export const useBookStore = create<BookStore>()(
+  persist(
+    (set) => ({
+      cart: [],
+      favorites: [],
+      query: '',
+      currentBook: null,
+      bookVariants: [],
 
-  setCurrentBook: (book) => set({ currentBook: book }),
-  setBookVariants: (books) => set({ bookVariants: books }),
+      setCurrentBook: (book) => set({ currentBook: book }),
+      setBookVariants: (books) => set({ bookVariants: books }),
+      setQuery: (query) => set({ query: query.trim() }),
 
-  setQuery: (query) => {
-    const normalizedQuery = query.trim();
-    set(() => ({ query: normalizedQuery }));
-  },
+      addToCart: (book) => {
+        set((state) => {
+          const existing = state.cart.find((b) => b.id === book.id);
+          const updated =
+            existing ?
+              state.cart.map((b) =>
+                b.id === book.id ? { ...b, quantity: b.quantity + 1 } : b,
+              )
+            : [...state.cart, { ...book, quantity: 1 }];
+          return { cart: updated };
+        });
+      },
 
-  addToCart: (book) => {
-    set((state) => {
-      const existing = state.cart.find((b) => b.id === book.id);
-      const updated =
-        existing ?
-          state.cart.map((b) =>
-            b.id === book.id ? { ...b, quantity: b.quantity + 1 } : b,
-          )
-        : [...state.cart, { ...book, quantity: 1 }];
-      localStorage.setItem('cart', JSON.stringify(updated));
-      return { cart: updated };
-    });
-  },
+      removeFromCart: (id) =>
+        set((state) => ({ cart: state.cart.filter((b) => b.id !== id) })),
 
-  removeFromCart: (id) => {
-    set((state) => {
-      const updated = state.cart.filter((b) => b.id !== id);
-      localStorage.setItem('cart', JSON.stringify(updated));
-      return { cart: updated };
-    });
-  },
+      increaseQuantity: (id) =>
+        set((state) => ({
+          cart: state.cart.map((b) =>
+            b.id === id && b.quantity < 10 ?
+              { ...b, quantity: b.quantity + 1 }
+            : b,
+          ),
+        })),
 
-  increaseQuantity: (id) => {
-    set((state) => {
-      const updated = state.cart.map((b) =>
-        b.id === id && b.quantity < 10 ? { ...b, quantity: b.quantity + 1 } : b,
-      );
-      localStorage.setItem('cart', JSON.stringify(updated));
-      return { cart: updated };
-    });
-  },
+      decreaseQuantity: (id) =>
+        set((state) => {
+          const found = state.cart.find((b) => b.id === id);
+          return {
+            cart:
+              found?.quantity === 1 ?
+                state.cart.filter((b) => b.id !== id)
+              : state.cart.map((b) =>
+                  b.id === id ? { ...b, quantity: b.quantity - 1 } : b,
+                ),
+          };
+        }),
 
-  decreaseQuantity: (id) => {
-    set((state) => {
-      const found = state.cart.find((b) => b.id === id);
-      let updated: CartItem[];
+      addToFavorites: (book) =>
+        set((state) => ({
+          favorites:
+            state.favorites.some((b) => b.id === book.id) ?
+              state.favorites
+            : [...state.favorites, book],
+        })),
 
-      if (found?.quantity === 1) {
-        updated = state.cart.filter((b) => b.id !== id);
-      } else {
-        updated = state.cart.map((b) =>
-          b.id === id ? { ...b, quantity: b.quantity - 1 } : b,
-        );
-      }
-
-      localStorage.setItem('cart', JSON.stringify(updated));
-      return { cart: updated };
-    });
-  },
-
-  addToFavorites: (book) => {
-    set((state) => {
-      const updated = [...state.favorites, book];
-      localStorage.setItem('favorites', JSON.stringify(updated));
-      return { favorites: updated };
-    });
-  },
-
-  removeFromFavorites: (book) => {
-    set((state) => {
-      const updated = state.favorites.filter((b) => b.id !== book.id);
-      localStorage.setItem('favorites', JSON.stringify(updated));
-      return { favorites: updated };
-    });
-  },
-}));
+      removeFromFavorites: (book) =>
+        set((state) => ({
+          favorites: state.favorites.filter((b) => b.id !== book.id),
+        })),
+    }),
+    {
+      name: 'bookstore-storage',
+      partialize: (state) => ({
+        cart: state.cart,
+        favorites: state.favorites,
+      }),
+    },
+  ),
+);

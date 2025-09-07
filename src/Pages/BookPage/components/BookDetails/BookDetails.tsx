@@ -16,17 +16,17 @@ export function BookDetails({ book }: Props) {
   const { t } = useTranslation();
 
   const bookDetailsData: [string, string | number | null][] = [
-    [t('author'), book.author],
-    [t('cover'), book.coverType ?? null],
+    [t('bookDetails.author'), book.author],
+    [t('bookDetails.cover'), book.coverType ?? null],
     [
-      t('listening'),
+      t('bookDetails.listening'),
       book.listeningLength !== null && book.listeningLength !== undefined ?
         formatListeningLength(book.listeningLength)
       : null,
     ],
-    [t('narrator'), book.narrator ?? null],
-    [t('numberOfPages'), book.numberOfPages ?? null],
-    [t('yearOfPublication'), book.publicationYear],
+    [t('bookDetails.narrator'), book.narrator ?? null],
+    [t('bookDetails.pages'), book.numberOfPages ?? null],
+    [t('bookDetails.year'), book.publicationYear],
   ];
 
   const filteredDetails = bookDetailsData.filter(([, value]) => value !== null);
@@ -76,7 +76,7 @@ export function BookDetails({ book }: Props) {
     <div className="w-full max-w-[400px] mx-auto lg:mx-0 flex flex-col gap-6 text-[16px] text-custom-primary  dark:text-white">
       <div>
         <p className="text-custom-secondary  dark:text-white/80 text-[16px] font-bold leading-[24px] mb-2">
-          {t('category')}
+          {t('books.category')}
         </p>
         {book.category && book.category.length > 0 && (
           <div className="flex flex-wrap gap-2">
@@ -94,7 +94,7 @@ export function BookDetails({ book }: Props) {
 
       <div className="border-t border-custom-elements  pt-4">
         <p className="text-custom-secondary  dark:text-white/80 text-[16px] font-bold leading-[24px] mb-2">
-          {t('selectlanguage')}
+          {t('bookDetails.language')}
         </p>
 
         <div className="mb-4">

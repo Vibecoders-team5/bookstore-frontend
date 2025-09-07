@@ -13,30 +13,26 @@ type AddButtonProps = {
     | 'icon'
     | 'customAddButton'
     | 'bookPageAddButton'
-    | null
-    | undefined;
+    | null;
   className?: string;
 };
 
 export const AddButton: React.FC<AddButtonProps> = ({
-  onClick = () => {},
+  onClick,
   isSelected = false,
   size,
   className,
 }) => {
-  const handleClick = () => {
-    onClick();
-  };
   const { t } = useTranslation();
 
   return (
     <Button
       variant={isSelected ? 'addToCartAdded' : 'addToCartNormal'}
       size={size}
-      onClick={handleClick}
+      onClick={onClick}
       className={className}
     >
-      {isSelected ? t('added') : t('addToCart')}
+      {isSelected ? t('ui.added') : t('ui.addToCart')}
     </Button>
   );
 };

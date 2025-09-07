@@ -6,28 +6,32 @@ import {
   getAudioBooks,
 } from '@/services/booksAPI';
 
-type State = {
+type BooksStoreState = {
   allBooks: Book[];
   paperBooks: Book[];
   kindleBooks: Book[];
   audioBooks: Book[];
   isLoading: boolean;
+  error: string | null;
   fetchAllBooks: () => Promise<void>;
-  fetchPaperBooks: () => Promise<void>;
-  fetchKindleBooks: () => Promise<void>;
-  fetchAudioBooks: () => Promise<void>;
+  fetchBooksByType: (type: 'paper' | 'kindle' | 'audio') => Promise<void>;
   clearBooks: () => void;
 };
 
-export const useFetchBooksStore = create<State>((set) => ({
+const initialState = {
   allBooks: [],
   paperBooks: [],
   kindleBooks: [],
   audioBooks: [],
   isLoading: false,
+  error: null,
+};
+
+export const useFetchBooksStore = create<BooksStoreState>((set) => ({
+  ...initialState,
 
   fetchAllBooks: async () => {
-    set({ isLoading: true });
+    set({ isLoading: true, error: null });
     try {
       const [paper, kindle, audio] = await Promise.all([
         getPaperBooks(),
@@ -40,46 +44,31 @@ export const useFetchBooksStore = create<State>((set) => ({
         audioBooks: audio,
         allBooks: [...paper, ...kindle, ...audio],
       });
+    } catch (err) {
+      set({ error: (err as Error).message });
     } finally {
       set({ isLoading: false });
     }
   },
 
-  fetchPaperBooks: async () => {
-    set({ isLoading: true });
+  fetchBooksByType: async (type) => {
+    set({ isLoading: true, error: null });
     try {
-      const books = await getPaperBooks();
-      set({ paperBooks: books });
+      let books: Book[] = [];
+      if (type === 'paper') books = await getPaperBooks();
+      if (type === 'kindle') books = await getKindleBooks();
+      if (type === 'audio') books = await getAudioBooks();
+
+      set((state) => ({
+        ...state,
+        [`${type}Books`]: books,
+      }));
+    } catch (err) {
+      set({ error: (err as Error).message });
     } finally {
       set({ isLoading: false });
     }
   },
 
-  fetchKindleBooks: async () => {
-    set({ isLoading: true });
-    try {
-      const books = await getKindleBooks();
-      set({ kindleBooks: books });
-    } finally {
-      set({ isLoading: false });
-    }
-  },
-
-  fetchAudioBooks: async () => {
-    set({ isLoading: true });
-    try {
-      const books = await getAudioBooks();
-      set({ audioBooks: books });
-    } finally {
-      set({ isLoading: false });
-    }
-  },
-
-  clearBooks: () =>
-    set({
-      allBooks: [],
-      paperBooks: [],
-      kindleBooks: [],
-      audioBooks: [],
-    }),
+  clearBooks: () => set(initialState),
 }));

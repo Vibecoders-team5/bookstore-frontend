@@ -18,7 +18,7 @@ export const BackButton: React.FC<BackButtonProps> = ({
       onClick={onClick}
     >
       <ChevronLeft className="text-custom-primary dark:text-white/60" />
-      {t('backBtn')}
+      {t('ui.back')}
     </Button>
   );
 };

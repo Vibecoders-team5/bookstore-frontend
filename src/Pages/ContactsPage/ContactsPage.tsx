@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { members } from '@/data/members';
 import { useTranslation } from 'react-i18next';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 export const ContactsPage = () => {
   const { t } = useTranslation();
@@ -22,7 +22,7 @@ export const ContactsPage = () => {
   return (
     <div className="max-w-[1136px] mx-auto px-4 mt-25">
       <h2 className="text-[2rem] font-bold text-custom-primary mb-8 text-center dark:text-white">
-        {t('meetOurTeam')}
+        {t('team.meetOurTeam')}
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -32,14 +32,14 @@ export const ContactsPage = () => {
           return (
             <div
               key={index}
-              className={classNames(
+              className={clsx(
                 'relative h-[400px] cursor-pointer overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white dark:bg-brown-dark dark:border-none transition-all duration-500 group',
                 { 'bg-white': isActive },
               )}
               onClick={() => toggleCard(index)}
             >
               <div
-                className={classNames(
+                className={clsx(
                   'absolute inset-0 transition-transform duration-500',
                   {
                     'scale-105 blur-sm': isActive,
@@ -55,7 +55,7 @@ export const ContactsPage = () => {
               </div>
 
               <div
-                className={classNames(
+                className={clsx(
                   'absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white transition-opacity duration-300 z-10',
                   { 'opacity-0': isActive, 'opacity-100': !isActive },
                 )}
@@ -73,7 +73,7 @@ export const ContactsPage = () => {
               </div>
 
               <div
-                className={classNames(
+                className={clsx(
                   'absolute inset-0 flex flex-col justify-between p-4 bg-white dark:bg-brown-dark text-custom-primary dark:text-white transition-transform duration-500 transform z-20',
                   {
                     'translate-y-0 opacity-100': isActive,
@@ -100,7 +100,7 @@ export const ContactsPage = () => {
                   </div>
 
                   <p className="text-sm text-[#6c6c76] dark:text-[#ead7d1] text-left">
-                    {t(member.description)}
+                    {t(`team.${member.description}`)}
                   </p>
                 </div>
 

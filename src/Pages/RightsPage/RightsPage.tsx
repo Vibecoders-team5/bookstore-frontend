@@ -5,39 +5,39 @@ export const RightsPage = () => {
 
   const sections = [
     {
-      title: t('contentOwnership'),
-      text: t('contentOwnershipText'),
+      title: t('legal.contentOwnership'),
+      text: t('legal.contentOwnershipText'),
     },
     {
-      title: t('websiteUse'),
-      text: t('websiteUseText'),
+      title: t('legal.websiteUse'),
+      text: t('legal.websiteUseText'),
     },
     {
-      title: t('protection'),
-      text: t('protectionText'),
+      title: t('legal.protection'),
+      text: t('legal.protectionText'),
     },
     {
-      title: t('dataRights'),
-      text: t('dataRightsText'),
+      title: t('legal.dataRights'),
+      text: t('legal.dataRightsText'),
     },
     {
-      title: t('termsUpdates'),
-      text: t('termsUpdatesText'),
+      title: t('legal.termsUpdates'),
+      text: t('legal.termsUpdatesText'),
     },
     {
-      title: t('contactUs'),
-      text: t('contactUsText'),
+      title: t('legal.contactUs'),
+      text: t('legal.contactUsText'),
     },
   ];
 
   return (
-    <div className="max-w-[1136px] mx-auto mt-25">
+    <div className="max-w-[1136px] px-6 pt-18 lg:pt-25 mx-auto">
       <h2 className="font-extrabold text-[2rem] text-custom-primary dark:text-white/80  mb-[23px]">
-        {t('termsOfUse')}
+        {t('legal.termsOfUse')}
       </h2>
 
       <p className="text-base text-custom-primary dark:text-[#d6c5b1]">
-        {t('termsOfUseText')}
+        {t('legal.termsOfUseText')}
       </p>
 
       {sections.map(({ title, text }, index) => (
@@ -45,7 +45,7 @@ export const RightsPage = () => {
           <h3 className="mt-8 text-2xl text-custom-primary dark:text-white/70 font-bold mb-[30px]">
             {title}
           </h3>
-          <p className="mb-[40px] text-[#6c6c76] dark:text-[#c5bbb0]">{text}</p>
+          <p className="mb-10 text-[#6c6c76] dark:text-[#c5bbb0]">{text}</p>
         </div>
       ))}
     </div>

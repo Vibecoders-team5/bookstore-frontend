@@ -8,15 +8,12 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-type PaperBookSliderProps = {
+type BookSliderProps = {
   books: Book[];
   title?: string;
 };
 
-export const PaperBookSlider: React.FC<PaperBookSliderProps> = ({
-  books,
-  title,
-}) => {
+export const BookSlider: React.FC<BookSliderProps> = ({ books, title }) => {
   return (
     <Carousel
       className="max-w-284 mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-auto mt-20 pb-8"

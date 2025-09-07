@@ -4,6 +4,7 @@ import { useFetchBooksStore } from '@/store/useFetchBooksStore';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { NotFoundPage } from '../NotFoundPage/NotFoundPage';
 
 export const CategoryPage = () => {
   const { categorySlug } = useParams<{ categorySlug: string }>();
@@ -11,15 +12,19 @@ export const CategoryPage = () => {
     useFetchBooksStore();
   const { t } = useTranslation();
 
+  const categoriesMap: Record<string, string> = {
+    programming: t('categories.programming'),
+    psychology: t('categories.psychology'),
+    fantasy: t('categories.fantasy'),
+    drama: t('categories.drama'),
+    detective: t('categories.detective'),
+  };
+
+  const isValidSlug =
+    !categorySlug || Object.keys(categoriesMap).includes(categorySlug);
+
   const slugToDisplayName = (slug: string): string => {
-    const map: Record<string, string> = {
-      programming: t('programming'),
-      psychology: t('psyhology'),
-      fantasy: t('fantasy'),
-      drama: t('drama'),
-      detective: t('detective'),
-    };
-    return map[slug] ?? slug;
+    return categoriesMap[slug] ?? slug;
   };
 
   const title = categorySlug ? slugToDisplayName(categorySlug) : 'catalog';
@@ -34,9 +39,14 @@ export const CategoryPage = () => {
     : allBooks;
 
   useEffect(() => {
+    if (!isValidSlug) return;
     clearBooks();
     fetchAllBooks();
-  }, [categorySlug, clearBooks, fetchAllBooks]);
+  }, [categorySlug, clearBooks, fetchAllBooks, isValidSlug]);
+
+  if (!isValidSlug) {
+    return <NotFoundPage />;
+  }
 
   return (
     <CatalogTemplate

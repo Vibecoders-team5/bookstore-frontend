@@ -15,7 +15,7 @@ export const EmptyCart = () => {
       />
 
       <p className="text-custom-secondary dark:text-white/50 text-base sm:text-lg pb-8">
-        <Trans i18nKey="emptyCart">
+        <Trans i18nKey="cart.empty">
           Your cart is still sleeping...
           <br />
           Add some books to gently wake it up
@@ -30,7 +30,7 @@ export const EmptyCart = () => {
           navigate('/');
         }}
       >
-        {t('backToShopBtn')}
+        {t('cart.backToShop')}
       </Button>
     </div>
   );
