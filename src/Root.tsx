@@ -18,7 +18,7 @@ import {
   NotFoundPage,
   NotFoundItemPage,
   CategoryPage,
-} from './pages';
+} from './pagesTemp';
 
 export const Root = () => (
   <Router>
