@@ -5,4 +5,4 @@ export * from './MobileMenu';
 export * from './NavList';
 export * from './SearchBar';
 export * from './SearchDropdown';
-export * from '../../RadioPlayer/RadioPlayer';
+export * from './RadioPlayer';

@@ -53,6 +53,9 @@
     "selectLanguage": "Select language",
     "sortDescending": "Sort descending",
     "sortAscending": "Sort ascending",
+    "theme": "Theme",
+    "language": "Language",
+    "settings": "Settings",
     "languageSelector": "UA"
   },
 
@@ -65,7 +68,6 @@
     "year": "Year of publication",
     "publication": "Publication",
     "format": "Format",
-    "language": "Language",
     "illustrations": "Illustrations",
     "illustrationsTrue": "With illustrations",
     "illustrationsFalse": "No illustrations"

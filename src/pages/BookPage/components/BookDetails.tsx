@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 
 import { AddButton } from '@/components/ui/Buttons/AddButton';
 import { HeartButton } from '@/components/ui/Buttons/HeartButton';
-import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
-import { formatListeningLength } from '../FormatListeningLength/formatListeningLength';
 import { Minus, Plus } from 'lucide-react';
+import { formatListeningLength } from '@/utils/formatListeningLength';
+import { LanguageSelector } from './LanguageSelector';
 
 type Props = {
   book: Book;
@@ -94,7 +94,7 @@ export function BookDetails({ book }: Props) {
 
       <div className="border-t border-custom-elements  pt-4">
         <p className="text-custom-secondary  dark:text-white/80 text-[16px] font-bold leading-[24px] mb-2">
-          {t('bookDetails.language')}
+          {t('ui.language')}
         </p>
 
         <div className="mb-4">

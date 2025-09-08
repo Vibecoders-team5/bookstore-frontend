@@ -7,8 +7,12 @@ import { getRecommendedBooks } from '@/utils/getRecommendedBooks';
 import { BookLoader } from '@/components/ui/BookLoader/BookLoader';
 import { BookSlider } from '@/components/sections/BooksSlider/BookSlider';
 
-import { CategoriesGrid, ScrollSection, MovingRows } from './components/index';
-import BannerSlider from './components/BannerSlider/BannerSlider';
+import {
+  CategoriesGrid,
+  ScrollSection,
+  MovingRows,
+  BannerSlider,
+} from './components/index';
 
 export const HomePage = () => {
   const { allBooks, isLoading, fetchAllBooks } = useFetchBooksStore();

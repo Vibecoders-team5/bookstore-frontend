@@ -1,5 +1,5 @@
 import { Book } from '@/types/Book';
-import { formatListeningLength } from '../FormatListeningLength/formatListeningLength';
+import { formatListeningLength } from '@/utils/formatListeningLength';
 import { useTranslation } from 'react-i18next';
 
 type Props = {
@@ -24,7 +24,7 @@ export const BookCharacteristics = ({ book }: Props) => {
     [t('bookDetails.publication'), book.publication],
     [t('bookDetails.format'), book.format ?? null],
     [
-      t('bookDetails.language'),
+      t('ui.language'),
       book.lang.toUpperCase() === 'UK' ? t('ui.languageSelector') : 'ENG',
     ],
     [

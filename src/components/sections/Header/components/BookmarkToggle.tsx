@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 export const BookmarkToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { theme, toggleTheme } = useThemeStore();
 
   const langMap = {
@@ -38,7 +38,7 @@ export const BookmarkToggle = () => {
         <button
           aria-label="Toggle theme"
           className="mt-5 text-xl hover:scale-110 transition cursor-pointer"
-          title="Theme"
+          title={t('ui.theme')}
           onClick={(e) => {
             toggleTheme();
             e.stopPropagation();
@@ -52,14 +52,14 @@ export const BookmarkToggle = () => {
         <button
           onClick={(e) => languageToggle(e)}
           className="mt-3 text-md font-bold hover:scale-110 transition cursor-pointer"
-          title="Languages"
+          title={t('ui.language')}
         >
           {langMap[i18n.language as 'en' | 'uk']}
         </button>
 
         <button
           className="mt-7 sm:mt-13 text-sm transition-transform duration-700 ease-in-out cursor-pointer hover:rotate-360"
-          title="Settings"
+          title={t('ui.settings')}
         >
           <Settings />
         </button>
