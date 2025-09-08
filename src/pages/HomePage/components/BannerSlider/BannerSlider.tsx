@@ -3,7 +3,7 @@ import { banners } from '@/data/banners';
 import { SlideImage } from './SlideImage';
 import SliderControls from './SliderControls';
 
-export default function BannerSlider() {
+export function BannerSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);

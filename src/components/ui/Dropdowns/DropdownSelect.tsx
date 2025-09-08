@@ -29,16 +29,21 @@ export function DropdownSelect({
   className,
   onChange,
 }: DropdownSelectProps) {
+  const labelId = label?.toLowerCase().replace(/\s+/g, '_') || 'dropdown';
+
   return (
     <div className={cn('flex flex-col gap-1', className)}>
       {label && (
-        <label className="small-text text-custom-secondary dark:text-white">
+        <label
+          htmlFor={labelId}
+          className="small-text text-custom-secondary dark:text-white"
+        >
           {label}
         </label>
       )}
 
       <Select value={value} onValueChange={onChange}>
-        <SelectTrigger>
+        <SelectTrigger id={labelId} aria-labelledby={labelId} title={label}>
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>
         <SelectContent>

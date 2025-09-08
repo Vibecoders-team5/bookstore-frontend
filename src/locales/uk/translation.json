@@ -53,6 +53,9 @@
     "selectLanguage": "Обрати мову",
     "sortDescending": "Сортувати за спаданням",
     "sortAscending": "Сортувати за зростанням",
+    "theme": "Тема",
+    "language": "Мова",
+    "settings": "Налаштування",
     "languageSelector": "УКР"
   },
 
@@ -65,7 +68,6 @@
     "year": "Рік видання",
     "publication": "Видавництво",
     "format": "Формат",
-    "language": "Мова",
     "illustrations": "Ілюстрації",
     "illustrationsTrue": "З ілюстраціями",
     "illustrationsFalse": "Немає ілюстрацій"

@@ -44,7 +44,10 @@ export function SearchBar() {
         size={18}
       />
       <CustomInput
+        id="search"
         type="text"
+        title={t('books.searchPlaceholder')}
+        aria-label={t('books.searchPlaceholder')}
         placeholder={t('books.searchPlaceholder')}
         value={inputValue}
         onChange={handleChange}
